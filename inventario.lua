@@ -921,14 +921,7 @@ uccidi tutte le carte sul terreno tra 3 turni]]
 	--	self.copies[i] = 0
 	--end
 	self.edit = "card"
-
-	self.selection = {}
-	for i=1,8 do
-		self.selection[i] = love.graphics.newImage("inventario/select/"..i..".png")
-	end
-	self.selection.width = self.selection[1]:getWidth()
-	self.selection.current = 5
-
+	
 	inventario:loadSTATS()
 	
 end
