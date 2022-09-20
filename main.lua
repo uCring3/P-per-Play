@@ -1,46 +1,121 @@
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdoodxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdol::codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdolll:;;:cldxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdolllll:;;;;;codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdollllcllc;;;;;;:codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdoolllllcllc:;:;;:;;:coxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxdddddddddolcoooooooooddxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxO0XXNNNNXXXXXXNNNNNNNNNNNNNNNNNXXXXXXXXXXXXXXXXXXXXKK0000OOkkxxxxxxxxxxxxxdol::cldxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0XNWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXKK000000000OOkkxxxxxxxdolllc;;;:odxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXK0KK000000000000OOkkdolccll:;;;;:cldxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxOXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNK00000000000000000000Oxdollc:;;;;:;;codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0XNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXK000000000000000000000000Okxoc:::;::;:coxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0NNNXXKKKKKKKKKKKKKKKKKKKKKKK00000000000OOO0KXNNNNXK0000000000000000000000000000Okdoddoddoddxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxkKNNXKOOOO000000000000000000OOOOOOOOOkkkkkkkkkO0XNNK0000000000000000000000000000000Oxxxxxkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxkKNXK0O0XNWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWNNNNXXK000OO00000000000000000000000000Odldxkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxOXNXKOOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXXKOOOOO000OOOOOOOOOOOOOOO00000000Oo;:oxxxxxxxxdoooxxxxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxOXNXKOOXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXX0OOOOOO0OOOOOOOOOOOOOOOOOOOOOOOOOo;;;cldxxxxdolc:cldxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxx0XNX0O0NMMWMMWMMMMMWMMMWMMWWWWWMWWWWWWWMWWMMMMMWXXK0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo:;;;:coddolll:;;;coxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxkxxxxkKNNX0OKNMWKO0NWMMW0OKNWMMMWNKkOXWWWN0kONWWMMMMWNXXKOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxddoddollllclc:;;;;;codxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxkkkkxxkKNXX0OKWWOl:cd0X0xc:lONMMMW0l:coOK0dc:ckNMMMMWWNXXKOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkxkxxdollllclc:;;;;;;;codxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxkkkxxOXNXKOOXWWNOoc:cll::oONWMWWMN0dc:clc:coOXWMMMMWNXXX0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOdoddolllllllll:;;:;;::;:codxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxkxxxOXNXKO0NWWWWKdc::::dXWWWMMMMWWXxc::ccoKWWWMMMMWNNXX0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOd::loddddddddoccooddddddddxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxkkxk0XNX0k0NMMN0xl:clc:cdKNWWWWWN0dcc:lc:loONWWMMMNNXXK0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkd:;;:odxxxxdolc:cldxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxkxxxxxxxkkkk0XNX0OKNWWOl::oOKOoc:lONWMWW0lccokK0dc:ckNWWMMNXXXKOkOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOd:;:;:coddollcc:;:codxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxkkkkxxxxxkkkOKNNXOOXWWWNOk0NWMMNOx0NMMMMWN0kONWWWN0kONWWMMWNXXXKOkOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOkxdddoooollccll::;;;:cldxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxkkxxxxxxkkxOXXXKOOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKXK0OOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOkxxxddolllllllc:;;;;;;codxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxxkxxOXXXKOOXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOxoddolllllllllc::::::;;:coxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxkkkkkxx0XXXKO0NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNXXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOd::loddddxdddoccoddddddddddxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxkkkkkxx0XXXX00NMMWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOd:;:codxxxddol:::ldxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxkxxxkxxkKXXXXXKXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXXXXXK0OkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOxc:::;codollll:;;:cldxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxxxxxxxxxxkxxOKXXXXXXXKKXXXXXXXXXXKKKKKKKKKXXXXXXXKXXXKKXXXXXXXK0Okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdddddoollllllc;;;;;:ldxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxk0KK0kxxxxxkkOKXXXXXXXXXXXXXXXXXXXXKKKKKKKXXXXXXXXKKXXXKKXXKKXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxdolllllll::;;;;;;codxxxxxxxxxxxx
+--xxxxxxxxxxxxx0NWWN0xxxxxkk0KXXXKOkOKXKKKKKXX0kxxkkkkkkkkxxxxxxxxk0XXKKXKKXXKKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxdddolllllllllc:::;;::::codxxxxxxxxxx
+--kkkkxxxxxxkkkk0NN0kxxxxkkk0KKXXK0kOKXKKXKKXX0kxxxxxxxxxkkkkkkkkxk0KXKKKKKXXK0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkd::loddddddddoccooddooddddxxxxxxxxxxx
+--xkkxxxxxxxkkkxk00xxkxxxxxkKXXXKKKXKKKXKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKXK0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdc;;:ldxxxxdol:::ldxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxkk00dxkxxkkkOKXXXKKKKKKKXKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdc::::coddolllc:;;:ldxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxk0XNN0xxxkKNKO0KXKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK0Okkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxdddddoollccll:;;;;:cldxxxxxxxxxxxxxx
+--xxxxxxxxxxxkKWWW0xxx0NMXO0KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK0Okxxkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkxxxdoolllllllc;;;:;;;:ldxxkxxxxxxxxx
+--xxxxxxxxxxxkO0KX0xkO0000kOO00000000000000000000000000000000000000000000000OOkxxkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkxoodolllllllllc:::::;;::coxxxxkxxxxxx
+--00Oxxkkxxxxxxxk00kkkkxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkdc:codxxdxdddoccodddddddddxxxxxxxxxxx
+--WWXOxkkkxxxxxxkOOkkkkxxkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxddxxxxxxxxxxxxddxxddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdc;;:ldxxxddol:;:ldxxxxxxxxxxxxxxxxxx
+--NNX0kxxxxxxxxxx00kkxxxxxkxxxxxxxxddoooooooooooooooooooooooooooooooooooooooooooooloooddxxxxxxxxxxdxxdxxxxxxxddxxxxdl::::codoollc:;;;:ldxxxxxxxxxxxxxxxx
+--kkOOOOkxxxxxxxk00xxxkkxxkxxxxxxxxxddoooooooooooooooooooooooooooooooooooollllllllllllodxxxxxxxxxxddxddddddddodxxxxxxddxddollllllc:;;;;:ldxxxxxxxxxxxxxx
+--xxxkKXKOxxxxxxx00xxxkkxkxxxxxxxxxxxdoooooooooooooooooooooooooooooooooooooooollllllllldxxxxxxddddoodooooooooooxxdxxxxxdoolllllllc:;;;;;;:ldxxxxxxxxxxxx
+--xxx0NWWNKOxxOO0K0xxxkkkkkxxxxkxxxxxdoooooooooooooooooooooooooooooooooooooolllllllllloodddxxddooooooooooooododdddxdoooolllllllllc::::;::::coxxxxxxxxxxx
+--xxxkKNNKO00KNMWN0xxxkkkkkxO00Okxxxxdoooooooooooooooooooooooooooooooooooooolllllllllllodddddddoooooodddddddddddddxdc:cldxxddxddoccodddddddddxxxxxxxxxxx
+--xxxxxkkxxxkKNWWN0xxxxxxxk0NWWN0xxOOkdooooooooooooooooooooooooooooooooooooolllllllllllodddddddddddddddddddddddddddxxxoooddxxdoolc;cldxxxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxOKKX0xxxxxxxkOKNNNNXNWWXkooooooooooooooooooooooooooooooooooooolllllllllllodddddddddddddddddddddddddddkXWWNXKKOdolll:;;;:ldxxxxxxxxxxxxxxxx
+--xxxxxxxxxxxxxxkK0xxxxxxxddxdx0WWWWMWXOdooooooooooooooooooooooooooooooooooolllllllllllodddddddddddddddddddddddddxOXWMWMMWN0doool:;;;;;:ldxxxxxxxxxxxxxx
+--xxxxxxxxxxxkO00K0xxxdddddddddxKNWMMWMWX0kdoooooooooooooooooooooooooollllooooolllllollodddddddddddodddddddddxxk0XWWMMMWWN0xddddoolc:;;;;:ldxxxxxxxxxxxx
+--xxxxxxxxxxk0NWWW0xdxdddddddddddkKNWWMMWWWNK0kxddoooooooooooooooooooooolooolllllllllllodddddddddddddddddxkO0KNWMMMMMMWN0kdddddddddoolc::::coxxxxxxxxxxx
+--xxxxxxxxxxxOXWWKkddddddddddddddddxOKXNWWMMMMWWNX00OkxddoooollllllllooooollllllllllllloddddddddddxkOO0KXNNWMMMMMWWNX0Oxddddddddddddddooddddddxxxxxxxxxx
+--xxxxxxxxxxxxkkxxddddddddddddddddddddxkO0XNWWMMMMMMWWNNNXKK00OOOkkkkxxxxxxxxxxddddxxxxkO0000KKXXXNWWWWMMMWWWWNNX0Okxddddddddddddddddddddddxxxxxxxxxxxxx
+--xxxxxxxxxxxddddodddddoddddddddddddddddddddxkO0KXNNWWWWMMMMMMMMMMWWWWWWNNNNNNNNNNWWWWWMMMMMMMMMMMMMWWWNXXK0Okxddddddddddddddddddddddddddddddxxxxxxxxxxx
+--xxxxxxxxxxddddddO0kooxOK0kddk0OxddddddddddddddddxxkkO00KXXXNNNNWWWWWWWWWWWWWWWWWWWWWWWWNNNNXXXKK0OOkkxxdddddddddddddddddddddddddddddddddddddxxxxxxxxxx
+--xxxxxxxxdddddddxXWNK0XWMWN00NWXxdddddddddddddddddddddddddddxxxxkkkkkkOOOOOOOOOOOOkkkkkkkxxxdddddddooddddddddddddddddddddddddddddddddddddddddddxxxxxxxx
+--xxxxxxxddddddddkXMMWMMMMMMMWWWNkddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxOOxoodkOOxodxkkdddddddddddddddddddddddddddddddddxxxxxxx
+--xxxxxxdddddddddkXWMMMMMMMMMMMWXkddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxKWXOk0NWWKOOXWKxodddddddddddddddddddddddddddddddddxxxxx
+--xxxxxddddddddddx0NWMMWMMMWMMWN0xddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddkXMWWWWMMWWWWWWXkddddddddddddddddddddddddddddddddddxxxxx
+--xxxddddddddddddox0XWWMMMMMMWX0xoddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxXWMMWMMMWMMMMWXxdddddddddddddddddddddddddddddddddddxxxx
+--xxxdodddddddddddddxO0KXXXK0Oxddddddddddddddddddddddddddodddodddodddddddddddddddddddddddddddddox0WMMWWMMWMMMWWKxddddddddddddddddddddddddodddddddddddxxx
+--xxdddoddddoddddddddddddddddddddddddddddddddddddddddooddddddodddddddddddddddddddddddddddddddddodx0NWMMMMMMMWN0xdddddddddddddddddddx0KOdox0X0kddOK0ddxxx
+--xxdodddodddddoddddddddddddddddddddddddddddddddddodkOkdddxOOxddxkOxddddddddddddddddddddddddddddddxk0XNNNNNX0kdddddddddddddddddddddxXMWXKXWWWNKXWWXxdddx
+--dxO0kddxkOkddddddddddddddddddddddddddddddddddddddd0NX0k0XWWXOOKNXkdoddddddddddddddddddddddddoddddddxxkkxxdddddddddddddddddddddddoxXMWWMMMWMMMWMMXkdddx
+--OXWWNKOKNW0dddddddddddddddddddddddddddddddddddddddKWWWWWMMMMWWWWXkooddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddoxXWMWWWMWMMMWMMKxoddd
+--NWMMMMWMMW0dddddddddddddddddddddddddddddddddddddddKWMMMMMMMMMMMMXkddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddodONWMWMMMMMMMWNOddddd
+--WMMMMMMMMW0dddddddddddddddddddddddddddddddddddddddONWMMMMMMMMMMWKxdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddkKNWMMMMWWNKkdddddd
+--MMMMMMMMWNOdddddddddddddddddddddddddddddddddddddddxKWMMMMMMMMMMNOdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxOXNWMMNKOxdoddddd
+
 io.stdout:setvbuf("no")
 
-enet = require ("enet")			--🌐
-sock = require ("libs/sock")
-bitser = require ("libs/bitser")
-require("host")
-require("connect")				--🌐
-require("general")
-require("achievement")
-require("gui")
-tick = require ("libs/tick")
-Object = require ("libs/classic")
-anim8 = require ("libs/anim8")
-InputField = require("libs/InputField")			--💬
-require("libs/flux")
-Konami = require "libs/konami"
+enet = require "enet"			--🌐
+sock = require "libs/sock"
+bitser = require "libs/bitser"
+tick = require "libs/tick"
+Object = require "libs/classic"
+anim8 = require "libs/anim8"
+InputField = require"libs/InputField"			--💬
+Konami = require"libs/konami"
 Konami.setWaitTime(1.5)
-flux = require("libs/flux")
-require("music")						--[🎵
-require("sfx")						--🎵]
-require("entity")
-require("entities/camps")
-require("draw_order")
-require("menu")
-require("tutorial")
-require("hamachi")
-require("inventario")
-require("player")
-require("player2")
-require("entities/cards")
-require("entities/cards2")
-require("abilita")
-require("room")
-require("font")
-require("text_anim")
-require("cursor")
+flux = require"libs/flux"
+require"libs/text_anim"
+require"libs/flux"
+require"host"
+require"connect"				--🌐
+require"general"
+require"achievement"
+require"gui"
+require"music"						--[🎵
+require"sfx"						--🎵]
+require"entity"
+require"entities/camps"
+require"draw_order"
+require"menu"
+require"tutorial"
+require"hamachi"
+require"inventario"
+require"player"
+require"player2"
+require"entities/cards"
+require"entities/cards2"
+require"abilita"
+require"room"
+require"font"
+require"cursor"
 
 local exit = {img,imgON,imgOFF,x,y,width,height,bool}
 function love.load()
-	--window 															--[🔲
-    window = {} 
-    window.width, window.height, window.flags = love.window.getMode( )	--🔲]
-	attaccante = nessuno
+		--window 															--[🔲
+    window = {width,height,flags} 
+    window.width, window.height, window.flags = love.window.getMode( )		--🔲]
 	nessuno = {puoattaccare}
     cambia_turno = false
     giocatore = 1
@@ -52,6 +127,7 @@ function love.load()
     Konami.newCode({"kp6", "kp9", "kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6"}, function() love.system.openURL("https://www.reddit.com/user/Cring3_Crimson") end)
 	gameState = "menu"
 	LOAD_FONTS()
+	--Testo[1] = "ping" --importante da eliminare
 	host.IP = Testo[3]			--[🌐-💬
 	connect.IP = Testo[4]		--🌐-💬]
 	LOAD_CURSOR()
@@ -91,7 +167,6 @@ function love.update(dt)
 	end						--🌐]
     UPDATE_GENERAL(dt)
 	flux.update(dt)
-	--UPDATE_GENERAL(dt)
 	UPDATE_TEXT_ANIM(dt)
 	UPDATE_ACHIEVEMENT(dt)
 	UPDATE_JUMPSCARE(dt)
@@ -203,7 +278,7 @@ function love.keypressed(key, scancode, isRepeat)									--⌨️
 				LOAD_ABILITA()
 				player:scambio_nomi()
 				music.menu:stop()
-				if not Bad_Millie:isPlaying() then
+				if not (Bad_Millie:isPlaying() or music.kazotsky_kick:isPlaying() or music.Red_Sun:isPlaying()) then
 					music.inGame:play()
 				end
 				if connesso then

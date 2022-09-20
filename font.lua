@@ -245,7 +245,7 @@ function Font:draw2()
 	love.graphics.rectangle("fill", FIELD_OUTER_X+FIELD_OUTER_WIDTH, FIELD_OUTER_Y+vertHandlePos,  SCROLLBAR_WIDTH, vertHandleLength) -- Vertical scrollbar.
 	love.graphics.rectangle("fill", FIELD_OUTER_X+horiHandlePos, FIELD_OUTER_Y+FIELD_OUTER_HEIGHT, horiHandleLength, SCROLLBAR_WIDTH) -- Horizontal scrollbar.
 
-	love.graphics.setColor(love.math.colorFromBytes(255,255,255))
+	love.graphics.setColor(1,1,1)
 	love.graphics.print("INSERISCI IL TUO NOME E PREMI INVIO", 100, 760)
 
     --love.graphics.setColor(1,1,1,1)
@@ -296,7 +296,7 @@ function Font:draw3()
 	love.graphics.rectangle("fill", FIELD_OUTER_X+FIELD_OUTER_WIDTH, FIELD_OUTER_Y+vertHandlePos,  SCROLLBAR_WIDTH, vertHandleLength) -- Vertical scrollbar.
 	love.graphics.rectangle("fill", FIELD_OUTER_X+horiHandlePos, FIELD_OUTER_Y+FIELD_OUTER_HEIGHT, horiHandleLength, SCROLLBAR_WIDTH) -- Horizontal scrollbar.
 
-	love.graphics.setColor(love.math.colorFromBytes(255,255,255))
+	love.graphics.setColor(1,1,1)
 	love.graphics.print([[INSERISCI L'IP DI HAMACHI E PREMI INVIO ESEMPIO: 69.69.69.69]], 100, 760)
 end
 
@@ -345,7 +345,7 @@ function Font:draw4()
 	love.graphics.rectangle("fill", FIELD_OUTER_X+FIELD_OUTER_WIDTH, FIELD_OUTER_Y+vertHandlePos,  SCROLLBAR_WIDTH, vertHandleLength) -- Vertical scrollbar.
 	love.graphics.rectangle("fill", FIELD_OUTER_X+horiHandlePos, FIELD_OUTER_Y+FIELD_OUTER_HEIGHT, horiHandleLength, SCROLLBAR_WIDTH) -- Horizontal scrollbar.
 
-	love.graphics.setColor(love.math.colorFromBytes(255,255,255))
+	love.graphics.setColor(1,1,1)
 	love.graphics.print([[INSERISCI L'IP DATO DALL'ALTRO GIOCATORE E PREMI INVIOESEMPIO: 69.69.69.69]], 100, 760)
 end
 
@@ -362,9 +362,35 @@ function Testi_Easteregg(n)
 		sfx.megalovenia_short:play()
 	elseif Testo[n] == "tf2" or Testo[n] == "TF2" or Testo[n] == "Kazotsky Kick" then 	--Kazotsky Kick
 		love.audio.setVolume(1)
+		if music.menu:isPlaying() then 
+			music.menu:stop()
+		elseif Bad_Millie:isPlaying() then
+			Bad_Millie:pause()
+		elseif Red_Sun:isPlaying() then
+			music.Red_Sun:pause()
+		end
+		music.kazotsky_kick:setLooping(true)
 		music.kazotsky_kick:play()
+	elseif Testo[n] == "Taiwan" or Testo[n] == "TAIWAN" or Testo[n] == "taiwan" then 	--Red_Sun
+		Testo[n] = "China"
+		love.audio.setVolume(2)
+		if music.menu:isPlaying() then 
+			music.menu:stop()
+		elseif Bad_Millie:isPlaying() then
+			Bad_Millie:pause()
+		elseif music.kazotsky_kick:isPlaying() then
+			music.kazotsky_kick:pause()
+		end
+		music.Red_Sun:setLooping(true)
+		music.Red_Sun:play()
 	elseif Testo[n] == "pepone" or Testo[n] == "Pepone" or Testo[n] == "PEPONE" then 	--Bad  Millie
-		music.menu:pause()
+		if music.menu:isPlaying() then 
+			music.menu:stop()
+		elseif music.kazotsky_kick:isPlaying() then
+			music.kazotsky_kick:pause()
+		elseif music.Red_Sun:isPlaying() then
+			music.Red_Sun:pause()
+		end
 		Bad_Millie:play()
 		Bad_Millie_Bool = true
 	elseif Testo[n] == "blink" or Testo[n] == "Blink" or Testo[n] == "BLINK" then 	--blink
@@ -374,9 +400,11 @@ function Testi_Easteregg(n)
 	else 																--Ferma ogni audio
 		love.audio.stop(
 			sfx.megalovenia_short,
-			music.kazotsky_kick)
+			music.kazotsky_kick,
+			music.Red_Sun)
 		Bad_Millie:pause()
 		Bad_Millie_Bool = false
+		music.menu:play()
 	end
 	love.audio.setVolume(1)																			--🎵]
 end

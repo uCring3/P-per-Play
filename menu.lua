@@ -1,5 +1,36 @@
-menu = {}
+--                              ,╓╖╖╖╖╖╖╢╖╖╖╖╖╖╖,
+--                        ,╓╖╢▒▒▒▒▒▒▓▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒║╖╖
+--                    ,╖║▒▒▒▒▒▒▒▒▓▓▓▓▓▓▄▒▓▓╢╣╢╢▓▓▓▓▓▒▒▒▒▒╖╖
+--                 ,╖▒▒▒▒▓▒▒▒▒▒▓▓▓▓▓▓▓▓▓╣╢╢╢╢╢╢╢▓▓▓▓▓▓▓▒▒▒▒▒╖╖
+--               ╓╢▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓╢╣╣╣╢╢╢╣╢╢╢╢╢╢╢╢╢╢╣╢╢╢╬▒▒▒▒▒╖
+--             ╓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓╢╢╣╢╣▓▓▓▓▓▓╣╢╢╢╢╢╢╢╢╢╢╢╢╢▓▓▓▓▒▒▒▒╖
+--           ╓╢▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓╣╢▓▓▓▓▓▓▓╣╢╢╢╣╣╢╢╫╣╢╣╢╢╢╢╢╢▒▒▒▒▒▒╖
+--          ╖▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▀╣╣▓╣╢╢▓╣▓▓╢▓▓▓╣╢╢╢╢╢╢▓▒▒▒▒▒▒╢
+--         ╢▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▀▓▓▓▓░░╙╜╜╙▓▓▓▓▓╢╢╢╣╢╢╢╢╫▓▒▒▒▒▒▒▒▒▒▒
+--        ╢▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▌░░]▓▓╣░   &▓▒░▀╢╢▓▓╣╢╢╢╢╢╢╢▓▒▒▒▒▒▒▒▒▒
+--       ║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓║▓▌░░░░▓░░  ░▓▓░░░▒▓▓▓╫▓▓▓╢╢▓▓▒▒▒▒▒▒▒▒▒╙▒
+--      ╓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▓▓▓▓╣░╢▌░▒▒░▌@N  ░░▒▒╓▓╢▓░▓▓▓╣╢╣╫╬▓▒▒▒▒▒▒▒╖.∩▒▒
+--      ▒▒░░░▒▒▒▒▒▒▒▒▒▒▒░░▒▒░░╟@▓╢▒▒▒ ╙╜  ,g▒▒▒║▓▓ß╣ä▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+--      ▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░╓▒░▓@ ╙Ñ╖╓ n╜ ░░g▒░░╓▓╜░░  ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+--     ]▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒╓▒▒H╖╫▓░░▓▓Ñ╨▓    ,╓g▓▓▓▓▓▓▓░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+--     ]▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒╣░╢▒▒║░░╙  ╓▓▓▓▓▒▒╢░░▀▓▓▓▓▀▀░░▒▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+--     ]▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒@▒╨▒H╜░ ╓M▓▓▓░░▓Ñ╜╙@,  ▀▓▓@░░▒░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+--      ▒▒░░░▒▒▒▒▒▒▒▒▓▓▓▓▓▄░░░»H╩m╖░╓@▓▓▒░░,▓▓ÑW,░░░▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▒▒
+--      ║▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▄╖╓╥╖╖▓╣▒▓▓▓╓╓▓▓░╖░░╙Ñ▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒
+--       ▒▒▒░░▒▒▒▒▒▓▀░▀▓▓╣╣▒▀▓▓╣╢╢╣╢╢╢▒▒▓▓▓▒░░▒╣╣╣╣▒╢▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒╖▒▒▒▒
+--       ╙▒▒░░░▒▒▓▓▓▒▒▒▒░╙j▄▓▒▒╢╢╢╣╣╣╢╢╣▒╢╨╢╢▒╙╫▓▓▓╨╢▓╜╜▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+--        ╙▒▒╖╖▓╣╢╣▒▒▒▒░  ╠▓▒▒╟▒▒▒▒▒▒▒▒░▒    ░░░╫▒▒    ░▓▒▒▒▒▒▒▒▒▒░░▒▒▒
+--         ╙▒▒▓╢╢╢╢╣╢▒▒░ ░▓▒▒▒▓▓╣@╢▒▒▒╣▒▒╢▒▒▒▒░░╫▓╢▒╖╖░░░▓▒▒▒▒▒▒▒░░░▒╜
+--          ╙▒▒▒╢╢╣╢╢╣╣╣▒▓▓╫╣▒▒▓╣▓▓╢╣╣╣╣╣╣▒▒▒▒▒╢▓╣╢╢▒╢╢╢╢▒▒▓▒▒▒▒░░▒▒╜
+--            ╙▒▒▒░╜▓▓╢▒▓╣▓╢╢╣╣▓▓▓▓▓╢╢╢╢╣╢▒▒▒▒╢▒▓▒╢╢▒▒▒▒▒╢▒▒▓▒▒▒╓▒╜
+--              ╨@░ ┌µ░g▓▒▒╢╣▓▓▒▒░░░░░░░░░░░░▒▒╫▒░░░▒▒░░░░╙░░▓▒▒▒`
+--                ╙▒▓▓╢╣▒░░▒▓▒▒▓▓╖░░░╖╥╢▒░▒░ ,░▓▒▓▒▒@▒░▒░╓╓╓░▒▓`
+--                  ╙▀▓▓▒▒▒▒▒▒▓╢╣▒▒▒▒▒╣╣╢▒▒▒╢╣▒▓╣╫▓╣╣╣╢▒╢╢╣▓╜
+--                      ╙╜▒▒▓▒╢╫▒╣╣╢╢╢╢▒▒▒▒▒▒╫▓╢╢▓▓▓▓Ñ╣Ñ╜`
+--                          ╙╙╜▒▒▒▒▒▒▒▒░▒▒▒▒▒╜░▓╬▒▒╜`
+--                                  ``````'
 
+menu = {}
 
 function menu:load()
 	self.background = love.graphics.newImage("assets/menu/Grid682x385.png")
@@ -175,7 +206,7 @@ function menu:drawCredits(r,g,b,a,offset)
 	love.graphics.setFont(Font.credits)
 	love.graphics.setColor(love.math.colorFromBytes(r,g,b,a))
 	love.graphics.print("Programmer u/Cring3_Crimson Alias Ping", (screen.width / 2 - Font.menu2:getWidth("Programmer u/Cring3_Crimson Alias Ping_________________") / 2)-offset, window.height 	+0-offset -creditsY)
-	love.graphics.print("ringrazio tutti i corsi di LÖVE engine online:", (screen.width / 2 - Font.menu2:getWidth("  ringrazio tutti i corsi di LÖVE engine online   ") / 2)-offset, window.height 	+50-offset -creditsY)
+	love.graphics.print("ringrazio tutti i corsi di LÖVE engine online:", (screen.width / 2 - Font.menu2:getWidth("___ringrazio tutti i corsi di LÖVE engine online   ") / 2)-offset, window.height 	+50-offset -creditsY)
 	love.graphics.print("Sheepolution", (screen.width / 2 - Font.menu2:getWidth("Sheepolution") / 2)-offset, window.height 																			+100-offset -creditsY)
 	love.graphics.print("AtiByte", (screen.width / 2 - Font.menu2:getWidth("AtiByte") / 2)-offset, window.height 																					+150-offset -creditsY)
 	love.graphics.print("https://love2d.org/", (screen.width / 2 - Font.menu2:getWidth("https://love2d.org/") / 2)-offset, window.height 															+200-offset -creditsY)
@@ -197,6 +228,10 @@ function menu:drawCredits(r,g,b,a,offset)
 	love.graphics.print("Kingdom: Two Crowns", (screen.width / 2 - Font.menu2:getWidth("Kingdom: Two Crowns") / 2)-offset, window.height 															+1000-offset -creditsY)
 	love.graphics.print("Persone di ispirazione", (screen.width / 2 - Font.menu2:getWidth("Persone di ispirazione") / 2)-offset, window.height 														+1050-offset -creditsY)
 	love.graphics.print("Discord: I know this meme  Alias Sciagghi", (screen.width / 2 - Font.menu2:getWidth("Discord: I know this meme  Alias Sciagghi") / 2)-offset, window.height 				+1100-offset -creditsY)
+	love.graphics.print("Le canzoni utilizzate per il potere di Gin sono Copyright free:", (screen.width / 2 - Font.menu2:getWidth("Le canzoni utilizzate per il potere di Gin sono Copyright free:") / 2)-offset, window.height 				+1150-offset -creditsY)
+	love.graphics.print("(inutilizzata) Begin Your Journey - Pix", (screen.width / 2 - Font.menu2:getWidth("Begin Your Journey - Pix") / 2)-offset, window.height 				+1200-offset -creditsY)
+	love.graphics.print("Alien wolves - Pix", (screen.width / 2 - Font.menu2:getWidth("Alien wolves - Pix") / 2)-offset, window.height 				+1250-offset -creditsY)
+	love.graphics.print("(inutilizzata) Digestive biscuit - Kubbi", (screen.width / 2 - Font.menu2:getWidth("Digestive biscuit - Kubbi") / 2)-offset, window.height 				+1300-offset -creditsY)
 end
 
 

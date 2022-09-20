@@ -5,7 +5,6 @@ function tutorial:load()
 	self.no_cambia_turno = true
 	self.no_sacrifici = true
 	self.no_posizionamenti = false
-
 	self.next = {
 		img = love.graphics.newImage("assets/menu/tutorials/next.png"),
 		x = 50,
@@ -13,7 +12,6 @@ function tutorial:load()
 	}
 	self.next.width = self.next.img:getWidth()
 	self.next.height = self.next.img:getHeight()
-
 	self.bar = {
 		img = love.graphics.newImage("assets/menu/tutorials/bar.png"),
 		x = 300,
@@ -21,7 +19,6 @@ function tutorial:load()
 	}
 	self.bar.width = self.bar.img:getWidth()
 	self.bar.height = self.bar.img:getHeight()
-
 	self.arrow = {
 		img = love.graphics.newImage("assets/menu/tutorials/arrow.png"),
 		bool = false,
@@ -43,9 +40,6 @@ function tutorial:load()
 	self.mouse.img[1] = love.graphics.newQuad( 213, 0, 213, 269, self.mouse.img0)
 	self.mouse.img[2] = love.graphics.newQuad( 426, 0, 213, 269, self.mouse.img0)
 	self.mouse.img[3] = love.graphics.newQuad( 639, 0, 213, 269, self.mouse.img0)
-	--self.mouse.width = self.mouse.img[1]:getWidth()
-	--self.mouse.height = self.mouse.img[1]:getHeight()
-
 	--steps per il tutorial
 	self.step = 1
 	tick.delay(function () self.arrow.bool = true end , 2.5)
@@ -56,14 +50,12 @@ function tutorial:mouseClick(x, y, button)
 	if button == 1 and general:aabb(self.next.x, self.next.y, self.next.width, self.next.height, mouse.x, mouse.y, 1, 1) and not(self.step == 15 or self.step == 18 or self.step == 19 or self.step == 20 or self.step == 26)  then
 		self.step = self.step+1
 	end
-
 	if self.step == 2 then
 		LOAD_TEXT_ANIM(
 			--(testo,					x,				y,			scalax,	scalay,		sec_per_lettera,sec_passati,lettera_corrente)
 [[BENVENUTO NEL TUTORIAL DI PING]],	self.bar.x*1.1, self.bar.y*1.7,		0.5, 0.5, 		0.1, 0, 0)
 		tick.delay(function () self.arrow.bool = false end , 2.5)
 		self.step = self.step+1
-
 	elseif self.step == 4 then
 		LOAD_TEXT_ANIM(
 [[PER PRIMA COSA ECCOTI UNA CARTA]], self.bar.x*1.1, self.bar.y*1.7,	0.5, 0.5,		0.07, 0, 0)
@@ -73,30 +65,25 @@ function tutorial:mouseClick(x, y, button)
 			COLOR_CARDS(activeCards)
 		 end , 2)
 		self.step = self.step+1
-
 	elseif self.step == 6 then
 		LOAD_TEXT_ANIM(
 [[QUANDO INIZI UNA PARTITA PUOI
  SCEGLIERNE 30 DA METTERE NEL MAZZO]], self.bar.x*1.1, self.bar.y*1.3,	0.4, 0.4,		0.07, 0, 0)
 		self.step = self.step+1
-
 	elseif self.step == 8 then
 		LOAD_TEXT_ANIM(
 [[(MASSIMO 2 COPIE PER OGNI CARTA)]], self.bar.x*1.1, self.bar.y*1.7,		0.5, 0.5,		0.055, 0, 0)
 		self.step = self.step+1
-
 	elseif self.step == 10 then
 		LOAD_TEXT_ANIM(
 [[E UNA PARTITA INIZIA
  CON 5 CARTE]], self.bar.x*1.1, self.bar.y*1.3,	0.4, 0.4,		0.07, 0, 0)
 		self.step = self.step+1
-
 	elseif self.step == 12 then
 		LOAD_TEXT_ANIM(
 [[GLI UTENTI SI POSIZIONANO NELLA META' ALTA
  E LE REAZIONI NELLA META' BASSA]], self.bar.x*1.1, self.bar.y*1.4,	0.38, 0.4,		0.07, 0, 0)
 		self.step = self.step+1
-
 	elseif self.step == 14 then
 		LOAD_TEXT_ANIM(
 [[PER POSIZIONARE UNA CARTA POSIZIONA IL MOUSE SU
@@ -105,12 +92,18 @@ function tutorial:mouseClick(x, y, button)
 		tick.delay(function () self.mouse.bool = true end , 9)
 			:after(function () self.arrow.bool2 = true end , 4)
 		self.step = self.step+1
-
 	elseif self.step == 17 then
 		LOAD_TEXT_ANIM(
 [[PER ATTACCARE UNA CARTA AVVERSARIA
  PREMI TASTO DX SULLA TUA CARTA E
- TASTO DX SU QUELLA AVVERSARIA]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
+ TASTO DX SU QUELLA AVVERSARIA
+
+
+
+
+
+
+C'E' UNA POSSIBILITA' DI DANNO CRITICO (X10)]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
 		for c,card in ipairs(inCampoCards) do
 			card.puoattaccare = true
 		end
@@ -123,7 +116,6 @@ function tutorial:mouseClick(x, y, button)
 			inCampoCards2[1].y = 161
 		tick.delay(function () self.mouse.bool2 = true end , 8)
 		self.step = self.step+1
-
 	elseif self.step == 19 then
 		LOAD_TEXT_ANIM(
 [[PER ATTIVARE L'ABILITA' SPECIALE DI
@@ -131,21 +123,18 @@ function tutorial:mouseClick(x, y, button)
  DEL MOUSE]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
 		tick.delay(function () self.mouse.bool3 = true end , 8)
 		self.step = self.step+1
-		
 	elseif self.step == 20 and button == 3 then
 		for c,card in ipairs(inCampoCards) do 
 			if general:aabb(card.x, card.y, card.width/2, card.height/2, mouse.x, mouse.y, 1, 1) then
 				self.step = self.step+1
 			end
 		end
-
 	elseif self.step == 23 then
 		LOAD_TEXT_ANIM(
 [[RICORDA CHE L'ATTIVAZIONE DI 
  UNA ABILITA' RICHIEDE MANA
  (INDICATO IN BASSO A DX)]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
 		self.step = self.step+1
-
 	elseif self.step == 25 then
 		LOAD_TEXT_ANIM(
 [[PER OTTENERE MANA DEVI SACRIFICARE
@@ -160,20 +149,17 @@ function tutorial:mouseClick(x, y, button)
 		 end , 1.6)
 			:after(function() self.arrow.bool3 = true end, 9)
 		self.step = self.step+1
-
 	elseif self.step == 27 then
 		LOAD_TEXT_ANIM(
 [[PASSA IL TURNO 
  PREMENDO L'APPOSITO PULSANTE]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
 		self.no_cambia_turno = false
 		self.step = self.step+1
-
 	elseif self.step == 29 then
 		LOAD_TEXT_ANIM(
 [[OGNI CARTA HA LA SUA ABILITA'
  E CLASSE]], self.bar.x*1.1, self.bar.y*1.4,	0.5, 0.5,		0.069, 0, 0)
 		self.step = self.step+1
-
 	elseif self.step == 31 then
 		LOAD_TEXT_ANIM(
 [[LE CARTE POSSONO ESSERE
@@ -186,7 +172,6 @@ function tutorial:mouseClick(x, y, button)
 			COLOR_CARDS(activeCards)
 		 end , 1.6)
 		self.step = self.step+1
-
 	elseif self.step == 33 then
 		LOAD_TEXT_ANIM(
 [[SE PROVI AD ATTIVARE UNA CARTA
@@ -199,33 +184,31 @@ function tutorial:mouseClick(x, y, button)
 			COLOR_CARDS(activeCards)
 		 end , 1.6)
 		self.step = self.step+1
-
 	elseif self.step == 35 then
 		LOAD_TEXT_ANIM(
 [[IN BASE AL MOUSE SI POSSONO
  USARE DIVERSI POTERI]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		tick.delay(function() love.mouse.setCursor(Cursor.TelecinesiLibero) end, 5)
-			:after(function() love.mouse.setCursor(Cursor.TelecinesiPreso) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Bread) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Potenziare) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.DePotenziare) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Evocare) end, 0.4)	
-			:after(function() love.mouse.setCursor(Cursor.INGEGNERE_DEI_MEMES) end, 0.4)	
-			:after(function() love.mouse.setCursor(Cursor.Explosion) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Rubare) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Switch) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Annulla) end, 0.4)	
-			:after(function() love.mouse.setCursor(Cursor.Stella) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Aculeo) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Laser) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Urlo) end, 0.4)	
-			:after(function() love.mouse.setCursor(Cursor.Smith) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Cuore) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Immunnizzare) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.Uccidere) end, 0.4)
-			:after(function() love.mouse.setCursor(Cursor.arrow) end, 0.4)
+		tick.delay(function() love.mouse.setCursor(Cursor.TelecinesiLibero) end, 3)
+			:after(function() love.mouse.setCursor(Cursor.TelecinesiPreso) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Bread) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Potenziare) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.DePotenziare) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Evocare) end, 0.6)	
+			:after(function() love.mouse.setCursor(Cursor.INGEGNERE_DEI_MEMES) end, 0.6)	
+			:after(function() love.mouse.setCursor(Cursor.Explosion) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Rubare) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Switch) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Annulla) end, 0.6)	
+			:after(function() love.mouse.setCursor(Cursor.Stella) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Aculeo) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Laser) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Urlo) end, 0.6)	
+			:after(function() love.mouse.setCursor(Cursor.Smith) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Cuore) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Immunnizzare) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.Uccidere) end, 0.6)
+			:after(function() love.mouse.setCursor(Cursor.arrow) end, 0.6)
 		self.step = self.step+1
-
 	elseif self.step == 37 then
 		LOAD_TEXT_ANIM(
 [[PER PROBLEMI DI CONNESSIONE CONSULTARE
@@ -246,7 +229,6 @@ end
 
 
 function tutorial:update(dt)
-	
 	if self.step == 15 then
 		for c,card in ipairs(inCampoCards) do
 			self.step = self.step+1
@@ -283,7 +265,6 @@ end
 
 
 function tutorial:draw()							--✏️
-	
 	love.graphics.setFont(Font.pixel)
 	love.graphics.setColor(love.math.colorFromBytes(255,255,255))
 		--barra di testo
@@ -292,7 +273,6 @@ function tutorial:draw()							--✏️
 		love.graphics.setColor(love.math.colorFromBytes(162,80,12))		--🎨
 		text_anim:draw()
 	end
-
 		--tasto NEXT
 	love.graphics.setColor(love.math.colorFromBytes(255,255,255,255))		--🎨
 	love.graphics.draw(self.next.img, self.next.x, self.next.y)
@@ -302,7 +282,6 @@ function tutorial:draw()							--✏️
 	else
 		love.graphics.print("NEXT", self.next.x+25, self.next.y+35, 0, 0.53, 0.52)
 	end
-
 		--clicca qui per andare avanti col tutorial
 	love.graphics.setFont(Font.cardName)
 	love.graphics.setColor(love.math.colorFromBytes(250,255,255,255))		--🎨

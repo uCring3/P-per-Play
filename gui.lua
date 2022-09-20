@@ -111,6 +111,7 @@ end
 
 function gui:drawTurno()																	--✏️
 		--turni
+	love.graphics.setColor(1,1,1)
 	love.graphics.print("Turno "..turno.n, turno.x, turno.y, turno.r, 1/2, 1/2)
 end
 

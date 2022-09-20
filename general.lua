@@ -1,11 +1,44 @@
+--((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+--((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+--((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+--((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
+--((((((((((((((((*,         ..,**///////////////**,,.       .,*//((((((((((((((((
+--,,,,,,,,,,,,,,. ,,,,,,,,,,,,,,,,,*(#%%%#(/*,,,,,,,,,,,,,********** *///*//******
+--,,,,,,,,,,,,,,. ,,,,,,,,,,,*%@&&&&&&&&&&&&&&&&@&*,,,,,,,,,,,,,,,,, ,,,,,,,,,,,,,
+--,,,,,,,,,,,,,,. ,,,,,,,,/@&&&&&&&&&&&&&&@&&&&&&&&&*,,,,,,,,,,,,,,. ,,,,,,,,,,,,,
+--,,,,,,,,,,,,,,  ,,,,,,/@&&&&&&&&&&&&@&&&@%&@&&&&&&@*,,,,,,,,,,,,,, ,,,,,,,,,,,,,
+--,,,,,,,,,,,,,,  ,,,,,#@&&&&&&&&@&&@@@@@#*/@%(@@@&@&@(,,,,,,,,,,,,, ,,,,,,,,,,,,,
+--,,,,,,,,,,,,,. .,,,,%@&@&&&@&@@&#@/*************#@&&&&@&*,,,,,,,,. ,,,,,,,,,,,,,
+--,,,,,,,,,,,,,. .#@&&&&&@@&&*****/%@@/*****/******@@&&&&&@*,,,,,,,. ,,,,,,,,,,,,,
+--           .   &&&&&&&&&@@@&**************//////%@&&&&&&&                       
+--                &&&&&&&&&@&**(&%/%%%&//(%,,/&&%%%%((@&&&%                       
+--               ,@&&&&&&&&%%**(#*(#///&(//(#%&&%%&((*(@@&&@                      
+--              &@@&&&&@&///#%//&/%#*****(%#/%*****((*@@@@@@,                     
+--             .@@@@@@@@&****#%/************(%/***#@@@@@@@@.                      
+--              *@@@@@@@@@&/**%&*******((*******(@@@@@@.                          
+--               /*/((  %@@@@@@@@@@@#*******/%@@@@#@@*                /*          
+--/////*///////..%**%(//////(@@@@%&@&////////(@@&/////////////****,,#**%.         
+--/////////////. @***%//////////////#/////****%@&/////////////////*%**/&//////////
+--/////////////  %/**%//////////#@&%&@#@#&@%@%(@%%%%%%&&@@@@@#/////%**(#//////////
+--/////////////. ((**#(&@@&&%%%%%%%&*.*%&&&&%,..,%%%%&&%%%@(////(&#(**#(//////////
+--/////////////(//(*/%**(#/@&%%%%#.................,@@%%&///(%/#/**&**%/(#////////
+--////////////(/*(/*******/*(@@*....................#&%%%@/%/*(*******(/*(////////
+--%%%%%%%%%%%&//**********#**#(.....%((/%*.../**#.,#%%%&@%@(*((**********(/&%%%%##
+--&&&&&&&&&&&%************/@%%&/.............***,,*%%&&&@@@%&&*************%&&&&&&
+--&&&&&&&&&&&&&************&&&##..*/(*(((//../,/..&(%%%(   /&#***********/@&&&&&&&
+--&&&&&&&&&&&&&&%*********/@%%&/#../#,((#/*(,,*&,//#%%%%%%%%%&**********&&&&&&&&&&
+--&&&&&&&&&&&&&&&*******/&%%%%%(#,.//,(.(/,%*/*.(&%(%%%%%&.  ,%&*******/&&&&&&&&&&
+--&&&&&&&&&&&&&&%*******/&%%%%%%#(%,/(#/(.*(,,,/..#%&%%%%%&&&%&&********&&&&&&&&&&
+--&&&&&&&&&&&&&@/*******/&%%%%%%(%#*#%,##%,,/##.#/,%#%%%%%%%%%%&********(&&&&&&&&&
+
 general = {}
 danno = 0
 antidanno = 0
 piuATK = 0
 local Danno = {}
 
-local function SHOW_DANNO() --DA FINIRE
-	table.insert(Danno, {bool = true, val = danno, x = mouse.x, y = mouse.y })
+local function SHOW_DANNO(attaccato) --DA FINIRE
+	table.insert(Danno, {bool = true, val = danno, x = attaccato.x+attaccato.width/4, y = attaccato.y+attaccato.height/4})
 	for d,dan in ipairs(Danno) do
 		if not (COMMISSIONE_NON_PAGATA or OSU) then
 			tick.delay(function() Danno[d].bool = false end, 1)
@@ -47,9 +80,9 @@ function general:fineBattaglia()
 		end
 	end
 	for c,card in ipairs(inCampoCards) do
-		if card.attaccata then
-			card.attaccata = false
-		end
+		--if card.attaccata then
+		--	card.attaccata = false
+		--end
 	end
 end
 
@@ -83,7 +116,7 @@ function general:danno(attaccato,attaccante)
 				RaidenRandom2 = love.math.random(1, 15)				--per parare
 				if RaidenRandom1 == 1 then				 	--per contrattaccare
 					attaccante.HP = attaccante.HP - danno
-					SHOW_DANNO()
+					SHOW_DANNO(attaccato)
 					general:scambio_dati_carta_propria()
 				end
 				if RaidenRandom2 ~= 1 then					--per parare
@@ -91,19 +124,19 @@ function general:danno(attaccato,attaccante)
 						BasatoRandom = love.math.random(1, 10)		--per critico Basato
 						if BasatoRandom == 1 then
 							attaccato.HP = attaccato.HP - danno*10
-							SHOW_DANNO()
+							SHOW_DANNO(attaccato)
 						else
 							attaccato.HP = attaccato.HP - danno
-							SHOW_DANNO()
+							SHOW_DANNO(attaccato)
 						end
 					else
 						AltriRandom = love.math.random(1, 25) 		--per critico normale
 						if AltriRandom == 1 then
 							attaccato.HP = attaccato.HP - danno*10
-							SHOW_DANNO()
+							SHOW_DANNO(attaccato)
 						else
 							attaccato.HP = attaccato.HP - danno
-							SHOW_DANNO()
+							SHOW_DANNO(attaccato)
 						end
 					end
 				end
@@ -112,25 +145,26 @@ function general:danno(attaccato,attaccante)
 					BasatoRandom = love.math.random(1, 10)			--per critico Basato
 					if BasatoRandom == 1 then
 						attaccato.HP = attaccato.HP - danno*10
-						SHOW_DANNO()
+						SHOW_DANNO(attaccato)
 					else
 						attaccato.HP = attaccato.HP - danno
-						SHOW_DANNO()
+						SHOW_DANNO(attaccato)
 					end
 				else
 					AltriRandom = love.math.random(1, 25) 			--per critico normale
 					if AltriRandom == 1 then
 						attaccato.HP = attaccato.HP - danno*10
-						SHOW_DANNO()
+						SHOW_DANNO(attaccato)
 					else
 						attaccato.HP = attaccato.HP - danno
-						SHOW_DANNO()
+						SHOW_DANNO(attaccato)
 					end
 				end
 			end
 		end
 	elseif attaccato == player2 then --se attacca l'avversario
 		attaccato.HP = attaccato.HP - danno
+		SHOW_DANNO(attaccato)
 	end
 
 	if attaccato.HP <= 0 then
@@ -139,12 +173,6 @@ function general:danno(attaccato,attaccante)
 
 	if not (COMMISSIONE_NON_PAGATA or OSU) then --il danno non si azzera se questi poteri sono attivi
 		danno = 0
-	end
-
-	for c,card in ipairs(inCampoCards) do
-		if (card.id == 22) then -- Cosmi
-			card.abilita = false
-		end
 	end
 
 	general:scambio_dati_carta()

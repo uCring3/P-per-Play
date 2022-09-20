@@ -3,6 +3,7 @@ Abilita.__index = Abilita
 
 local CONO
 local SMITH
+local GUFETTA
 local AREA
 local BEAN
 local CUORI
@@ -12,7 +13,6 @@ local LASER
 local WALL
 local SQUALO
 local NOTE
---local SHOP
 local evocare_SHOP
 local curare = false
 local potenziare = false
@@ -44,7 +44,7 @@ end
 
 
 local function DRAW_AREA()
-	love.graphics.circle("line", mouse.x, mouse.y, 200 )
+	love.graphics.circle("line", mouse.x, mouse.y, area_ray)
 end
 
 local squalo = {img,x,y,width,height,scale,grid,animation}
@@ -80,7 +80,7 @@ local function LOAD_SMITH(card)
 	smith.x = card.x + card.width/4
 	smith.y = card.y + card.height/4
 	--smith = {img,width,height,x,y,r,ox,oy}
-	smith.img = love.graphics.newImage("assets/cards/cardfont/SMITHimg.png")
+	smith.img = love.graphics.newImage("assets/cards/cardfont/SMITH.png")
 	smith.width = smith.img:getWidth()
 	smith.height = smith.img:getHeight()
 	smith.X = smith.x
@@ -117,7 +117,7 @@ local laser = {img,width,height,x,y,r,ox,oy,alfa}
 local function LOAD_LASER()
 	love.mouse.setCursor(Cursor.Laser)
 	--laser = {img,width,height,x,y,r,ox,oy,alfa}
-	laser.img = love.graphics.newImage("assets/cards/cardfont/LASERimg.png")
+	laser.img = love.graphics.newImage("assets/cards/cardfont/LASER.png")
 	laser.width = laser.img:getWidth()
 	laser.height = laser.img:getHeight()
 	laser.x = mouse.x
@@ -128,7 +128,7 @@ local function LOAD_LASER()
 	ruota_laser = true
 	LASER_GO = true
 	bean = {img,width,height,x,y,r,ox,oy,scale}
-	bean.img = love.graphics.newImage("assets/cards/cardfont/BEANimg.png")
+	bean.img = love.graphics.newImage("assets/cards/cardfont/BEAN.png")
 	bean.width = bean.img:getWidth()
 	bean.height = bean.img:getHeight()
 	bean.x = mouse.x
@@ -182,7 +182,6 @@ local ferma_aculei = false
 local aculei = {}
 local function LOAD_ACULEI(card)
 	ACULEI = true
-	--card.abilita = false
 	card.puoabilita = false
 	love.mouse.setCursor(Cursor.Aculeo)
 	aculei[1] = {x = love.math.random(0, 140), y = love.math.random(50, 685), r = 0}
@@ -200,7 +199,7 @@ local function UPDATE_ACULEI(dt)
 			if general:aabb(card2.x, card2.y, card2.width/2, card2.height/2, aculeo.x, aculeo.y, 1, 1) then
 				card2.stato.avvelenata = true
 				for c,card in ipairs(inCampoCards) do
-					if card.id == 19 then --Alex
+					if card.id == 19 then -- Zio Pera
 						card.abilita = false
 					end
 				end
@@ -240,13 +239,12 @@ end
 local function LOAD_STELLE()
 	STELLE = true
 	love.mouse.setCursor(Cursor.Stella)
-	stella_img.img = love.graphics.newImage("assets/cards/cardfont/STELLAimg.png")
+	stella_img.img = love.graphics.newImage("assets/cards/cardfont/STELLA.png")
 	stella_img.width = stella_img.img:getWidth()
 	stella_img.height = stella_img.img:getHeight()
 	for s, stella in ipairs(stelle) do
 		stella.z = true
 	end
-
 	tick.delay(function() stelle[1] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 1.2)
   		:after(function() stelle[2] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
   		:after(function() stelle[3] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
@@ -300,7 +298,6 @@ local cuore_img = {img, width, height}
 local cuori_ruota = false
 local cuore_X
 local cuore_Y
-
 local function MOVE_CUORI()
 	for c, card in ipairs(inCampoCards) do
 		cuore_X = card.x+card.width/4
@@ -314,13 +311,12 @@ local function MOVE_CUORI()
 end
 local function LOAD_CUORI()
 	love.mouse.setCursor(Cursor.Cuore)
-	cuore_img.img = love.graphics.newImage("assets/cards/cardfont/CUOREimg.png")
+	cuore_img.img = love.graphics.newImage("assets/cards/cardfont/CUORE.png")
 	cuore_img.width = cuore_img.img:getWidth()
 	cuore_img.height = cuore_img.img:getHeight()
 	for s, cuore in ipairs(cuori) do
 		cuore.z = true
 	end
-
 	CUORI = true
 	tick.delay(function() cuori[1] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 1.2)
   		:after(function() cuori[2] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
@@ -368,7 +364,6 @@ local function DRAW_CUORI()
 		love.graphics.draw(cuore_img.img, cuore.x,cuore.y, cuore.r, 0.9,0.9, cuore_img.width/2,cuore_img.height/2)
 	end
 end
-
 
 local cono = {sxa,sya,dxa,dya,sxb,syb,dxb,dyb}
 local function LOAD_CONO(card)
@@ -459,52 +454,136 @@ local function DRAW_COMMISSIONE_NON_PAGATA()
 end
 
 
-local osu = {x={1,2,3,4,5,6,7,8},y={1,2,3,4,5,6,7,8},bool={[1]=false,[2]=false,[3]=false,[4]=false,[5]=false,[6]=false,[7]=false,[8]=false},min={x,y},max={x,y}}
+local osu = {x={},y={},bool={},min={x,y},max={x,y},bar={int={x,y,width,height},est={x,y,width,height}},song}
 local osu_img = {img,width,height}
+local function PLAY_OSU(number)
+	love.audio.setVolume(1.5)
+	if number == 1 then 
+		for o=1,43 do
+			osu.bool[o] = false
+		end
+		for o,su in ipairs(osu.bool) do
+			osu.x[o] = love.math.random(osu.min.x, osu.max.x)
+		end
+		for o,su in ipairs(osu.bool) do
+			osu.y[o] = love.math.random(osu.min.y, osu.max.y)
+		end
+		tick.delay(function() osu.bool[1] = true end, 0.09)
+			:after(function() osu.bool[2] = true end, 1.21)
+			:after(function() osu.bool[3] = true end, 0.77)
+			:after(function() osu.bool[4] = true end, 1.06)
+			:after(function() osu.bool[5] = true end, 1.29)
+			:after(function() osu.bool[6] = true end, 1.7)
+			:after(function() osu.bool[7] = true end, 1.28)
+			:after(function() osu.bool[8] = true end, 0.92)
+			:after(function() osu.bool[9] = true end, 0.8)
+			:after(function() osu.bool[10] = true end, 1.12)
+			:after(function() osu.bool[11] = true end, 1.89)
+			:after(function() osu.bool[12] = true end, 0)
+			:after(function() osu.bool[13] = true end, 1.12)
+			:after(function() osu.bool[14] = true end, 0)
+			:after(function() osu.bool[15] = true end, 0.95)
+			:after(function() osu.bool[16] = true end, 0)
+			:after(function() osu.bool[17] = true end, 0.92)
+			:after(function() osu.bool[18] = true end, 0)
+			:after(function() osu.bool[19] = true end, 1.23)
+			:after(function() osu.bool[20] = true end, 0)
+			:after(function() osu.bool[21] = true end, 1.75)
+			:after(function() osu.bool[22] = true end, 0)
+			:after(function() osu.bool[23] = true end, 1.25)
+			:after(function() osu.bool[24] = true end, 0)
+			:after(function() osu.bool[25] = true end, 0.8)
+			:after(function() osu.bool[26] = true end, 0)
+			:after(function() osu.bool[27] = true end, 0.95)
+			:after(function() osu.bool[28] = true end, 0)
+			:after(function() osu.bool[29] = true end, 1.11)
+			:after(function() osu.bool[30] = true end, 0)
+			:after(function() osu.bool[31] = true end, 1.69)
+			:after(function() osu.bool[32] = true end, 0)
+			:after(function() osu.bool[33] = true end, 1.81)
+			:after(function() osu.bool[34] = true end, 0.63)
+			:after(function() osu.bool[35] = true end, 0.36)
+			:after(function() osu.bool[36] = true end, 0.1)
+			:after(function() osu.bool[37] = true end, 1.5)
+			:after(function() osu.bool[38] = true end, 0.93)
+			:after(function() osu.bool[39] = true end, 0.37)
+			:after(function() osu.bool[40] = true end, 0.5)
+			:after(function() osu.bool[41] = true end, 1.50)
+			:after(function() osu.bool[42] = true end, 0.94)
+			:after(function() osu.bool[43] = true end, 0.66)
+			:after(function() OSU = false
+				music.osu[osu.song]:stop() end, 0.3)
+			:after(function() 
+				for o,su in ipairs(osu.bool) do 
+					osu.bool[o] = nil
+					osu.x[o] = nil
+					osu.y[o] = nil
+				end 
+			end, 0)
+	elseif number == 2 then --da fare mappatura
+	elseif number == 3 then --da fare mappatura
+	end
+end
 local function LOAD_OSU(card)
 	OSU = true
-
 	attaccante = card
 	card.puoabilita = false
-	osu_img.img = love.graphics.newImage("assets/cards/cardfont/OSUimg.png")
+	osu_img.img = love.graphics.newImage("assets/cards/cardfont/OSU.png")
 	osu_img.width = osu_img.img:getWidth()
 	osu_img.height = osu_img.img:getHeight()
-
 	osu.min.x = window.width*0.15
 	osu.max.x = window.width*0.85
 	osu.min.y = 45
 	osu.max.y = 345
+		--ferma il resto
+	love.audio.stop(
+		sfx.megalovenia_short,
+		music.kazotsky_kick,
+		music.Red_Sun,
+		music.inGame)
+	Bad_Millie:pause()
+	Bad_Millie_Bool = false
+		--parte la canzone
+	osu.song = love.math.random(1,1) --da fare mappatura [2] e [3] e poi cambiare (1,1) in (1,3)
+	music.osu[osu.song]:play()
+	PLAY_OSU(osu.song)
 
-	for o,su in ipairs(osu.x) do
-		osu.x[o] = love.math.random(osu.min.x, osu.max.x)
+	osu.bar.int.x = window.width*0.9
+	osu.bar.int.y = window.height*0.6
+	osu.bar.int.width = 20
+	osu.bar.int.height = 120
+	osu.bar.est.x = osu.bar.int.x-5
+	osu.bar.est.y = osu.bar.int.y-5
+	osu.bar.est.width = osu.bar.int.width+5
+	osu.bar.est.height = osu.bar.int.height+5
+end
+local function UPDATE_OSU(dt)
+	osu.bar.int.height = osu.bar.int.height -45*dt
+	osu.bar.int.y = osu.bar.int.y +45*dt
+	if osu.bar.int.height <= 0 then 
+		OSU = false
+		music.osu[osu.song]:stop()
+		for o,su in ipairs(osu.bool) do 
+			osu.bool[o] = nil 
+			osu.x[o] = nil
+			osu.y[o] = nil
+		end
 	end
-	for o,su in ipairs(osu.y) do
-		osu.y[o] = love.math.random(osu.min.y, osu.max.y)
-	end
-
-	tick.delay(function() osu.bool[1] = true end, 1)
-		:after(function() osu.bool[2] = true end, 0.5)
-		:after(function() osu.bool[3] = true end, 0.5)
-		:after(function() osu.bool[4] = true end, 0.45)
-		:after(function() osu.bool[5] = true end, 0.4)
-		:after(function() osu.bool[6] = true end, 0.35)
-		:after(function() osu.bool[7] = true end, 0.25)
-		:after(function() osu.bool[8] = true end, 0.2)
-		:after(function() OSU = false end, 3)
-		:after(function() 
-			for o,su in ipairs(osu.bool) do 
-				osu.bool[o] = false 
-			end 
-				end, 0)
 end
 local function DRAW_OSU()
 	love.graphics.setFont(Font.cardName)
-	love.graphics.setColor(1,1,1)
 	for o,su in ipairs(osu.bool) do
 		if osu.bool[o] then
 			love.graphics.draw(osu_img.img, osu.x[o], osu.y[o], 0, 0.1, 0.1, osu_img.width/2, osu_img.height/2)
 			love.graphics.print("GIN", osu.x[o]-((osu_img.width/4)*0.12), osu.y[o]-((osu_img.height/4)*0.07), 0, 0.6, 0.6)
 		end
+	end
+	love.graphics.setColor(love.math.colorFromBytes(1550/(osu.bar.int.height/9),255*(osu.bar.int.height/80),5))
+	love.graphics.rectangle("fill",	osu.bar.int.x,osu.bar.int.y,osu.bar.int.width,osu.bar.int.height)
+	love.graphics.setColor(love.math.colorFromBytes(252, 186, 3))
+	love.graphics.rectangle("line",	osu.bar.est.x,osu.bar.est.y,osu.bar.est.width,osu.bar.est.height)
+	if music.osu[osu.song]:isPlaying() then 
+		love.graphics.print(music.osu[osu.song]:tell(), 10, 40, 0, 2,2)
 	end
 end
 
@@ -528,12 +607,12 @@ local function MOVE_TELECINESI(x, y, dx, dy)
 		if card2.hoverposizionato2 and love.mouse.isDown(2) then
 			card2.x = card2.x + dx
 			card2.y = card2.y + dy
-			if dx > 100 then
+			if dy > 100 then
 				card2.stato.stordito = true
-			elseif dy > 50 and dy < 100 then
+			elseif dx > 50 and dx < 100 then
 				danno = 50
 				general:danno(card2,attaccante)
-			elseif dy >= 100 then
+			elseif dx >= 100 then
 				danno = 100
 				general:danno(card2,attaccante)
 			end
@@ -557,7 +636,7 @@ end
 local function UPDATE_KYS()
 	if turno.n == KYS.TURNO + 2 then
 		for c,card in ipairs(inCampoCards) do
-			if card.id == 15 then -- Mostro di Firenze
+			if card.id == 15 then -- Mariottide
 				card.morta = true
 				KYS.bool = false
 			end
@@ -615,7 +694,6 @@ local function UPDATE_MADE_IN_HEAVEN(dt)
 	elseif Made_in_Heaven.time < 30 then
 		Made_in_Heaven.time = (0.99*Made_in_Heaven.time)-1*dt
 	end
-
 	if Made_in_Heaven.time <= 0 then
 		if player.HP >= player2.HP then
 			player2.HP = 0 
@@ -932,7 +1010,7 @@ function Abilita:activeAbility(x,y,button)
 							card.puoabilita = false
 						elseif card.id == 6 then -- Gin Fotonic
 							LOAD_OSU(card)
-							tick.delay(function () card.abilita = false end , 0.5)
+							card.abilita = false
 						elseif card.id == 7 then -- Shadow Grimm
 							LOAD_CONO(card)
 							card.puoabilita = false
@@ -967,7 +1045,7 @@ function Abilita:activeAbility(x,y,button)
 							tick.delay(function() card.abilita = false end, 5)
 								:after(function() love.mouse.setCursor(Cursor.arrow) end, 0)
 							card.puoabilita = false
-						elseif card.id == 15 then -- Mostro di Firenze
+						elseif card.id == 15 then -- Mariottide
 							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
 							player.Mana = player.Mana + card.Mana
 							card.abilita = false
@@ -985,7 +1063,7 @@ function Abilita:activeAbility(x,y,button)
 							LOAD_TELECINESI(card)
 							attaccante = card
 							card.puoabilita = false
-						elseif card.id == 19 then -- Alex
+						elseif card.id == 19 then -- Zio Pera
 							LOAD_ACULEI(card)
 						elseif card.id == 20 then -- Doppialex
 							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
@@ -999,6 +1077,8 @@ function Abilita:activeAbility(x,y,button)
 						elseif card.id == 22 then -- Cosmi
 							love.mouse.setCursor(Cursor.Explosion)
 							AREA = true
+							area_ray = 200
+							areaMaxDanno = 2500
 							attaccante = card
 							card.puoabilita = false
 						elseif card.id == 23 then -- Cring3_Crimson
@@ -1127,7 +1207,7 @@ function Abilita:activeAbility(x,y,button)
 							player.Mana = player.Mana + card.Mana
 							card.abilita = false
 							card.puoabilita = false
-						elseif card.id == 49 then -- Neko Arc
+						elseif card.id == 49 then -- Neco Arc
 							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
 							player.Mana = player.Mana + card.Mana
 							card.abilita = false
@@ -1166,6 +1246,33 @@ function Abilita:activeAbility(x,y,button)
 							player.Mana = player.Mana + card.Mana
 							card.abilita = false
 							card.puoabilita = false
+						elseif card.id == 57 then -- DUO
+							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
+							player.Mana = player.Mana + card.Mana
+							card.abilita = false
+							card.puoabilita = false
+						elseif card.id == 58 then -- TRIO
+							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
+							player.Mana = player.Mana + card.Mana
+							card.abilita = false
+							card.puoabilita = false
+						elseif card.id == 59 then -- QUARTETTO
+							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
+							player.Mana = player.Mana + card.Mana
+							card.abilita = false
+							card.puoabilita = false
+						elseif card.id == 60 then -- verificazione
+							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
+							player.Mana = player.Mana + card.Mana
+							card.abilita = false
+							card.puoabilita = false
+						elseif card.id == 61 then -- Alex
+							GUFETTA = true
+							card.puoabilita = false
+						elseif card.id == 62 then -- Sole
+							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
+							player.Mana = player.Mana + card.Mana
+							card.puoabilita = false
 						end
 				elseif card.abilita then	 
 					card.abilita = false
@@ -1179,7 +1286,6 @@ function Abilita:activeAbility(x,y,button)
 					ACULEI = false
 					STELLE = false
 					LASER = false
-					OSU = false
 					love.mouse.setCursor(Cursor.arrow)
 				end
 			end
@@ -1217,7 +1323,7 @@ function Abilita:activeAbilitySummon(card)
 			player.Mana = player.Mana - card.Mana
 			LOAD_RADDOPPIA_HP()
 		end
-	elseif card.id == 15 then	-- Mostro di Firenze
+	elseif card.id == 15 then	-- Mariottide
 		if card.Mana <= player.Mana then
 			player.Mana = player.Mana - card.Mana
 			LOAD_KYS()
@@ -1405,7 +1511,7 @@ function Abilita:activeAbilitySummon(card)
 			player.Mana = player.Mana+1
 			card.morta = true
 		end
-	elseif card.id == 49 then -- Neko Arc
+	elseif card.id == 49 then -- Neco Arc
 		if card.Mana <= player.Mana then
 			player.Mana = player.Mana - card.Mana
 			card.abilita = true
@@ -1421,7 +1527,6 @@ function Abilita:activeAbilitySummon(card)
 			player.Mana = player.Mana - card.Mana
 			SPAWN_CARD(screen.width / 2, screen.height - 90, numeroCarteInMano-1, true)
 			SPAWN_CARD(screen.width / 2, screen.height - 90, numeroCarteInMano-1, true)
-			--MUOVI_CARTA()
 			COLOR_CARDS(activeCards)
 		else 
 			player.Mana = player.Mana+1
@@ -1471,6 +1576,66 @@ function Abilita:activeAbilitySummon(card)
 					LOAD_CHIUDI()
 				end
 			end
+		else
+			player.Mana = player.Mana+1
+		end
+		card.morta = true
+	elseif card.id == 57 then -- DUO
+		if card.Mana <= player.Mana then
+			player.Mana = player.Mana - card.Mana
+			for c2,card2 in ipairs(inCampoCards2) do
+				if c2>2 then 
+					card2.morta = true
+				end
+			end
+		else 
+			player.Mana = player.Mana+1
+		end
+		card.morta = true
+	elseif card.id == 58 then -- TRIO
+		if card.Mana <= player.Mana then
+			player.Mana = player.Mana - card.Mana
+			for c2,card2 in ipairs(inCampoCards2) do
+				if c2>3 then 
+					card2.morta = true
+				end
+			end
+		else 
+			player.Mana = player.Mana+1
+		end
+		card.morta = true
+	elseif card.id == 59 then -- QUARTETTO
+		if card.Mana <= player.Mana then
+			player.Mana = player.Mana - card.Mana
+			for c2,card2 in ipairs(inCampoCards2) do 
+				if c2 > 4 then 
+					card2.morta = true
+				end
+			end
+		else
+			player.Mana = player.Mana+1
+		end
+		card.morta = true
+	elseif card.id == 60 then -- verificazione
+		if card.Mana <= player.Mana then
+			player.Mana = player.Mana - card.Mana
+			for c2,card2 in ipairs(inCampoCards2) do 
+				card2.stato.stordito = true
+			end
+		else
+			player.Mana = player.Mana+1
+		end
+		card.morta = true
+	elseif card.id == 62 then -- Sole
+		if card.Mana <= player.Mana then
+			player.Mana = player.Mana - card.Mana
+			AREA = true
+			love.mouse.setCursor(Cursor.Explosion)
+			area_ray = 400
+			areaMaxDanno = 5000
+		else
+			player.Mana = player.Mana+1
+			card.morta = true
 		end
 	end
 	if card.INFO.classe == "GOLDEN STAFF SEGRETARIO" then -- Staffers
@@ -1487,11 +1652,19 @@ end
 function Abilita:useAbility()
 	if AREA then
 		for c2,card2 in ipairs(inCampoCards2) do
-			if (general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)) < 200 then
-				danno = math.floor(2500-(general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)))
+			if (general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)) < area_ray then
+				danno = math.floor(areaMaxDanno-(general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)))
 				general:danno(card2,attaccante)
 				AREA = false
 				love.mouse.setCursor(Cursor.arrow)
+			end
+		end
+		for c,card in ipairs(inCampoCards) do
+			if card.id == 22 then --Cosmi
+				card.abilita = false
+			elseif card.id == 62 then --Sole
+				card.abilita = false
+				card.morta = true
 			end
 		end
 	elseif CONO then
@@ -1523,6 +1696,30 @@ function Abilita:useAbility()
 				love.mouse.setCursor(Cursor.arrow)
 			end
 		end
+	elseif GUFETTA then 
+		for c2,card2 in ipairs(inCampoCards2) do
+			if card2.hoverposizionato2 then
+				card2.stato.stordito = true
+				love.mouse.setCursor(Cursor.arrow)
+			end
+		end
+		local gufettati = 0
+		repeat
+			local randomCard2 = love.math.random(1,#inCampoCards2)
+			for c2,card2 in ipairs(inCampoCards2) do
+				if (c2 == randomCard2) and (not card2.morta) and (not card2.stato.stordito) then
+					card2.stato.stordito = true
+					gufettati = gufettati+1
+				end
+			end
+		until gufettati == 2
+		for c,card in ipairs(inCampoCards) do
+			if card.id == 61 then -- Alex
+				card.abilita = false
+			end
+		end
+		GUFETTA = false
+		general:scambio_dati_carta()
 	elseif LASER_GO then
 		laser.x = mouse.x 
 		laser.y = mouse.y
@@ -1635,12 +1832,19 @@ function Abilita:useAbility()
 	elseif TELECINESI then
 		love.mouse.setCursor(Cursor.TelecinesiPreso)
 	elseif OSU then
-		for c,card2 in ipairs(inCampoCards2) do
-			danno = 300
-			for o,su in ipairs(osu.bool) do
-				if osu.bool[o] and ((general:calculateDistance(osu.x[o], osu.y[o], mouse.x, mouse.y)) < 50) then
-					osu.bool[o] = false
+		for o,su in ipairs(osu.bool) do
+			if osu.bool[o] and ((general:calculateDistance(osu.x[o], osu.y[o], mouse.x, mouse.y)) < 50) then
+				if music.osu[osu.song]:tell() <= 12 then
+					osu.bar.int.height = osu.bar.int.height +45
+					osu.bar.int.y = osu.bar.int.y -45
+				else
+					osu.bar.int.height = osu.bar.int.height +30
+					osu.bar.int.y = osu.bar.int.y -30
+				end
+				osu.bool[o] = false
+				for c,card2 in ipairs(inCampoCards2) do
 					if (general:aabb((card2.x-50),(card2.y-50), ((card2.width/4)+100),((card2.height/4)+100), osu.x[o],osu.y[o], 1, 1)) then
+						danno = 300
 						general:danno(card2)
 					end
 				end
@@ -1692,7 +1896,7 @@ end
 
 
 function Abilita:load()
-	ABimg = love.graphics.newImage("assets/cards/cardfont/ABimg.png")
+	ABimg = love.graphics.newImage("assets/cards/cardfont/AB.png")
 	Made_in_Heaven = {bool = false, time = 120}
 	KYS = {bool = false,TURNO}
 	KYS_ALL = {bool = false,TURNO}
@@ -1726,6 +1930,9 @@ function Abilita:update(dt)
 	if COMMISSIONE_NON_PAGATA then
 		UPDATE_COMMISSIONE_NON_PAGATA(dt)
 	end
+	if OSU then 
+		UPDATE_OSU(dt)
+	end
 	if KYS.bool then
 		UPDATE_KYS()
 	end
@@ -1747,7 +1954,7 @@ function Abilita:draw(card)
 	if card.posizionato then
 			--se abilità attiva
 		if card.abilita then
-			love.graphics.draw(ABimg,card.x , card.y, card.r, 1/2, 1/2)
+			love.graphics.draw(ABimg,card.x , card.y, card.r, 1, 1)
 		end
 	end
 	if AREA then
@@ -1791,11 +1998,6 @@ function Abilita:draw(card)
 	end
 	if SQUALO then 
 		squalo.animation:draw(squalo.img, squalo.x, squalo.y, 0, squalo.scale, squalo.scale)
-		--love.graphics.circle("fill",squalo.x+squalo.width*squalo.scale/2, squalo.y+squalo.height*squalo.scale/1.5, 60)
-		--for c2,card2 in ipairs(inCampoCards2) do
-		--	love.graphics.rectangle("fill", card2.x, card2.y, card2.width/2, card2.height/2, 6)
-		--end
-		--qwerty
 	end
 end
 
@@ -1823,6 +2025,7 @@ function Abilita:cambiaTurno()
 	CUORI = false
 	WALL = false
 	SQUALO = false
+	GUFETTA = false
 
 	ferma_aculei = false
 	
@@ -1852,10 +2055,11 @@ function Abilita:cambiaTurno()
 			card.puoattaccare = true
 		end
 		card.hoverposizionato = false
+		card.hoverposizionato2 = false
+		card.hover = false
 		card.puoabilita = true
 		if card.stato.avvelenata then
 			danno = 300
-			--attaccante = nessuno
 			general:danno(card)
 			if general:togliEffeto() then
 				card.stato.avvelenata = false
