@@ -1,21 +1,77 @@
+--@@@@@@@@@@%%%%%%%%%%%%%%%#*%%%%%%%%%%%%%%%%%%%%%%%%%%%%##%%%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@
+--@@@@@@@@@@%%%%%%%%%%%%%%%%%%%%%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@%%%%@@@@@@@@
+--@@@@@@%%%%%%%%%%%%%%%%%%%%%%%%%%%#*%%%%%%%%%%%%%%#####***++++****####%%%%%%%%%%%%%@%@@@@@@
+--@@@@@@%%%%%%%%%%%%%%#%%%%%##%#%%##*#%%%##%%%%%%%%#+*+-=+#---=-===#**#%%%%%%%%%%%%%@@@@@@@@
+--@@@@@%##%%%%%%%%%%%%%%%%####%*#%##+*#%#+=*###%%%%#************++++++#**##%###%##%%%#%%%%%@
+--%@%@%##*****########*#**+=***#*###**#*+*+*#*##%#*%****#*****########**####%%#%###%####%#%%
+--%%*%%%%#***%#%%#+#%#####+****##*#####*+=+*****#*+####++**+**+###**##+=++++==*######*+###%@
+--%%%######***#***+###*#***###**###**###**++****####****##***+*#**++*==###*#*+*#+#%#%#*##%%@
+--%%%#####**###*===#####+#####*############***#####+*+=++**+=**#*++*+==***+**#*#+*%#%#*##%%%
+--%%%#######*###**++###########%##############*####+**++**#+*++#*+=-*+=###**#*##*+*#*#*#%%%%
+--%%########*#####***#%%#########################+=+=++*%#*-+=*##*##*#*#**%#*+**=++%**#%%%%%
+--*#%##**+##+=*+*+*##%%%##########################*+++=++**#*#**####**###+-+++++*########%%%
+--*####%%**####=*%%%%###############################*+==*##=*#####*++++*#+**=-=*#*=+######%%
+--**+*+###*+%%*==%%###%%%############################-:=###*-+***##*+#****=+*###**++######%%
+--+*##%+=+*+#%#**##%##%######%########################+==%%%#==*++=-+#=-=*#+#+++#*##%#*###%%
+--%#*+=+###**#+-=+*#%#%%%#%#%=+#%#######################%#+=+#**#%*+*##*+####*#****%%#--####
+--#*+*+*%#--+#*#*+-+#%%%%%%%*---=*%%%#%####################+=*===**###*==+=#%+:=+++#%##*+##*
+--#**%#==#*=***###++%%%%%%%%+--=#%*=---+%######%%#############**+=+**##==+=+#=-==++*%#*+#++*
+--*%%%%#*+++:+*##%%%%%%%#%%%+-+**+=+*+-+%######%%%%#########**=+=+=:+#*++==*+-=+***=+##+#*##
+--##*+*++++=+++##*%%%%%#-++%+---=--=+==-*%%##%#%%%%%###%%%##%+-*#*##+*#=:=*#+===+#*+*##*#**=
+--##*###%####*+#+*%%%%%#-==#=---======---#%%%%%%%%%%%##%%%%##%##%#+-+###*++#+---=++**####*+*
+--%#**#######=*#*##%%%%#-=++-----==------=#%%%%%%%##%%%%%%%%###+##******+*#*****+#*+*%##**=#
+--%##******#%%##**#%%%%*=+=----------------+%%%%%+%#%%%%%%%%%#=-=*##*####*#**#%%##==+#####+*
+--######**=#%###**+##%%**=---====-=---------=#%%*+#%%%%%%%%%%#%#+=*#*%%%###+*##*+=*#*#####+:
+--##**=+###=*###**=*#*%*+*##*##*=--=---------##+*%%%%%%%%%%####%%%%%##%*-*#*##+++=#*%%###***
+--##*++=%#%%%*####***=:=-======----==--------=*=+%%%%%%%%%##%#%#%%%#*#%+=###%##%##*##**###+=
+--###%%#%#%%**###*#%*+:-==-=-====-------------+--%%%%%%##++*####%++##%#++##*####=:-=+*-#%#*+
+--###%##%%#=:+#*#*==+=*==--===-=--=----------=+--#%%%%+#*+++=+--*=**%%%++##--#**%%###*+####*
+--*###+==###+*#++=-==-*=----=+=-=-==---------+=--*%%##*####%##*####*####=**:.:-*####*#######
+--**###*++#%#+=##++*##*-------=--------------*----=--=+#%%#%%#*%####%%%%##*+++==+**%####***%
+--#*###%*++=---=#*##*===--------------------++--------=+==+++++*####%##%%#**%%#**####**#####
+--**#####****#%%*==++=+==-----------------+*=------=+==-=++=--=:=##**####*-=#%%#%#%##+*#*#*-
+--***#######*#+*++=-=-:.:==-------=-----++*----==-----=++:.:###*=#######**+=*#%%%%%###+#++=-
+--***######+:--*###**#**###+---=----=-===-+*+=+-:-=+==:.:=*###*###*#*###**#*##%%%%#%#**#**==
+--#**####**=:.=+-++=#%###%+-::-++++=++*#=:-##*::-:...:=*###*-=-=**+*######--*+*%%%%#####*=+*
+--#*#####*++*##=::=++##*####*+****#######*:##-:---=+#######*:*+===+++****+::*=-+#*##*#*#***%
+--#++=##%##%%%%####****+****##############=-===*#############+==-+##+=##**+*#*-:-:+#**####%%
+--##*######%%##%%%#**%#*##################*+*##################*=-=*##*++*##***+**#*+:+*####
+--##%%#####%%%##%%*..-############################################+=-=***==++###+==-:::--**#
+--%%%%%####%%%**++--::###############################**##############+-:=+########*-.:-=.:=+
+--%%%%%%*##%%#****+--+##############################*::+################**######*****+-:::-+
+--%%%%%%###+=*%###**+*##############################+:-##########################**#=:.:---=
+--*##%*#+=----**==:.=#############################*#-:+#############################+...::--
+--+#%%*===+*+=+=--:+#############################*++=+*##############################-::=+#%
+--+##%#==+*####*=:=##############################**-==+*#############################*#%%%%@
+--*+*##+=+#%%%%*++################################*****###############################%%%%%%
+--*==*%#*#%%%%#*+######################################################################%%%%%
+--++++###%%%%%#*#####################################################################%#%%%%%
+--++++*@%##%%###################################################%####################%#%###%
+--%#++=#%##%%##%#################################################%###################%##%%%%
+--@@%**#%%#%#%%%######%#########################################%%##################%%%*#@%%
+--@@@%%@%%%##%#%#####%%#########################################%%%#################%%%#####
+--@@%%@@@@%%%%%%%%%%%%%#########################################%%%%###############%%%%%%%%#
+--%%##%%%%%%%%%%%%%%%%%%#######################################%%%%%%%###########%%%%%%%%@@%
+--%##*%%%%%%%%%%%%%%%%%%#######################################%%%%%%%%%#####%%%%%%%%%%%@@%%
+--%###%%@%%%%%%%%%%%%%%%%#####################################%%%%%%%%%%%%%%%%%%%%%%%%%@@%%%
+--::::-::-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-----
+
 Card = {}
 activeCards = {}
 inCampoCards = {}
---activeCards2 = {}
---inCampoCards2 = {}
 Card.__index = Card
 
 function Card:loadAssets()
 	MALTOPimg = love.graphics.newImage("assets/cards/cardfont/MALTOP.png")
 	MALBOTimg = love.graphics.newImage("assets/cards/cardfont/MALBOT.png")
 	img1 = love.graphics.newImage("assets/cards/cardimg/cardimg1.png")
-	Pingimg = love.graphics.newImage("assets/cards/cardfont/Pingimg.png")
-	ATKimg = love.graphics.newImage("assets/cards/cardfont/ATKimg.png")
-	HPimg = love.graphics.newImage("assets/cards/cardfont/HPimg.png")
-	IMMUNEimg = love.graphics.newImage("assets/cards/cardfont/IMMUNEimg.png")
-	STORDITOimg = love.graphics.newImage("assets/cards/cardfont/STORDITOimg.png")
-	VELENOimg = love.graphics.newImage("assets/cards/cardfont/VELENOimg.png")
-	ANNULLATOimg = love.graphics.newImage("assets/cards/cardfont/ANNULLATOimg.png")
+	Pingimg = love.graphics.newImage("assets/cards/cardfont/Ping.png")
+	ATKimg = love.graphics.newImage("assets/cards/cardfont/ATK.png")
+	--HPimg = love.graphics.newImage("assets/cards/cardfont/HP.png")
+	IMMUNEimg = love.graphics.newImage("assets/cards/cardfont/IMMUNE.png")
+	STORDITOimg = love.graphics.newImage("assets/cards/cardfont/STORDITO.png")
+	VELENOimg = love.graphics.newImage("assets/cards/cardfont/VELENO.png")
+	ANNULLATOimg = love.graphics.newImage("assets/cards/cardfont/ANNULLATO.png")
 	backimg = gui.deck.img
 end
 
@@ -36,10 +92,10 @@ function Card:new(x,y, number, drawn, id)
 	cardObj.posizionato = false
 	cardObj.morta = false
 	cardObj.puoattaccare = false --true? al primo turno non può attaccare
-	cardObj.puoabilita = false		--al primo turno non può usare la sua abilità
+	cardObj.puoabilita = true --da rimettere false		--al primo turno non può usare la sua abilità
 	cardObj.puoabilita2 = true
 	cardObj.attacco = false
-	cardObj.attaccata = false
+	--cardObj.attaccata = false
 	cardObj.abilita = false
 	
 	cardObj.stato = {}
@@ -98,8 +154,8 @@ function Card:new(x,y, number, drawn, id)
 		cardObj.Utente = true
 		cardObj.Name = "SCIAGGHI"
 		cardObj.ATK = 2800
-		cardObj.Mana = 3
-		cardObj.hp = 9000
+		cardObj.Mana = 2
+		cardObj.hp = 8000
 		cardObj.HP = cardObj.hp
 		cardObj.INFO.classe = "GOLDEN STAFF SEGRETARIO"
 		cardObj.INFO.Tabilita1 = "Abilità speciale"
@@ -126,7 +182,7 @@ function Card:new(x,y, number, drawn, id)
 		cardObj.Name = "LUCY"
 		cardObj.ATK = 1200
 		cardObj.Mana = 0
-		cardObj.hp = 9000
+		cardObj.hp = 8000
 		cardObj.HP = cardObj.hp	
 		cardObj.INFO.classe = "GOLDEN STAFF SEGRETARIO"
 		cardObj.INFO.Tabilita1 = "Abilità passiva"
@@ -150,7 +206,7 @@ function Card:new(x,y, number, drawn, id)
 		cardObj.Name = "VOID"
 		cardObj.ATK = 2000
 		cardObj.Mana = 0
-		cardObj.hp = 8000
+		cardObj.hp = 7500
 		cardObj.HP = cardObj.hp		
 		cardObj.INFO.classe = "GOLDEN STAFF SEGRETARIO"
 		cardObj.INFO.Tabilita1 = "Abilità passiva"
@@ -226,13 +282,15 @@ function Card:new(x,y, number, drawn, id)
  (tasto dx per colpire i cerchi)]]
 		cardObj.INFO.Tabilita2 = "Consiglio"
 		cardObj.INFO.tabilita2 = 
-[[si veloce]]
+[[se fallisci attiva l'abilità
+ di un'altra GIN FOTONIC per
+ continuare l'attacco]]
  		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
  		cardObj.INFOlinee.classe = 1
  		cardObj.INFOlinee.Tabilita1 = 1
  		cardObj.INFOlinee.tabilita1 = 3
  		cardObj.INFOlinee.Tabilita2 = 1
- 		cardObj.INFOlinee.tabilita2 = 1
+ 		cardObj.INFOlinee.tabilita2 = 3
 	elseif cardObj.id == 7 then -- Shadow Grimm
 		cardObj.Utente = true
 		cardObj.Name = "SHADOW GRIMM"
@@ -412,9 +470,9 @@ function Card:new(x,y, number, drawn, id)
  		cardObj.INFOlinee.tabilita1 = 2
  		cardObj.INFOlinee.Tabilita2 = 1
  		cardObj.INFOlinee.tabilita2 = 3
-	elseif cardObj.id == 15 then -- Mostro di Firenze
+	elseif cardObj.id == 15 then -- Mariottide
 		cardObj.Utente = true
-		cardObj.Name = "MOSTRO DI FIRENZE"
+		cardObj.Name = "MARIOTTIDE"
 		cardObj.ATK = 15000
 		cardObj.Mana = 0
 		cardObj.hp = 20000
@@ -426,8 +484,8 @@ function Card:new(x,y, number, drawn, id)
  dopo 2 turni]]
 		cardObj.INFO.Tabilita2 = "Consiglio"
 		cardObj.INFO.tabilita2 = 
-[[evoca un altro MOSTRO DI
- FIRENZE il turno dopo
+[[evoca un altro MARIOTTIDE
+ il turno dopo
  per allungare l'effetto]]
  		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
  		cardObj.INFOlinee.classe = 1
@@ -504,9 +562,9 @@ function Card:new(x,y, number, drawn, id)
  		cardObj.INFOlinee.tabilita1 = 4
  		cardObj.INFOlinee.Tabilita2 = 1
  		cardObj.INFOlinee.tabilita2 = 4
-	elseif cardObj.id == 19 then -- Alex
+	elseif cardObj.id == 19 then -- Zio Pera
 		cardObj.Utente = true
-		cardObj.Name = "ALEX"
+		cardObj.Name = "ZIO PERA"
 		cardObj.ATK = 1200
 		cardObj.Mana = 3
 		cardObj.hp = 8000
@@ -514,9 +572,7 @@ function Card:new(x,y, number, drawn, id)
 		cardObj.INFO.classe = "MEMBRO ONORARIO"
 		cardObj.INFO.Tabilita1 = "Abilità speciale"
 		cardObj.INFO.tabilita1 = 
-[[Aculei dal culo:
- spara 6 aculei
- (tasto dx per selezionare la carta)]]
+"Aculei dal culo: \n spara 6 aculei \n (tasto dx per selezionare la carta) "
 		cardObj.INFO.Tabilita2 = ""
 		cardObj.INFO.tabilita2 = 
 [[]]
@@ -556,9 +612,7 @@ function Card:new(x,y, number, drawn, id)
 		cardObj.INFO.classe = "ADMIN"
 		cardObj.INFO.Tabilita1 = "Abilità speciale"
 		cardObj.INFO.tabilita1 = 
-[[Ho programmato io questo gioco!
- se ci sono 2 carte uguali sul campo
- si disintegrano entrambe]]
+"Ho programmato io questo gioco! \n se ci sono 2 carte uguali sul campo \n si disintegrano entrambe "
 		cardObj.INFO.Tabilita2 = "Consiglio"
 		cardObj.INFO.tabilita2 = 
 [[  -è una D4C reference]]
@@ -691,7 +745,7 @@ function Card:new(x,y, number, drawn, id)
 		cardObj.Utente = true
 		cardObj.Name = "VEREL"
 		cardObj.ATK = 3000
-		cardObj.Mana = 4
+		cardObj.Mana = 5
 		cardObj.hp = 3000
 		cardObj.HP = cardObj.hp	
 		cardObj.INFO.classe = "ARTISTA"
@@ -736,7 +790,7 @@ function Card:new(x,y, number, drawn, id)
 		cardObj.Mana = 2
 		cardObj.hp = 6000
 		cardObj.HP = cardObj.hp	
-		cardObj.INFO.classe = "MODERATORE"
+		cardObj.INFO.classe = "ADMIN"
 		cardObj.INFO.Tabilita1 = "Abilità a evocazione"
 		cardObj.INFO.tabilita1 = 
 [[tutte le carte sul tuo terreno
@@ -970,7 +1024,7 @@ scambia ATK e HP di una carta]]
 	elseif cardObj.id == 39 then -- Edd
 		cardObj.Utente = true
 		cardObj.Name = "EDD"
-		cardObj.ATK = 1600
+		cardObj.ATK = 1500
 		cardObj.Mana = 0
 		cardObj.hp = 2500
 		cardObj.HP = cardObj.hp	
@@ -1343,6 +1397,131 @@ ogni "ADMIN guadagna +1000 HP"]]
  		cardObj.INFOlinee.tabilita1 = 3
  		cardObj.INFOlinee.Tabilita2 = 0
  		cardObj.INFOlinee.tabilita2 = 0
+ 	elseif cardObj.id == 57 then -- DUO
+		cardObj.Utente = false
+		cardObj.Name = "DUO"
+		cardObj.ATK = 0
+		cardObj.Mana = 6
+		cardObj.hp = 4000
+		cardObj.HP = cardObj.hp		
+		cardObj.INFO.classe = "CANALE"
+		cardObj.INFO.Tabilita1 = "Abilità a evocazione"
+		cardObj.INFO.tabilita1 = 
+[[solo 2 Utenti ammessi
+ nel campo avversario]]
+		cardObj.INFO.Tabilita2 = ""
+		cardObj.INFO.tabilita2 = 
+[[]]
+ 		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
+ 		cardObj.INFOlinee.classe = 1
+ 		cardObj.INFOlinee.Tabilita1 = 1
+ 		cardObj.INFOlinee.tabilita1 = 2
+ 		cardObj.INFOlinee.Tabilita2 = 0
+ 		cardObj.INFOlinee.tabilita2 = 0
+ 	elseif cardObj.id == 58 then -- DUO
+		cardObj.Utente = false
+		cardObj.Name = "TRIO"
+		cardObj.ATK = 0
+		cardObj.Mana = 4
+		cardObj.hp = 4000
+		cardObj.HP = cardObj.hp		
+		cardObj.INFO.classe = "CANALE"
+		cardObj.INFO.Tabilita1 = "Abilità a evocazione"
+		cardObj.INFO.tabilita1 = 
+[[solo 3 Utenti ammessi
+ nel campo avversario]]
+		cardObj.INFO.Tabilita2 = ""
+		cardObj.INFO.tabilita2 = 
+[[]]
+ 		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
+ 		cardObj.INFOlinee.classe = 1
+ 		cardObj.INFOlinee.Tabilita1 = 1
+ 		cardObj.INFOlinee.tabilita1 = 2
+ 		cardObj.INFOlinee.Tabilita2 = 0
+ 		cardObj.INFOlinee.tabilita2 = 0
+ 	elseif cardObj.id == 59 then -- DUO
+		cardObj.Utente = false
+		cardObj.Name = "QUARTETTO"
+		cardObj.ATK = 0
+		cardObj.Mana = 2
+		cardObj.hp = 4000
+		cardObj.HP = cardObj.hp		
+		cardObj.INFO.classe = "CANALE"
+		cardObj.INFO.Tabilita1 = "Abilità a evocazione"
+		cardObj.INFO.tabilita1 = 
+[[solo 4 Utenti ammessi
+ nel campo avversario]]
+		cardObj.INFO.Tabilita2 = ""
+		cardObj.INFO.tabilita2 = 
+[[]]
+ 		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
+ 		cardObj.INFOlinee.classe = 1
+ 		cardObj.INFOlinee.Tabilita1 = 1
+ 		cardObj.INFOlinee.tabilita1 = 2
+ 		cardObj.INFOlinee.Tabilita2 = 0
+ 		cardObj.INFOlinee.tabilita2 = 0
+ 	elseif cardObj.id == 60 then -- verificazione
+		cardObj.Utente = false
+		cardObj.Name = "VERIFICAZIONE"
+		cardObj.ATK = 0
+		cardObj.Mana = 2
+		cardObj.hp = 4000
+		cardObj.HP = cardObj.hp		
+		cardObj.INFO.classe = "CANALE"
+		cardObj.INFO.Tabilita1 = "Abilità a evocazione"
+		cardObj.INFO.tabilita1 = 
+[[stordisce tutte le carte avversarie]]
+		cardObj.INFO.Tabilita2 = ""
+		cardObj.INFO.tabilita2 = 
+[[]]
+ 		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
+ 		cardObj.INFOlinee.classe = 1
+ 		cardObj.INFOlinee.Tabilita1 = 1
+ 		cardObj.INFOlinee.tabilita1 = 1
+ 		cardObj.INFOlinee.Tabilita2 = 0
+ 		cardObj.INFOlinee.tabilita2 = 0
+ 	elseif cardObj.id == 61 then -- Alex
+		cardObj.Utente = true
+		cardObj.Name = "ALEX"
+		cardObj.ATK = 3000
+		cardObj.Mana = 3
+		cardObj.hp = 3000
+		cardObj.HP = cardObj.hp		
+		cardObj.INFO.classe = "MODERATORE"
+		cardObj.INFO.Tabilita1 = "Abilità speciale"
+		cardObj.INFO.tabilita1 = 
+[[stordisce 3 carte avversarie
+ 1 a piacere 2 a caso]]
+		cardObj.INFO.Tabilita2 = ""
+		cardObj.INFO.tabilita2 = 
+[[]]
+ 		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
+ 		cardObj.INFOlinee.classe = 1
+ 		cardObj.INFOlinee.Tabilita1 = 1
+ 		cardObj.INFOlinee.tabilita1 = 2
+ 		cardObj.INFOlinee.Tabilita2 = 0
+ 		cardObj.INFOlinee.tabilita2 = 0
+
+ 	elseif cardObj.id == 62 then -- Sole
+		cardObj.Utente = false
+		cardObj.Name = "SOLE"
+		cardObj.ATK = 0
+		cardObj.Mana = 2
+		cardObj.hp = 4000
+		cardObj.HP = cardObj.hp		
+		cardObj.INFO.classe = "MEME"
+		cardObj.INFO.Tabilita1 = "Abilità a evocazione"
+		cardObj.INFO.tabilita1 = 
+[[lancia un sole]]
+		cardObj.INFO.Tabilita2 = ""
+		cardObj.INFO.tabilita2 = 
+[[]]
+ 		cardObj.INFOlinee = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2}
+ 		cardObj.INFOlinee.classe = 1
+ 		cardObj.INFOlinee.Tabilita1 = 1
+ 		cardObj.INFOlinee.tabilita1 = 1
+ 		cardObj.INFOlinee.Tabilita2 = 0
+ 		cardObj.INFOlinee.tabilita2 = 0
 	end
 
 	return setmetatable(cardObj, Card)
@@ -1489,6 +1668,12 @@ local function LOAD_CARD_IMG()
 	for i=1,inventario.maxCards do
 		cardimg[i] = love.graphics.newImage("assets/cards/cardimg/cardimg"..i..".png")
 	end
+	cardimg[100] = love.graphics.newImage("assets/cards/cardimg/cardimg108.png")
+	cardimg[125] = love.graphics.newImage("assets/cards/cardimg/cardimg108.png")
+	cardimg[108] = love.graphics.newImage("assets/cards/cardimg/cardimg108.png")
+	cardimg[101] = love.graphics.newImage("assets/cards/cardimg/cardimg101.png")
+	cardimg[201] = love.graphics.newImage("assets/cards/cardimg/cardimg201.png")
+	cardimg[301] = love.graphics.newImage("assets/cards/cardimg/cardimg301.png")
 end
 
 
@@ -1531,16 +1716,16 @@ function DRAW_CARD_STATS(card,a,b,c,d,e,f,g,h,i,j,k,l,m,n)												--✏️
 	 or (connesso and (Testo[2] == "sonostatoobbligato" or Testo[2] == "SonoStatoObbligato" or Testo[2] == "SONOSTATOOBBLIGATO"
 	 or Testo[2] == "sono stato obbligato" or Testo[2] == "Sono Stato Obbligato" or Testo[2] == "SONO STATO OBBLIGATO")))
 	 and card.id == 8 then
-		love.graphics.draw(love.graphics.newImage("assets/cards/cardimg/cardimg108.png"), a, b, card.r, c, d, e, f)
+		love.graphics.draw(cardimg[108], a, b, card.r, c, d, e, f)
 	elseif ((hoster and (Testo[1] == "Javier")) or (connesso and (Testo[2] == "Javier")))
 	 and (card.id == 1 or card.id == 25) then
-		love.graphics.draw(love.graphics.newImage("assets/cards/cardimg/cardimg101.png"), a, b, card.r, c, d, e, f)
+		love.graphics.draw(cardimg[101], a, b, card.r, c, d, e, f)
 	elseif ((hoster and (Testo[1] == "javier")) or (connesso and (Testo[2] == "javier")))
 	 and (card.id == 1 or card.id == 25) then
-		love.graphics.draw(love.graphics.newImage("assets/cards/cardimg/cardimg201.png"), a, b, card.r, c, d, e, f)
+		love.graphics.draw(cardimg[201], a, b, card.r, c, d, e, f)
 	elseif ((hoster and (Testo[1] == "JAVIER")) or (connesso and (Testo[2] == "JAVIER")))
 	 and (card.id == 1 or card.id == 25) then
-		love.graphics.draw(love.graphics.newImage("assets/cards/cardimg/cardimg301.png"), a, b, card.r, c, d, e, f)
+		love.graphics.draw(cardimg[301], a, b, card.r, c, d, e, f)
 	else
 		love.graphics.draw(cardimg[card.id], a, b, card.r, c, d, e, f)
 	end
@@ -1723,10 +1908,6 @@ function Card:draw(card)
 			if card.attacco then
 				love.graphics.draw(ATKimg, card.x+card.width/4, card.y+card.height/4, attacco_R, 1, 1, ATKimg:getWidth()/2, ATKimg:getHeight()/2)
 			end
-			--se attaccata
-			if card.attaccata then
-				love.graphics.draw(HPimg, card.x , card.y, card.r)
-			end
 			--se stordita
 			if card.stato.stordito then
 				love.graphics.draw(STORDITOimg, card.x , card.y, card.r)
@@ -1789,14 +1970,14 @@ function DRAW_CARDS()																									--✏️
         	Card:draw(card)
         end
     end
-
     for c, card in ipairs(inCampoCards) do
         Card:draw(card)
     end
-
-    for c, card in ipairs(union(inCampoCards,inCampoCards2)) do
-    	DRAW_INFO(card)
-    end
+    if not OSU then
+	    for c, card in ipairs(union(inCampoCards,inCampoCards2)) do
+	    	DRAW_INFO(card)
+	    end
+	end
 	for c, card in ipairs(activeCards) do
     	if not card.posizionato then
         	DRAW_INFO(card)

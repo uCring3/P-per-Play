@@ -4,10 +4,7 @@ inCampoCards2 = {}
 Card2.__index = Card2
 
 function loadAssets2()
-	MALTOPimg2 = love.graphics.newImage("assets/cards/cardfont/MALTOP.png")
-	MALBOTimg2 = love.graphics.newImage("assets/cards/cardfont/MALBOT.png")
 	img12 = love.graphics.newImage("assets/cards/cardimg/cardimg1.png")
-	backimg2 = gui.deck.img
 end
 
 local function checkHoverPosizionato2()
@@ -22,7 +19,6 @@ end
 
 function Card2:update(dt)
 	checkHoverPosizionato2()
-	
 	for c,card2 in ipairs(inCampoCards2) do
  		if card2.y >= 325 and card2.y <= 345 then
 	        card2.y = 161
@@ -44,14 +40,9 @@ local function draw2(card2)																								--✏️
 			7,card2.y + 3*card2.height/8,
 			4,2)	
 		
-
 			--se in attacco
 		if card2.attacco then
 			love.graphics.draw(ATKimg,card2.x , card2.y, card2.r, 1/2, 1/2)
-		end
-			--se attaccata
-		if card2.attaccata then
-			love.graphics.draw(HPimg,card2.x , card2.y, card2.r)
 		end
 
 		if card2.stato.stordito then
@@ -91,9 +82,9 @@ function DRAW_CARDS2()																									--✏️
 			love.graphics.setColor(1,1,1)
 			love.graphics.draw(TOPBOT, BOTimg, card.x, card.y+56, card.r)
 		else
-			love.graphics.draw(MALTOPimg2, card.x, card.y-10, card.r)
+			love.graphics.draw(MALTOPimg, card.x, card.y-10, card.r)
 			love.graphics.setColor(1,1,1)														--🎨
-			love.graphics.draw(MALBOTimg2, card.x, card.y-10, card.r)
+			love.graphics.draw(MALBOTimg, card.x, card.y-10, card.r)
 		end
     end
 
@@ -112,9 +103,9 @@ function DRAW_CARD_STATS2(card2,a,b,c,d,e,f,g,h,i,j,k,l,m,n)
 		love.graphics.setColor(1,1,1)
 		love.graphics.draw(TOPBOT, BOTimg, g, h+56, card2.r)
 	else
-		love.graphics.draw(MALTOPimg2, g, h-10, card2.r)
+		love.graphics.draw(MALTOPimg, g, h-10, card2.r)
 		love.graphics.setColor(1,1,1)														--🎨
-		love.graphics.draw(MALBOTimg2, g, h-10, card2.r)
+		love.graphics.draw(MALBOTimg, g, h-10, card2.r)
 	end
 		--Scritte-font
 	love.graphics.setFont(Font.cardName)
