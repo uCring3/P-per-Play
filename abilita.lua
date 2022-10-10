@@ -1,53 +1,52 @@
-Abilita = {}
-Abilita.__index = Abilita
+abilita = {}
 
-local CONO
-local SMITH
-local GUFETTA
-local AREA
-local BEAN
-local CUORI
-local ACULEI
-local STELLE
-local LASER
-local WALL
-local SQUALO
-local NOTE
-local evocare_SHOP
+local CONO = false
+local SMITH = false
+local GUFETTA = false
+local AREA = false
+local BEAN = false
+local CUORI = false
+local ACULEI = false
+local STELLE = false
+local LASER = false
+local WALL = false
+local SQUALO = false
+local NOTE = false
+local evocare_SHOP = false
 local curare = false
 local potenziare = false
 local ruba = false
 local uccidere = false
 local annullare = false
 local immunizzare = false
-
-function LOAD_ABILITA()
-	Abilita:load()
-end
-
-function UPDATE_ABILITA(dt)
-	Abilita:update(dt)
-end
-function DRAW_ABILITA()
-    for c, card in ipairs(activeCards) do
-    	if not card.hover then
-        	Abilita:draw(card)
-        end
-    end
-
-    for c, card in ipairs(activeCards) do
-    	if card.hover then
-        	Abilita:draw(card)
-        end
-    end
-end
-
+SHOP = false
 
 local function DRAW_AREA()
 	love.graphics.circle("line", mouse.x, mouse.y, area_ray)
 end
 
+local sole = {img,x,y,width,height}
+sole.img = love.graphics.newImage("assets/misc/SUPERNOVA.png")
+sole.width = sole.img:getWidth()
+sole.height = sole.img:getHeight()
+local explosion = {image,grid,animation,width,height}
+explosion.image = love.graphics.newImage("assets/misc/SUPERNOVAgrid.png")
+explosion.grid = anim8.newGrid(200, 200, explosion.image:getWidth(), explosion.image:getHeight())
+explosion.animation = anim8.newAnimation(explosion.grid('1-8',1), 0.1)
+explosion.width = explosion.image:getWidth()
+explosion.height = explosion.image:getHeight()
+local function DRAW_SOLE()
+	love.graphics.draw(sole.img,sole.x-sole.width/2,sole.y-sole.height/2)
+end
+local function UPDATE_EXPLOSION(dt) --🔁
+	explosion.animation:update(dt) --🔁
+end
+local function DRAW_EXPLOSION()
+	explosion.animation:draw(explosion.image, mouse.pressed.dx.x-explosion.width/4, mouse.pressed.dx.y-explosion.height/0.5, 0, 4, 4)
+end
+
 local squalo = {img,x,y,width,height,scale,grid,animation}
+squalo.img = love.graphics.newImage("assets/misc/squalo374x122.png")
 local function MOVE_SQUALO(dt)
 	squalo.x = squalo.x+500*dt
 	for c2,card2 in ipairs(inCampoCards2) do
@@ -60,7 +59,6 @@ end
 local function LOAD_SQUALO(card)
 	SQUALO = true
 	attaccante = card
-	squalo.img = love.graphics.newImage("assets/cards/cardfont/squalo374x122.png")
 	squalo.x = -2000 
 	squalo.y = -180
 	squalo.width = squalo.img:getWidth()/2
@@ -72,15 +70,14 @@ end
 
 local ruota_smith
 local smith = {img,width,height,x,y,r,ox,oy}
+smith.img = love.graphics.newImage("assets/misc/SMITH.png")
 local function LOAD_SMITH(card)
 	SMITH = true
-	love.mouse.setCursor(Cursor.Smith)
+	love.mouse.setCursor(cursor.Smith)
 	ruota_smith = true
 	attaccante = card
 	smith.x = card.x + card.width/4
 	smith.y = card.y + card.height/4
-	--smith = {img,width,height,x,y,r,ox,oy}
-	smith.img = love.graphics.newImage("assets/cards/cardfont/SMITH.png")
 	smith.width = smith.img:getWidth()
 	smith.height = smith.img:getHeight()
 	smith.X = smith.x
@@ -88,17 +85,17 @@ local function LOAD_SMITH(card)
 	smith.ox = smith.width/2
 	smith.oy = smith.height/2
 end
-local function UPDATE_SMITH()
+local function UPDATE_SMITH() --🔁
 	flux.to(smith, 1, {x = smith.X, y = smith.Y})
 	for c2,card2 in ipairs(inCampoCards2) do
 		if general:aabb(card2.x,card2.y, card2.width/2,card2.height/2, smith.x,smith.y, 1, 1) and not card2.abilita then
-			card2.stato.avvelenata = true
+			card2.avvelenata = true
 			for c,card in ipairs(inCampoCards) do
 				if (card.id == 8) then --Nabboleone
 					card.abilita = false
 				end
 			end
-			general:scambio_dati_carta()
+			general:ScambioDatiCarte()
 			danno = 300
 			general:danno(card2,attaccante)
 			SMITH = false
@@ -114,10 +111,11 @@ local function DRAW_SMITH()
 end
 
 local laser = {img,width,height,x,y,r,ox,oy,alfa}
+local bean = {img,width,height,x,y,r,ox,oy,scale}
+laser.img = love.graphics.newImage("assets/misc/LASER.png")
+bean.img = love.graphics.newImage("assets/misc/BEAN.png")
 local function LOAD_LASER()
-	love.mouse.setCursor(Cursor.Laser)
-	--laser = {img,width,height,x,y,r,ox,oy,alfa}
-	laser.img = love.graphics.newImage("assets/cards/cardfont/LASER.png")
+	love.mouse.setCursor(cursor.Laser)
 	laser.width = laser.img:getWidth()
 	laser.height = laser.img:getHeight()
 	laser.x = mouse.x
@@ -127,8 +125,6 @@ local function LOAD_LASER()
 	laser.alfa = 0
 	ruota_laser = true
 	LASER_GO = true
-	bean = {img,width,height,x,y,r,ox,oy,scale}
-	bean.img = love.graphics.newImage("assets/cards/cardfont/BEAN.png")
 	bean.width = bean.img:getWidth()
 	bean.height = bean.img:getHeight()
 	bean.x = mouse.x
@@ -139,16 +135,21 @@ local function LOAD_LASER()
 	bean.ox = bean.width/2
 	bean.oy = bean.height/2
 end
-local function UPDATE_LASER(dt)
-	bean.scale.width = 1.5*bean.scale.width+0.5*dt
-	for c2,card2 in ipairs(inCampoCards2) do
-		if general:calculateDistanceToLine(card2.x+card2.width/4,card2.y+card2.height/4, laser.x,laser.y, mouse.released.dx.x,mouse.released.dx.y) < (bean.height*bean.scale.height) then
-			danno = 80
-			general:danno(card2,attaccante)
+local function UPDATE_LASER(dt) --🔁
+	if BEAN then
+		bean.scale.width = 1.05*bean.scale.width+0.5*dt
+		for c2,card2 in ipairs(inCampoCards2) do
+			if general:calculateDistanceToLine(card2.x+card2.width/4,card2.y+card2.height/4, laser.x,laser.y, mouse.released.dx.x,mouse.released.dx.y) < (bean.height*bean.scale.height) then
+				danno = 50
+				general:danno(card2,attaccante)
+			end
 		end
 	end
+	if LASER then
+		laser.alfa = laser.alfa+60*dt
+	end
 end
-local function MOVE_LASER(x, y, button)
+local function MOVE_LASER()
 	laser.R = laser.r
 	ruota_laser = false
 	LASER_GO = false
@@ -160,8 +161,10 @@ local function MOVE_LASER(x, y, button)
 	end
 	mouse.released.dx.x = mouse.x 
 	mouse.released.dx.y = mouse.y 
-	tick.delay(function() LASER = false end, 1.75)
-		:after(function() BEAM = false end, 0)
+	Timer.after(3, function() --⏱️
+		LASER = false
+		BEAN = false 
+	end)
 end
 local function DRAW_LASER()
 	if ruota_laser then
@@ -169,7 +172,6 @@ local function DRAW_LASER()
 		laser.R = laser.r
 		bean.r = laser.r -2.07
 	end
-	laser.alfa = (laser.alfa+0.006)*1.01
 	love.graphics.setColor(love.math.colorFromBytes(255,255,255,laser.alfa))
 	love.graphics.draw(laser.img, laser.x,laser.y, laser.R, 2,2, laser.ox,laser.oy)
 	love.graphics.setColor(1,1,1,1)
@@ -183,7 +185,7 @@ local aculei = {}
 local function LOAD_ACULEI(card)
 	ACULEI = true
 	card.puoabilita = false
-	love.mouse.setCursor(Cursor.Aculeo)
+	love.mouse.setCursor(cursor.Aculeo)
 	aculei[1] = {x = love.math.random(0, 140), y = love.math.random(50, 685), r = 0}
 	aculei[2] = {x = love.math.random(1140, 1280), y = love.math.random(50, 685), r = 0}
 	aculei[3] = {x = love.math.random(0, 140), y = love.math.random(50, 685), r = 0}
@@ -193,18 +195,18 @@ local function LOAD_ACULEI(card)
 	aculei[7] = {x = love.math.random(0, 140), y = love.math.random(50, 685), r = 0}
 	aculei[8] = {x = love.math.random(1140, 1280), y = love.math.random(50, 685), r = 0}
 end
-local function UPDATE_ACULEI(dt)
+local function UPDATE_ACULEI(dt) --🔁
 	for c2,card2 in ipairs(inCampoCards2) do
 		for a,aculeo in ipairs(aculei) do
 			if general:aabb(card2.x, card2.y, card2.width/2, card2.height/2, aculeo.x, aculeo.y, 1, 1) then
-				card2.stato.avvelenata = true
+				card2.avvelenata = true
 				for c,card in ipairs(inCampoCards) do
 					if card.id == 19 then -- Zio Pera
 						card.abilita = false
 					end
 				end
-				love.mouse.setCursor(Cursor.arrow)
-				general:scambio_dati_carta()
+				love.mouse.setCursor(cursor.arrow)
+				general:ScambioDatiCarte()
 			end
 		end
 	end
@@ -222,6 +224,9 @@ end
 local stelle = {}
 local stella = {x,y,z,r}
 local stella_img = {img, width, height}
+stella_img.img = love.graphics.newImage("assets/misc/STELLA.png")
+stella_img.width = stella_img.img:getWidth()
+stella_img.height = stella_img.img:getHeight()
 local stelle_ruota = false
 local stella_X
 local stella_Y
@@ -238,36 +243,69 @@ local function MOVE_STELLE()
 end
 local function LOAD_STELLE()
 	STELLE = true
-	love.mouse.setCursor(Cursor.Stella)
-	stella_img.img = love.graphics.newImage("assets/cards/cardfont/STELLA.png")
-	stella_img.width = stella_img.img:getWidth()
-	stella_img.height = stella_img.img:getHeight()
+	love.mouse.setCursor(cursor.Stella)
 	for s, stella in ipairs(stelle) do
 		stella.z = true
 	end
-	tick.delay(function() stelle[1] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 1.2)
-  		:after(function() stelle[2] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[3] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[4] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[5] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[6] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[7] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[8] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[9] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[10] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[11] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[12] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[13] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[14] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() stelle[15] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-		:after(function() MOVE_STELLE(dt) end , 0.9)
-		:after(function() stelle_ruota = true end , 0.1)
-		:after(function() love.mouse.setCursor(Cursor.arrow) end , 8)
-		:after(function() STELLE = false
-			stelle = {}
-			stelle_ruota = false end, 0)
+	Timer.after(1.2, function() --⏱️
+		stelle[1] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+		Timer.after(0.3, function() --⏱️
+			stelle[2] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+			Timer.after(0.3, function() --⏱️
+				stelle[3] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+				Timer.after(0.3, function() --⏱️
+					stelle[4] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+					Timer.after(0.3, function() --⏱️
+						stelle[5] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+						Timer.after(0.3, function() --⏱️
+							stelle[6] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+							Timer.after(0.3, function() --⏱️
+								stelle[7] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+								Timer.after(0.3, function() --⏱️
+									stelle[8] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+									Timer.after(0.3, function() --⏱️
+										stelle[9] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+									end)
+								end)
+							end)
+						end)
+					end)
+				end)
+			end)
+		end)										
+	end)
+	Timer.after(3.9, function() --⏱️
+		stelle[10] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+		Timer.after(0.3, function() --⏱️
+			stelle[11] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+			Timer.after(0.3, function() --⏱️
+				stelle[12] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+				Timer.after(0.3, function() --⏱️
+					stelle[13] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+					Timer.after(0.3, function() --⏱️
+						stelle[14] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+						Timer.after(0.3, function() --⏱️
+							stelle[15] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+							Timer.after(0.9, function() --⏱️
+								MOVE_STELLE(dt)
+								Timer.after(0.1, function() --⏱️
+									stelle_ruota = true
+									Timer.after(10.6, function() --⏱️
+										love.mouse.setCursor(cursor.arrow)
+										STELLE = false
+										stelle = {}
+										stelle_ruota = false
+									end)
+								end)
+							end)
+						end)
+					end)
+				end)
+			end)
+		end)
+	end)
 end
-local function UPDATE_STELLE(dt)
+local function UPDATE_STELLE(dt) --🔁
 	for c2, card2 in ipairs(inCampoCards2) do
 		for s, stella in ipairs(stelle) do
 			if stella.z then
@@ -310,37 +348,73 @@ local function MOVE_CUORI()
 	end
 end
 local function LOAD_CUORI()
-	love.mouse.setCursor(Cursor.Cuore)
-	cuore_img.img = love.graphics.newImage("assets/cards/cardfont/CUORE.png")
+	love.mouse.setCursor(cursor.Cuore)
+	cuore_img.img = love.graphics.newImage("assets/misc/CUORE.png")
 	cuore_img.width = cuore_img.img:getWidth()
 	cuore_img.height = cuore_img.img:getHeight()
 	for s, cuore in ipairs(cuori) do
 		cuore.z = true
 	end
 	CUORI = true
-	tick.delay(function() cuori[1] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 1.2)
-  		:after(function() cuori[2] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[3] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[4] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[5] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[6] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[7] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[8] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[9] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[10] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[11] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[12] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[13] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[14] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-  		:after(function() cuori[15] = {x = mouse.x, y = mouse.y, z = true, r = 0} end, 0.3)
-		:after(function() MOVE_CUORI(dt) end , 0.9)
-		:after(function() cuori_ruota = true end , 0.1)
-		:after(function() love.mouse.setCursor(Cursor.arrow) end , 6)
-		:after(function() CUORI = false
-			cuori = {}
-			cuori_ruota = false end, 0)
+	Timer.after(1.2, function() --⏱️
+		cuori[1] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+		Timer.after(0.3, function() --⏱️
+			cuori[2] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+			Timer.after(0.3, function() --⏱️
+				cuori[3] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+				Timer.after(0.3, function() --⏱️
+					cuori[4] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+					Timer.after(0.3, function() --⏱️
+						cuori[5] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+						Timer.after(0.3, function() --⏱️
+							cuori[6] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+							Timer.after(0.3, function() --⏱️
+								cuori[7] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+								Timer.after(0.3, function() --⏱️
+									cuori[8] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+									Timer.after(0.3, function() --⏱️
+										cuori[9] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+									end)
+								end)
+							end)
+						end)
+					end)
+				end)
+			end)
+		end)										
+	end)
+	Timer.after(3.9, function() --⏱️
+		cuori[10] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+		Timer.after(0.3, function() --⏱️
+			cuori[11] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+			Timer.after(0.3, function() --⏱️
+				cuori[12] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+				Timer.after(0.3, function() --⏱️
+					cuori[13] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+					Timer.after(0.3, function() --⏱️
+						cuori[14] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+						Timer.after(0.3, function() --⏱️
+							cuori[15] = {x = mouse.x, y = mouse.y, z = true, r = 0}
+							Timer.after(0.9, function() --⏱️
+								MOVE_CUORI(dt)
+								Timer.after(0.1, function() --⏱️
+									cuori_ruota = true
+									Timer.after(10.6, function() --⏱️
+										love.mouse.setCursor(cursor.arrow)
+										CUORI = false
+										cuori = {}
+										cuori_ruota = false
+									end)
+								end)
+							end)
+						end)
+					end)
+				end)
+			end)
+		end)
+	end)
 end
-local function UPDATE_CUORI(dt)
+local function UPDATE_CUORI(dt) --🔁
 	for c, card in ipairs(inCampoCards) do
 		for cu, cuore in ipairs(cuori) do
 			if cuore.z then
@@ -367,7 +441,7 @@ end
 
 local cono = {sxa,sya,dxa,dya,sxb,syb,dxb,dyb}
 local function LOAD_CONO(card)
-	love.mouse.setCursor(Cursor.Urlo)
+	love.mouse.setCursor(cursor.Urlo)
 	CONO = true
 	cono.sxb = card.x
 	cono.syb = card.y + card.height/4
@@ -399,15 +473,15 @@ local function UPDATE_LA_PRIMA_REPUBBLICA()
 		for p,po in ipairs(PEPONE.PO) do
 			for p,ne in ipairs(PEPONE.NE) do
 				PEPONE.bool = true
-				love.mouse.setCursor(Cursor.Evocare)
+				love.mouse.setCursor(cursor.Evocare)
 			end
 		end
 	end
 end
 
 local function elimina_cloni()
-	for c1,card1 in ipairs(union(inCampoCards,inCampoCards2)) do
-		for c2,card2 in ipairs(union(inCampoCards,inCampoCards2)) do
+	for c1,card1 in ipairs(general:union(inCampoCards,inCampoCards2)) do
+		for c2,card2 in ipairs(general:union(inCampoCards,inCampoCards2)) do
 			if c1 ~= c2 then
 				if card1.Name == card2.Name then
 					card1.morta = true
@@ -416,7 +490,7 @@ local function elimina_cloni()
 			end
 		end
 	end
-	general:scambio_dati_carta()
+	general:ScambioDatiCarte()
 end
 
 local COMMISSIONE_NON_PAGATA_RADIUS
@@ -428,9 +502,11 @@ local function LOAD_COMMISSIONE_NON_PAGATA(card)
 	COMMISSIONE_NON_PAGATA_RADIUS = 10
 	COMMISSIONE_NON_PAGATA_ALPHA = 255
 	for c,card in ipairs(inCampoCards) do
-		tick.delay(function () COMMISSIONE_NON_PAGATA = false end , 5)
-			:after(function () card.abilita = false end , 0)
-			:after(function () card.attacco = false end , 0)
+		Timer.after(5, function() --⏱️
+			COMMISSIONE_NON_PAGATA = false
+			card.abilita = false
+			card.attacco = false 
+		end)
 	end
 	inCampoAria = {}
 	for c1,card1 in ipairs(inCampoCards) do
@@ -468,58 +544,144 @@ local function PLAY_OSU(number)
 		for o,su in ipairs(osu.bool) do
 			osu.y[o] = love.math.random(osu.min.y, osu.max.y)
 		end
-		tick.delay(function() osu.bool[1] = true end, 0.09)
-			:after(function() osu.bool[2] = true end, 1.21)
-			:after(function() osu.bool[3] = true end, 0.77)
-			:after(function() osu.bool[4] = true end, 1.06)
-			:after(function() osu.bool[5] = true end, 1.29)
-			:after(function() osu.bool[6] = true end, 1.7)
-			:after(function() osu.bool[7] = true end, 1.28)
-			:after(function() osu.bool[8] = true end, 0.92)
-			:after(function() osu.bool[9] = true end, 0.8)
-			:after(function() osu.bool[10] = true end, 1.12)
-			:after(function() osu.bool[11] = true end, 1.89)
-			:after(function() osu.bool[12] = true end, 0)
-			:after(function() osu.bool[13] = true end, 1.12)
-			:after(function() osu.bool[14] = true end, 0)
-			:after(function() osu.bool[15] = true end, 0.95)
-			:after(function() osu.bool[16] = true end, 0)
-			:after(function() osu.bool[17] = true end, 0.92)
-			:after(function() osu.bool[18] = true end, 0)
-			:after(function() osu.bool[19] = true end, 1.23)
-			:after(function() osu.bool[20] = true end, 0)
-			:after(function() osu.bool[21] = true end, 1.75)
-			:after(function() osu.bool[22] = true end, 0)
-			:after(function() osu.bool[23] = true end, 1.25)
-			:after(function() osu.bool[24] = true end, 0)
-			:after(function() osu.bool[25] = true end, 0.8)
-			:after(function() osu.bool[26] = true end, 0)
-			:after(function() osu.bool[27] = true end, 0.95)
-			:after(function() osu.bool[28] = true end, 0)
-			:after(function() osu.bool[29] = true end, 1.11)
-			:after(function() osu.bool[30] = true end, 0)
-			:after(function() osu.bool[31] = true end, 1.69)
-			:after(function() osu.bool[32] = true end, 0)
-			:after(function() osu.bool[33] = true end, 1.81)
-			:after(function() osu.bool[34] = true end, 0.63)
-			:after(function() osu.bool[35] = true end, 0.36)
-			:after(function() osu.bool[36] = true end, 0.1)
-			:after(function() osu.bool[37] = true end, 1.5)
-			:after(function() osu.bool[38] = true end, 0.93)
-			:after(function() osu.bool[39] = true end, 0.37)
-			:after(function() osu.bool[40] = true end, 0.5)
-			:after(function() osu.bool[41] = true end, 1.50)
-			:after(function() osu.bool[42] = true end, 0.94)
-			:after(function() osu.bool[43] = true end, 0.66)
-			:after(function() OSU = false
-				music.osu[osu.song]:stop() end, 0.3)
-			:after(function() 
-				for o,su in ipairs(osu.bool) do 
-					osu.bool[o] = nil
-					osu.x[o] = nil
-					osu.y[o] = nil
-				end 
-			end, 0)
+		Timer.after(0.09, function() --⏱️
+			osu.bool[1] = true
+			Timer.after(1.21, function() --⏱️
+				osu.bool[2] = true
+				Timer.after(0.77, function() --⏱️
+					osu.bool[3] = true
+					Timer.after(1.06, function() --⏱️
+						osu.bool[4] = true
+						Timer.after(1.29, function() --⏱️
+							osu.bool[5] = true
+							Timer.after(1.7, function() --⏱️
+								osu.bool[6] = true
+								Timer.after(1.28, function() --⏱️
+									osu.bool[7] = true
+									Timer.after(0.92, function() --⏱️
+										osu.bool[8] = true
+										Timer.after(0.8, function() --⏱️
+											osu.bool[9] = true
+											Timer.after(1.12, function() --⏱️
+												osu.bool[10] = true
+												Timer.after(1.89, function() --⏱️
+													osu.bool[11] = true
+													Timer.after(0, function() --⏱️
+														osu.bool[12] = true
+														Timer.after(1.12, function() --⏱️
+															osu.bool[13] = true															
+														end)
+													end)
+												end)
+											end)
+										end)
+									end)
+								end)
+							end)
+						end)
+					end)
+				end)
+			end)
+		end)
+		Timer.after(13.25, function() --⏱️
+			osu.bool[14] = true
+			Timer.after(0.95, function() --⏱️
+				osu.bool[15] = true
+				Timer.after(0, function() --⏱️
+					osu.bool[16] = true
+					Timer.after(0.92, function() --⏱️
+						osu.bool[17] = true
+						Timer.after(0, function() --⏱️
+							osu.bool[18] = true
+							Timer.after(1.23, function() --⏱️
+								osu.bool[19] = true
+								Timer.after(0, function() --⏱️
+									osu.bool[20] = true
+									Timer.after(1.75, function() --⏱️
+										osu.bool[21] = true
+										Timer.after(0, function() --⏱️
+											osu.bool[22] = true
+											Timer.after(1.25, function() --⏱️
+												osu.bool[23] = true
+												Timer.after(0, function() --⏱️
+													osu.bool[24] = true
+													Timer.after(0.8, function() --⏱️
+														osu.bool[25] = true
+														Timer.after(0, function() --⏱️
+															osu.bool[26] = true
+														end)
+													end)
+												end)
+											end)
+										end)
+									end)
+								end)
+							end)
+						end)
+					end)
+				end)
+			end)
+		end)
+		Timer.after(21.1, function() --⏱️
+			osu.bool[27] = true
+			Timer.after(0, function() --⏱️
+				osu.bool[28] = true
+				Timer.after(1.11, function() --⏱️
+					osu.bool[29] = true
+					Timer.after(0, function() --⏱️
+						osu.bool[30] = true
+						Timer.after(1.69, function() --⏱️
+							osu.bool[31] = true
+							Timer.after(0, function() --⏱️
+								osu.bool[32] = true
+								Timer.after(1.81, function() --⏱️
+									osu.bool[33] = true
+									Timer.after(0.63, function() --⏱️
+										osu.bool[34] = true
+										Timer.after(0.36, function() --⏱️
+											osu.bool[35] = true
+											Timer.after(0.1, function() --⏱️
+												osu.bool[36] = true
+												Timer.after(1.5, function() --⏱️
+													osu.bool[37] = true
+													Timer.after(0.93, function() --⏱️
+														osu.bool[38] = true
+														Timer.after(0.37, function() --⏱️
+															osu.bool[39] = true
+														end)
+													end)
+												end)
+											end)
+										end)
+									end)
+								end)
+							end)
+						end)
+					end)
+				end)
+			end)
+		end)
+		Timer.after(30.1, function() --⏱️
+			osu.bool[40] = true
+			Timer.after(1.50, function() --⏱️
+				osu.bool[41] = true
+				Timer.after(0.94, function() --⏱️
+					osu.bool[42] = true
+					Timer.after(0.66, function() --⏱️
+						osu.bool[43] = true
+						Timer.after(0.3, function() --⏱️
+							OSU = false
+							music.osu[osu.song]:stop()
+							for o,su in ipairs(osu.bool) do 
+								osu.bool[o] = nil
+								osu.x[o] = nil
+								osu.y[o] = nil
+							end
+						end)
+					end)
+				end)
+			end)
+		end)
 	elseif number == 2 then --da fare mappatura
 	elseif number == 3 then --da fare mappatura
 	end
@@ -528,7 +690,7 @@ local function LOAD_OSU(card)
 	OSU = true
 	attaccante = card
 	card.puoabilita = false
-	osu_img.img = love.graphics.newImage("assets/cards/cardfont/OSU.png")
+	osu_img.img = love.graphics.newImage("assets/misc/OSU.png")
 	osu_img.width = osu_img.img:getWidth()
 	osu_img.height = osu_img.img:getHeight()
 	osu.min.x = window.width*0.15
@@ -571,7 +733,7 @@ local function UPDATE_OSU(dt)
 	end
 end
 local function DRAW_OSU()
-	love.graphics.setFont(Font.cardName)
+	love.graphics.setFont(font.cardName)
 	for o,su in ipairs(osu.bool) do
 		if osu.bool[o] then
 			love.graphics.draw(osu_img.img, osu.x[o], osu.y[o], 0, 0.1, 0.1, osu_img.width/2, osu_img.height/2)
@@ -589,26 +751,30 @@ end
 
 local function LOAD_TELECINESI(card)
 	TELECINESI = true
-	love.mouse.setCursor(Cursor.TelecinesiLibero)
+	love.mouse.setCursor(cursor.TelecinesiLibero)
 	for c2,card2 in ipairs(inCampoCards2) do
 		card2.X = card2.x 
 		card2.Y = card2.y 
 		if not card2.morta then
-			tick.delay(function() flux.to(card2, 1.5, {x = card2.X, y = card2.Y}) end, 7)
-			:after(function() TELECINESI = false end, 0)
-			:after(function() love.mouse.setCursor(Cursor.arrow) end, 0)
-			:after(function() card.abilita = false end, 0)
-			:after(function() general:scambio_dati_carta() end, 1.6)
+			Timer.after(7, function() --⏱️
+				flux.to(card2, 1.5, {x = card2.X, y = card2.Y})
+				TELECINESI = false
+				love.mouse.setCursor(cursor.arrow)
+				card.abilita = false
+				Timer.after(1.6, function() --⏱️
+					general:ScambioDatiCarte()
+				end)
+			end)
 		end
 	end	
 end
 local function MOVE_TELECINESI(x, y, dx, dy)
 	for c2,card2 in ipairs(inCampoCards2) do
-		if card2.hoverposizionato2 and love.mouse.isDown(2) then
+		if card2.selezionata and love.mouse.isDown(2) then
 			card2.x = card2.x + dx
 			card2.y = card2.y + dy
 			if dy > 100 then
-				card2.stato.stordito = true
+				card2.stordito = true
 			elseif dx > 50 and dx < 100 then
 				danno = 50
 				general:danno(card2,attaccante)
@@ -622,7 +788,7 @@ end
 
 local function LOAD_PLYTLAS()
 	for c2,card2 in ipairs(inCampoCards2) do
-		if ((card2.INFO.classe == "CONTENT CREATOR") or (card2.INFO.classe == "GOLDEN STAFF SEGRETARIO")) then
+		if ((card2.info.classe == "CONTENT CREATOR") or (card2.info.classe == "GOLDEN STAFF SEGRETARIO")) then
 			piuATK = -500
 			general:aumentaATK(card2)
 		end
@@ -653,8 +819,8 @@ local function UPDATE_KYS_ALL()
 	if turno.n == KYS_ALL.TURNO + 3 then
 		inCampoCards = {}
 		inCampoCards2 = {}
-		general:scambio_dati_carta()
-		general:scambio_dati_carta_propria()
+		general:ScambioDatiCarte()
+		general:ScambioDatiCartePropria()
 		for u,camp in ipairs(campi) do
     		for l,campo in ipairs(camp) do
     			campo.hotcampo = false
@@ -669,15 +835,15 @@ local function LOAD_DIMEZZA_HP()
 	for c2,card2 in ipairs(inCampoCards2) do
 		card2.HP = card2.HP/2
 	end
-	general:scambio_dati_carta()
+	general:ScambioDatiCarte()
 end 
 
 local function LOAD_RADDOPPIA_HP()
 	for c,card in ipairs(inCampoCards) do
-		card.hp = card.hp*2
+		card.HP = card.HP*2
 		card.HP = card.HP*2
 	end
-	general:scambio_dati_carta()
+	general:ScambioDatiCarte()
 end 
 
 function LOAD_MADE_IN_HEAVEN(time)
@@ -700,7 +866,7 @@ local function UPDATE_MADE_IN_HEAVEN(dt)
 		else
 			player.HP = 0 
 		end
-		general:scambio_dati_player()
+		general:scambioDatiPlayers()
 		Made_in_Heaven.bool = false
 	end
 end
@@ -710,18 +876,17 @@ local function DRAW_MADE_IN_HEAVEN()
 end
 
 local function LOAD_MINION(id)
-	table.insert(activeCards, Card:new(0, 0, 1,false, id))
-	COLOR_CARDS(activeCards)
-	for i,card in ipairs(activeCards) do
-		if card.id == id and not card.posizionato then
+	cards:spawn(100+150*(#inManoCards),window.height*0.78,id)
+	for c,card in ipairs(inManoCards) do
+		if card.id == id then
 			for u,camp in ipairs(campi) do
-   				for l,campo in ipairs(camp) do
+   				for i,campo in ipairs(camp) do
 					if campo.hotcampo and u == 1 then
 						card.x = campo.x
 						card.y = campo.y
-						card.posizionato = true
 						table.insert(inCampoCards,card)
-						Abilita:activeAbilitySummon(card)
+						table.remove(inManoCards,c)
+						abilita:activeAbilitySummon(card)
 						evocare = false
 						campo.puohotcampo = false
 						campo.hotcampo = false
@@ -732,7 +897,7 @@ local function LOAD_MINION(id)
 								NE={},
 								bool=false}
 						end
-						love.mouse.setCursor(Cursor.arrow)
+						love.mouse.setCursor(cursor.arrow)
 						for c,card in ipairs(inCampoCards) do	
 							if card.id == 25 then --Mortius
 								card.abilita = false
@@ -782,14 +947,14 @@ local function LOAD_WALL()							--💬
 	field:setFont(theFont)
 	field:setDimensions(FIELD_INNER_WIDTH, FIELD_INNER_HEIGHT)
 
-	tick.delay(function() 	
+	Timer.after(15, function() --⏱️ 	
 		if hoster then
 			server:sendToAll("WALL_1-2", bitser.dumps(Wall))
 		elseif connesso then
 			client:send("WALL_2-1", bitser.dumps(Wall))
 		end
 		WALL = false
-		end, 15)
+	end)
 end
 local function DRAW_WALL()
 
@@ -881,7 +1046,7 @@ local function DRAW_NOTE()
 	end
 
     -- Text.
-	love.graphics.setFont(Font.horror)
+	love.graphics.setFont(font.horror)
 	love.graphics.setColor(0, 0, 0)
 	for _, lineText, lineX, lineY in field:eachVisibleLine() do
 	    love.graphics.print(lineText, FIELD_INNER_X+lineX, FIELD_INNER_Y+lineY)
@@ -918,27 +1083,35 @@ local function CLOSE_NOTE(key)
 			end
 		end
 		NOTE = false
-		general:scambio_dati_carta()
+		general:ScambioDatiCarte()
 	end
 end
 
-
-local shop = {}
 local function LOAD_SHOP()
+	shop = {}
+	shopTable = {x,y,width,height}
 	SHOP = true
-	table.insert(shop, Card:new(window.width*0.71, window.height*0.6, 1,false, love.math.random(1, inventario.maxCards)))
-	table.insert(shop, Card:new(window.width*0.86, window.height*0.6, 1,false, love.math.random(1, inventario.maxCards)))
-	table.insert(shop, Card:new(window.width*1.02, window.height*0.6, 1,false, love.math.random(1, inventario.maxCards)))
+	shopTable.x = window.width*0.27
+	shopTable.y = window.height*0.3
+	shopTable.width = window.width*0.47
+	shopTable.height = window.height*0.34
+	local UtenteId = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,36,37,38,39,40,41,42,43,45,46,47,51,55,61,63} --tutti gli utenti
+	local RandomUtenteId = UtenteId[love.math.random(#UtenteId)]
+	table.insert(shop, card(RandomUtenteId,shopTable.x+50, shopTable.y+50))
+	RandomUtenteId = UtenteId[love.math.random(#UtenteId)]
+	table.insert(shop, card(RandomUtenteId,shopTable.x+300, shopTable.y+50))
+	RandomUtenteId = UtenteId[love.math.random(#UtenteId)]
+	table.insert(shop, card(RandomUtenteId,shopTable.x+550, shopTable.y+50))
 end
-local function SELECT_SHOP(x,y)
+local function SELECT_SHOP(x, y, button)
 	for c,card in ipairs(shop) do
-		if general:aabb(card.x,card.y, card.width/2,card.height/2, mouse.x,mouse.y, 1,1) and SHOP then
+		if general:aabb(card.x,card.y, card.width,card.height, mouse.x,mouse.y, 1,1) and SHOP then
 			shop[4] = card
 			SHOP = false
 			evocare_SHOP = true
-			love.mouse.setCursor(Cursor.Evocare)
+			love.mouse.setCursor(cursor.Evocare)
 			for c1,card1 in ipairs(inCampoCards) do
-				if card1.id == 52 then -- Temmie
+				if card1.id == 52 then --Temmie
 					card1.morta = true
 				end
 			end
@@ -948,64 +1121,634 @@ end
 local function EVOCA_SHOP(card)
 	for u,camp in ipairs(campi) do
 		for l,campo in ipairs(camp) do
-			if campo.hotcampo and ((u == 1 and card.Utente) or (u == 3 and not card.Utente)) then
+			if campo.hotcampo and u == 1 then
+				campo.puohotcampo = false
 				card.x = campo.x
 				card.y = campo.y
-				card.posizionato = true
 				table.insert(inCampoCards,card)
-				Abilita:activeAbilitySummon(card)
-				campo.puohotcampo = false
+				abilita:activeAbilitySummon(card)
 				campo.hotcampo = false
-				love.mouse.setCursor(Cursor.arrow)
+				love.mouse.setCursor(cursor.arrow)
 			end
 		end
 	end
 end
-local function DRAW_SHOP()
-	SHOP = true
-	love.graphics.setColor(love.math.colorFromBytes(174,134,61,90))
-	love.graphics.rectangle("fill", window.width*0.27, window.height*0.3, window.width*0.47, window.height*0.34)
-	love.graphics.setColor(1,1,1,1)
-	for s,card in ipairs(shop) do
-		COLOR_CARDS(shop)
-		card.scaleMod = 1
-		card.scale = 1.2
-		DRAW_CARD_STATS(card,card.x,card.y,1/2,1/2,0,0,
-			card.x,card.y,
-			4,0.61,
-			7,card.y + 3*card.height/8,	--ATK
-			4,2)	--Mana
+
+function abilita:activeAbilitySummon(card)
+	if card.id == 100 then	-- Pepone
+		Timer.after(3, function() --⏱️ 
+			player2.HP = 0
+			general:scambioDatiPlayers()
+		end)
+	elseif card.id == 1 then -- Sciagghi
+	  	table.insert(PEPONE.PE, "PE")
+	elseif card.id == 2 then -- Lucy
+	  	table.insert(PEPONE.PO, "PO")
+	elseif card.id == 3 then -- VOID
+	  	table.insert(PEPONE.NE, "NE")
+	elseif card.id == 4 then -- Hardcore Jack
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			table.insert(cards.deck, 48)
+			table.insert(cards.deck, 48)
+			table.insert(cards.deck, 48)
+			cards.deck.total = cards.deck.total+3
+		end
+	elseif card.id == 10 then	-- Padanian Shitposter
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_DIMEZZA_HP()
+		end
+	elseif card.id == 12 then -- Charlie Ebony
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_RADDOPPIA_HP()
+		end
+	elseif card.id == 15 then	-- Mariottide
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_KYS()
+		end
+	elseif card.id == 17 then	--Plytlas
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_PLYTLAS()
+		end
+	elseif card.id == 20 then -- Doppialex
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c2,card2 in ipairs(inCampoCards2) do
+				if c2 < 4 and card2 ~= nil then 
+					card2.stordito = true
+				end
+			end
+		end
+	elseif card.id == 23 then	--Cring3_Crimson
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			if hoster then
+            	abilita:cambiaTurno()
+            	server:sendToAll("cambia_turno_1-2", true)
+        	elseif connesso then
+         	   abilita:cambiaTurno()
+        	   client:send("cambia_turno_2-1", true)
+        	end
+        	Timer.after(.5, function() --⏱️
+				if hoster then
+					abilita:cambiaTurno()
+					server:sendToAll("cambia_turno_1-2", true)
+				elseif connesso then
+					abilita:cambiaTurno()
+					client:send("cambia_turno_2-1", true)
+				end
+			end)
+
+		end
+	elseif card.id == 25 then -- Mortius
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			card.abilita = true
+			evocare = true
+			love.mouse.setCursor(cursor.Evocare)
+		end
+	elseif card.id == 28 then -- Esagono
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c,card1 in ipairs(inCampoCards) do
+				if card1.MANA > 0 then
+					card1.MANA = card1.MANA-1
+				end
+			end
+		end
+	elseif card.id == 29 then -- Disegni e Fan Art
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c,card1 in ipairs(inCampoCards) do 
+				if card1.info.classe == "ARTISTA" then
+					card1.ATK = card1.ATK + 800
+					card1.HP = card1.HP + 800
+				end
+			end
+		else player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 30 then -- BAN
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			card.abilita = true
+			uccidere = true
+			love.mouse.setCursor(Cursor.Uccidere)
+		else player.MANA = player.MANA+1
+		end
+	elseif card.id == 31 then -- Demon Core
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_KYS_ALL()
+		else player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 32 then -- #memes
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c,card1 in ipairs(inCampoCards) do 
+				if card1.info.classe == "INGEGNERE DEI MEMES" then
+					card1.ATK = card1.ATK + 800
+					card1.HP = card1.HP + 800
+				end
+			end
+		else player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 33 then -- Made in Heaven
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_MADE_IN_HEAVEN(120)
+			if hoster then
+				server:sendToAll("MADE_IN_HAEVEN_1-2", true)
+  			elseif connesso then
+    			client:send("MADE_IN_HAEVEN_2-1", true)
+    		end
+		else player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 34 then -- moyai
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			card.abilita = true
+			piuATK = -9000
+			potenziare = true
+			love.mouse.setCursor(cursor.DePotenziare)
+		else player.MANA = player.MANA+1
+		end
+	elseif card.id == 35 then -- Kronk Drip
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c,card1 in ipairs(inCampoCards) do 
+				card1.HP = card1.HP + 1000
+			end
+			for c,card2 in ipairs(inCampoCards2) do 
+				card2.ATK = card2.ATK - 100
+			end
+		else player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 36 then -- IL DVCE
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			table.insert(cards.deck, (love.math.random(1,cards.maxCards)))
+			cards.deck.total = cards.deck.total+1
+		end
+	elseif card.id == 39 then -- Edd
+		for c2,card2 in ipairs(inCampoCards2) do
+			if card2.info.classe == "GOLDEN STAFF SEGRETARIO" then
+				piuATK = -700
+				general:aumentaATK(card2)
+				danno = 100
+				general:danno(card2)
+			end
+		end
+	elseif card.id == 41 then -- Uomo Piccione
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c12,card12 in ipairs(general:union(inCampoCards,inCampoCards2)) do
+				card12.HP = card12.HP - 100
+			end
+		end
+	elseif card.id == 42 then -- Schrödinger
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			card.immune = true
+		end
+		for c1,card1 in ipairs(inCampoCards) do
+			if card1.id == 26 then 	--Verel
+				card.ATK = card.ATK + 500
+				card.HP = card.HP + 300
+			end
+		end
+	elseif card.id == 44 then -- Perry
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			card.abilita = true
+			immunizzare = true
+			love.mouse.setCursor(cursor.Immunizzare)
+		else
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+		sfx.perry:play()
+	elseif card.id == 47 then -- Gato sburato
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			cards:spawn(100+150*(#inManoCards),window.height*0.78)
+		end
+	elseif card.id == 48 then -- Bread
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			love.mouse.setCursor(cursor.Bread)
+			curare = true
+		else
+			player.MANA = player.MANA+1
+			card.morta = true
+		end
+	elseif card.id == 49 then -- Neco Arc
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			card.abilita = true
+			piuATK = 1000
+			potenziare = true
+			love.mouse.setCursor(cursor.DePotenziare)
+		else
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 50 then -- Sfango
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			Timer.after(0.1, function() --⏱️
+				cards:spawn(100+150*(#inManoCards+1),window.height*0.78)
+				Timer.after(0.1, function() --⏱️
+					cards:spawn(100+150*(#inManoCards+1),window.height*0.78)
+				end)
+			end)
+		else 
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 52 then -- Temmie Shop
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_SHOP()
+		else 
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 53 then -- Sboro
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c,card in ipairs(inCampoCards) do
+				if card.info.classe == "GOLDEN STAFF SEGRETARIO" then 
+					card.ATK = card.ATK + 1000
+					card.HP = card.HP + 500
+				elseif card.info.classe == "ADMIN" then 
+					card.HP = card.HP + 1000
+				end
+			end
+		else 
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 54 then -- Death Note
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			LOAD_NOTE()
+		else 
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 55 then -- local Troller
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			Konami.newCode({"up", "up", "down", "down", "left", "right", "left", "right", "b", "a"}, function() player.HP = player.maxHP general:scambioDatiPlayersPropri() end)
+		end
+	elseif card.id == 56 then -- Erba
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c2,card2 in ipairs(inCampoCards2) do 
+				if card2.info.classe == "GOLDEN STAFF SEGRETARIO" or card2.info.classe == "ADMIN" then
+					LOAD_CHIUDI()
+				end
+			end
+		else
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 57 then -- DUO
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c2,card2 in ipairs(inCampoCards2) do
+				if c2>2 then 
+					card2.morta = true
+				end
+			end
+		else 
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 58 then -- TRIO
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c2,card2 in ipairs(inCampoCards2) do
+				if c2>3 then 
+					card2.morta = true
+				end
+			end
+		else 
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 59 then -- QUARTETTO
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c2,card2 in ipairs(inCampoCards2) do 
+				if c2 > 4 then 
+					card2.morta = true
+				end
+			end
+		else
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 60 then -- verificazione
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			for c2,card2 in ipairs(inCampoCards2) do 
+				card2.stordito = true
+			end
+		else
+			player.MANA = player.MANA+1
+		end
+		card.morta = true
+	elseif card.id == 62 then -- Sole
+		if card.MANA <= player.MANA then
+			player.MANA = player.MANA - card.MANA
+			AREA = true
+			sole.x=window.width/2
+			sole.y=-window.height
+			love.mouse.setCursor(cursor.Explosion)
+			area_ray = 400
+			areaMaxDanno = 5000
+		else
+			player.MANA = player.MANA+1
+			card.morta = true
+		end
+	end
+	if card.info.classe == "GOLDEN STAFF SEGRETARIO" then -- Staffers
+		for c1,card1 in ipairs(inCampoCards2) do
+			if card1.id == 39 then 	--Edd
+				card.ATK = card.ATK - 700
+				card.HP = card.HP - 100
+			end
+		end
 	end
 end
 
-
-function Abilita:activeAbility(x,y,button)
-	if button == 3 then mouse.pressed.rot.x, mouse.pressed.rot.y = mouse.x, mouse.y
+function abilita:mousepressed(x, y, button) --🖱️
+	if button == 2 then mouse.pressed.dx.x, mouse.pressed.dx.y = mouse.x, mouse.y
+		if AREA then
+			for c2,card2 in ipairs(inCampoCards2) do
+				if (general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)) < area_ray then
+					SOLE = true
+					AREA = false
+					Timer.after(2, function() --⏱️
+						EXPLOSION = true
+						SOLE = false
+						danno = math.floor(areaMaxDanno-(general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)))
+						general:danno(card2,attaccante)
+						Timer.after(0.85, function() --⏱️
+							EXPLOSION = false
+						end)
+					end)
+					flux.to(sole, 2, {x = mouse.pressed.dx.x, y = mouse.pressed.dx.y}):ease("linear")
+					love.mouse.setCursor(cursor.arrow)
+				end
+			end
+			for c,card in ipairs(inCampoCards) do
+				if card.id == 22 then --Cosmi
+					card.abilita = false
+				elseif card.id == 62 then --Sole
+					card.abilita = false
+					card.morta = true
+				end
+			end
+		elseif CONO then
+			for c2,card2 in ipairs(inCampoCards2) do
+				if ((giocatore == 1) and ((general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb)) > 0)) or ((giocatore == 2) and ((general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb)) < 0)) then
+					if ((general:getAngle(card2.x+card2.width/4,card2.y+card2.height/4, cono.cxb,cono.cyb))-0.4 < (general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb))) and 
+						((general:getAngle(card2.x+card2.width/4,card2.y+card2.height/4, cono.cxb,cono.cyb))+0.4 > (general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb)))
+					 then
+						card2.stordito = true
+						general:ScambioDatiCarte()
+						CONO = false
+						for c,card in ipairs(inCampoCards) do
+							if (card.id == 7) then --Shadow grimm
+								card.abilita = false
+							end
+						end
+						love.mouse.setCursor(cursor.arrow)
+					end
+				end
+			end
+		elseif SMITH then
+			for c2,card2 in ipairs(inCampoCards2) do
+				if card2.selezionata then
+					smith.X = mouse.x 
+					smith.Y = mouse.y
+					smith.R = smith.r
+					ruota_smith = false
+					UPDATE_SMITH()
+					love.mouse.setCursor(cursor.arrow)
+				end
+			end
+		elseif GUFETTA then 
+			for c2,card2 in ipairs(inCampoCards2) do
+				if card2.selezionata then
+					card2.stordito = true
+					love.mouse.setCursor(cursor.arrow)
+				end
+			end
+			local gufettati = 0
+			repeat
+				local randomCard2 = love.math.random(1,#inCampoCards2)
+				for c2,card2 in ipairs(inCampoCards2) do
+					if (c2 == randomCard2) and (not card2.morta) and (not card2.stordito) then
+						card2.stordito = true
+						gufettati = gufettati+1
+					end
+				end
+			until gufettati == 2
+			for c,card in ipairs(inCampoCards) do
+				if card.id == 61 then -- Alex
+					card.abilita = false
+				end
+			end
+			GUFETTA = false
+			general:ScambioDatiCarte()
+		elseif LASER_GO then
+			laser.x = mouse.x 
+			laser.y = mouse.y
+			LASER = true
+			love.mouse.setCursor(cursor.arrow)
+		elseif ACULEI then
+			ferma_aculei = true
+			for a,aculeo in ipairs(aculei) do
+				flux.to(aculeo, 3, {x = (mouse.pressed.dx.x+(2*(mouse.pressed.dx.x-aculeo.x))), y = (mouse.pressed.dx.y+(2*(mouse.pressed.dx.y-aculeo.y))),})
+			end
+			Timer.after(3, function() --⏱️
+				ACULEI = false
+				ferma_aculei = false
+				Timer.after(3, function() --⏱️
+					love.mouse.setCursor(cursor.arrow)
+				end)
+			end)
+		elseif curare then
+			for c,card in ipairs(inCampoCards) do
+				if card.selezionata then
+					general:cura(card)
+					curare = false
+					love.mouse.setCursor(cursor.arrow)
+				end
+			end
+		elseif potenziare then
+			for c,card in ipairs(general:union(inCampoCards,inCampoCards2)) do
+				if card.selezionata then
+					general:aumentaATK(card)
+					potenziare = false
+					love.mouse.setCursor(cursor.arrow)
+				end
+				if card.id == 1 or card.id == 9 or card.id == 49 then	-- Sciagghi or lolfun
+					card.abilita = false
+				elseif card.id == 34 then				--Moyai
+					card.morta = true
+				end
+			end
+		elseif ruba then
+			for c2,card2 in ipairs(inCampoCards2) do
+				if card2.selezionata then
+					table.insert(cards.deck, card2.id)
+					card2.morta = true
+					general:ScambioDatiCarte()
+					cards.deck.total = cards.deck.total+1
+					ruba = false
+					love.mouse.setCursor(cursor.arrow)
+				end
+			end
+			for c,card in ipairs(inCampoCards) do
+				if card.id == 13 then -- Juj
+					card.abilita = false
+				end
+			end
+		elseif uccidere then
+			for c2,card2 in ipairs(inCampoCards2) do
+				if card2.selezionata then
+					card2.morta = true
+					uccidere = false
+					love.mouse.setCursor(cursor.arrow)
+					for c,card in ipairs(inCampoCards) do
+						if card.id == 5 then -- Trill
+							card.abilita = false
+						elseif card.id == 30 then --BAN
+							card.morta = true
+						end
+					end
+				end
+			end
+		elseif annullare then
+			for c2,card2 in ipairs(inCampoCards2) do
+				if card2.selezionata then
+					card2.puoabilita2 = false
+					card2.info.Tabilita1 = ""
+					card2.info.tabilita1 = ""
+					card2.info.Tabilita2 = ""
+					card2.info.tabilita2 = ""
+					card2.selezionata = false
+					for c,card in ipairs(inCampoCards) do	
+						if card.id == 24 then --Fat Chad Yoshi
+							card.abilita = false
+						end
+					end
+					annullare = false
+					love.mouse.setCursor(cursor.arrow)
+				end
+			end
+		elseif immunizzare then
+			for c,card in ipairs(inCampoCards) do
+				if card.selezionata then
+					card.immune = true
+					immunizzare = false
+					love.mouse.setCursor(cursor.arrow)
+				end
+			end
+		elseif evocare then
+			LOAD_MINION(125)
+		elseif switch then
+			for c,card in ipairs(general:union(inCampoCards,inCampoCards2)) do
+				if card.selezionata then
+					attaccante = nessuno
+					switchATK = card.ATK
+					card.ATK = card.HP 
+					card.HP = switchATK
+					switch = false
+					love.mouse.setCursor(cursor.arrow)
+				end
+				if card.id == 2 then --Lucy
+					card.abilita = false
+				end
+			end
+		elseif evocare_SHOP then 
+			EVOCA_SHOP(shop[4])
+		elseif TELECINESI then
+			love.mouse.setCursor(cursor.TelecinesiPreso)
+		elseif OSU then
+			for o,su in ipairs(osu.bool) do
+				if osu.bool[o] and ((general:calculateDistance(osu.x[o], osu.y[o], mouse.x, mouse.y)) < 50) then
+					if music.osu[osu.song]:tell() <= 12 then
+						osu.bar.int.height = osu.bar.int.height +45
+						osu.bar.int.y = osu.bar.int.y -45
+					else
+						osu.bar.int.height = osu.bar.int.height +30
+						osu.bar.int.y = osu.bar.int.y -30
+					end
+					osu.bool[o] = false
+					for c,card2 in ipairs(inCampoCards2) do
+						if (general:aabb((card2.x-50),(card2.y-50), ((card2.width/4)+100),((card2.height/4)+100), osu.x[o],osu.y[o], 1, 1)) then
+							danno = 300
+							general:danno(card2)
+						end
+					end
+				end
+			end
+		elseif cambia_classe_INGEGNERE_DEI_MEMES then
+			for c,card in ipairs(general:union(inCampoCards, inCampoCards2)) do
+				if card.selezionata or card.selezionata then
+					card.info.classe = "INGEGNERE DEI MEMES"
+					for c,card in ipairs(inCampoCards) do	
+						if card.id == 27 then -- Il sam
+							card.abilita = false
+						end
+					end
+					cambia_classe_INGEGNERE_DEI_MEMES = false
+				end
+			end
+			love.mouse.setCursor(cursor.arrow)
+		elseif 
+			PEPONE.bool then LOAD_MINION(100) 
+		end
+	elseif button == 3 then mouse.pressed.rot.x, mouse.pressed.rot.y = mouse.x, mouse.y
 		for c,card in ipairs(inCampoCards) do
-			if card.puoabilita2 and giocatore == 1 and card.hoverposizionato then
-				if not card.abilita and card.puoabilita and card.Mana <= player.Mana then
+			if card.puoabilita2 and giocatore == 1 and card.selezionata then
+				if not card.abilita and card.puoabilita and card.MANA <= player.MANA then
 						card.abilita = true
-						player.Mana = player.Mana - card.Mana
+						player.MANA = player.MANA - card.MANA
 						if card.id == 1 then -- Sciagghi
 							piuATK = card.ATK/2
 							potenziare = true
-							love.mouse.setCursor(Cursor.Potenziare)
+							love.mouse.setCursor(cursor.Potenziare)
 							card.puoabilita = false
 						elseif card.id == 2 then -- Lucy
-							player.Mana = player.Mana + card.Mana
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 3 then -- VOID
-							player.Mana = player.Mana + card.Mana
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 4 then -- Hardcore Jack
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 5 then -- Trill
-							love.mouse.setCursor(Cursor.Uccidere)
+							love.mouse.setCursor(cursor.Uccidere)
 							uccidere = true
 							card.puoabilita = false
 						elseif card.id == 6 then -- Gin Fotonic
@@ -1018,36 +1761,38 @@ function Abilita:activeAbility(x,y,button)
 							LOAD_SMITH(card)
 							card.puoabilita = false
 						elseif card.id == 9 then -- lolfun
-							love.mouse.setCursor(Cursor.Potenziare)
+							love.mouse.setCursor(cursor.Potenziare)
 							piuATK = card.ATK
 							potenziare = true
-							--love.mouse.setCursor(Cursor.Potenziare)
+							--love.mouse.setCursor(cursor.Potenziare)
 							card.puoabilita = false
 						elseif card.id == 10 then	-- Padanian Shitposter
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 11 then -- Aria
 							LOAD_COMMISSIONE_NON_PAGATA(card)
 						elseif card.id == 12 then -- Charlie Ebony
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 13 then -- Juj
-							love.mouse.setCursor(Cursor.Rubare)
+							love.mouse.setCursor(cursor.Rubare)
 							ruba = true
 							card.puoabilita = false
 						elseif card.id == 14 then -- Sakura
 							LOAD_STELLE()
 							attaccante = card
-							tick.delay(function() card.abilita = false end, 5)
-								:after(function() love.mouse.setCursor(Cursor.arrow) end, 0)
+							Timer.after(5, function() --⏱️
+								card.abilita = false
+								love.mouse.setCursor(cursor.arrow)
+							end)
 							card.puoabilita = false
 						elseif card.id == 15 then -- Mariottide
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 16 then -- La Morte Oscura
@@ -1055,8 +1800,8 @@ function Abilita:activeAbility(x,y,button)
 							attaccante = card
 							card.puoabilita = false
 						elseif card.id == 17 then -- Plytlas
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 18 then -- Inazuma sensei
@@ -1066,8 +1811,8 @@ function Abilita:activeAbility(x,y,button)
 						elseif card.id == 19 then -- Zio Pera
 							LOAD_ACULEI(card)
 						elseif card.id == 20 then -- Doppialex
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 21 then -- Ping
@@ -1075,107 +1820,109 @@ function Abilita:activeAbility(x,y,button)
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 22 then -- Cosmi
-							love.mouse.setCursor(Cursor.Explosion)
+							love.mouse.setCursor(cursor.Explosion)
 							AREA = true
 							area_ray = 200
 							areaMaxDanno = 2500
 							attaccante = card
 							card.puoabilita = false
 						elseif card.id == 23 then -- Cring3_Crimson
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 24 then -- Fat Chad Yoshi
-							love.mouse.setCursor(Cursor.Annulla)
+							love.mouse.setCursor(cursor.Annulla)
 							annullare = true
 							card.puoabilita = false
 						elseif card.id == 25 then -- Mortius
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 26 then -- Verel
 							LOAD_SQUALO(card)
-							--player.Mana = player.Mana + card.Mana
+							--player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 27 then -- Il sam
 							cambia_classe_INGEGNERE_DEI_MEMES = true
-							love.mouse.setCursor(Cursor.INGEGNERE_DEI_MEMES)
+							love.mouse.setCursor(cursor.INGEGNERE_DEI_MEMES)
 							card.puoabilita = false
 						elseif card.id == 28 then -- Esagono
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 29 then -- Disegni e Fan Art
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 30 then -- BAN
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
 							uccidere = true
-							love.mouse.setCursor(Cursor.Uccidere)
-							--player.Mana = player.Mana + card.Mana
+							love.mouse.setCursor(cursor.Uccidere)
+							--player.MANA = player.MANA + card.MANA
 							--card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 31 then -- Demon Core
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 32 then -- #memes
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 33 then -- Made in Haven
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 34 then -- Moyai
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 35 then -- Kronk Drip
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 36 then -- IL DVCE
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 37 then -- Carly
-							love.mouse.setCursor(Cursor.Switch)
+							love.mouse.setCursor(cursor.Switch)
 							switch = true
 							card.puoabilita = false
 						elseif card.id == 38 then -- Raiden
-							player.Mana = player.Mana + card.Mana
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 39 then -- Edd
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 40 then -- Fizz
 							LOAD_CUORI()
-							tick.delay(function() card.abilita = false end, 5)
+							Timer.after(5, function() --⏱️
+								card.abilita = false
+							end)
 							card.puoabilita = false
 						elseif card.id == 41 then -- Uomo Piccione
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 42 then -- Schrödinger
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 43 then -- Doom Slayer
@@ -1183,38 +1930,38 @@ function Abilita:activeAbility(x,y,button)
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 44 then -- Perry
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 45 then -- Basato
 							-- Ha una Abilità passiva
-							player.Mana = player.Mana + card.Mana
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 46 then -- Summer
-							love.mouse.setCursor(Cursor.Bread)
+							love.mouse.setCursor(cursor.Bread)
 							antidanno = card.ATK
 							curare = true
 							card.puoabilita = false
 						elseif card.id == 47 then -- Gato sburato
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 48 then -- Bread
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 49 then -- Neco Arc
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 50 then -- Sfango
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 51 then -- Mr Caputo
@@ -1222,62 +1969,69 @@ function Abilita:activeAbility(x,y,button)
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 52 then -- Temmie Shop
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 53 then -- Sboro
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 54 then -- Death Note
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 55 then -- Local Troller
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 56 then -- Erba
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 57 then -- DUO
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 58 then -- TRIO
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 59 then -- QUARTETTO
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 60 then -- verificazione
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
 							card.abilita = false
 							card.puoabilita = false
 						elseif card.id == 61 then -- Alex
 							GUFETTA = true
 							card.puoabilita = false
 						elseif card.id == 62 then -- Sole
-							-- Ha una Abilità in Abilita:activeAbilitySummon(card)
-							player.Mana = player.Mana + card.Mana
+							-- Ha una Abilità in abilita:activeAbilitySummon(card)
+							player.MANA = player.MANA + card.MANA
+							card.puoabilita = false
+						elseif card.id == 63 then -- Incazzoso
+							local MemeId = {31,34,35,44,48,49,50,52,56,62} --tutti i meme
+							local RandomMeme = MemeId[love.math.random(#MemeId)]
+							print(RandomMeme)
+							cards:spawn(100+150*(#inManoCards),window.height*0.78,RandomMeme)
+							card.abilita = false
 							card.puoabilita = false
 						end
 				elseif card.abilita then	 
 					card.abilita = false
 					card.puoabilita = true
-					player.Mana = player.Mana + card.Mana
+					player.MANA = player.MANA + card.MANA
 					CONO = false
 					SMITH = false
 					AREA = false
@@ -1286,617 +2040,48 @@ function Abilita:activeAbility(x,y,button)
 					ACULEI = false
 					STELLE = false
 					LASER = false
-					love.mouse.setCursor(Cursor.arrow)
+					evocare_SHOP = false
+					SHOP = false
+					love.mouse.setCursor(cursor.arrow)
 				end
 			end
 		end
 	end
 end
 
-function Abilita:activeAbilitySummon(card)
-	if card.id == 100 then	-- Pepone
-		tick.delay(function() 
-			player2.HP = 0
-			general:scambio_dati_player()
-		end, 3)
-	elseif card.id == 1 then -- Sciagghi
-	  	table.insert(PEPONE.PE, "PE")
-	elseif card.id == 2 then -- Lucy
-	  	table.insert(PEPONE.PO, "PO")
-	elseif card.id == 3 then -- VOID
-	  	table.insert(PEPONE.NE, "NE")
-	elseif card.id == 4 then -- Hardcore Jack
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			table.insert(inventario.deck, 48)
-			table.insert(inventario.deck, 48)
-			table.insert(inventario.deck, 48)
-			inventario.deck.total = inventario.deck.total+3
-		end
-	elseif card.id == 10 then	-- Padanian Shitposter
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_DIMEZZA_HP()
-		end
-	elseif card.id == 12 then -- Charlie Ebony
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_RADDOPPIA_HP()
-		end
-	elseif card.id == 15 then	-- Mariottide
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_KYS()
-		end
-	elseif card.id == 17 then	--Plytlas
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_PLYTLAS()
-		end
-	elseif card.id == 20 then -- Doppialex
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c2,card2 in ipairs(inCampoCards2) do
-				if c2 < 4 and card2 ~= nil then 
-					card2.stato.stordito = true
-				end
-			end
-		end
-	elseif card.id == 23 then	--Cring3_Crimson
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			if hoster then
-            	Abilita:cambiaTurno()
-            	server:sendToAll("cambia_turno_1-2", true)
-        	elseif connesso then
-         	   Abilita:cambiaTurno()
-        	   client:send("cambia_turno_2-1", true)
-        	end
-        	tick.delay(function() 
-        	if hoster then
-            	Abilita:cambiaTurno()
-            	server:sendToAll("cambia_turno_1-2", true)
-        	elseif connesso then
-         	   Abilita:cambiaTurno()
-        	   client:send("cambia_turno_2-1", true)
-        	end
-        	 end, .5)
 
-		end
-	elseif card.id == 25 then -- Mortius
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			card.abilita = true
-			evocare = true
-			love.mouse.setCursor(Cursor.Evocare)
-		end
-	elseif card.id == 28 then -- Esagono
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c,card1 in ipairs(inCampoCards) do
-				if card1.Mana > 0 then
-					card1.Mana = card1.Mana-1
-				end
-			end
-		end
-	elseif card.id == 29 then -- Disegni e Fan Art
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c,card1 in ipairs(inCampoCards) do 
-				if card1.INFO.classe == "ARTISTA" then
-					card1.ATK = card1.ATK + 800
-					card1.HP = card1.HP + 800
-				end
-			end
-		else player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 30 then -- BAN
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			card.abilita = true
-			uccidere = true
-			love.mouse.setCursor(Cursor.Uccidere)
-		else player.Mana = player.Mana+1
-		end
-	elseif card.id == 31 then -- Demon Core
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_KYS_ALL()
-		else player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 32 then -- #memes
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c,card1 in ipairs(inCampoCards) do 
-				if card1.INFO.classe == "INGEGNERE DEI MEMES" then
-					card1.ATK = card1.ATK + 800
-					card1.HP = card1.HP + 800
-				end
-			end
-		else player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 33 then -- Made in Heaven
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_MADE_IN_HEAVEN(120)
-			if hoster then
-				server:sendToAll("MADE_IN_HAEVEN_1-2", true)
-  			elseif connesso then
-    			client:send("MADE_IN_HAEVEN_2-1", true)
-    		end
-		else player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 34 then -- moyai
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			card.abilita = true
-			piuATK = -9000
-			potenziare = true
-			love.mouse.setCursor(Cursor.DePotenziare)
-		else player.Mana = player.Mana+1
-		end
-	elseif card.id == 35 then -- Kronk Drip
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c,card1 in ipairs(inCampoCards) do 
-				card1.HP = card1.HP + 1000
-			end
-			for c,card2 in ipairs(inCampoCards2) do 
-				card2.ATK = card2.ATK - 100
-			end
-		else player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 36 then -- IL DVCE
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			table.insert(inventario.deck, (love.math.random(1,inventario.maxCards)))
-			inventario.deck.total = inventario.deck.total+1
-		end
-	elseif card.id == 39 then -- Edd
-		for c2,card2 in ipairs(inCampoCards2) do
-			if card2.INFO.classe == "GOLDEN STAFF SEGRETARIO" then
-				piuATK = -700
-				general:aumentaATK(card2)
-				danno = 100
-				general:danno(card2)
-			end
-		end
-	elseif card.id == 41 then -- Uomo Piccione
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c12,card12 in ipairs(union(inCampoCards,inCampoCards2)) do
-				card12.HP = card12.HP - 100
-			end
-		end
-	elseif card.id == 42 then -- Schrödinger
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			card.stato.immune = true
-		end
-		for c1,card1 in ipairs(inCampoCards) do
-			if card1.id == 26 then 	--Verel
-				card.ATK = card.ATK + 500
-				card.HP = card.HP + 300
-			end
-		end
-	elseif card.id == 44 then -- Perry
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			card.abilita = true
-			immunizzare = true
-			love.mouse.setCursor(Cursor.Immunizzare)
-		else
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-		sfx.perry:play()
-	elseif card.id == 47 then -- Gato sburato
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			SPAWN_CARD(screen.width / 2, screen.height - 90, numeroCarteInMano-1, true)
-			--MUOVI_CARTA()
-			COLOR_CARDS(activeCards)
-		end
-	elseif card.id == 48 then -- Bread
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			love.mouse.setCursor(Cursor.Bread)
-			curare = true
-		else
-			player.Mana = player.Mana+1
-			card.morta = true
-		end
-	elseif card.id == 49 then -- Neco Arc
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			card.abilita = true
-			piuATK = 1000
-			potenziare = true
-			love.mouse.setCursor(Cursor.DePotenziare)
-		else
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 50 then -- Sfango
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			SPAWN_CARD(screen.width / 2, screen.height - 90, numeroCarteInMano-1, true)
-			SPAWN_CARD(screen.width / 2, screen.height - 90, numeroCarteInMano-1, true)
-			COLOR_CARDS(activeCards)
-		else 
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 52 then -- Temmie Shop
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_SHOP()
-		else 
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 53 then -- Sboro
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c,card in ipairs(inCampoCards) do
-				if card.INFO.classe == "GOLDEN STAFF SEGRETARIO" then 
-					card.ATK = card.ATK + 1000
-					card.HP = card.HP + 500
-				elseif card.INFO.classe == "ADMIN" then 
-					card.HP = card.HP + 1000
-				end
-			end
-		else 
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 54 then -- Death Note
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			LOAD_NOTE()
-		else 
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 55 then -- local Troller
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			Konami.newCode({"up", "up", "down", "down", "left", "right", "left", "right", "b", "a"}, function() player.HP = player.maxHP general:scambio_dati_player_propria() end)
-		end
-	elseif card.id == 56 then -- Erba
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c2,card2 in ipairs(inCampoCards2) do 
-				if card2.INFO.classe == "GOLDEN STAFF SEGRETARIO" or card2.INFO.classe == "ADMIN" then
-					LOAD_CHIUDI()
-				end
-			end
-		else
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 57 then -- DUO
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c2,card2 in ipairs(inCampoCards2) do
-				if c2>2 then 
-					card2.morta = true
-				end
-			end
-		else 
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 58 then -- TRIO
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c2,card2 in ipairs(inCampoCards2) do
-				if c2>3 then 
-					card2.morta = true
-				end
-			end
-		else 
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 59 then -- QUARTETTO
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c2,card2 in ipairs(inCampoCards2) do 
-				if c2 > 4 then 
-					card2.morta = true
-				end
-			end
-		else
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 60 then -- verificazione
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			for c2,card2 in ipairs(inCampoCards2) do 
-				card2.stato.stordito = true
-			end
-		else
-			player.Mana = player.Mana+1
-		end
-		card.morta = true
-	elseif card.id == 62 then -- Sole
-		if card.Mana <= player.Mana then
-			player.Mana = player.Mana - card.Mana
-			AREA = true
-			love.mouse.setCursor(Cursor.Explosion)
-			area_ray = 400
-			areaMaxDanno = 5000
-		else
-			player.Mana = player.Mana+1
-			card.morta = true
-		end
-	end
-	if card.INFO.classe == "GOLDEN STAFF SEGRETARIO" then -- Staffers
-		for c1,card1 in ipairs(inCampoCards2) do
-			if card1.id == 39 then 	--Edd
-				card.ATK = card.ATK - 700
-				card.HP = card.HP - 100
-			end
-		end
-	end
-end
-
-
-function Abilita:useAbility()
-	if AREA then
-		for c2,card2 in ipairs(inCampoCards2) do
-			if (general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)) < area_ray then
-				danno = math.floor(areaMaxDanno-(general:calculateDistance(card2.x+card2.width/4,card2.y+card2.height/4,mouse.x,mouse.y)))
-				general:danno(card2,attaccante)
-				AREA = false
-				love.mouse.setCursor(Cursor.arrow)
-			end
-		end
-		for c,card in ipairs(inCampoCards) do
-			if card.id == 22 then --Cosmi
-				card.abilita = false
-			elseif card.id == 62 then --Sole
-				card.abilita = false
-				card.morta = true
-			end
-		end
-	elseif CONO then
-		for c2,card2 in ipairs(inCampoCards2) do
-			if ((giocatore == 1) and ((general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb)) > 0)) or ((giocatore == 2) and ((general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb)) < 0)) then
-				if ((general:getAngle(card2.x+card2.width/4,card2.y+card2.height/4, cono.cxb,cono.cyb))-0.4 < (general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb))) and 
-					((general:getAngle(card2.x+card2.width/4,card2.y+card2.height/4, cono.cxb,cono.cyb))+0.4 > (general:getAngle(cono.cxa,cono.cya, cono.cxb,cono.cyb)))
-				 then
-					card2.stato.stordito = true
-					general:scambio_dati_carta()
-					CONO = false
-					for c,card in ipairs(inCampoCards) do
-						if (card.id == 7) then --Shadow grimm
-							card.abilita = false
-						end
-					end
-					love.mouse.setCursor(Cursor.arrow)
-				end
-			end
-		end
-	elseif SMITH then
-		for c2,card2 in ipairs(inCampoCards2) do
-			if card2.hoverposizionato2 then
-				smith.X = mouse.x 
-				smith.Y = mouse.y
-				smith.R = smith.r
-				ruota_smith = false
-				UPDATE_SMITH()
-				love.mouse.setCursor(Cursor.arrow)
-			end
-		end
-	elseif GUFETTA then 
-		for c2,card2 in ipairs(inCampoCards2) do
-			if card2.hoverposizionato2 then
-				card2.stato.stordito = true
-				love.mouse.setCursor(Cursor.arrow)
-			end
-		end
-		local gufettati = 0
-		repeat
-			local randomCard2 = love.math.random(1,#inCampoCards2)
-			for c2,card2 in ipairs(inCampoCards2) do
-				if (c2 == randomCard2) and (not card2.morta) and (not card2.stato.stordito) then
-					card2.stato.stordito = true
-					gufettati = gufettati+1
-				end
-			end
-		until gufettati == 2
-		for c,card in ipairs(inCampoCards) do
-			if card.id == 61 then -- Alex
-				card.abilita = false
-			end
-		end
-		GUFETTA = false
-		general:scambio_dati_carta()
-	elseif LASER_GO then
-		laser.x = mouse.x 
-		laser.y = mouse.y
-		LASER = true
-		love.mouse.setCursor(Cursor.arrow)
-	elseif ACULEI then
-		ferma_aculei = true
-		for a,aculeo in ipairs(aculei) do
-			flux.to(aculeo, 3, {x = (mouse.pressed.dx.x+(2*(mouse.pressed.dx.x-aculeo.x))), y = (mouse.pressed.dx.y+(2*(mouse.pressed.dx.y-aculeo.y))),})
-		end
-		tick.delay(function() ACULEI = false end, 3)
-			:after(function() ferma_aculei = false end, 0)
-			:after(function() love.mouse.setCursor(Cursor.arrow) end, 3)
-	elseif curare then
-		for c,card in ipairs(inCampoCards) do
-			if card.hoverposizionato then
-				general:cura(card)
-				curare = false
-				love.mouse.setCursor(Cursor.arrow)
-			end
-		end
-	elseif potenziare then
-		for c,card in ipairs(union(inCampoCards,inCampoCards2)) do
-			if  card.hoverposizionato then
-				general:aumentaATK(card)
-				potenziare = false
-				love.mouse.setCursor(Cursor.arrow)
-			end
-			if card.id == 1 or card.id == 9 or card.id == 49 then	-- Sciagghi or lolfun
-				card.abilita = false
-			elseif card.id == 34 then				--Moyai
-				card.morta = true
-			end
-		end
-	elseif ruba then
-		for c2,card2 in ipairs(inCampoCards2) do
-			if card2.hoverposizionato2 then
-				table.insert(inventario.deck, card2.id)
-				card2.morta = true
-				general:scambio_dati_carta()
-				inventario.deck.total = inventario.deck.total+1
-				ruba = false
-				love.mouse.setCursor(Cursor.arrow)
-			end
-		end
-		for c,card in ipairs(inCampoCards) do
-			if card.id == 13 then -- Juj
-				card.abilita = false
-			end
-		end
-	elseif uccidere then
-		for c2,card2 in ipairs(inCampoCards2) do
-			if card2.hoverposizionato2 then
-				card2.morta = true
-				uccidere = false
-				love.mouse.setCursor(Cursor.arrow)
-				for c,card in ipairs(inCampoCards) do
-					if card.id == 5 then -- Trill
-						card.abilita = false
-					elseif card.id == 30 then --BAN
-						card.morta = true
-					end
-				end
-			end
-		end
-	elseif annullare then
-		for c2,card2 in ipairs(inCampoCards2) do
-			if card2.hoverposizionato2 then
-				card2.puoabilita2 = false
-				card2.INFO.Tabilita1 = ""
-				card2.INFO.tabilita1 = ""
-				card2.INFO.Tabilita2 = ""
-				card2.INFO.tabilita2 = ""
-				card2.hoverposizionato2 = false
-				for c,card in ipairs(inCampoCards) do	
-					if card.id == 24 then --Fat Chad Yoshi
-						card.abilita = false
-					end
-				end
-				annullare = false
-				love.mouse.setCursor(Cursor.arrow)
-			end
-		end
-	elseif immunizzare then
-		for c,card in ipairs(inCampoCards) do
-			if card.hoverposizionato then
-				card.stato.immune = true
-				immunizzare = false
-				love.mouse.setCursor(Cursor.arrow)
-			end
-		end
-	elseif evocare then
-		LOAD_MINION(125)
-	elseif switch then
-		for c,card in ipairs(union(inCampoCards,inCampoCards2)) do
-			if card.hoverposizionato then
-				attaccante = nessuno
-				switchATK = card.ATK
-				card.ATK = card.HP 
-				card.HP = switchATK
-				switch = false
-				love.mouse.setCursor(Cursor.arrow)
-			end
-			if card.id == 2 then --Lucy
-				card.abilita = false
-			end
-		end
-	elseif evocare_SHOP then 
-		EVOCA_SHOP(shop[4])
-	elseif TELECINESI then
-		love.mouse.setCursor(Cursor.TelecinesiPreso)
-	elseif OSU then
-		for o,su in ipairs(osu.bool) do
-			if osu.bool[o] and ((general:calculateDistance(osu.x[o], osu.y[o], mouse.x, mouse.y)) < 50) then
-				if music.osu[osu.song]:tell() <= 12 then
-					osu.bar.int.height = osu.bar.int.height +45
-					osu.bar.int.y = osu.bar.int.y -45
-				else
-					osu.bar.int.height = osu.bar.int.height +30
-					osu.bar.int.y = osu.bar.int.y -30
-				end
-				osu.bool[o] = false
-				for c,card2 in ipairs(inCampoCards2) do
-					if (general:aabb((card2.x-50),(card2.y-50), ((card2.width/4)+100),((card2.height/4)+100), osu.x[o],osu.y[o], 1, 1)) then
-						danno = 300
-						general:danno(card2)
-					end
-				end
-			end
-		end
-	elseif cambia_classe_INGEGNERE_DEI_MEMES then
-		for c,card in ipairs(union(inCampoCards, inCampoCards2)) do
-			if card.hoverposizionato or card.hoverposizionato2 then
-				card.INFO.classe = "INGEGNERE DEI MEMES"
-				for c,card in ipairs(inCampoCards) do	
-					if card.id == 27 then -- Il sam
-						card.abilita = false
-					end
-				end
-				cambia_classe_INGEGNERE_DEI_MEMES = false
-			end
-		end
-		love.mouse.setCursor(Cursor.arrow)
-	elseif 
-		PEPONE.bool then LOAD_MINION(100) 
-	end
-end
-
-
-function Abilita:mousereleased(x, y, button)
+function abilita:mousereleased(x, y, button) --🖱️
 	if button == 1 and SHOP then 
-		SELECT_SHOP(x, y)
+		SELECT_SHOP(x, y, button)
 	elseif button == 2 then
 		if LASER then
-			MOVE_LASER(x, y, button)
+			MOVE_LASER()
 		elseif TELECINESI then
-			love.mouse.setCursor(Cursor.TelecinesiLibero)
+			love.mouse.setCursor(cursor.TelecinesiLibero)
 		end
 	end
 end
 
 
-function Abilita:mousemoved(x, y, dx, dy)
+function abilita:mousemoved(x, y, dx, dy) --🖱️
 	if TELECINESI then	
 		MOVE_TELECINESI(x, y, dx, dy)
 	end
 end
 
-function Abilita:keypressed(key)
+function abilita:keypressed(key)
 	if NOTE then	
 		CLOSE_NOTE(key)
 	end
 end
 
 
-function Abilita:load()
-	ABimg = love.graphics.newImage("assets/cards/cardfont/AB.png")
+function abilita:load()
+        --Animazione abilità
+    abilita.image = love.graphics.newImage("assets/misc/ABILITAGrid174x214.png")
+    abilita.grid = anim8.newGrid(abilita.image:getWidth()/6,abilita.image:getHeight(), abilita.image:getWidth(), abilita.image:getHeight())
+    abilita.animation = anim8.newAnimation(abilita.grid('1-6',1), 0.1)
+	--ABimg = love.graphics.newImage("assets/misc/AB.png")
 	Made_in_Heaven = {bool = false, time = 120}
 	KYS = {bool = false,TURNO}
 	KYS_ALL = {bool = false,TURNO}
@@ -1907,14 +2092,18 @@ function Abilita:load()
 		bool=false}
 end
 
-function Abilita:update(dt)
+function abilita:update(dt)
+	abilita.animation:update(dt)
 	UPDATE_LA_PRIMA_REPUBBLICA()
+	if EXPLOSION then 
+		UPDATE_EXPLOSION(dt)
+	end
 	if SMITH and not ruota_smith then
 		UPDATE_SMITH()
 	end
-	if BEAN then
-		UPDATE_LASER(dt)
-	end
+	--if BEAN then -- in 2 parti
+	UPDATE_LASER(dt)
+	--end
 	if CONO then
 		UPDATE_CONO()
 	end
@@ -1948,17 +2137,22 @@ function Abilita:update(dt)
 	end
 end
 
-function Abilita:draw(card)
+function abilita:draw()
 	love.graphics.setColor(1,1,1)
 		--carte posizionate
-	if card.posizionato then
+	for c,card in ipairs(general:union(inCampoCards,inCampoCards2)) do
 			--se abilità attiva
 		if card.abilita then
-			love.graphics.draw(ABimg,card.x , card.y, card.r, 1, 1)
+			abilita.animation:draw(abilita.image, card.x , card.y, card.r, 1, 1)
 		end
 	end
 	if AREA then
 		DRAW_AREA()
+	end
+	if SOLE then 
+		DRAW_SOLE()
+	elseif EXPLOSION then 
+		DRAW_EXPLOSION()
 	end
 	if CONO then
 		DRAW_CONO()
@@ -1993,16 +2187,16 @@ function Abilita:draw(card)
 	if NOTE then 
 		DRAW_NOTE()
 	end
-	if SHOP then 
-		DRAW_SHOP()
-	end
+	--if SHOP then 
+	--	DRAW_SHOP()
+	--end
 	if SQUALO then 
 		squalo.animation:draw(squalo.img, squalo.x, squalo.y, 0, squalo.scale, squalo.scale)
 	end
 end
 
 
-function Abilita:cambiaTurno()
+function abilita:cambiaTurno()
 	for u,camp in ipairs(campi) do --spegnere i campi
 		for i,campo in ipairs(camp) do
 			if campo.hotcampo then
@@ -2011,7 +2205,7 @@ function Abilita:cambiaTurno()
 		end
 	end
 		--cambio turno
-	love.mouse.setCursor(Cursor.arrow)
+	love.mouse.setCursor(cursor.arrow)
 
 	AREA = false
 	CONO = false
@@ -2046,23 +2240,23 @@ function Abilita:cambiaTurno()
 	
 	attaccante = nessuno
 	for c,card in ipairs(inCampoCards) do --cambio turno da stordito
-		if card.stato.stordito then
+		if card.stordito then
 			card.puoattaccare = false
 			if giocatore == 1 then
-				card.stato.stordito = false
+				card.stordito = false
 			end
 		else 
 			card.puoattaccare = true
 		end
-		card.hoverposizionato = false
-		card.hoverposizionato2 = false
+		card.selezionata = false
+		card.selezionata = false
 		card.hover = false
 		card.puoabilita = true
-		if card.stato.avvelenata then
+		if card.avvelenata then
 			danno = 300
 			general:danno(card)
 			if general:togliEffeto() then
-				card.stato.avvelenata = false
+				card.avvelenata = false
 			end
 		end
 	end
@@ -2074,7 +2268,7 @@ function Abilita:cambiaTurno()
 		if connesso then
 			turno.n = turno.n +1
 			if turno.n == 2 then
-				player:scambio_nomi()
+				general:scambioNomiPlayers()
 			end
 		end
 		danno = 0
@@ -2086,13 +2280,15 @@ function Abilita:cambiaTurno()
 		if hoster then
 			turno.n = turno.n +1
 			if turno.n == 2 then
-				player:scambio_nomi()
+				general:scambioNomiPlayers()
 			end
 		end
 		danno = 0
-		SPAWN_CARD(screen.width / 2, screen.height - 90, numeroCarteInMano, true)
-		COLOR_CARDS(activeCards)
+		cards:spawn(100+150*(#inManoCards),window.height*0.78)
+		if #inManoCards < 4 then
+			player.MANA = player.MANA + (3 - #inManoCards)
+		end
 	end
 	general:fineBattaglia()	
-	general:scambio_dati_player()
+	general:scambioDatiPlayers()
 end

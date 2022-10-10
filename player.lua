@@ -1,252 +1,104 @@
---......................'',,,,,,,,,,,,,,,,,,,'............''''''''''''''''''''''''''.................',,,,,,,,'......',,,,,,,,,,,''.....................
---........................................................''''''''''''''''''''''''''...................'''''''........'''''''''''''.....................
---.......................................................'''''''''''''''''''''''''''...................'''''''.......''''''''''''''''...................
---........................................''''...''''',;:::;,'''''''''''''''''''''''...................'''''''.......''''''''''''''''''.................
---.......................................'''',,,,,,,;:cclolc;','''''''''''''''''''''...................'''''''.......'''''''''''''''''''................
---.......................................';:ccodoc:::cc:lolc;','''''''''''''''''''''..................''''''''.......''''''''''''...'''''...............
---.......................................,;;;,;:lc::::llclll:,'''''''''''''''''''''...................''''''''.......''''''''''''......'''..............
---......................................':c;,;:ll;,:;,;lllc;;;,''''''''''''''''''''...................''''''''.......'''''''''''''........'.............
---..................................'...'cdolddo:...,;;;,;;,:;'''''''''''''''''''''...................'''''''''......'''''''''''''......................
---..................................'...':xOko:;cl'..,;,',,,ld;''''''''''''''''''''...................''''''''''.....'''''''''''''......................
---.....................................''colodl;:ooc;,..'''cdd:''''''''''''''''''''............':;'...'.''''''''.....'''''''''''''......................
---....................................''':l;;ldc:;:llc:,,,:ll:,',''''''''''',,::,''..........'o0XX0o,....'''''''''....''''''''''''......................
---....................................''';odoollddlc:;:oxdl:c:,'''''''''''''''lOx:'.,:ldxko;;kXNNNNNOc.''..'';;''''...''''''''''''......................
---.....................................''';clc;,lxxkkkk000Okko,'''''''''''''''cKNOclk0KK0o:cONNNNNNNN0l,,;;,okc'''''..'''''''''''''.....................
---.....................................''''.',;,;oxk00OkkkO0x:''''''''''''''''oXN0O0XNNNk:cONNXKXNNNNNk,:O0xO0c''''''''''''''''''''''...................
---.............................''..'.'',;::;'.',;cxkOxc:cclo:''''''''''''''';lOWXKNWNNNNd,oNMWWKKNWWWWKl;kNX0Kx,''''''''''''''''''''''..................
---........................'''''''''''';oxl,......'cxOxoc;:lc,''''''''''''''.lOKN0KMMMWMW0cdWMMMWXNMMMNKl;OWW000c'''''''''''''''''''''''''....'..........
---.......................'''''',,;;;,,ckx'  . .;,..;ok0kdxxl;'''''''''..':c:lx0X0KWWWWWWWkkWWWWWXKNWNXXdoNMMK0Kd,''''''''''''''''''''''''''''''.........
---.......................'',;loxkkkkxlcokl'....:c,...,;;;:oko,'''''''':c:xX0dcokkOXNNNNNN0dkXNNNXKXNXXXk0WWWKkkl''''''''''''''''''''''''''''''''........
---......................',:dk000000Oxolldo;'...,,'..'''',lxx:,''''''.,kXKXKOdlccllxO0XNNNKo:lkKXXKKXNNKOKNNXx:,...'''''''''''''''''''''''''''''''.......
---......................'ck00000Okxdlllldc....,cc,.;dxxdddl::c:;:lllllkNNKxlooolldOKKXNX0dc;;:codxxOXXkxKXKkl;;'....''''''''''''''''''''''''''''''......
---.....................',oO0000Oxlldddddx:....';;'.:xdclooddollxO0000Ok0NKocoodxOKK0Okxl,.',;;;;cclOKx;;dOKK0Okdl,...''''''''''''''''''''''''''''''.....
---...................''',lO000Od,..:odol:....',,,''lklcdxxdc;lk0000000Ok0Kklllodolc:okk:....:dlokxxxc..;lccloolcoc.....'''''''''''''''''''''''''''''....
---...................'''';oO00k;.;lldxc'......'''.,dkoc::ddodxk00000OkkkxxxllxolokkcoNNd,,';OW0xOkdo:',x0c,:ll;..'.....'''''''''''''''''''''''''''''''..
---...................'',:;:lddo::::;cxd:,'......'';lddo:;lo;;oO00000Oxxkkxxdodocd0Kkox0OoclkNN0kK0xxd:oOd;;:cxx;........'''''''''''''''''''''''''''''''.
---...................'':xo:ccc;lo;,,;okl;,,,,:looc;,,;lxo:;'.,x000000Oxdox0OoloxxkOOxdxxdxO00OO0K0kdoolc;;;:lx0o.........'''''''''''''''''''''''''''''''
---...................'';ldooooddc,,,,:dxc,:ldxoc;,,,,,;cdd:'.,xOxk00000kx0Odollll:oO0OOOOO0000KKKK0d:ccc;;:lok0c..........'''''''''''''''''''''''''''..'
---..................''';;',;:ll;,,,,,,cddoxdl:;,,,,,,,,,;ll;,lxolokOOOOxdOkooooccccoOKKKK0OkkOkO0K0xoolc::cldko............'''''''''.''''''.............
---...................',lc'''cd:,,,,,,:lodxo;,,,,,,,,,,,,'ckxlccc:cllooolcldoloollolclxO0KK0kkkOkxdkOkoc:lllll;..........................................
---...................''lo;'.;ol;,,,:ldl:cxd:,,,,,,,,,,,,,;okdoooooc:ccccc::;:cllooooc;:dk0KK00000OOkoccll:;;.....................'......................
---..................''':l:'..;c;',:ol:,',cxdc,,,,,,,,,;cl;,col:,;col::cc::::loooooool;;:cloxk000Okdlcloo:...............................................
---..................''',:cc'..',,,;'.....';odl;,,,,,;:cc;'... ....,locccc::::;;;;:c:'':llcc:,,coollolcloc'..............................................
---.................''''';ld:....''.........';::,..',;;,...... .,;;,:oool:;,',;;;,'....,;::;,...':llc,.',,...............................................
---................''',;,;ll;'.'..,;'..........',''''.........  .:ol;,..'',''',,;;,......................................................................
---................'',,;;;;'''.:;.;ol,,'''.......''....'''.... ..':lol;.''''''',;;::,...........'........................................................
---...............''''........'cc..:oc,,,,,:c:...'cl:,'''.........',:ll:'.'',,,;:cddlc'..,;;;;'.''..'''''................................................
---...............'''..','..'ccc:'.,cl:,;cll:'...';ldl,'...........',co:'''.':oxxool:;.',,,,,'..',..,,'''''..............................................
---................''..;l:'':oc,,'.',::;cc;'...'''',co:'..........'':l:'.',,;ldl;;cll;.','....'''..'''',,,'..............................................
---.................''.'clc;lo;'''.,llllc;'.''''''''';;'''..........','.',;,'... .:l:..','.'''...'','',,,,'..............................................
---.................'''.';clll;.,l::dxxxdo;.''''''....'''''.........',,'',,.......,;,....''...',,,,,'',,,,,..............................................
---...................''..':;;;';oocllooooccc:;,'',,:::;'''.........','..........';;;,..,,,''',,,,,''',,,,,''............................................
---...................'''.',...';c;,:cccc::lddooooodddl;,''.........''............''''..',,,'',,,,,'.',,,,,''............................................
---...................'''''......,;;lddddl,,codddddolc;'''''........''.','.........'''',,,,,,'',,'....,,,,,''............................................
---....................'''...;;..;olccccllccc::::::;;;,,,'.'...........,;,'',,;,'',,,,,,,,,''..,'......,,,,,,,...........................................
---.....................'',,''::,:o:,,,,;;;cooccccllooc,'...............''',,,,''.............''........,,,,,,'..........................................
---.......................,:::,',;:;;cllll:;cooooooolc;'..'..............................................,,,,,,..........................................
---........................;clc,..',looooooc;:llcc:;;,,,,,,'............',...............................',,,,,'.........................................
---.......................':lc;,,;',loooooooc,.',;:clll:,................''...............................',,,,,.........................................
---......................',::;;:::;;;loloollc'.;cllc:,......'','..........''...............................',,,,.........................................
---.......................',,',;:,,;;:cllll:,',cc:;'. .....''''...........';,...............................''',,'.......................................
---........................'''.''..';,;:::;,'';cc;''......................'c:...............................''''''.......................................
---........................''''','..,;,,,,,,'';lo:'..   ..........'........;;'..'................................'.......................................
---.................................':;'''''.'cdo;..   ...'...........'....','.','....',.....................'''','......................................
---..................................,:,.....,cl:..  ....',;;,......'''....';,'',,....,,;'..................',,,,,'......................................
---..............................;;'...,'''.',,.............';;,....''.....:c,.',,..........................',,,,,,'.....................................
---.............................','...........................,;;'.........,;,..,,'.........................',,,,,,'.....................................
---.......................................... ....'.............,;'..........................................',,,,,,'....................................
---..............................................'''...........'',............................................',,,,,'....................................
---............................................................'...............................................,,,,,'....................................
---................................................................. .........................................,;,;;,;'...................................
---..................................................   ........... .......,,,,,'.............................;::lc;:;'..................................
---...............................  .....        ...     .  ......  .......,,;;;;,'............................',;,','...................................
---..........................    ......   ...................   ................''.......................................................................
---.........................   . ..  ..   .........   .. .  ..      .....................................................................................
---........................     .......              ... ......     ...........................................',,,,,,,'........ ........................
---........................   .. ....          ..                   ..........................................',;;;;;;;,......      .....................
---.........................                                         ....................................  ...',;;;;;;,,......  ..   ....................
---............................                                      ..............  ...................   ...',,,;;,,,,...........   ...................
---...................................                                ...........     ..................   ...''.,,,,''.............   ..................
---.............................................                      ...                                  ......,,'''..............   ..................
---.............................................                                                          .......,,'................   ..................
---...........................................                                                            .......,'................    ..................
---...........................................                       ...                                 .........................    ...................
---.............................................                 ........                               .........................    ....................
---lllllllllllllllllllllllllllllllllllllllllllllllllccccccccclllllllllllllc:::::::::::::::::::::::::::cllllllllllllllllllllllllc::::cllllllllllllllllllll
-
 player = {}
-
+playerimg = love.graphics.newImage("assets/player/frame.png")
 local HAI_PERSO = love.graphics.newImage("assets/HAI_PERSO-VINTO/HAI_PERSO"..love.math.random(1,5)..".png")
 local dead
 
-function player:load()
-	self.img = love.graphics.newImage("assets/ehp/frame.png")
-	self.width = self.img:getWidth()
-	self.height = self.img:getHeight()
-	self.x = (window.width)/2 + 450
-	self.y = ((window.height/2)-100) + 100
-	self.attaccata = false
-	self.puopassare = false
+function player:load() --💾
+	--player.img = love.graphics.newImage("assets/ehp/frame.png")
+	player.width = playerimg:getWidth()
+	player.height = playerimg:getHeight()
+	player.x = (window.width)/2 + 450
+	player.y = ((window.height/2)-100) + 100
+	player.attaccata = false
+	player.puopassare = false
 
-	self.previousCard = 18
-	self.aiming = false
-	self.nextCardFree = false
-
-	self.maxHP = 200000
-	self.HP = self.maxHP
-
-	self.Mana = 3
+	player.maxHP = 100000
+	player.HP = player.maxHP
+	player.MANA = 2
 	
-	self.scale = 2
+	player.scale = 2
 end
 
-
-function player:mouseClick(x, y, button)
-	if button == 1 then --tasto sx
-		mouse.pressed.sx.x, mouse.pressed.sx.y = mouse.x, mouse.y
-		player:aim()
-	end
-	if button == 2 then --tasto dx
-		mouse.pressed.dx.x, mouse.pressed.dx.y = mouse.x, mouse.y
-		Abilita:useAbility()
-		
-		for i,card in ipairs(inCampoCards) do
-			if  card.abilita == false then
-				Card:seleziona()
-				player2:seleziona()
-			end
-		end
-	end
-end
-
-
-function player:aim()
-	for i,card in ipairs(activeCards) do
-		if card.hover == true then
-			
-			if self.nextCardFree == true then
-				self.nextCardFree = false
-				self.aiming = true
-			else
-				self.aiming = true
-			end
-		end
-	end
-end
-
-function player:throw()
-	if self.aiming == true then
-		for c,card in ipairs(activeCards) do
-			if card.hover and not card.morta then
-				for u,camp in ipairs(campi) do
-    				for l,campo in ipairs(camp) do
-						if campo.hotcampo and not card.posizionato then
-							if (giocatore == 1 or ToolBox) and not SHOP then
-								if ((u == 1 and card.Utente) or (u == 3 and not card.Utente)) and not(tutorial.no_posizionamenti) then
-									card.x = campo.x
-									card.y = campo.y
-									card.posizionato = true
-									card.img = nil
-										--attivare un abilità con evocazione
-									Abilita:activeAbilitySummon(card)
-									campo.hotcampo = false
-									campo.puohotcampo = false
-									numeroCarteInMano = numeroCarteInMano - 1
-									numCartaLanciata = card.number
-									MUOVI_CARTA(card.number)
-									table.insert(inCampoCards,card)
-								elseif (u == 6) and not tutorial.no_sacrifici then
-									card.x = campo.x-campo_Width/2
-									card.y = campo.y-campo_Height/2
-									numeroCarteInMano = numeroCarteInMano - 1
-									numCartaLanciata = card.number 
-									card.morta = true
-									if card.id == 12 then --Charlie
-										self.Mana = self.Mana+4
-									elseif card then
-										self.Mana = self.Mana+1
-									end
-									MUOVI_CARTA(card.number)
-								elseif (u == 1 or u == 2 or u == 3 or u == 4) and ToolBox then --🧰
-									card.x = campo.x
-									card.y = campo.y
-									card.posizionato = true
-									card.img = nil
-										--attivare un abilità con evocazione
-									Abilita:activeAbilitySummon(card)
-									campo.hotcampo = false
-									campo.puohotcampo = false
-									numeroCarteInMano = numeroCarteInMano - 1
-									--numCartaLanciata = card.number
-									MUOVI_CARTA(card.number)
-									table.insert(inCampoCards2,card)
-								end
-							end
-						end
-					end
-				end
-				player.previousCard = card.id
-			end
-		end
-		self.aiming = false
-	end
-end
-
-
-function player:update(dt)
-	if (player.HP <= 0) and not ((hoster and (Testo[1] == "ping" or Testo[1] == "Ping" or Testo[1] == "PING")) or (connesso and (Testo[2] == "ping" or Testo[2] == "Ping" or Testo[2] == "PING"))) then
+function player:update(dt) --🔁
+	if (player.HP <= 0) and not ((hoster and (testo[1] == "ping" or testo[1] == "Ping" or testo[1] == "PING")) or (connesso and (testo[2] == "ping" or testo[2] == "Ping" or testo[2] == "PING"))) then
 		dead = true
 	end
 end
 
-
-function player:draw()																									--✏️
+function player:draw() --✏️
 		--Barra Vita
-	love.graphics.draw(self.img,self.x,self.y)
+	love.graphics.draw(playerimg,player.x,player.y)
 		--Nome
+	love.graphics.setColor(1,1,1,1) --🎨
+	love.graphics.setFont(font.RamonaBold)
 	if hoster then
-		love.graphics.print(Testo[1],self.x,self.y-35, 0, .5, .5)
+		love.graphics.print(testo[1],player.x,player.y-37, 0, .5, .5)
 	elseif connesso then
-		love.graphics.print(Testo[2],self.x,self.y-35, 0, .5, .5)
+		love.graphics.print(testo[2],player.x,player.y-37, 0, .5, .5)
 	end
 		--Punti vita
-	love.graphics.print(self.HP ..  " / "  .. self.maxHP,self.x,self.y+25, 0, .3, .3)
+	love.graphics.print(player.HP ..  " / "  .. player.maxHP,player.x,player.y+25, 0, .3, .3)
 		--Barra colorata
-	love.graphics.setColor(love.math.colorFromBytes(150/(self.HP/self.maxHP),155*(3*self.HP/self.maxHP),5))			--🎨
-	love.graphics.rectangle("fill",self.x , self.y,self.width*self.HP/self.maxHP,self.height)
-		--Mana
+	love.graphics.setColor(love.math.colorFromBytes(150/(player.HP/player.maxHP),155*(3*player.HP/player.maxHP),5))			--🎨
+	love.graphics.rectangle("fill",player.x , player.y,player.width*player.HP/player.maxHP,player.height)
+		--MANA
 	love.graphics.setColor(love.math.colorFromBytes(245,55,55))														--🎨
-	love.graphics.setFont(Font.horror)
-	love.graphics.print(self.Mana, sacrifici.x+campo_Width/3, sacrifici.y+campo_Height/4, 0, 2,2)
+	love.graphics.setFont(font.horror)
+	love.graphics.print(player.MANA, sacrifici.x+sacrifici.width/3, sacrifici.y+sacrifici.height/4, 0, 2,2)
 
 	if dead then
 		love.graphics.setColor(1,1,1)
-		love.graphics.draw(HAI_PERSO, 0, -30)
+		love.graphics.draw(HAI_PERSO, 0, -30,0, window.width/(HAI_PERSO:getWidth()),1.03*window.height/(HAI_PERSO:getHeight()))
 	end
 end
 
-
-function player:scambio_nomi()
-	if hoster then
-		server:sendToAll("player_name_1-2", Testo[1])
-  	elseif connesso then
-    	client:send("player_name_2-1", Testo[2])
-    end
-    general:scambio_dati_player()
+function player:mousepressed(x, y, button) --🖱️
+	if button == 1 then
+		for c,card in ipairs(inManoCards) do
+			if general:aabb(card.x,card.y,card.width,card.height,mouse.x,mouse.y,1,1) then
+				card.selezionata = true
+			end
+		end
+	end
 end
 
-
-function LOAD_PLAYER()
-	player:load()
-end
-
-function UPDATE_PLAYER(dt)
-	player:update(dt)
-end
-
-
-function DRAW_PLAYER()
-	love.graphics.setColor(1,1,1)																					--🎨
-	love.graphics.setFont(Font.cardName)
-	player:draw()
+function player:mousereleased(x, y, button) --🖱️
+	for c,card in ipairs(inManoCards) do
+		for i,camp in ipairs(campi) do
+	    	for u,campo in ipairs(camp) do
+	    		if campo.hotcampo and card.selezionata and giocatore == 1 and not SHOP and (player.puopassare or connesso or ToolBox) then
+	    			if ((i == 1 and card.utente) or (i == 3 and not card.utente)) and not(tutorial.no_posizionamenti) then
+						card.x = campo.x 
+						card.y = campo.y
+						table.insert(inCampoCards,card)
+						table.remove(inManoCards,c)
+						campo.hotcampo = false
+						campo.puohotcampo = false
+						abilita:activeAbilitySummon(card)
+						cards:moveCards(card.num)
+					elseif (i == 6) and not tutorial.no_sacrifici then
+						card.x = campo.x
+						card.y = campo.y
+						card.morta = true
+						table.remove(inManoCards,c)
+						if card.id == 12 then --Charlie
+							player.MANA = player.MANA+4
+						elseif card then
+							player.MANA = player.MANA+1
+						end
+						cards:moveCards(card.num)
+					elseif ((i == 4 and card.utente) or (i == 2 and not card.utente)) and Toolbox then
+						card.x = campo.x 
+						card.y = campo.y
+						table.insert(inCampoCards2,card)
+						table.remove(inManoCards,c)
+						campo.hotcampo = false
+						campo.puohotcampo = false
+						abilita:activeAbilitySummon(card)
+						cards:moveCards(card.num)
+					end
+				end
+			end
+		end
+	end
 end

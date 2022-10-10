@@ -1,100 +1,22 @@
---................................................................................................................           .............            .
-----...................................................................................................................  ..    .................        .
-----..................................................................''''''''''''''''....................................    .................. .      .
---..................................................................................................................................               ...............               
---.....................................................................................................................................           ................               
---..........................................................................................................................................      ................. ....         
---..........................................................................................................................................      .....................          
---.........................................................................''''',,,,,,,,,,,,,,,,,,,,,,''''......................................  .......................        
---..............................................................................''',,,,,,,,,,,,,,,,,,,,''''''''''''''''''''....''''............   ........................       
---..................................'''''''''''''''''''''''''''''''''''''''',,,,,,,,,,,,,,,,,,,,,,,,,,,'''''''''''''''''.....'''''''''................................... .      
---......................''''''''''''''''''''''''''''',,''',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'''''''''''.........''''.''''...............'........''....''''... ..     
---.................'''''''''''''''''''''''''',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,''..'''''................'''.'''.'''''''.'''''''''''''.....''''''..'''.'... ...   
---..............'''''''''''''''''''''''',,,,,,,,,,,,,,,,,,,,,,,,;,,,,,;;;;;;,;;,,,,,,,,,,,,,,,,,'.....'''''''''..'''''''''''''''.''''''.'''''''''''''''''..''''''................
---...............'''''''''''''''''',,,,,,,,,,,,,,,,,,''',,,,,,,,,,,;;;;;;;;;;;;;;;;;;;;;;;;,,;,,,,'...''''',,'''.''''.''''..'''..''''''.''''..''''''''''''''.'''''...''..........
---.................'''''''''''''',,,,,'''''''''..............'''''''''',,,,,,,,,,,;;;;;;;;;;,,,,,,,,'...''''''''.''''''''''.'''.''''''..''''''...'''''...''''''.'.''''''.........
---.....................'''''''''''''............................................'....''',,''''''''.......''''''''''''''''''''''''''''''''''''''''.......'....''''''''''''''......
---........................................................................................................'''''''''''''''''''''''''''''''''''''''..''..'''''''''''.''''..'''.....
---........................................  ..................................... ........................'''''',''''''''''''''''''''''''''''''''''...'..'''''...'''''...''......
---........................................  ...................................  ........................'''''''''''''''''''''''''''''''''''''..''''..'..''...''''''''...........
---.......................................   .................................  ..............................''''''''''''''''''''',,''''''''''''''''''''''''.''''''''............
---.......................................   ................................,;,.................................'''''''''''''''''''''''''''''''''''''''''''''''''''..............
---..................''..................   ....................''''........,ldl,...................................'''''.'''''''''''''','''''''''''''''''''.''''''...............
---.................''...................   ..................',,,,,,''.....;ll:'..................................'''''''''''''''''''','''''''.''''''''''''''''..................
---..............''''..................... .................',,,,,,,,,,,,'..''...................................'''''''..............'''''''''''''''''''''''''''.................
---...........''''.....................:oo;...............',,,,,,,,,,,,,,,,,,,''................................'''.......................''''''''''''''.'''''''''................
---.........''''......................cOXXd.............',,,,,,,,,,,,,,,,,,,,,,,,,,,,''''.....................'''.............................''''''''''..'''''''''...............
---........'''''''''',,,,,''.........ckXNNd'..........',,,,,,,,,,,,,,,,,,,,,;;,,,,,,,,,,,,,,,,''............'''..................................''''''...........'...............
---..............'''',,,,,,,'.......;d0NNKd'........',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;;,,,,,,,,,,,.........''.....................................''''............................
---..................',,,,,,'......,lxkxl;'.......',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;;;;,,,,,;,,,'.........'.......................................''....''......................
---...................,,,,,'......'cc:,..........',,,,,,,,,,,,,,,,,,,,,,,,,;;;;;;;;;;;;;,,,,,;;,,,'.........''.......................................''...''......................
---..................',,,,'.......,,.............''',,,,,,,,,,,,,,,,;;;;;,,,,,,;;;;;;;,,,,,,,,;;,,'.................................      ........................................
---..................',,,'..........  ........;oxdc,.',,;,,,;;,,;;,;;;;,,,,;;;;;,;;;,,,,,,,,,,,,,,........................................   .....................................
---.................',,,'...........      ..'o0NXOc,',,,;,,;;,,;;,,;,,,,,,,;;;;;;,,,,,;lxkkkxo:,,'..........................................  ....................................
---...............'',,,'................   .:dkO0kc'',;,,;;;,,,,,,,'''''',,,,,;;,,,,,cOXNWWWWNKo,............................................  ...................................
---.............'',,,,,'.............'''.....',;::'.',,,,;;,,,,,;:clllllcc;;,,,,,,,'c0NWWWWWWWNKo.............................................  ..................................
---...........'''',,,,,'...........',,,,,,,'''.....',,;,,,,,;:coOKXXNNNNXXK0Oxoc;,''dXWWWWWWWWWNKl............................................   .................................
---.........'''''',,,,,''........',,,,,,,,,,,,,,,,,,,,,,,,,:d0XNNWWWWWWWWWWWWNNX0kooONWWWWWWWWWWN0c...........................',,'.............  .................................
---........'''''''''''','''....''''''',,,,,,,,,,,,,,,,,,,':xKNWWWWWWWWWWWWWWWWNXXNNXKOOKXNWWWWWWWNk;.......................':looool,...........  .................................
---.........'''''''''''''''.............',,,,,,,,,,,,,,,';xKNWWWWWWWWWWWWWWWWNOoxXWWKdcldkkO0KNNWWXd,.''..................,oxdooodkd:..........  .................................
---.........'''''''''.....................',,,,,,,,,,,,''lOXNNWWWWWWWWWWMMWWXOdldKWWNKkdoxxxxkkkO00d;'''.................,okkxxxxxkko,........   .................................
---........................................',,,,,,,,,,'.:x0XNWWWWWWWWWWWWNKOxkOdxKNNNNX0xddxO0K00kd:'.'''................;loooooodxxd;.......    .................................
---.........................................',,,,,,,,,'.:k0XNNNWWWWWWWNX0kxk0KOodKNNNNNNXOxddxkkxdc:;''''.......................'',;;........    .................................
---..........................................',,,,,,,,'.:k0XNNNNNNXXKOkxxk0KK0kokXNNNNNNNXXK0kkxxxdoc,'''.................''......... .......   ..................................
---..........................................'',,,,,,,'.:xOKXNNKkddddxkO00000xodKNNNNXXXXNNNNXXKKOdlc;'''................;xkl'.;l:..  ......    ..................................
---...........................................',,,,,,,'.'ck0KXXOl;;:ldxxxxxdold0XNNNNXXXXXNNNXX0xc,:o:...................:OXx,,okc..  .....    ...................................
---............................................',,,,,,,'.,ok000xc;;;:ccllllodx0KXXXXXXXXXXXXK0xoc',od;...................;xKkloko,.  .....   .';'.................................
---............................',;;;;,..........',,,,,,'..;oxkOxc:::ldxxkkkkOO00KKKKKKKKKKK0xc:l:.:xo,....................;dOOkl'.  .....    'oo'.................................
---.......................;lodddolc;'...........'',,,,,,'.';oxkxo:;,;clcclllc::lloolccodddoc'..,.'okl'................ .. .';:,..  .....    .ckd'.................................
---......................:OXKOd:,'...............',,,,,,''..;ldxdl:cl:'...,;. .,ldd:..,ldl:'   ..:xx:..................    ...    ....    ..'d0d'.................................
---.....................,dKX0l'...................'',,,''''..,cdxdocodc'.....  ..:c,  .':;'.    'oko,..'.................      ....     ....,xKk;.................................
---.....................cOXKo'......................'''''''...':lddoloo;'''.  .,...  .  .   .'..:xxc'.''......................       .......;kKOl.................................
---....................;kKXk;...................................';colcc:;ldc'',:;.  .,,.  .'c:';dxo,..''..............,:::;,'...............,dOOd;................................
---...................,dKX0o'......................................,;::;,:oc,col;,..'cc,..;cl::dkd;..'''..............';cccc::;,'............;oxxo;...............................
---..................'o0XXO:..........................................'''.',,:oolllc:::;,,;:cldkx:'.''''.....................................'cddo:...............................
---..................cOXXKo'..................................................',;;:::cccclloddxd:'.'''''................',,,,,'.............':loo:................................
---.................;xKK0k:...........'.......................''''''........     ....'''',,,;;:;'.''''''.......''.......,;::::;............;lodo:'................................
---.................,cll:,......';:ldxkdl:,....................'''''..........   ....'.'.......'''''''''.......';,........................:oddol;.................................
---...............'''....',;:coxk0KKXXXXK0koc:,'''...............'''...............''''........'''''''''........:c,.......................,clll:'.................................
---..............'',,''';dO0KKXXXK0Okxkkkkxolccc::;;,,'...'...........''..........................''''''........:ol,.......................,,;;,..................................
---..............',,'''.;x0KKXK0ko:,',,,;;;;,'....'''''',,,,''''......'''''''...............'''....'''''........:ooc,.................,:lddddoc,..................................
---.............''''''''',cdxxol:;:coxkkkkkxdoc,'..',,,,,,,,,,,,,''..'',,,,,'''........''''',,'''....'..........,oxoc;'... ........,coxO00Okxxo;..................................
---..............'''','''''''',lxO0KKKK0Oxoc:cclc;,'''',,,,,,,,,,,,''',,,,,,,,'...'''''',,,,,,,''.....'.........'okxolc:,.........':ooddddolll:'..................................
---...............'''''''''''.cOKKKK0Oxdoooc:,''',;;,'.'',,,,,,,,,,,,,,,,,,,,,''''',,,,,,,,,,,''.......'........'cxkxool:'....''...,clodxxxddol;..................................
---......''.......'''''''''''.;oxxxddddxxxol:,'.....''..'',,,,,,,,,,,,,,,,,'',,,,,,,,,,,,,,,,,,'.................':dxdol:'...'''''....';clooollc'.................................
---...''''''..',,,,,,,,,,,,''''''''cxkkko:'..........'''',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,''''.................':odo;....''...,;clodxxdl:,....................................
---.''''''''.',;;;;;;;;;;;;;;,,,,''ckkdc'..'''''''''''',,'',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'''''...................';;'...'''..',,:clooool:.....................................
---..''''''.',;;;;;;;;::::::::::;;,;cc;..',,,,,,''''''',''''''''''''',,,,,,,,,,,,,'''''''''''',''''.........................''''''''''''''''......................................
---...'''''.';;;;;;;;;:::::::::::;;;'..',;:::;;;;;;,,,,,,''''''''''''''''''''''''''''''''''''''''''........................''''''''''''''.........................................
---.....'''',;;;;;;;;;::::::::::;;;,'.',;::::::::::::::;;;,'''''''''''''''''''''''''''''''''''''''''......................''''''''''''''''........................................
---....'''.',;;;;;;;;;;:::::::;;;;,'.',;::::::::::::::::::;,''''''''''''''''''''''''''''''''''''''''......................''''''''''''''''........................................
---..''''..,;;;;;;;;;;;::::::;;;;,'.',;;;;;,,,,,,,,,;;:::;,'''''''''''''''''''''''''''''''''''''''''......................'''''''''''''''.........................................
---''',,'.',;;;;;;;;;;;;::;;;;;,'''',,,,,,'''''....',;;;;,'''''''''''''''''''''''''''''''''''''''''''....................''''''''''''''''.........................................
---''',,'.';;;;;;;;;;;;;;;;;;,,'''',,;;,,,'''''.....'''''''''''''''''''''''''''''''''''''''''''''''''....................'''''''''''''''..........................................
---,,,,,'',;;;;;;;;;;;;;;;;,'......''''''.................'''''''''''''''''''''''''''''''''''''''''''....................''''''''''''''...........................................
---,,,,,'',;;;;;;;,,,,,''''........'''.....................''''''''''''''''''''''''''''''''''''''''''...................''''''''''''''............................................
---,,,,,'',,,,,'''''''''''........''........................'''''''''''''''''''''''''''''''''''''''''...................'''''''''''''.............................................
---,,,,,'.'''''''''''''''..................................'',,,,,,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,'''''''''.''....',;;;;;,,,,,,,''............................................
---,,,,,'',;;;,,,,,'',,'''.....''''''''''''''''''''',,,,,''',;;;;;;:;;;;;;;;;;;;;;;;;;::::::::::::::;;,',,,,,,,''''''';:::::::::;;;;,'............................................
---,,,,,'';;::;;;;;;;;;;;;,''',,;;;;;,,,,,,,,',,,,,,,,',,''.',,,,;;;;;;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,'................',,,,,,,,,,,,,'....'''......................................
---,,,,,',;::::::::::::::;,'',;;;;;;;,,,,,''.''''................''''''''''''''''''''''''''''''''''''..................'''''''''''....................''..........................
---,,,,,',;::::::::::::;;;,'.''''''''..............................'''''''''''''''''''''''''''''''''...................''''''''''.................................................
---.......,,,,,,,,,,'''''............................................'''''''''''''''''''''''''''''.....................'''''''',''................................................
---...................................................................'''''''''''''''''''''''''''.......................'''''',,,'..''............................................
---......................................................................''''''''''''''''''''''''....... ...............''.............................'..........................
---........................................................................'''.......'''....''....................................................................................
---.........................................................................''....................................................................................................
---...............................................................................................................................................................................
---...............................................................................................................................................................................
---...............................................................................................................................................................................
---.............................................................................................................. ................................................................
---.............................................................................................................   ...............................................................
-local versione = 1.01
+local data = {mazzo,copies,ver}
+local versione = 1.02
 inventario = {}
+inventarioCards = {}
 
 local imap = {
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -226,7 +148,7 @@ local imap = {
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-        {0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -339,1856 +261,114 @@ local imap = {
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     }
-local data
 
-function inventario:load()
-    	--Torna al menu
-    self.Back = {text = "Torna al menu", x = 0, y = 80, width, height}
-    self.Back.width = Font.menu2:getWidth(self.Back.text)
-    self.Back.height = Font.menu2:getWidth(self.Back.text)
+local function saveDeck()
+    data.mazzo = cards.deck.mazzo
+    data.copies = cards.copies
+    data.ver = versione
+    dataSerializzato = bitser.dumps(data)
+    love.filesystem.write("deck.txt", dataSerializzato)
+end
+local function resetDeck()
+    cards.deck.mazzo = {}
+    cards.deck.max = 30 --massimo carte nel mazzo
+    cards.deck.total = 0
+    cards.copies = {}
+    for i=1,cards.maxCards do
+        cards.copies[i] = 0    --analisi doppioni
+    end
+end
+
+function inventario:load() --💾
+    if ((hoster and (testo[1] == "ping" or testo[1] == "Ping" or testo[1] == "PING")) or (connesso and (testo[2] == "ping" or testo[2] == "Ping" or testo[2] == "PING"))) then
+        ToolBox = true
+        --player.puopassare = true
+    end
+        --Torna al menu
+    inventario.Back = {text = "Torna al menu", x = 0, y = 85, width, height}
+    inventario.Back.width = font.Digi:getWidth(inventario.Back.text)*0.8
+    inventario.Back.height = font.Digi:getWidth(inventario.Back.text)*0.1
         --background
-    self.image = love.graphics.newImage("assets/inventario/background.png")
-    self.grid = anim8.newGrid(816, 538, self.image:getWidth(), self.image:getHeight())
-    self.animation = anim8.newAnimation(self.grid('1-5',1), 0.15)
-	--self.bg = love.graphics.newImage("assets/inventario/bg.png")
-    self.troll = love.graphics.newImage("assets/inventario/troll.png")
-	   --leva epicentro
-	self.leva_epicentro = {img,x,y,width,height}
-	self.leva_epicentro.img = love.graphics.newImage("assets/inventario/leva_epicentro.png")
-	self.leva_epicentro.x = window.width*0.96
-	self.leva_epicentro.y = window.height*0.5
-	self.leva_epicentro.width = self.leva_epicentro.img:getWidth()
-	self.leva_epicentro.height = self.leva_epicentro.img:getHeight()
+    inventario.image = love.graphics.newImage("assets/inventario/background.png")
+    inventario.grid = anim8.newGrid(816, 538, inventario.image:getWidth(), inventario.image:getHeight())
+    inventario.animation = anim8.newAnimation(inventario.grid('1-5',1), 0.15)
+	--inventario.bg = love.graphics.newImage("assets/inventario/bg.png")
+    inventario.troll = love.graphics.newImage("assets/inventario/troll.png")
+        --leva epicentro
+    inventario.leva_epicentro = {img,x,y,width,height}
+	inventario.leva_epicentro.img = love.graphics.newImage("assets/inventario/leva_epicentro.png")
+	inventario.leva_epicentro.x = window.width*0.96
+	inventario.leva_epicentro.y = window.height*0.5
+    inventario.leva_epicentro.r = -math.pi/2
+    inventario.leva_epicentro.scale = .25
+	inventario.leva_epicentro.width = inventario.leva_epicentro.img:getWidth()
+	inventario.leva_epicentro.height = inventario.leva_epicentro.img:getHeight()
         --leva
-	self.leva = {img,x,y,r,scale,width,height}
-	self.leva.img = love.graphics.newImage("assets/inventario/leva.png")
-	self.leva.x = self.leva_epicentro.x+self.leva_epicentro.width*0.1
-	self.leva.y = self.leva_epicentro.y-self.leva_epicentro.height*0.275
-	self.leva.r = math.pi
-	self.leva.scale = .25
-	self.leva.width = self.leva.img:getWidth()
-	self.leva.height = self.leva.img:getHeight()
+	inventario.leva = {img,x,y,r,scale,width,height}
+	inventario.leva.img = love.graphics.newImage("assets/inventario/leva.png")
+	inventario.leva.x = inventario.leva_epicentro.x+inventario.leva_epicentro.width*0.1
+	inventario.leva.y = inventario.leva_epicentro.y-inventario.leva_epicentro.height*inventario.leva_epicentro.scale
+	inventario.leva.r = math.pi
+	inventario.leva.scale = .25
+	inventario.leva.width = inventario.leva.img:getWidth()
+	inventario.leva.height = inventario.leva.img:getHeight()
         --Randomizer
-    self.Randomizer = {img,x,y,r,scale,width,height}
-    self.Randomizer.img = love.graphics.newImage("assets/inventario/Randomizer.png")
-    self.Randomizer.x = window.width*0.91
-    self.Randomizer.y = window.height*0.07
-    self.Randomizer.scale = .25
-    self.Randomizer.width = self.Randomizer.img:getWidth()
-    self.Randomizer.height = self.Randomizer.img:getHeight()
-
-    self.maxCards = 62 --numero di carte totali nella collezione
-        
-        --copertina carte
-    TOPBOT = love.graphics.newImage("assets/cards/cardfont/TOPBOT.png")
-	TOPimg = love.graphics.newQuad( 0, 0, TOPBOT:getWidth(), 56, TOPBOT)
-	BOTimg = love.graphics.newQuad( 0, 56, TOPBOT:getWidth(), 117, TOPBOT)
-	self.MALTOPimg = love.graphics.newImage("assets/cards/cardfont/MALTOP.png")
-	self.MALBOTimg = love.graphics.newImage("assets/cards/cardfont/MALBOT.png")
-	self.Pingimg = love.graphics.newImage("assets/cards/cardfont/Ping.png")
-
-		self.card = {}
-		for w=1,self.maxCards do
-			self.card[w] = love.graphics.newImage("assets/cards/cardimg/cardimg"..w..".png")
-		end
-
-		self.card.width = self.card[1]:getWidth()/2
-		self.card.height = self.card[1]:getHeight()/2
-		self.card.offset = 10
-		self.card.max = 30 --carte nel mazzo
-	
-	--Proprietà carte
-		self.card.attributi = {Utente,Name,ATK,hp,INFO}
-		self.card.attributi.Utente = {}
-		self.card.attributi.Name = {}
-		self.card.attributi.ATK = {}
-		self.card.attributi.Mana = {}
-		self.card.attributi.hp = {}
-		self.card.attributi.INFO = {classe={},Tabilita1={},tabilita1={},Tabilita2={},tabilita2={},color={r={},g={},b={}}}
-		self.card.attributi.INFOlinee = {classe={},Tabilita1={},tabilita1={},Tabilita2={},tabilita2={}}
-
-			--Reazione/Utente
-                --Sciagghi
-			self.card.attributi.Utente[1] = true
-			self.card.attributi.Name[1] = "SCIAGGHI"
-			self.card.attributi.ATK[1] = 2800
-			self.card.attributi.Mana[1] = 2
-			self.card.attributi.hp[1] = 8000
-			self.card.attributi.INFO.classe[1] = "GOLDEN STAFF SEGRETARIO"
-				self.card.attributi.INFO.color.r[1] = 227
-				self.card.attributi.INFO.color.g[1] = 215
-				self.card.attributi.INFO.color.b[1] = 43
-			self.card.attributi.INFO.Tabilita1[1] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[1] = 
-"Canale di Scooby-Doo: \n una carta guadagna ATK pari a \n metà dell'ATK di questa carta \n (tasto dx per selezionare la carta)]] "
-			self.card.attributi.INFO.Tabilita2[1] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita2[1] = 
-"La prima repubblica: \n una volta che hai piazzato \n tutti i segretari sul campo \n puoi sacrificarli \n per evocare il Pepone "
- 			self.card.attributi.INFOlinee.classe[1] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[1] = 1
- 			self.card.attributi.INFOlinee.tabilita1[1] = 4
- 			self.card.attributi.INFOlinee.Tabilita2[1] = 1
- 			self.card.attributi.INFOlinee.tabilita2[1] = 5
-
-                --LUCY
-			self.card.attributi.Utente[2] = true
-			self.card.attributi.Name[2] = "LUCY"
-			self.card.attributi.ATK[2] = 1200
-			self.card.attributi.Mana[2] = 0
-			self.card.attributi.hp[2] = 8000
-			self.card.attributi.INFO.classe[2] = "GOLDEN STAFF SEGRETARIO"
-				self.card.attributi.INFO.color.r[2] = 227
-				self.card.attributi.INFO.color.g[2] = 215
-				self.card.attributi.INFO.color.b[2] = 43
-			self.card.attributi.INFO.Tabilita1[2] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita1[2] = 
-"La prima repubblica: \n una volta che hai piazzato \n tutti i segretari sul campo \n puoi sacrificarli \n per evocare il Pepone "
-			self.card.attributi.INFO.Tabilita2[2] = ""
-			self.card.attributi.INFO.tabilita2[2] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[2] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[2] = 1
- 			self.card.attributi.INFOlinee.tabilita1[2] = 5
- 			self.card.attributi.INFOlinee.Tabilita2[2] = 0
- 			self.card.attributi.INFOlinee.tabilita2[2] = 0
-
-                --VOID
-			self.card.attributi.Utente[3] = true
-			self.card.attributi.Name[3] = "VOID"
-			self.card.attributi.ATK[3] = 2000
-			self.card.attributi.Mana[3] = 0
-			self.card.attributi.hp[3] = 7500
-			self.card.attributi.INFO.classe[3] = "GOLDEN STAFF SEGRETARIO"
-				self.card.attributi.INFO.color.r[3] = 227
-				self.card.attributi.INFO.color.g[3] = 215
-				self.card.attributi.INFO.color.b[3] = 43
-			self.card.attributi.INFO.Tabilita1[3] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita1[3] = 
-"La prima repubblica: \n una volta che hai piazzato \n tutti i segretari sul campo \n puoi sacrificarli \n per evocare il Pepone "
-			self.card.attributi.INFO.Tabilita2[3] = ""
-			self.card.attributi.INFO.tabilita2[3] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[3] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[3] = 1
- 			self.card.attributi.INFOlinee.tabilita1[3] = 5
- 			self.card.attributi.INFOlinee.Tabilita2[3] = 0
- 			self.card.attributi.INFOlinee.tabilita2[3] = 0
-
-                --Harcore Jack
-			self.card.attributi.Utente[4] = true
-			self.card.attributi.Name[4] = "HARDCORE JACK"
-			self.card.attributi.ATK[4] = 1500
-			self.card.attributi.Mana[4] = 3
-			self.card.attributi.hp[4] = 10000
-			self.card.attributi.INFO.classe[4] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[4] = 155
-				self.card.attributi.INFO.color.g[4] = 55
-				self.card.attributi.INFO.color.b[4] = 155
-			self.card.attributi.INFO.Tabilita1[4] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[4] = 
-"aggiungi 3 BREAD al tuo mazzo "
-			self.card.attributi.INFO.Tabilita2[4] = ""
-			self.card.attributi.INFO.tabilita2[4] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[4] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[4] = 1
- 			self.card.attributi.INFOlinee.tabilita1[4] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[4] = 0
- 			self.card.attributi.INFOlinee.tabilita2[4] = 0
-
-                -- Trill
-			self.card.attributi.Utente[5] = true
-			self.card.attributi.Name[5] = "TRILL"
-			self.card.attributi.ATK[5] = 5000
-			self.card.attributi.Mana[5] = 5
-			self.card.attributi.hp[5] = 5000
-			self.card.attributi.INFO.classe[5] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[5] = 155
-				self.card.attributi.INFO.color.g[5] = 55
-				self.card.attributi.INFO.color.b[5] = 155
-			self.card.attributi.INFO.Tabilita1[5] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[5] = 
-"Kill: \n uccidi un carta avversaria \n (tasto dx per selezionare la carta) "
-			self.card.attributi.INFO.Tabilita2[5] = ""
-			self.card.attributi.INFO.tabilita2[5] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[5] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[5] = 1
- 			self.card.attributi.INFOlinee.tabilita1[5] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[5] = 0
- 			self.card.attributi.INFOlinee.tabilita2[5] = 0
-
-                -- Gin Fotonic
-			self.card.attributi.Utente[6] = true
-			self.card.attributi.Name[6] = "GIN FOTONIC"
-			self.card.attributi.ATK[6] = 1300
-			self.card.attributi.Mana[6] = 4
-			self.card.attributi.hp[6] = 12000
-			self.card.attributi.INFO.classe[6] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[6] = 55
-				self.card.attributi.INFO.color.g[6] = 255
-				self.card.attributi.INFO.color.b[6] = 55
-			self.card.attributi.INFO.Tabilita1[6] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[6] = 
-"OSU: \n fai danno a ritmo \n (tasto dx per colpire i cerchi)"
-			self.card.attributi.INFO.Tabilita2[6] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[6] = 
-"se fallisci attiva l'abilità \n di un'altra GIN FOTONIC per \n continuare l'attacco "
- 			self.card.attributi.INFOlinee.classe[6] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[6] = 1
- 			self.card.attributi.INFOlinee.tabilita1[6] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[6] = 1
- 			self.card.attributi.INFOlinee.tabilita2[6] = 3
-
-		      -- Shadow Grimm
-			self.card.attributi.Utente[7] = true
-			self.card.attributi.Name[7] = "SHADOW GRIMM"
-			self.card.attributi.ATK[7] = 3000
-			self.card.attributi.Mana[7] = 4
-			self.card.attributi.hp[7] = 12000
-			self.card.attributi.INFO.classe[7] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[7] = 55
-				self.card.attributi.INFO.color.g[7] = 255
-				self.card.attributi.INFO.color.b[7] = 55
-			self.card.attributi.INFO.Tabilita1[7] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[7] = 
-"Urlo del sium: \n stordisce gli avversari \n (tasto dx per selezionare le carte) "
-			self.card.attributi.INFO.Tabilita2[7] = ""
-			self.card.attributi.INFO.tabilita2[7] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[7] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[7] = 1
- 			self.card.attributi.INFOlinee.tabilita1[7] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[7] = 0
- 			self.card.attributi.INFOlinee.tabilita2[7] = 0
-
-                -- Nabboleone
-			self.card.attributi.Utente[8] = true
-			self.card.attributi.Name[8] = "NABBOLEONE"
-			self.card.attributi.ATK[8] = 1700
-			self.card.attributi.Mana[8] = 3
-			self.card.attributi.hp[8] = 11000
-			self.card.attributi.INFO.classe[8] = "ADMIN"
-				self.card.attributi.INFO.color.r[8] = 255
-				self.card.attributi.INFO.color.g[8] = 52
-				self.card.attributi.INFO.color.b[8] = 38
-			self.card.attributi.INFO.Tabilita1[8] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[8] = 
-"Gangam Style: \n avvelena a una carta a scelta \n (tasto dx per selezionare la carta) "
-			self.card.attributi.INFO.Tabilita2[8] = ""
-			self.card.attributi.INFO.tabilita2[8] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[8] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[8] = 1
- 			self.card.attributi.INFOlinee.tabilita1[8] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[8] = 0
- 			self.card.attributi.INFOlinee.tabilita2[8] = 0
-
-                -- lolfun
-			self.card.attributi.Utente[9] = true
-			self.card.attributi.Name[9] = "LOLFUN"
-			self.card.attributi.ATK[9] = 1800
-			self.card.attributi.Mana[9] = 3
-			self.card.attributi.hp[9] = 10000
-			self.card.attributi.INFO.classe[9] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[9] = 55
-				self.card.attributi.INFO.color.g[9] = 255
-				self.card.attributi.INFO.color.b[9] = 55
-			self.card.attributi.INFO.Tabilita1[9] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[9] = 
-"una carta guadagna ATK pari \n all'ATK di questa carta \n (tasto dx per selezionare la carta) "
-			self.card.attributi.INFO.Tabilita2[9] = ""
-			self.card.attributi.INFO.tabilita2[9] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[9] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[9] = 1
- 			self.card.attributi.INFOlinee.tabilita1[9] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[9] = 0
- 			self.card.attributi.INFOlinee.tabilita2[9] = 0
-
-                -- Padanian Shitposter
-			self.card.attributi.Utente[10] = true
-			self.card.attributi.Name[10] = "PADANIAN SHITPOSTER"
-			self.card.attributi.ATK[10] = 2500
-			self.card.attributi.Mana[10] = 4
-			self.card.attributi.hp[10] = 5000
-			self.card.attributi.INFO.classe[10] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[10] = 55
-				self.card.attributi.INFO.color.g[10] = 255
-				self.card.attributi.INFO.color.b[10] = 55
-			self.card.attributi.INFO.Tabilita1[10] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[10] = 
-"Dimezza gli HP \n di ogni carta aversaria "
-			self.card.attributi.INFO.Tabilita2[10] = ""
-			self.card.attributi.INFO.tabilita2[10] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[10] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[10] = 1
- 			self.card.attributi.INFOlinee.tabilita1[10] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[10] = 0
- 			self.card.attributi.INFOlinee.tabilita2[10] = 0
-
-                -- Aria
-			self.card.attributi.Utente[11] = true
-			self.card.attributi.Name[11] = "ARIA"
-			self.card.attributi.ATK[11] = 200
-			self.card.attributi.Mana[11] = 4
-			self.card.attributi.hp[11] = 8000
-			self.card.attributi.INFO.classe[11] = "ARTISTA"
-				self.card.attributi.INFO.color.r[11] = 55
-				self.card.attributi.INFO.color.g[11] = 55
-				self.card.attributi.INFO.color.b[11] = 255
-			self.card.attributi.INFO.Tabilita1[11] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[11] = 
-"COMMISSIONE NON PAGATA: \n attacchi infiniti per 5 secondi "
-			self.card.attributi.INFO.Tabilita2[11] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[11] = 
-"Team Up: \n quando COMMISSIONE NON PAGATA \n è attiva l'ATK di Aria raddoppia \n per ogni Aria sul campo "
- 			self.card.attributi.INFOlinee.classe[11] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[11] = 1
- 			self.card.attributi.INFOlinee.tabilita1[11] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[11] = 1
- 			self.card.attributi.INFOlinee.tabilita2[11] = 4
-
-                -- Charlie Ebony
-			self.card.attributi.Utente[12] = true
-			self.card.attributi.Name[12] = "CHARLIE EBONY"
-			self.card.attributi.ATK[12] = 2900
-			self.card.attributi.Mana[12] = 4
-			self.card.attributi.hp[12] = 4500
-			self.card.attributi.INFO.classe[12] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[12] = 55
-				self.card.attributi.INFO.color.g[12] = 255
-				self.card.attributi.INFO.color.b[12] = 55
-			self.card.attributi.INFO.Tabilita1[12] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita1[12] = 
-"sacrifica questa carta \n per ottenere 4 Mana anzichè 1 "
-			self.card.attributi.INFO.Tabilita2[12] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita2[12] = 
-"raddoppia gli HP \n di ogni carta sul \n tuo terreno "
- 			self.card.attributi.INFOlinee.classe[12] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[12] = 1
- 			self.card.attributi.INFOlinee.tabilita1[12] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[12] = 1
- 			self.card.attributi.INFOlinee.tabilita2[12] = 3
-
-		          -- Juj
-			self.card.attributi.Utente[13] = true
-			self.card.attributi.Name[13] = "JUJ"
-			self.card.attributi.ATK[13] = 1400
-			self.card.attributi.Mana[13] = 6
-			self.card.attributi.hp[13] = 6500
-			self.card.attributi.INFO.classe[13] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[13] = 55
-				self.card.attributi.INFO.color.g[13] = 255
-				self.card.attributi.INFO.color.b[13] = 55
-			self.card.attributi.INFO.Tabilita1[13] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[13] = 
-"Bello stu' 'rulog: \n un utente avversario diventa tuo \n (tasto dx per selezionare la carta) "
-			self.card.attributi.INFO.Tabilita2[13] = ""
-			self.card.attributi.INFO.tabilita2[13] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[13] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[13] = 1
- 			self.card.attributi.INFOlinee.tabilita1[13] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[13] = 0
- 			self.card.attributi.INFOlinee.tabilita2[13] = 0
-
-                -- Sakura
-			self.card.attributi.Utente[14] = true
-			self.card.attributi.Name[14] = "SAKURA"
-			self.card.attributi.ATK[14] = 3000
-			self.card.attributi.Mana[14] = 4
-			self.card.attributi.hp[14] = 9000
-			self.card.attributi.INFO.classe[14] = "ARTISTA"
-				self.card.attributi.INFO.color.r[14] = 55
-				self.card.attributi.INFO.color.g[14] = 55
-				self.card.attributi.INFO.color.b[14] = 255
-			self.card.attributi.INFO.Tabilita1[14] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[14] = 
-"polvere di stelle \n (muovi il mouse per disegnare Stelle) "
-			self.card.attributi.INFO.Tabilita2[14] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[14] = 
-"La carta obbiettivo è \n la carta avversaria presente \n da più tempo "
- 			self.card.attributi.INFOlinee.classe[14] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[14] = 1
- 			self.card.attributi.INFOlinee.tabilita1[14] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[14] = 1
- 			self.card.attributi.INFOlinee.tabilita2[14] = 3
-
-                -- Mariottide
-			self.card.attributi.Utente[15] = true
-			self.card.attributi.Name[15] = "MARIOTTIDE"
-			self.card.attributi.ATK[15] = 15000
-			self.card.attributi.Mana[15] = 0
-			self.card.attributi.hp[15] = 20000
-			self.card.attributi.INFO.classe[15] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[15] = 155
-				self.card.attributi.INFO.color.g[15] = 55
-				self.card.attributi.INFO.color.b[15] = 155
-			self.card.attributi.INFO.Tabilita1[15] = "Disbilità passiva"
-			self.card.attributi.INFO.tabilita1[15] = 
-"si elimina da sola \n dopo 2 turni "
-			self.card.attributi.INFO.Tabilita2[15] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[15] = 
-"evoca un altro MARIOTTIDE \n il turno dopo \n per allungare l'effetto "
- 			self.card.attributi.INFOlinee.classe[15] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[15] = 1
- 			self.card.attributi.INFOlinee.tabilita1[15] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[15] = 1
- 			self.card.attributi.INFOlinee.tabilita2[15] = 3
-
-                -- La Morte Oscura
-			self.card.attributi.Utente[16] = true
-			self.card.attributi.Name[16] = "MORTE OSCURA"
-			self.card.attributi.ATK[16] = 1700
-			self.card.attributi.Mana[16] = 4
-			self.card.attributi.hp[16] = 10000
-			self.card.attributi.INFO.classe[16] = "INGEGNERE DEI MEMES"
-				self.card.attributi.INFO.color.r[16] = 150
-				self.card.attributi.INFO.color.g[16] = 230
-				self.card.attributi.INFO.color.b[16] = 90
-			self.card.attributi.INFO.Tabilita1[16] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[16] = 
-"Laser della Morte: \n (tieni premuto tasto dx e rilascalo) "
-			self.card.attributi.INFO.Tabilita2[16] = ""
-			self.card.attributi.INFO.tabilita2[16] = 
-[[]]
-
- 			self.card.attributi.INFOlinee.classe[16] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[16] = 1
- 			self.card.attributi.INFOlinee.tabilita1[16] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[16] = 0
- 			self.card.attributi.INFOlinee.tabilita2[16] = 0
-
-                -- Plytlas
-			self.card.attributi.Utente[17] = true
-			self.card.attributi.Name[17] = "PLYTLAS"
-			self.card.attributi.ATK[17] = 2000
-			self.card.attributi.Mana[17] = 2
-			self.card.attributi.hp[17] = 8500
-			self.card.attributi.INFO.classe[17] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[17] = 55
-				self.card.attributi.INFO.color.g[17] = 255
-				self.card.attributi.INFO.color.b[17] = 55
-			self.card.attributi.INFO.Tabilita1[17] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[17] = 
-"ogni utente avversario di classe \n CONTENT CREATOR o GOLDEN STAFF SEGRETARIO \n avversario perde 500 ATK "
-			self.card.attributi.INFO.Tabilita2[17] = ""
-			self.card.attributi.INFO.tabilita2[17] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[17] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[17] = 1
- 			self.card.attributi.INFOlinee.tabilita1[17] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[17] = 0
- 			self.card.attributi.INFOlinee.tabilita2[17] = 0
-
-                -- Inazuma sensei
-			self.card.attributi.Utente[18] = true
-			self.card.attributi.Name[18] = "INAZUMA SENSEI"
-			self.card.attributi.ATK[18] = 1700
-			self.card.attributi.Mana[18] = 4
-			self.card.attributi.hp[18] = 10000
-			self.card.attributi.INFO.classe[18] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[18] = 55
-				self.card.attributi.INFO.color.g[18] = 255
-				self.card.attributi.INFO.color.b[18] = 55
-			self.card.attributi.INFO.Tabilita1[18] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[18] = 
-"Telecinesi: \n muovi le carte avversarie \n (tenere premuto tasto dx per \n raccogliere le carte) "
-			self.card.attributi.INFO.Tabilita2[18] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[18] = 
-"durante Telecinesi \n se muovi le carte in verticale \n le stordisci, \n in orizzontale le fai danno "
- 			self.card.attributi.INFOlinee.classe[18] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[18] = 1
- 			self.card.attributi.INFOlinee.tabilita1[18] = 4
- 			self.card.attributi.INFOlinee.Tabilita2[18] = 1
- 			self.card.attributi.INFOlinee.tabilita2[18] = 4
-
-                -- Zio Pera
-			self.card.attributi.Utente[19] = true
-			self.card.attributi.Name[19] = "ZIO PERA"
-			self.card.attributi.ATK[19] = 1200
-			self.card.attributi.Mana[19] = 3
-			self.card.attributi.hp[19] = 8000
-			self.card.attributi.INFO.classe[19] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[19] = 155
-				self.card.attributi.INFO.color.g[19] = 55
-				self.card.attributi.INFO.color.b[19] = 155
-			self.card.attributi.INFO.Tabilita1[19] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[19] = 
-"Aculei dal culo: \n spara 6 aculei \n (tasto dx per selezionare la carta) "
-			self.card.attributi.INFO.Tabilita2[19] = ""
-			self.card.attributi.INFO.tabilita2[19] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[19] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[19] = 1
- 			self.card.attributi.INFOlinee.tabilita1[19] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[19] = 0
- 			self.card.attributi.INFOlinee.tabilita2[19] = 0
-
-                -- Doppialex
-			self.card.attributi.Utente[20] = true
-			self.card.attributi.Name[20] = "DOPPIALEX"
-			self.card.attributi.ATK[20] = 2000
-			self.card.attributi.Mana[20] = 3
-			self.card.attributi.hp[20] = 10000
-			self.card.attributi.INFO.classe[20] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[20] = 55
-				self.card.attributi.INFO.color.g[20] = 255
-				self.card.attributi.INFO.color.b[20] = 55
-			self.card.attributi.INFO.Tabilita1[20] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[20] = 
-"stordisce 3 carte avversarie"
-			self.card.attributi.INFO.Tabilita2[20] = ""
-			self.card.attributi.INFO.tabilita2[20] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[20] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[20] = 1
- 			self.card.attributi.INFOlinee.tabilita1[20] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[20] = 0
- 			self.card.attributi.INFOlinee.tabilita2[20] = 0
-
-                -- Ping
-			self.card.attributi.Utente[21] = true
-			self.card.attributi.Name[21] = "PING"
-			self.card.attributi.ATK[21] = 2000
-			self.card.attributi.Mana[21] = 4
-			self.card.attributi.hp[21] = 4000
-			self.card.attributi.INFO.classe[21] = "ADMIN"
-				self.card.attributi.INFO.color.r[21] = 255
-				self.card.attributi.INFO.color.g[21] = 52
-				self.card.attributi.INFO.color.b[21] = 38
-			self.card.attributi.INFO.Tabilita1[21] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[21] = 
-"Ho programmato io questo gioco! \n se ci sono 2 carte uguali sul campo \n si disintegrano entrambe "
-			self.card.attributi.INFO.Tabilita2[21] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[21] = 
-"  -è una D4C reference"
- 			self.card.attributi.INFOlinee.classe[21] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[21] = 1
- 			self.card.attributi.INFOlinee.tabilita1[21] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[21] = 1
- 			self.card.attributi.INFOlinee.tabilita2[21] = 1
-
-                -- Cosmi
-			self.card.attributi.Utente[22] = true
-			self.card.attributi.Name[22] = "COSMI"
-			self.card.attributi.ATK[22] = 1900
-			self.card.attributi.Mana[22] = 4
-			self.card.attributi.hp[22] = 10000
-			self.card.attributi.INFO.classe[22] = "CONTENT CREATOR"
-				self.card.attributi.INFO.color.r[22] = 55
-				self.card.attributi.INFO.color.g[22] = 255
-				self.card.attributi.INFO.color.b[22] = 55
-			self.card.attributi.INFO.Tabilita1[22] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[22] = 
-"Explosion: \n infligge danno ad area \n (tasto dx per selezionare l'area) "
-			self.card.attributi.INFO.Tabilita2[22] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[22] = 
-"minore è la distanza dal centra \n maggiore è il danno \n danno massimo: 2500 "
- 			self.card.attributi.INFOlinee.classe[22] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[22] = 1
- 			self.card.attributi.INFOlinee.tabilita1[22] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[22] = 1
- 			self.card.attributi.INFOlinee.tabilita2[22] = 3
-
-                -- Cring3_Crimson
-			self.card.attributi.Utente[23] = true
-			self.card.attributi.Name[23] = "CRING3_CRIMSON"
-			self.card.attributi.ATK[23] = 1700
-			self.card.attributi.Mana[23] = 2
-			self.card.attributi.hp[23] = 13500
-			self.card.attributi.INFO.classe[23] = "INGEGNERE DEI MEMES"
-				self.card.attributi.INFO.color.r[23] = 150
-				self.card.attributi.INFO.color.g[23] = 230
-				self.card.attributi.INFO.color.b[23] = 90
-			self.card.attributi.INFO.Tabilita1[23] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[23] = 
-"passano 2 turni"
-			self.card.attributi.INFO.Tabilita2[23] = ""
-			self.card.attributi.INFO.tabilita2[23] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[23] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[23] = 1
- 			self.card.attributi.INFOlinee.tabilita1[23] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[23] = 0
- 			self.card.attributi.INFOlinee.tabilita2[23] = 0
-
-                -- Fat Chad Yoshi
-			self.card.attributi.Utente[24] = true
-			self.card.attributi.Name[24] = "FAT CHAD YOSHI"
-			self.card.attributi.ATK[24] = 2500
-			self.card.attributi.Mana[24] = 5
-			self.card.attributi.hp[24] = 7500
-			self.card.attributi.INFO.classe[24] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[24] = 155
-				self.card.attributi.INFO.color.g[24] = 55
-				self.card.attributi.INFO.color.b[24] = 155
-			self.card.attributi.INFO.Tabilita1[24] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[24] = 
-"Annulla l'effetto di una carta \n (tasto dx per selezionare la carta)"
-			self.card.attributi.INFO.Tabilita2[24] = ""
-			self.card.attributi.INFO.tabilita2[24] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[24] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[24] = 1
- 			self.card.attributi.INFOlinee.tabilita1[24] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[24] = 1
- 			self.card.attributi.INFOlinee.tabilita2[24] = 0
-
-                -- Mortius
-			self.card.attributi.Utente[25] = true
-			if ((hoster and (Testo[1] == "Morbius" or Testo[1] == "morbius" or Testo[1] == "MORBIUS"))
-			 or (connesso and (Testo[2] == "Morbius" or Testo[2] == "morbius" or Testo[2] == "MORBIUS"))) then
-				self.card.attributi.Name[25] = "MORBIUS"
-			else
-				self.card.attributi.Name[25] = "MORTIUS"
-			end
-			self.card.attributi.ATK[25] = 2000
-			self.card.attributi.Mana[25] = 4
-			self.card.attributi.hp[25] = 6000
-			self.card.attributi.INFO.classe[25] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[25] = 155
-				self.card.attributi.INFO.color.g[25] = 55
-				self.card.attributi.INFO.color.b[25] = 155
-			self.card.attributi.INFO.Tabilita1[25] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[25] = 
-[[evoca un minion
- (tasto dx per selezionare lo spazio)]]
-			self.card.attributi.INFO.Tabilita2[25] = "frase ad effetto"
-			self.card.attributi.INFO.tabilita2[25] = 
-[[FINO ALLA MORTE ED OLTRE]]
- 			self.card.attributi.INFOlinee.classe[25] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[25] = 1
- 			self.card.attributi.INFOlinee.tabilita1[25] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[25] = 1
- 			self.card.attributi.INFOlinee.tabilita2[25] = 1
-
-                -- Verel
-			self.card.attributi.Utente[26] = true
-			self.card.attributi.Name[26] = "VEREL"
-			self.card.attributi.ATK[26] = 3000
-			self.card.attributi.Mana[26] = 5
-			self.card.attributi.hp[26] = 3000
-			self.card.attributi.INFO.classe[26] = "ARTISTA"
-				self.card.attributi.INFO.color.r[26] = 55
-				self.card.attributi.INFO.color.g[26] = 55
-				self.card.attributi.INFO.color.b[26] = 255
-			self.card.attributi.INFO.Tabilita1[26] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[26] = 
-[[Squalo: mangia gli aversari
- (danno pari all'ATK di questa carta)]]
-			self.card.attributi.INFO.Tabilita2[26] = ""
-			self.card.attributi.INFO.tabilita2[26] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[26] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[26] = 1
- 			self.card.attributi.INFOlinee.tabilita1[26] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[26] = 0
- 			self.card.attributi.INFOlinee.tabilita2[26] = 0
-
-                -- Il sam
-			self.card.attributi.Utente[27] = true
-			self.card.attributi.Name[27] = "IL.SAM"
-			self.card.attributi.ATK[27] = 5500
-			self.card.attributi.Mana[27] = 2
-			self.card.attributi.hp[27] = 7000
-			self.card.attributi.INFO.classe[27] = "MODERATORE"
-				self.card.attributi.INFO.color.r[27] = 184
-				self.card.attributi.INFO.color.g[27] = 9
-				self.card.attributi.INFO.color.b[27] = 88
-			self.card.attributi.INFO.Tabilita1[27] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[27] = 
-[[rendi una carta
- classe "INGEGNERE DEI MEMES"]]
-			self.card.attributi.INFO.Tabilita2[27] = ""
-			self.card.attributi.INFO.tabilita2[27] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[27] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[27] = 1
- 			self.card.attributi.INFOlinee.tabilita1[27] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[27] = 0
- 			self.card.attributi.INFOlinee.tabilita2[27] = 0
-
-                -- Esagono
-			self.card.attributi.Utente[28] = true
-			self.card.attributi.Name[28] = "ESAGONO"
-			self.card.attributi.ATK[28] = 1800
-			self.card.attributi.Mana[28] = 2
-			self.card.attributi.hp[28] = 6000
-			self.card.attributi.INFO.classe[28] = "ADMIN"
-                                self.card.attributi.INFO.color.r[28] = 255
-                                self.card.attributi.INFO.color.g[28] = 52
-                                self.card.attributi.INFO.color.b[28] = 38
-			self.card.attributi.INFO.Tabilita1[28] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[28] = 
-[[tutte le carte sul tuo terreno
- costano 1 Mana in meno]]
-			self.card.attributi.INFO.Tabilita2[28] = ""
-			self.card.attributi.INFO.tabilita2[28] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[28] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[28] = 1
- 			self.card.attributi.INFOlinee.tabilita1[28] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[28] = 0
- 			self.card.attributi.INFOlinee.tabilita2[28] = 0
-
-                -- Disegni e Fan Art
-			self.card.attributi.Utente[29] = false
-			self.card.attributi.Name[29] = "DISEGNI E FAN ART"
-			self.card.attributi.ATK[29] = 0
-			self.card.attributi.Mana[29] = 1
-			self.card.attributi.hp[29] = 4000
-			self.card.attributi.INFO.classe[29] = "CANALE"
-				self.card.attributi.INFO.color.r[29] = 40
-				self.card.attributi.INFO.color.g[29] = 10
-				self.card.attributi.INFO.color.b[29] = 150
-			self.card.attributi.INFO.Tabilita1[29] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[29] = 
-[[ad ogni ARTISTA:
-+800 ATK
-+800 HP]]
-			self.card.attributi.INFO.Tabilita2[29] = ""
-			self.card.attributi.INFO.tabilita2[29] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[29] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[29] = 1
- 			self.card.attributi.INFOlinee.tabilita1[29] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[29] = 0
- 			self.card.attributi.INFOlinee.tabilita2[29] = 0
-
-                -- BAN
-			self.card.attributi.Utente[30] = false
-			self.card.attributi.Name[30] = "BAN"
-			self.card.attributi.ATK[30] = 0
-			self.card.attributi.Mana[30] = 3
-			self.card.attributi.hp[30] = 4000
-			self.card.attributi.INFO.classe[30] = "AZIONE"
-				self.card.attributi.INFO.color.r[30] = 66
-				self.card.attributi.INFO.color.g[30] = 132
-				self.card.attributi.INFO.color.b[30] = 245
-			self.card.attributi.INFO.Tabilita1[30] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[30] = 
-[[Kill:
- uccidi un carta avversaria
- (tasto dx per selezionare la carta)]]
-			self.card.attributi.INFO.Tabilita2[30] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[30] = 
-[[se ritiri l'effetto puoi utilizzarlo dopo]]
- 			self.card.attributi.INFOlinee.classe[30] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[30] = 1
- 			self.card.attributi.INFOlinee.tabilita1[30] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[30] = 1
- 			self.card.attributi.INFOlinee.tabilita2[30] = 1
-
-                -- Demon Core
-			self.card.attributi.Utente[31] = false
-			self.card.attributi.Name[31] = "DEMON CORE"
-			self.card.attributi.ATK[31] = 0
-			self.card.attributi.Mana[31] = 7
-			self.card.attributi.hp[31] = 4000
-			self.card.attributi.INFO.classe[31] = "MEME"
-				self.card.attributi.INFO.color.r[31] = 155
-				self.card.attributi.INFO.color.g[31] = 255
-				self.card.attributi.INFO.color.b[31] = 55
-			self.card.attributi.INFO.Tabilita1[31] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[31] = 
-[[Cancro:
- uccidi tutte le carte
- sul terreno tra 3 turni]]
-			self.card.attributi.INFO.Tabilita2[31] = ""
-			self.card.attributi.INFO.tabilita2[31] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[31] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[31] = 1
- 			self.card.attributi.INFOlinee.tabilita1[31] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[31] = 0
- 			self.card.attributi.INFOlinee.tabilita2[31] = 0
-
-                -- #memes
-			self.card.attributi.Utente[32] = false
-			self.card.attributi.Name[32] = "#MEMES"
-			self.card.attributi.ATK[32] = 0
-			self.card.attributi.Mana[32] = 1
-			self.card.attributi.hp[32] = 4000
-			self.card.attributi.INFO.classe[32] = "CANALE"
-				self.card.attributi.INFO.color.r[32] = 40
-				self.card.attributi.INFO.color.g[32] = 10
-				self.card.attributi.INFO.color.b[32] = 150
-			self.card.attributi.INFO.Tabilita1[32] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[32] = 
-[[ad ogni INGEGNERE DEI MEMES:
- +800 ATK
- +800 HP]]
-			self.card.attributi.INFO.Tabilita2[32] = ""
-			self.card.attributi.INFO.tabilita2[32] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[32] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[32] = 1
- 			self.card.attributi.INFOlinee.tabilita1[32] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[32] = 0
- 			self.card.attributi.INFOlinee.tabilita2[32] = 0
-
-                -- Made in Heaven
-			self.card.attributi.Utente[33] = false
-			self.card.attributi.Name[33] = "MADE IN HEAVEN"
-			self.card.attributi.ATK[33] = 0
-			self.card.attributi.Mana[33] = 9
-			self.card.attributi.hp[33] = 4000
-			self.card.attributi.INFO.classe[33] = "AZIONE"
-				self.card.attributi.INFO.color.r[33] = 66
-				self.card.attributi.INFO.color.g[33] = 132
-				self.card.attributi.INFO.color.b[33] = 245
-			self.card.attributi.INFO.Tabilita1[33] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[33] = 
-[[la partita si
- conclude tra 2 minuti]]
-			self.card.attributi.INFO.Tabilita2[33] = "Consiglio"
-			self.card.attributi.INFO.tabilita2[33] = 
-[[Il timer accellera ma
- si può resettare se
- evochi un altro Made in Heaven]]
- 			self.card.attributi.INFOlinee.classe[33] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[33] = 1
- 			self.card.attributi.INFOlinee.tabilita1[33] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[33] = 1
- 			self.card.attributi.INFOlinee.tabilita2[33] = 3
-
-                -- Moyai
-			self.card.attributi.Utente[34] = false
-			self.card.attributi.Name[34] = "MOYAI"
-			self.card.attributi.ATK[34] = 0
-			self.card.attributi.Mana[34] = 2
-			self.card.attributi.hp[34] = 4000
-			self.card.attributi.INFO.classe[34] = "MEME"
-				self.card.attributi.INFO.color.r[34] = 155
-				self.card.attributi.INFO.color.g[34] = 255
-				self.card.attributi.INFO.color.b[34] = 55
-			self.card.attributi.INFO.Tabilita1[34] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[34] = 
-[[una carta avversaria 
- perde 9000 ATK
- (tasto dx per selezionare la carta)]]
-			self.card.attributi.INFO.Tabilita2[34] = ""
-			self.card.attributi.INFO.tabilita2[34] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[34] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[34] = 1
- 			self.card.attributi.INFOlinee.tabilita1[34] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[34] = 0
- 			self.card.attributi.INFOlinee.tabilita2[34] = 0
-
-                -- Kronk Drip
-			self.card.attributi.Utente[35] = false
-			self.card.attributi.Name[35] = "KRONK DRIP"
-			self.card.attributi.ATK[35] = 0
-			self.card.attributi.Mana[35] = 2
-			self.card.attributi.hp[35] = 4000
-			self.card.attributi.INFO.classe[35] = "MEME"
-				self.card.attributi.INFO.color.r[35] = 155
-				self.card.attributi.INFO.color.g[35] = 255
-				self.card.attributi.INFO.color.b[35] = 55
-			self.card.attributi.INFO.Tabilita1[35] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[35] = 
-[[+1000 HP a ogni carta sul tuo terreno]]
-			self.card.attributi.INFO.Tabilita2[35] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita2[35] = 
-[[-100 ATK a ogni carta sul terreno avversario]]
- 			self.card.attributi.INFOlinee.classe[35] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[35] = 1
- 			self.card.attributi.INFOlinee.tabilita1[35] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[35] = 1
- 			self.card.attributi.INFOlinee.tabilita2[35] = 1
-
-                --  IL DVCE
-			self.card.attributi.Utente[36] = true
-			self.card.attributi.Name[36] = " IL DVCE"
-			self.card.attributi.ATK[36] = 3000
-			self.card.attributi.Mana[36] = 3
-			self.card.attributi.hp[36] = 8000
-			self.card.attributi.INFO.classe[36] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[36] = 155
-				self.card.attributi.INFO.color.g[36] = 55
-				self.card.attributi.INFO.color.b[36] = 155
-			self.card.attributi.INFO.Tabilita1[36] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[36] = 
-[[aggiungi una carta a caso al tuo mazzo]]
-			self.card.attributi.INFO.Tabilita2[36] = ""
-			self.card.attributi.INFO.tabilita2[36] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[36] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[36] = 1
- 			self.card.attributi.INFOlinee.tabilita1[36] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[36] = 0
- 			self.card.attributi.INFOlinee.tabilita2[36] = 0
-
-                -- Carly
-			self.card.attributi.Utente[37] = true
-			self.card.attributi.Name[37] = "CARLY"
-			self.card.attributi.ATK[37] = 3000
-			self.card.attributi.Mana[37] = 3
-			self.card.attributi.hp[37] = 8000
-			self.card.attributi.INFO.classe[37] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[37] = 155
-				self.card.attributi.INFO.color.g[37] = 55
-				self.card.attributi.INFO.color.b[37] = 155
-			self.card.attributi.INFO.Tabilita1[37] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[37] = 
-[[Switch
-scambia ATK e HP di una carta]]
-			self.card.attributi.INFO.Tabilita2[37] = ""
-			self.card.attributi.INFO.tabilita2[37] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[37] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[37] = 1
- 			self.card.attributi.INFOlinee.tabilita1[37] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[37] = 0
- 			self.card.attributi.INFOlinee.tabilita2[37] = 0
-
-                -- Raiden
-			self.card.attributi.Utente[38] = true
-			self.card.attributi.Name[38] = "RAIDEN"
-			self.card.attributi.ATK[38] = 3000
-			self.card.attributi.Mana[38] = 0
-			self.card.attributi.hp[38] = 3000
-			self.card.attributi.INFO.classe[38] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[38] = 155
-				self.card.attributi.INFO.color.g[38] = 55
-				self.card.attributi.INFO.color.b[38] = 155
-			self.card.attributi.INFO.Tabilita1[38] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita1[38] = 
-[[c'è una possibilità su 15
- di parare il colpo]]
-			self.card.attributi.INFO.Tabilita2[38] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita2[38] = 
-[[c'è una possibilità su 25
- di danneggiare la carta avversaria
- che sta attaccando questa carta]]
- 			self.card.attributi.INFOlinee.classe[38] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[38] = 1
- 			self.card.attributi.INFOlinee.tabilita1[38] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[38] = 1
- 			self.card.attributi.INFOlinee.tabilita2[38] = 3
-
-                -- Edd
-			self.card.attributi.Utente[39] = true
-			self.card.attributi.Name[39] = "EDD"
-			self.card.attributi.ATK[39] = 1500
-			self.card.attributi.Mana[39] = 0
-			self.card.attributi.hp[39] = 2500
-			self.card.attributi.INFO.classe[39] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[39] = 155
-				self.card.attributi.INFO.color.g[39] = 55
-				self.card.attributi.INFO.color.b[39] = 155
-			self.card.attributi.INFO.Tabilita1[39] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita1[39] = 
-[[tutti gli Utenti di classe
-"GOLDEN STAFF SEGRETARIO"
-perdono -700 ATK]]
-			self.card.attributi.INFO.Tabilita2[39] = ""
-			self.card.attributi.INFO.tabilita2[39] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[39] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[39] = 1
- 			self.card.attributi.INFOlinee.tabilita1[39] = 3
- 			self.card.attributi.INFOlinee.Tabilita2[39] = 0
- 			self.card.attributi.INFOlinee.tabilita2[39] = 0
-
-                -- Fizz
-			self.card.attributi.Utente[40] = true
-			self.card.attributi.Name[40] = "FIZZ"
-			self.card.attributi.ATK[40] = 2000
-			self.card.attributi.Mana[40] = 3
-			self.card.attributi.hp[40] = 8000
-			self.card.attributi.INFO.classe[40] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[40] = 155
-				self.card.attributi.INFO.color.g[40] = 55
-				self.card.attributi.INFO.color.b[40] = 155
-			self.card.attributi.INFO.Tabilita1[40] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[40] = 
-[[Super Cute:
- lancia cuori, curano 100 HP l'uno]]
-			self.card.attributi.INFO.Tabilita2[40] = ""
-			self.card.attributi.INFO.tabilita2[40] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[40] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[40] = 1
- 			self.card.attributi.INFOlinee.tabilita1[40] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[40] = 0
- 			self.card.attributi.INFOlinee.tabilita2[40] = 0
-
-                -- Uomo Piccione
-			self.card.attributi.Utente[41] = true
-			self.card.attributi.Name[41] = "UOMO PICCIONE"
-			self.card.attributi.ATK[41] = 3000
-			self.card.attributi.Mana[41] = 2
-			self.card.attributi.hp[41] = 8500
-			self.card.attributi.INFO.classe[41] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[41] = 155
-				self.card.attributi.INFO.color.g[41] = 55
-				self.card.attributi.INFO.color.b[41] = 155
-			self.card.attributi.INFO.Tabilita1[41] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[41] = 
-[[ogni carta sul terreno perde
-    -100 HP]]
-			self.card.attributi.INFO.Tabilita2[41] = ""
-			self.card.attributi.INFO.tabilita2[41] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[41] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[41] = 1
- 			self.card.attributi.INFOlinee.tabilita1[41] = 2
- 			self.card.attributi.INFOlinee.Tabilita2[41] = 0
- 			self.card.attributi.INFOlinee.tabilita2[41] = 0
-
-                -- Schrödinger
-			self.card.attributi.Utente[42] = true
-			self.card.attributi.Name[42] = "SCHRöDINGER"
-			self.card.attributi.ATK[42] = 1600
-			self.card.attributi.Mana[42] = 3
-			self.card.attributi.hp[42] = 8000
-			self.card.attributi.INFO.classe[42] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[42] = 155
-				self.card.attributi.INFO.color.g[42] = 55
-				self.card.attributi.INFO.color.b[42] = 155
-			self.card.attributi.INFO.Tabilita1[42] = "Abilità a evocazione"
-			self.card.attributi.INFO.tabilita1[42] = 
-[[Questa carta è immune al primo attacco]]
-			self.card.attributi.INFO.Tabilita2[42] = "Abilità passiva"
-			self.card.attributi.INFO.tabilita2[42] = 
-[[se Verel è sul campo questa carta 
- guadagna +500 ATK e + 300 HP]]
- 			self.card.attributi.INFOlinee.classe[42] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[42] = 1
- 			self.card.attributi.INFOlinee.tabilita1[42] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[42] = 1
- 			self.card.attributi.INFOlinee.tabilita2[42] = 2
-
-                -- Doom Slayer
-			self.card.attributi.Utente[43] = true
-			self.card.attributi.Name[43] = "DOOM SLAYER"
-			self.card.attributi.ATK[43] = 6000
-			self.card.attributi.Mana[43] = 4
-			self.card.attributi.hp[43] = 8500
-			self.card.attributi.INFO.classe[43] = "MEMBRO ONORARIO"
-				self.card.attributi.INFO.color.r[43] = 155
-				self.card.attributi.INFO.color.g[43] = 55
-				self.card.attributi.INFO.color.b[43] = 155
-			self.card.attributi.INFO.Tabilita1[43] = "Abilità speciale"
-			self.card.attributi.INFO.tabilita1[43] = 
-[[+500 HP a questa carta]]
-			self.card.attributi.INFO.Tabilita2[43] = ""
-			self.card.attributi.INFO.tabilita2[43] = 
-[[]]
- 			self.card.attributi.INFOlinee.classe[43] = 1
- 			self.card.attributi.INFOlinee.Tabilita1[43] = 1
- 			self.card.attributi.INFOlinee.tabilita1[43] = 1
- 			self.card.attributi.INFOlinee.Tabilita2[43] = 0
- 			self.card.attributi.INFOlinee.tabilita2[43] = 0
-
-                -- Perry
-            self.card.attributi.Utente[44] = false
-            self.card.attributi.Name[44] = "PERRY L'ORNITORINCO"
-            self.card.attributi.ATK[44] = 0
-            self.card.attributi.Mana[44] = 2
-            self.card.attributi.hp[44] = 4000
-            self.card.attributi.INFO.classe[44] = "MEME"
-                self.card.attributi.INFO.color.r[44] = 155
-                self.card.attributi.INFO.color.g[44] = 255
-                self.card.attributi.INFO.color.b[44] = 55
-            self.card.attributi.INFO.Tabilita1[44] = "Abilità speciale"
-            self.card.attributi.INFO.tabilita1[44] = 
-[[+500 HP a questa carta]]
-            self.card.attributi.INFO.Tabilita2[44] = ""
-            self.card.attributi.INFO.tabilita2[44] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[44] = 1
-            self.card.attributi.INFOlinee.Tabilita1[44] = 1
-            self.card.attributi.INFOlinee.tabilita1[44] = 1
-            self.card.attributi.INFOlinee.Tabilita2[44] = 0
-            self.card.attributi.INFOlinee.tabilita2[44] = 0
-
-                -- B per Basato
-            self.card.attributi.Utente[45] = true
-            self.card.attributi.Name[45] = "B PER BASATO"
-            self.card.attributi.ATK[45] = 3000
-            self.card.attributi.Mana[45] = 0
-            self.card.attributi.hp[45] = 1500
-            self.card.attributi.INFO.classe[45] = "ARTISTA"
-                self.card.attributi.INFO.color.r[45] = 55
-                self.card.attributi.INFO.color.g[45] = 55
-                self.card.attributi.INFO.color.b[45] = 255
-            self.card.attributi.INFO.Tabilita1[45] = "Abilità passiva"
-            self.card.attributi.INFO.tabilita1[45] = 
-[[possibilità di danno critico maggiore]]
-            self.card.attributi.INFO.Tabilita2[45] = ""
-            self.card.attributi.INFO.tabilita2[45] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[45] = 1
-            self.card.attributi.INFOlinee.Tabilita1[45] = 1
-            self.card.attributi.INFOlinee.tabilita1[45] = 1
-            self.card.attributi.INFOlinee.Tabilita2[45] = 0
-            self.card.attributi.INFOlinee.tabilita2[45] = 0
-
-                -- Summer
-            self.card.attributi.Utente[46] = true
-            self.card.attributi.Name[46] = "SUMMER"
-            self.card.attributi.ATK[46] = 3000
-            self.card.attributi.Mana[46] = 3
-            self.card.attributi.hp[46] = 4000
-            self.card.attributi.INFO.classe[46] = "ARTISTA"
-                self.card.attributi.INFO.color.r[46] = 55
-                self.card.attributi.INFO.color.g[46] = 55
-                self.card.attributi.INFO.color.b[46] = 255
-            self.card.attributi.INFO.Tabilita1[46] = "Abilità speciale"
-            self.card.attributi.INFO.tabilita1[46] = 
-[[Bread:
- cura una carta di un valore
- pari all'ATK di questa carta
- (tasto dx per selezionare la carta)]]
-            self.card.attributi.INFO.Tabilita2[46] = ""
-            self.card.attributi.INFO.tabilita2[46] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[46] = 1
-            self.card.attributi.INFOlinee.Tabilita1[46] = 1
-            self.card.attributi.INFOlinee.tabilita1[46] = 4
-            self.card.attributi.INFOlinee.Tabilita2[46] = 0
-            self.card.attributi.INFOlinee.tabilita2[46] = 0
-
-                -- Gato Sburato
-            self.card.attributi.Utente[47] = true
-            self.card.attributi.Name[47] = "LAC REATURA"
-            self.card.attributi.ATK[47] = 3500
-            self.card.attributi.Mana[47] = 1
-            self.card.attributi.hp[47] = 3500
-            self.card.attributi.INFO.classe[47] = "MEMBRO ONORARIO"
-                self.card.attributi.INFO.color.r[47] = 155
-                self.card.attributi.INFO.color.g[47] = 55
-                self.card.attributi.INFO.color.b[47] = 155
-            self.card.attributi.INFO.Tabilita1[47] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[47] = 
-[[pesca una carta]]
-            self.card.attributi.INFO.Tabilita2[47] = ""
-            self.card.attributi.INFO.tabilita2[47] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[47] = 1
-            self.card.attributi.INFOlinee.Tabilita1[47] = 1
-            self.card.attributi.INFOlinee.tabilita1[47] = 1
-            self.card.attributi.INFOlinee.Tabilita2[47] = 0
-            self.card.attributi.INFOlinee.tabilita2[47] = 0
-
-                --Bread
-            self.card.attributi.Utente[48] = false
-            self.card.attributi.Name[48] = "BREAD"
-            self.card.attributi.ATK[48] = 0
-            self.card.attributi.Mana[48] = 1
-            self.card.attributi.hp[48] = 4000
-            self.card.attributi.INFO.classe[48] = "MEME"
-                self.card.attributi.INFO.color.r[48] = 155
-                self.card.attributi.INFO.color.g[48] = 255
-                self.card.attributi.INFO.color.b[48] = 55
-            self.card.attributi.INFO.Tabilita1[48] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[48] = 
-[[cura una carta del 30%]]
-            self.card.attributi.INFO.Tabilita2[48] = ""
-            self.card.attributi.INFO.tabilita2[48] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[48] = 1
-            self.card.attributi.INFOlinee.Tabilita1[48] = 1
-            self.card.attributi.INFOlinee.tabilita1[48] = 1
-            self.card.attributi.INFOlinee.Tabilita2[48] = 0
-            self.card.attributi.INFOlinee.tabilita2[48] = 0
-
-                -- Neco Arc
-            self.card.attributi.Utente[49] = false
-            self.card.attributi.Name[49] = "NECO ARC"
-            self.card.attributi.ATK[49] = 0
-            self.card.attributi.Mana[49] = 1
-            self.card.attributi.hp[49] = 4000
-            self.card.attributi.INFO.classe[49] = "MEME"
-                self.card.attributi.INFO.color.r[49] = 155
-                self.card.attributi.INFO.color.g[49] = 255
-                self.card.attributi.INFO.color.b[49] = 55
-            self.card.attributi.INFO.Tabilita1[49] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[49] = 
-[[aumenta l'attacco di una carta +1000 ATK]]
-            self.card.attributi.INFO.Tabilita2[49] = ""
-            self.card.attributi.INFO.tabilita2[49] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[49] = 1
-            self.card.attributi.INFOlinee.Tabilita1[49] = 1
-            self.card.attributi.INFOlinee.tabilita1[49] = 1
-            self.card.attributi.INFOlinee.Tabilita2[49] = 0
-            self.card.attributi.INFOlinee.tabilita2[49] = 0
-
-                --Sfango
-            self.card.attributi.Utente[50] = false
-            self.card.attributi.Name[50] = "SFANGO"
-            self.card.attributi.ATK[50] = 0
-            self.card.attributi.Mana[50] = 0
-            self.card.attributi.hp[50] = 4000
-            self.card.attributi.INFO.classe[50] = "MEME"
-                self.card.attributi.INFO.color.r[50] = 155
-                self.card.attributi.INFO.color.g[50] = 255
-                self.card.attributi.INFO.color.b[50] = 55
-            self.card.attributi.INFO.Tabilita1[50] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[50] = 
-[[pesca 2 carte]]
-            self.card.attributi.INFO.Tabilita2[50] = ""
-            self.card.attributi.INFO.tabilita2[50] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[50] = 1
-            self.card.attributi.INFOlinee.Tabilita1[50] = 1
-            self.card.attributi.INFOlinee.tabilita1[50] = 1
-            self.card.attributi.INFOlinee.Tabilita2[50] = 0
-            self.card.attributi.INFOlinee.tabilita2[50] = 0
-
-                --Mr Caputo
-            self.card.attributi.Utente[51] = true
-            self.card.attributi.Name[51] = "MR CAPUTO"
-            self.card.attributi.ATK[51] = 3000
-            self.card.attributi.Mana[51] = 4
-            self.card.attributi.hp[51] = 3500
-            self.card.attributi.INFO.classe[51] = "MEMBRO ONORARIO"
-                self.card.attributi.INFO.color.r[51] = 155
-                self.card.attributi.INFO.color.g[51] = 55
-                self.card.attributi.INFO.color.b[51] = 155
-            self.card.attributi.INFO.Tabilita1[51] = "Abilità speciale"
-            self.card.attributi.INFO.tabilita1[51] = 
-[[Wall Text:
- copri la visuale all'avversario]]
-            self.card.attributi.INFO.Tabilita2[51] = ""
-            self.card.attributi.INFO.tabilita2[51] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[51] = 1
-            self.card.attributi.INFOlinee.Tabilita1[51] = 1
-            self.card.attributi.INFOlinee.tabilita1[51] = 2
-            self.card.attributi.INFOlinee.Tabilita2[51] = 0
-            self.card.attributi.INFOlinee.tabilita2[51] = 0
-
-                --Temmie Shop
-            self.card.attributi.Utente[52] = false
-            self.card.attributi.Name[52] = "TEMMIE SHOP"
-            self.card.attributi.ATK[52] = 0
-            self.card.attributi.Mana[52] = 3
-            self.card.attributi.hp[52] = 4000
-            self.card.attributi.INFO.classe[52] = "MEME"
-                self.card.attributi.INFO.color.r[52] = 155
-                self.card.attributi.INFO.color.g[52] = 255
-                self.card.attributi.INFO.color.b[52] = 55
-            self.card.attributi.INFO.Tabilita1[52] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[52] = 
-[[evoca una carta dal
- negozio di Temmie]]
-            self.card.attributi.INFO.Tabilita2[52] = ""
-            self.card.attributi.INFO.tabilita2[52] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[52] = 1
-            self.card.attributi.INFOlinee.Tabilita1[52] = 1
-            self.card.attributi.INFOlinee.tabilita1[52] = 2
-            self.card.attributi.INFOlinee.Tabilita2[52] = 0
-            self.card.attributi.INFOlinee.tabilita2[52] = 0
-
-                --Sboro
-            self.card.attributi.Utente[53] = false
-            self.card.attributi.Name[53] = "SBORO"
-            self.card.attributi.ATK[53] = 0
-            self.card.attributi.Mana[53] = 1
-            self.card.attributi.hp[53] = 4000
-            self.card.attributi.INFO.classe[53] = "CANALE"
-                self.card.attributi.INFO.color.r[53] = 40
-                self.card.attributi.INFO.color.g[53] = 10
-                self.card.attributi.INFO.color.b[53] = 150
-            self.card.attributi.INFO.Tabilita1[53] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[53] = 
-[[ogni "GOLDEN STAFF SEGRETARIO"
-guadagna +1000 ATK e +500 HP 
-ogni "ADMIN guadagna +1000HP"]]
-            self.card.attributi.INFO.Tabilita2[53] = ""
-            self.card.attributi.INFO.tabilita2[53] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[53] = 1
-            self.card.attributi.INFOlinee.Tabilita1[53] = 1
-            self.card.attributi.INFOlinee.tabilita1[53] = 3
-            self.card.attributi.INFOlinee.Tabilita2[53] = 0
-            self.card.attributi.INFOlinee.tabilita2[53] = 0
-
-                --Death Note
-            self.card.attributi.Utente[54] = false
-            self.card.attributi.Name[54] = "DEATH NOTE"
-            self.card.attributi.ATK[54] = 0
-            self.card.attributi.Mana[54] = 4
-            self.card.attributi.hp[54] = 4000
-            self.card.attributi.INFO.classe[54] = "AZIONE"
-                self.card.attributi.INFO.color.r[54] = 66
-                self.card.attributi.INFO.color.g[54] = 132
-                self.card.attributi.INFO.color.b[54] = 245
-            self.card.attributi.INFO.Tabilita1[54] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[54] = 
-[[scrivi il nome di una carta ed 
- essa muore]]
-            self.card.attributi.INFO.Tabilita2[54] = "Consiglio"
-            self.card.attributi.INFO.tabilita2[54] = 
-[[tutto in maiuscolo
- INVIO per confermare]]
-            self.card.attributi.INFOlinee.classe[54] = 1
-            self.card.attributi.INFOlinee.Tabilita1[54] = 1
-            self.card.attributi.INFOlinee.tabilita1[54] = 2
-            self.card.attributi.INFOlinee.Tabilita2[54] = 1
-            self.card.attributi.INFOlinee.tabilita2[54] = 2
-
-                --Local Troller
-            self.card.attributi.Utente[55] = true
-            self.card.attributi.Name[55] = "LOCAL TROLLER"
-            self.card.attributi.ATK[55] = 3000
-            self.card.attributi.Mana[55] = 20
-            self.card.attributi.hp[55] = 4000
-            self.card.attributi.INFO.classe[55] = "MEMBRO ONORARIO"
-                self.card.attributi.INFO.color.r[55] = 155
-                self.card.attributi.INFO.color.g[55] = 55
-                self.card.attributi.INFO.color.b[55] = 155
-            self.card.attributi.INFO.Tabilita1[55] = "Abilità segreta"
-            self.card.attributi.INFO.tabilita1[55] = 
-[[è un segreto]]
-            self.card.attributi.INFO.Tabilita2[55] = ""
-            self.card.attributi.INFO.tabilita2[55] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[55] = 1
-            self.card.attributi.INFOlinee.Tabilita1[55] = 1
-            self.card.attributi.INFOlinee.tabilita1[55] = 1
-            self.card.attributi.INFOlinee.Tabilita2[55] = 0
-            self.card.attributi.INFOlinee.tabilita2[55] = 0
-
-                --Erba
-            self.card.attributi.Utente[56] = false
-            self.card.attributi.Name[56] = "ERBA"
-            self.card.attributi.ATK[56] = 0
-            self.card.attributi.Mana[56] = 15
-            self.card.attributi.hp[56] = 4000
-            self.card.attributi.INFO.classe[56] = "MEME"
-                self.card.attributi.INFO.color.r[56] = 155
-                self.card.attributi.INFO.color.g[56] = 255
-                self.card.attributi.INFO.color.b[56] = 55
-            self.card.attributi.INFO.Tabilita1[56] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[56] = 
-[[se c'è un "GOLDEN STAFF SEGRETARIO" o un
- "ADMIN" mel campo nemico
- l'avversario chiude il gioco]]
-            self.card.attributi.INFO.Tabilita2[56] = ""
-            self.card.attributi.INFO.tabilita2[56] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[56] = 1
-            self.card.attributi.INFOlinee.Tabilita1[56] = 1
-            self.card.attributi.INFOlinee.tabilita1[56] = 3
-            self.card.attributi.INFOlinee.Tabilita2[56] = 0
-            self.card.attributi.INFOlinee.tabilita2[56] = 0
-
-                -- DUO
-            self.card.attributi.Utente[57] = false
-            self.card.attributi.Name[57] = "DUO"
-            self.card.attributi.ATK[57] = 0
-            self.card.attributi.Mana[57] = 6
-            self.card.attributi.hp[57] = 4000
-            self.card.attributi.INFO.classe[57] = "CANALE"
-                self.card.attributi.INFO.color.r[57] = 40
-                self.card.attributi.INFO.color.g[57] = 10
-                self.card.attributi.INFO.color.b[57] = 150
-            self.card.attributi.INFO.Tabilita1[57] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[57] = 
-[[solo 2 Utenti ammessi
- nel campo avversario]]
-            self.card.attributi.INFO.Tabilita2[57] = ""
-            self.card.attributi.INFO.tabilita2[57] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[57] = 1
-            self.card.attributi.INFOlinee.Tabilita1[57] = 1
-            self.card.attributi.INFOlinee.tabilita1[57] = 2
-            self.card.attributi.INFOlinee.Tabilita2[57] = 0
-            self.card.attributi.INFOlinee.tabilita2[57] = 0
-
-                -- TRIO
-            self.card.attributi.Utente[58] = false
-            self.card.attributi.Name[58] = "TRIO"
-            self.card.attributi.ATK[58] = 0
-            self.card.attributi.Mana[58] = 4
-            self.card.attributi.hp[58] = 4000
-            self.card.attributi.INFO.classe[58] = "CANALE"
-                self.card.attributi.INFO.color.r[58] = 40
-                self.card.attributi.INFO.color.g[58] = 10
-                self.card.attributi.INFO.color.b[58] = 150
-            self.card.attributi.INFO.Tabilita1[58] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[58] = 
-[[solo 2 Utenti ammessi
- nel campo avversario]]
-            self.card.attributi.INFO.Tabilita2[58] = ""
-            self.card.attributi.INFO.tabilita2[58] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[58] = 1
-            self.card.attributi.INFOlinee.Tabilita1[58] = 1
-            self.card.attributi.INFOlinee.tabilita1[58] = 2
-            self.card.attributi.INFOlinee.Tabilita2[58] = 0
-            self.card.attributi.INFOlinee.tabilita2[58] = 0
-
-                -- QUARTETTO
-            self.card.attributi.Utente[59] = false
-            self.card.attributi.Name[59] = "QUARTETTO"
-            self.card.attributi.ATK[59] = 0
-            self.card.attributi.Mana[59] = 2
-            self.card.attributi.hp[59] = 4000
-            self.card.attributi.INFO.classe[59] = "CANALE"
-                self.card.attributi.INFO.color.r[59] = 40
-                self.card.attributi.INFO.color.g[59] = 10
-                self.card.attributi.INFO.color.b[59] = 150
-            self.card.attributi.INFO.Tabilita1[59] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[59] = 
-[[solo 2 Utenti ammessi
- nel campo avversario]]
-            self.card.attributi.INFO.Tabilita2[59] = ""
-            self.card.attributi.INFO.tabilita2[59] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[59] = 1
-            self.card.attributi.INFOlinee.Tabilita1[59] = 1
-            self.card.attributi.INFOlinee.tabilita1[59] = 2
-            self.card.attributi.INFOlinee.Tabilita2[59] = 0
-            self.card.attributi.INFOlinee.tabilita2[59] = 0
-
-                -- verificazione
-            self.card.attributi.Utente[60] = false
-            self.card.attributi.Name[60] = "VERIFICAZIONE"
-            self.card.attributi.ATK[60] = 0
-            self.card.attributi.Mana[60] = 2
-            self.card.attributi.hp[60] = 4000
-            self.card.attributi.INFO.classe[60] = "CANALE"
-                self.card.attributi.INFO.color.r[60] = 40
-                self.card.attributi.INFO.color.g[60] = 10
-                self.card.attributi.INFO.color.b[60] = 150
-            self.card.attributi.INFO.Tabilita1[60] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[60] = 
-[[stordisce tutte le carte avversarie]]
-            self.card.attributi.INFO.Tabilita2[60] = ""
-            self.card.attributi.INFO.tabilita2[60] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[60] = 1
-            self.card.attributi.INFOlinee.Tabilita1[60] = 1
-            self.card.attributi.INFOlinee.tabilita1[60] = 1
-            self.card.attributi.INFOlinee.Tabilita2[60] = 0
-            self.card.attributi.INFOlinee.tabilita2[60] = 0
-
-                -- Alex
-            self.card.attributi.Utente[61] = true
-            self.card.attributi.Name[61] = "ALEX"
-            self.card.attributi.ATK[61] = 3000
-            self.card.attributi.Mana[61] = 3
-            self.card.attributi.hp[61] = 3000
-            self.card.attributi.INFO.classe[61] = "MODERATORE"
-                self.card.attributi.INFO.color.r[61] = 184
-                self.card.attributi.INFO.color.g[61] = 9
-                self.card.attributi.INFO.color.b[61] = 88
-            self.card.attributi.INFO.Tabilita1[61] = "Abilità speciale"
-            self.card.attributi.INFO.tabilita1[61] = 
-[[stordisce 3 carte avversarie
- 1 a piacere 2 a caso]]
-            self.card.attributi.INFO.Tabilita2[61] = ""
-            self.card.attributi.INFO.tabilita2[61] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[61] = 1
-            self.card.attributi.INFOlinee.Tabilita1[61] = 1
-            self.card.attributi.INFOlinee.tabilita1[61] = 2
-            self.card.attributi.INFOlinee.Tabilita2[61] = 0
-            self.card.attributi.INFOlinee.tabilita2[61] = 0
-
-                -- Sole
-            self.card.attributi.Utente[62] = false
-            self.card.attributi.Name[62] = "SOLE"
-            self.card.attributi.ATK[62] = 0
-            self.card.attributi.Mana[62] = 2
-            self.card.attributi.hp[62] = 4000
-                self.card.attributi.INFO.classe[62] = "MEME"
-                self.card.attributi.INFO.color.r[62] = 155
-                self.card.attributi.INFO.color.g[62] = 255
-                self.card.attributi.INFO.color.b[62] = 55
-            self.card.attributi.INFO.Tabilita1[62] = "Abilità a evocazione"
-            self.card.attributi.INFO.tabilita1[62] = 
-[[lancia un sole]]
-            self.card.attributi.INFO.Tabilita2[62] = ""
-            self.card.attributi.INFO.tabilita2[62] = 
-[[]]
-            self.card.attributi.INFOlinee.classe[62] = 1
-            self.card.attributi.INFOlinee.Tabilita1[62] = 1
-            self.card.attributi.INFOlinee.tabilita1[62] = 1
-            self.card.attributi.INFOlinee.Tabilita2[62] = 0
-            self.card.attributi.INFOlinee.tabilita2[62] = 0
+    inventario.Randomizer = {img,x,y,r,scale,width,height}
+    inventario.Randomizer.img = love.graphics.newImage("assets/inventario/Randomizer.png")
+    inventario.Randomizer.x = window.width*0.91
+    inventario.Randomizer.y = window.height*0.07
+    inventario.Randomizer.scale = .25
+    inventario.Randomizer.width = inventario.Randomizer.img:getWidth()
+    inventario.Randomizer.height = inventario.Randomizer.img:getHeight()
 
     if love.filesystem.getInfo("deck.txt") and not tutorial.bool then
         dataSerializzato = love.filesystem.read("deck.txt")
         data = bitser.loads(dataSerializzato)
         if data.ver ~= versione then
             love.filesystem.remove("deck.txt") --se di una versione diversa dalla corrente elimina deck per sicurezza
-            self.deck = {}
-            self.deck.max = 30 --massimo carte nel mazzo
-            self.deck.total = 0
-            self.copies = {}
-            for i=1,self.maxCards do
-                self.copies[i] = 0    --analisi doppioni
-            end
+            resetDeck()
         else
-            self.deck = data.deck --se della versione giusta carica il mazzo
-            self.copies = data.copies
+            cards.deck.mazzo = data.mazzo --se della versione giusta carica il mazzo
+            cards.copies = data.copies
+            cards.deck.total = #cards.deck.mazzo
         end
     else
-		self.deck = {}
-		self.deck.max = 30 --massimo carte nel mazzo
-		self.deck.total = 0
-		self.copies = {}
-		for i=1,self.maxCards do
-			self.copies[i] = 0    --analisi doppioni
-		end
+        resetDeck()
 	end
-	inventario:loadSTATS()
+    inventario:loadCollezione()
+    inventario.wheel = true
 end
 
-local CARDstats = {Name,ATK,hp,Mana}
-function inventario:loadSTATS()
-	
-	CARDstats.Name = {font,Width,Height,scale}
-	CARDstats.Name.Width = {}
-	CARDstats.Name.Height = {}
-	CARDstats.Name.scale = {}
-	CARDstats.ATK = {font,Width,Height}
-	CARDstats.ATK.Width = {}
-	CARDstats.ATK.Height = {}
-	CARDstats.Mana = {font,Width,Height}
-	CARDstats.Mana.Width = {}
-	CARDstats.Mana.Height = {}
-	CARDstats.hp = {font,Width,Height}
-	CARDstats.hp.Width = {}
-	CARDstats.hp.Height = {}
-	for i,v in ipairs(imap) do
-		for j,id in ipairs(v) do
-			if id > 0 then
-				    --Nome, ATK, Mana, hp
-				love.graphics.setFont(Font.cardName)
-				
-				CARDstats.Name.font = love.graphics.getFont()
-				CARDstats.Name.Width[id] = CARDstats.Name.font:getWidth(self.card.attributi.Name[id])
-				CARDstats.Name.Height[id] = CARDstats.Name.font:getHeight(self.card.attributi.Name[id])/4
-				if CARDstats.Name.Width[id] > 266 then
-					CARDstats.Name.scale[id] = 1/2
-				else
-				CARDstats.Name.scale[id] = 1
-				end
-				CARDstats.ATK.font = love.graphics.getFont()
-				CARDstats.ATK.Width[id] = CARDstats.ATK.font:getWidth(self.card.attributi.ATK[id])
-				CARDstats.ATK.Height[id] = CARDstats.ATK.font:getHeight(self.card.attributi.ATK[id])/4
-				if CARDstats.ATK.Width[id] > 90 then
-					CARDstats.ATK.Width[id] = 90
-				end
-				
-				CARDstats.Mana.font = love.graphics.getFont()
-				CARDstats.Mana.Width[id] = CARDstats.Mana.font:getWidth(self.card.attributi.Mana[id])
-				CARDstats.Mana.Height[id] = CARDstats.Mana.font:getHeight()/4
-				if CARDstats.Mana.Width[id] > 90 then
-					CARDstats.Mana.Width[id] = 90
-				end
-				
-				CARDstats.hp.font = love.graphics.getFont()
-				CARDstats.hp.Width[id] = CARDstats.hp.font:getWidth(self.card.attributi.hp[id])
-				CARDstats.hp.Height[id] = CARDstats.hp.font:getHeight()/4
-				if CARDstats.hp.Width[id] > 90 then
-					CARDstats.hp.Width[id] = 90
-				end
-			end
-		end
-	end
-end
-
-local wheel = 0
-function inventario:navigate(x, y)
-	if y > 0 then
-		wheel = wheel+15
-	elseif y < 0 then
-		wheel = wheel-15
-	end
-	if wheel >= 140 then
-		wheel = 140
-	end
-end
-
-function inventario:select(x,y,button)
-	if self.deck.total ~= self.deck.max then
-		for i,v in ipairs(imap) do
-			for j,id in ipairs(v) do
-				if id > 0 then
-					if general:aabb((j-1)*window.width/64, wheel+(i-1)*window.height/48, self.card.width, self.card.height, mouse.x, mouse.y, 1, 1)
-                        and button == 1 then
-                        if self.card.attributi.INFO.classe[id] == "GOLDEN STAFF SEGRETARIO" then
-                            if (self.copies[id] < 1 or ToolBox) then
-                                table.insert(self.deck, id)
-                                self.copies[id] = self.copies[id]+1
-                                self.deck.total = self.deck.total+1
-                            end
-                        else
-                            if (self.copies[id] < 2 or ToolBox) then
-                                table.insert(self.deck, id)
-                                self.copies[id] = self.copies[id]+1
-                                self.deck.total = self.deck.total+1
-                            end
-                        end
-					end
-				end
-			end
-		end
-	end
-	for d,id in ipairs(self.deck) do
-		if (general:aabb((d*70)-50, 650, self.card.width, self.card.height, mouse.x, mouse.y, 1, 1) and d <= 15) or 
-		(general:aabb(((d-15)*70)-50, 780, self.card.width, self.card.height, mouse.x, mouse.y, 1, 1) and d > 15) then
-			if button == 2 then
-				table.remove(self.deck, d)
-                self.copies[id] = self.copies[id]-1
-				self.deck.total = self.deck.total-1
-			end
-		end
-	end
-	if general:aabb(self.Back.x, self.Back.y, self.Back.width*0.8, self.Back.height, mouse.x, mouse.y, 1, 1) and button == 2 then
-		if hoster then 
-			hoster = false
-			server:destroy()
-		end
-		connesso = false
-		
-		music.menu:pause()
-		love.load()
-	end
-    if general:aabb(self.Randomizer.x, self.Randomizer.y, self.Randomizer.width*self.Randomizer.scale, self.Randomizer.height*self.Randomizer.scale, mouse.x, mouse.y, 1, 1) then --Ranodmizer
-        love.filesystem.remove("deck.txt") --se di una versione diversa dalla corrente elimina deck per sicurezza
-        self.deck = {}
-        self.deck.max = 30 --massimo carte nel mazzo
-        self.deck.total = 0
-        self.copies = {}
-        for i=1,self.maxCards do
-            self.copies[i] = 0    --analisi doppioni
+function inventario:loadCollezione()
+    inventarioCards = {}
+    for i,v in ipairs(imap) do
+        for j,id in ipairs(v) do
+            if id > 0 then
+                table.insert(inventarioCards,card(id,(j-1)*window.width/#v,(i-1)*window.height/(#imap/5),0))
+            end
         end
-        table.insert(self.deck,1) --Sciagghi
-        self.copies[1] = self.copies[1]+1
-        self.deck.total = self.deck.total+1
-        table.insert(self.deck,2) --Lucy
-        self.copies[2] = self.copies[2]+1
-        self.deck.total = self.deck.total+1
-        table.insert(self.deck,3) --VOID
-        self.copies[3] = self.copies[3]+1
-        self.deck.total = self.deck.total+1
-        repeat randomId = love.math.random(4,self.maxCards)
-            if self.copies[randomId] < 2 then
-                table.insert(self.deck,randomId)
-                self.copies[randomId] = self.copies[randomId]+1
-                self.deck.total = self.deck.total+1
-            end
-        until self.deck.total == self.deck.max
     end
 end
 
-function inventario:update(dt)
-    self.animation:update(dt)
-
-    if wheel <= -3650 then
-        ACHIEVEMENT("Trolled","sei stato trollato",5)
+function inventario:update(dt) --🔁
+    inventario.animation:update(dt)
+	for c,card in ipairs(inventarioCards) do
+		if general:aabb(card.x,card.y,card.width,card.height,mouse.x,mouse.y,1,1) then
+			card.selezionata = true
+        else
+            card.selezionata = false
+		end
     end
-end
-
-
-function inventario:draw()
-	   --BackGround
-    self.animation:draw(self.image, 0, 0, 0, 1.6, 1.6)
-	   --Collezione
-	for i,v in ipairs(imap) do
-		for j,id in ipairs(v) do
-			if id > 0 then
-
-				self.card.x = (j-1)*window.width/64
-				self.card.y = wheel+(i-1)*window.height/48
-				self:DRAW_TOP_AND_BOT(id, self.card.x, self.card.y)
-
-					if self.card.attributi.Utente[id] then 	--Utenti
-							--ATK
-						love.graphics.setColor(love.math.colorFromBytes(100,100,100,220))             --🎨
-						love.graphics.rectangle("fill",self.card.x + 3*self.card.width/(11*7) , self.card.y + 3*self.card.height/4-2.5, CARDstats.ATK.Width[id]+20,CARDstats.ATK.Height[id])
-						love.graphics.setColor(love.math.colorFromBytes(200,200,200,255))
-						love.graphics.print("ATK: "..self.card.attributi.ATK[id],self.card.x + 3*self.card.width/(11*7) ,self.card.y + 3*self.card.height/4, 0, 1/4, 1/4)
-							--hp
-						love.graphics.setColor(love.math.colorFromBytes(100,100,100,220))             --🎨
-						love.graphics.rectangle("fill", 25+self.card.x + 3*self.card.width/(11*7) , 22.5+self.card.y + 3*self.card.height/4, CARDstats.hp.Width[id],CARDstats.hp.Height[id])
-						love.graphics.setColor(love.math.colorFromBytes(200,200,200,255))
-						love.graphics.print("HP: "..self.card.attributi.hp[id], 25+self.card.x + 3*self.card.width/(11*7) , 25+self.card.y + 3*self.card.height/4, 0, 1/4, 1/4)
-					 		--Mana
-						love.graphics.setColor(love.math.colorFromBytes(250,250,250))             --🎨
-						love.graphics.draw(self.Pingimg, self.card.x+30+self.card.width/2, self.card.y-170+self.card.height, self.card.r, 1/40, 1/40)
-						love.graphics.print(self.card.attributi.Mana[id], self.card.x+43+self.card.width/2, self.card.y-156+self.card.height, self.card.r, 1/3, 1/3, CARDstats.Mana.Width[id]/3, CARDstats.Mana.Height[id]*1.5)
-					else 		--Reazioni
-							--Mana
-						love.graphics.setColor(love.math.colorFromBytes(250,250,250))             --🎨
-						love.graphics.print(self.card.attributi.Mana[id], self.card.x+self.card.width/2, self.card.y+self.card.height, self.card.r, 1/3, 1/3, CARDstats.Mana.Width[id]/3, CARDstats.Mana.Height[id]*1.5)
-					end
-
-					--Name
-				love.graphics.setColor(1,1,1)             --🎨
-				love.graphics.print(self.card.attributi.Name[id],self.card.x + self.card.width/2, (self.card.y + ((7.5)*self.card.height/11)), 0, CARDstats.Name.scale[id]* 1/3,1/3, CARDstats.Name.Width[id]/2, self.card.height / 4)
-			elseif id == -1 then
-                love.graphics.draw(self.troll, (j-1)*window.width/64, wheel+(i-1)*window.height/48)
-            end
+    for c,card in ipairs(cards.deck.mazzo) do
+		if c <= 15 and card.y ~= window.height*0.75 then 
+            card.x = 25+c*75
+			card.y = window.height*0.75
+		elseif c > 15 and card.y ~= window.height*0.88 then
+            card.x = 25+(c-15)*75
+			card.y = window.height*0.88
 		end
 	end
-	--Nel deck
-	for d,id in ipairs(self.deck) do
-		if d > 15 then
-			self:DRAW_TOP_AND_BOT(id, ((d-15)*70)-50, 780)
-		else
-			self:DRAW_TOP_AND_BOT(id, (d*70)-50, 650)
-		end
-	end
-		--Torna al menu
-	love.graphics.setFont(Font.menu2)
-    love.graphics.setColor(.6,.9,.6,0.95)             --🎨
-	love.graphics.print(self.Back.text,self.Back.x,self.Back.y, 0, .8)
-	love.graphics.setFont(Font.menu)
-	if self.deck.total ~= self.deck.max then
-		love.graphics.setColor(0,0,0)             --🎨
-		love.graphics.print(
-[[Tasto  SX
-  aggiungere
-
-Tasto  Dx
-  togliere
-
-Rotellina
-  muovere
-
-Leva 
-  salvare]], 1, 150 + 1, 0, .47, .45)
-		love.graphics.setColor(1,1,1)             --🎨
-		love.graphics.print(
-[[Tasto  SX
-  aggiungere
-
-Tasto  Dx
-  togliere
-
-Rotellina
-  muovere
-
-Leva 
-  salvare]], 0, 150, 0, .47, .45)
-	else
-		love.graphics.setColor(1,1,1)             --🎨
-		love.graphics.print("PREMI	ENTER (o spazio) PER	CONFERMARE", screen.width / 2 - 585 + 1, 350 + 1.5, 0,.7,1)
-		love.graphics.setColor(0,0,0)             --🎨
-		love.graphics.print("PREMI	ENTER (o spazio) PER	CONFERMARE", screen.width / 2 - 585 + 1, 350 - 1, 0,.7,1)
-		love.graphics.setColor(love.math.colorFromBytes(200,25,25))             --🎨
-		love.graphics.print("PREMI	ENTER (o spazio) PER	CONFERMARE", screen.width / 2 - 585, 350, 0,.7,1)
-	end
-end
-
-
-INFOstats = {classe,Tabilita1,tabilita1,Tabilita2,tabilita2,MAXWidth}
-function inventario:drawinfo()
-	for i,v in ipairs(imap) do
-		for j,id in ipairs(v) do
-			if id > 0 then
-				self.card.x = (j-1)*window.width/64
-				self.card.y = wheel+(i-1)*window.height/48
-					--INFO
-				if general:aabb(self.card.x,self.card.y,self.card.width,self.card.height,mouse.x,mouse.y,1,1) then
-					INFOstats.classe = {font,Width,Height,color}
-					INFOstats.Tabilita1 = {font,Width,Height}
-					INFOstats.tabilita1 = {font,Width,Height}
-					INFOstats.Tabilita2 = {font,Width,Height}
-					INFOstats.tabilita2 = {font,Width,Height}
-					INFOstats.classe.font = love.graphics.getFont()
-					INFOstats.classe.Width  = INFOstats.classe.font:getWidth(self.card.attributi.INFO.classe[id])
-					INFOstats.classe.Height = INFOstats.classe.font:getHeight()
-					INFOstats.Tabilita1.font = love.graphics.getFont()
-					INFOstats.Tabilita1.Width  = INFOstats.Tabilita1.font:getWidth(self.card.attributi.INFO.Tabilita1[id])
-					INFOstats.Tabilita1.Height = INFOstats.Tabilita1.font:getHeight()
-					INFOstats.tabilita1.font = love.graphics.getFont()
-					INFOstats.tabilita1.Width  = INFOstats.tabilita1.font:getWidth(self.card.attributi.INFO.tabilita1[id])
-					INFOstats.tabilita1.Height = INFOstats.tabilita1.font:getHeight()
-					INFOstats.Tabilita2.font = love.graphics.getFont()
-					INFOstats.Tabilita2.Width  = INFOstats.Tabilita2.font:getWidth(self.card.attributi.INFO.Tabilita2[id])
-					INFOstats.Tabilita2.Height = INFOstats.Tabilita2.font:getHeight()
-					INFOstats.tabilita2.font = love.graphics.getFont()
-					INFOstats.tabilita2.Width  = INFOstats.tabilita2.font:getWidth(self.card.attributi.INFO.tabilita2[id])
-					INFOstats.tabilita2.Height = INFOstats.tabilita2.font:getHeight()
-						--riga più larga
-					INFOstats.MAXWidth = general:greaterNumber5(INFOstats.classe.Width, INFOstats.Tabilita1.Width, INFOstats.tabilita1.Width, INFOstats.Tabilita2.Width, INFOstats.tabilita2.Width)
-						--scrittura e colori testi --Info
-					love.graphics.setColor(love.math.colorFromBytes(100,100,100,220))                  --🎨
-					love.graphics.rectangle("fill", mouse.x, mouse.y, INFOstats.MAXWidth, 
-						-((INFOstats.classe.Height*self.card.attributi.INFOlinee.classe[id])+(INFOstats.Tabilita1.Height*self.card.attributi.INFOlinee.Tabilita1[id])+(INFOstats.tabilita1.Height*self.card.attributi.INFOlinee.tabilita1[id])+(INFOstats.Tabilita2.Height*self.card.attributi.INFOlinee.Tabilita2[id])+(INFOstats.tabilita2.Height*self.card.attributi.INFOlinee.tabilita2[id])))
-					love.graphics.setColor(love.math.colorFromBytes(self.card.attributi.INFO.color.r[id],self.card.attributi.INFO.color.g[id],self.card.attributi.INFO.color.b[id]))             --🎨
-					love.graphics.print(self.card.attributi.INFO.classe[id], mouse.x, mouse.y-INFOstats.classe.Height*(self.card.attributi.INFOlinee.tabilita2[id]+self.card.attributi.INFOlinee.Tabilita2[id]+self.card.attributi.INFOlinee.tabilita1[id]+self.card.attributi.INFOlinee.Tabilita1[id]+self.card.attributi.INFOlinee.classe[id]))
-                    if self.card.attributi.INFO.Tabilita1[id] == "Abilità speciale" then                --🎨
-                        love.graphics.setColor(0, 1, 0, 1)
-                    elseif self.card.attributi.INFO.Tabilita1[id] == "Abilità a evocazione" then
-                        love.graphics.setColor(love.math.colorFromBytes(3, 252, 161, 255))
-                    elseif self.card.attributi.INFO.Tabilita1[id] == "Abilità passiva" then
-                        love.graphics.setColor(love.math.colorFromBytes(153, 255, 102, 255))
-                    elseif self.card.attributi.INFO.Tabilita1[id] == "Consiglio" then
-                        love.graphics.setColor(love.math.colorFromBytes(255, 204, 0, 255))
-                    elseif self.card.attributi.INFO.Tabilita1[id] == "Disabilità passiva" then
-                        love.graphics.setColor(love.math.colorFromBytes(204, 0, 0, 255))
-                    elseif self.card.attributi.INFO.Tabilita1[id] == "frase ad effetto" then
-                        love.graphics.setColor(love.math.colorFromBytes(255, 204, 0, 255))
-                    elseif self.card.attributi.INFO.Tabilita1[id] == "Abilità segreta" then
-                        love.graphics.setColor(0.5,0.5,0.5,0.7)
-                    elseif self.card.attributi.INFO.Tabilita1[id] == "" then
-                        love.graphics.setColor(0,0,0,0)
-                    end
-					love.graphics.print(self.card.attributi.INFO.Tabilita1[id], mouse.x, mouse.y-INFOstats.Tabilita1.Height*(self.card.attributi.INFOlinee.tabilita2[id]+self.card.attributi.INFOlinee.Tabilita2[id]+self.card.attributi.INFOlinee.tabilita1[id]+self.card.attributi.INFOlinee.Tabilita1[id]))
-					love.graphics.setColor(1,1,1,1)                                                    --🎨
-					love.graphics.print(self.card.attributi.INFO.tabilita1[id], mouse.x, mouse.y-INFOstats.tabilita1.Height*(self.card.attributi.INFOlinee.tabilita2[id]+self.card.attributi.INFOlinee.Tabilita2[id]+self.card.attributi.INFOlinee.tabilita1[id]))
-                    if self.card.attributi.INFO.Tabilita2[id] == "Abilità speciale" then                --🎨
-                        love.graphics.setColor(0, 1, 0 ,1)
-                    elseif self.card.attributi.INFO.Tabilita2[id] == "Abilità a evocazione" then
-                        love.graphics.setColor(love.math.colorFromBytes(3, 252, 161, 255))
-                    elseif self.card.attributi.INFO.Tabilita2[id] == "Abilità passiva" then
-                        love.graphics.setColor(love.math.colorFromBytes(153, 255, 102 , 255))
-                    elseif self.card.attributi.INFO.Tabilita2[id] == "Consiglio" then
-                        love.graphics.setColor(love.math.colorFromBytes(255, 204, 0 , 255))
-                    elseif self.card.attributi.INFO.Tabilita2[id] == "Disabilità passiva" then
-                        love.graphics.setColor(love.math.colorFromBytes(204, 0, 0, 255))
-                    elseif self.card.attributi.INFO.Tabilita2[id] == "frase ad effetto" then
-                        love.graphics.setColor(love.math.colorFromBytes(255, 204, 0 , 255))
-                    elseif self.card.attributi.INFO.Tabilita2[id] == "Abilità segreta" then
-                        love.graphics.setColor(0.5,0.5,0.5,0.7)
-                    elseif self.card.attributi.INFO.Tabilita2[id] == "" then
-                        love.graphics.setColor(0,0,0,0)
-                    end
-					love.graphics.print(self.card.attributi.INFO.Tabilita2[id], mouse.x, mouse.y-INFOstats.Tabilita2.Height*(self.card.attributi.INFOlinee.tabilita2[id]+self.card.attributi.INFOlinee.Tabilita2[id]))
-					love.graphics.setColor(1,1,1,1)                                  --🎨
-					love.graphics.print(self.card.attributi.INFO.tabilita2[id], mouse.x, mouse.y-INFOstats.tabilita2.Height*(self.card.attributi.INFOlinee.tabilita2[id]))
-				end
-			end
-		end
-	end
-end
-
-function inventario:DRAW_TOP_AND_BOT(id,x,y)
-	love.graphics.draw(self.card[id], x, y, 0, 1/2, 1/2)
-	if self.card.attributi.Utente[id] then --se è un Utente
-		love.graphics.setColor(love.math.colorFromBytes(self.card.attributi.INFO.color.r[id],self.card.attributi.INFO.color.g[id],self.card.attributi.INFO.color.b[id]))             --🎨
-		love.graphics.draw(TOPBOT, TOPimg, x, y)
-		love.graphics.setColor(1,1,1)             --🎨
-		love.graphics.draw(TOPBOT, BOTimg, x, y+56)
-	else
-		love.graphics.setColor(love.math.colorFromBytes(self.card.attributi.INFO.color.r[id],self.card.attributi.INFO.color.g[id],self.card.attributi.INFO.color.b[id]))             --🎨
-		love.graphics.draw(self.MALTOPimg, x, y-9)
-		love.graphics.setColor(1,1,1)             --🎨
-		love.graphics.draw(self.MALBOTimg, x, y-10)
-	end
-end
-
-
-local leva_back = false
-function inventario:update_leva(dt)
+        --leva
     if leva_back then
         if self.leva.r > 0 then
             self.leva.r = self.leva.r+1.69*dt
@@ -2206,64 +386,195 @@ function inventario:update_leva(dt)
     end
 end
 
-function inventario:move_leva(x, y, dx, dy)
-	if (love.mouse.isDown(1) or love.mouse.isDown(2)) and general:calculateDistance(self.leva.x, self.leva.y, mouse.x, mouse.y) < 125 then
-		if (self.leva.r >= math.pi-0.1 and (general:getAngle(self.leva.x, self.leva.y, mouse.x, mouse.y) <= self.leva.r+0.1)) or 
-		(self.leva.r <= math.pi+0.1 and (general:getAngle(self.leva.x, self.leva.y, mouse.x, mouse.y) >= self.leva.r-0.1)) then
-			self.leva.r = general:getAngle(self.leva.x, self.leva.y, mouse.x, mouse.y)
-			if self.leva.r >= -1.6 and self.leva.r < 0 then --elimina deck
-                leva_back = true
-                self.deck = {}
-				self.deck.max = 30 --massimo carte nel mazzo
-				self.deck.total = 0
-				self.copies = {}
-				for i=1,self.maxCards do
-					self.copies[i] = 0
-				end
-				love.filesystem.remove("deck.txt")
-			elseif self.leva.r <= 1.60 and self.leva.r > 0 then  --salva deck
-				leva_back = true
-				inventario:saveDeck()
-			end
+function inventario:draw() --✏️
+	   --BackGround
+    inventario.animation:draw(inventario.image, 0, 0, 0, window.width/(inventario.image:getWidth()/5),window.height/(inventario.image:getHeight()))
+        --Randomizer
+    love.graphics.draw(inventario.Randomizer.img,inventario.Randomizer.x,inventario.Randomizer.y,0,inventario.Randomizer.scale,inventario.Randomizer.scale)
+        --leva
+    love.graphics.draw(inventario.leva.img,inventario.leva.x,inventario.leva.y,inventario.leva.r,inventario.leva.scale,inventario.leva.scale)
+    love.graphics.draw(inventario.leva_epicentro.img,inventario.leva_epicentro.x,inventario.leva_epicentro.y,inventario.leva_epicentro.r,inventario.leva_epicentro.scale,inventario.leva_epicentro.scale)
+    love.graphics.setFont(font.pixel)
+    love.graphics.print("Elimina Deck",inventario.leva_epicentro.x-inventario.leva_epicentro.width/4,inventario.leva_epicentro.y-inventario.leva_epicentro.height,0,.2,.25)
+    love.graphics.print("Salva Deck",inventario.leva_epicentro.x-inventario.leva_epicentro.width/4,inventario.leva_epicentro.y+inventario.leva_epicentro.height/4,0,.3,.4)
+	   --Collezione
+	for c,card in ipairs(inventarioCards) do
+        love.graphics.setColor(love.math.colorFromBytes(card.color.r,card.color.g,card.color.b,255)) --🎨
+        if card.utente then
+            love.graphics.draw(TOPBOT, TOPimg, card.x,card.y)
+            love.graphics.setColor(1,1,1) --🎨
+            love.graphics.draw(TOPBOT, BOTimg, card.x,card.y+56)
+        else
+            love.graphics.draw(MALTOPimg, card.x,card.y-10)
+            love.graphics.setColor(1,1,1) --🎨
+            love.graphics.draw(MALBOTimg, card.x,card.y-10)
+        end
+		cards:drawStats(card)
+	end
+    for c,card in ipairs(inventarioCards) do
+        cards:drawInfo(card)
+    end
+		--Nel deck
+	for c,card in ipairs(cards.deck.mazzo) do
+		if c > 15 then
+			cards:drawStats(card)
+		else
+			cards:drawStats(card)
 		end
+	end
+        --Torna al menu
+    love.graphics.setFont(font.Digi)
+    love.graphics.setColor(.6,.9,.6,0.95) --🎨
+	love.graphics.print(inventario.Back.text,inventario.Back.x,inventario.Back.y, 0, .8)
+	love.graphics.setFont(font.RamonaBold)
+	if cards.deck.total ~= cards.deck.max then
+		love.graphics.setColor(0,0,0) --🎨
+		love.graphics.print(
+[[Tasto  SX
+  aggiungere
+
+Tasto  Dx
+  togliere
+
+Rotellina
+  muovere
+
+Leva 
+  salvare]], 1, 150 + 1, 0, .47, .45)
+		love.graphics.setColor(1,1,1) --🎨
+		love.graphics.print(
+[[Tasto  SX
+  aggiungere
+
+Tasto  Dx
+  togliere
+
+Rotellina
+  muovere
+
+Leva 
+  salvare]], 0, 150, 0, .47, .45)
+	else
+		love.graphics.setColor(1,1,1) --🎨
+		love.graphics.print("PREMI	ENTER (o spazio) PER	CONFERMARE", window.width / 2 - 585 + 1, 350 + 1.5, 0,.7,1)
+		love.graphics.setColor(0,0,0) --🎨
+		love.graphics.print("PREMI	ENTER (o spazio) PER	CONFERMARE", window.width / 2 - 585 + 1, 350 - 1, 0,.7,1)
+		love.graphics.setColor(love.math.colorFromBytes(200,25,25)) --🎨
+		love.graphics.print("PREMI	ENTER (o spazio) PER	CONFERMARE", window.width / 2 - 585, 350, 0,.7,1)
 	end
 end
 
-function inventario:draw_leva()
-    love.graphics.setColor(1,1,1)             --🎨
-	love.graphics.draw(self.leva.img, self.leva.x, self.leva.y, self.leva.r, self.leva.scale, self.leva.scale, 0, self.leva.height/2)
-	love.graphics.draw(self.leva_epicentro.img, self.leva_epicentro.x, self.leva_epicentro.y, -math.pi/2, .25,.25)
-	love.graphics.print([[
-SALVA
-DECK]], self.leva.x-120, self.leva.y+100, 0,.5,.5)
-	love.graphics.print([[
-ELIMINA
-DECK]], self.leva.x-130, self.leva.y-150, 0,.5,.5)
+function inventario:keypressed(key, scancode, isRepeat) --⌨️
+    if cards.deck.total == cards.deck.max and (key == "return" or key == "space") then
+        for c,card in ipairs(cards.deck.mazzo) do
+            cards.deck.mazzo[c] = card.id 
+        end
+        gamestate.switch(inGamE)
+        for a=1,5 do
+            cards:spawn(100+150*(a-1),window.height*0.78)
+        end
+        if connesso then
+            client:send("iniziamo", true)
+            general:scambioNomiPlayers()
+        end
+    end
 end
 
-
-function inventario:saveDeck()
-	data = {}
-	data.deck = self.deck
-	data.copies = self.copies
-        data.ver = versione
-	dataSerializzato = bitser.dumps(data)
-	love.filesystem.write("deck.txt", dataSerializzato)
+function inventario:mousepressed(x, y, button) --🖱️
+	if cards.deck.total ~= cards.deck.max then
+		for c,carta in ipairs(inventarioCards) do
+			if carta.selezionata and button == 1 then
+                if ToolBox then
+                    table.insert(cards.deck.mazzo, card(carta.id,carta.x,carta.y,0))
+                    cards.deck.total = cards.deck.total+1
+                else
+                    if carta.info.classe == "GOLDEN STAFF SEGRETARIO" then
+    					if (cards.copies[carta.id] < 1) then
+    						table.insert(cards.deck.mazzo, carta)
+    						cards.copies[carta.id] = cards.copies[carta.id]+1
+    						cards.deck.total = cards.deck.total+1
+                        end
+    				else
+    					if (cards.copies[carta.id] == 1) then
+    						table.insert(cards.deck.mazzo, carta)
+    						cards.copies[carta.id] = cards.copies[carta.id]+1
+    						cards.deck.total = cards.deck.total+1
+                        elseif (cards.copies[carta.id] < 1 or ToolBox) then
+                            table.insert(cards.deck.mazzo, card(carta.id,carta.x,carta.y,0))
+                            cards.copies[carta.id] = cards.copies[carta.id]+1
+                            cards.deck.total = cards.deck.total+1
+    					end
+                    end
+				end
+			end
+		end
+	end
+	for c,carta in ipairs(cards.deck.mazzo) do
+		if general:aabb(carta.x, carta.y, carta.width, carta.height, mouse.x, mouse.y, 1, 1) and button == 2 then
+            table.remove(cards.deck.mazzo, c)
+            cards.copies[carta.id] = cards.copies[carta.id]-1
+			cards.deck.total = cards.deck.total-1
+		end
+	end
+	if general:aabb(inventario.Back.x, inventario.Back.y, inventario.Back.width, inventario.Back.height, mouse.x, mouse.y, 1, 1) and button == 2 then
+		if hoster then 
+			hoster = false
+			server:destroy()
+        else connesso = false
+        end
+        menu.background.speed = menu.background.speed*0.9
+		music.menu:pause()
+		gamestate.switch(menU)
+	end
+    if general:aabb(inventario.Randomizer.x, inventario.Randomizer.y, inventario.Randomizer.width*inventario.Randomizer.scale, inventario.Randomizer.height*inventario.Randomizer.scale, mouse.x, mouse.y, 1, 1) then --Ranodmizer
+        love.filesystem.remove("deck.txt") --se di una versione diversa dalla corrente elimina deck per sicurezza
+        cards.deck.mazzo = {}
+        cards.deck.max = 30 --massimo carte nel mazzo
+        cards.deck.total = 0
+        cards.copies = {}
+        for i=1,cards.maxCards do
+            cards.copies[i] = 0    --analisi doppioni
+        end
+        repeat local RandomID = love.math.random(1,cards.maxCards)
+        for c,carta in ipairs(inventarioCards) do
+            if carta.id == RandomID then
+                if carta.info.classe == "GOLDEN STAFF SEGRETARIO" then
+                    if (cards.copies[carta.id] < 1) then
+                        table.insert(cards.deck.mazzo, carta)
+                        cards.copies[carta.id] = cards.copies[carta.id]+1
+                        cards.deck.total = cards.deck.total+1
+                     end
+                else
+                    if (cards.copies[carta.id] == 1) then
+                        table.insert(cards.deck.mazzo, carta)
+                        cards.copies[carta.id] = cards.copies[carta.id]+1
+                        cards.deck.total = cards.deck.total+1
+                    elseif (cards.copies[carta.id] < 1 or ToolBox) then
+                        table.insert(cards.deck.mazzo, card(carta.id,carta.x,carta.y,0))
+                        cards.copies[carta.id] = cards.copies[carta.id]+1
+                        cards.deck.total = cards.deck.total+1
+                    end
+                end
+            end
+        end
+        until cards.deck.total == cards.deck.max
+    end
 end
 
-
-function LOAD_inventario()
-	inventario:load()
-end
-function UPDATE_inventario(dt)
-	inventario:update(dt)
-end
-function DRAW_inventario()
-    love.graphics.setFont(Font.cardName)
-	inventario:draw()
-    love.graphics.setFont(Font.cardName)
-	inventario:draw_leva()
-    love.graphics.draw(inventario.Randomizer.img,inventario.Randomizer.x,inventario.Randomizer.y,0,inventario.Randomizer.scale,inventario.Randomizer.scale)
-    love.graphics.setFont(Font.cardInfo)
-    inventario:drawinfo()
+function inventario:mousemoved(x, y, dx, dy) --🖱️
+    if (love.mouse.isDown(1) or love.mouse.isDown(2)) and general:calculateDistance(inventario.leva.x, inventario.leva.y, mouse.x, mouse.y) < 125 then
+        if (inventario.leva.r >= math.pi-0.1 and (general:getAngle(inventario.leva.x, inventario.leva.y, mouse.x, mouse.y) <= inventario.leva.r+0.1)) or 
+        (inventario.leva.r <= math.pi+0.1 and (general:getAngle(inventario.leva.x, inventario.leva.y, mouse.x, mouse.y) >= inventario.leva.r-0.1)) then
+            inventario.leva.r = general:getAngle(inventario.leva.x, inventario.leva.y, mouse.x, mouse.y)
+            if inventario.leva.r >= -1.6 and inventario.leva.r < 0 then --elimina deck
+                leva_back = true
+                resetDeck()
+                inventario:loadCollezione()
+                love.filesystem.remove("deck.txt")
+            elseif inventario.leva.r <= 1.60 and inventario.leva.r > 0 then  --salva deck
+                leva_back = true
+                saveDeck()
+            end
+        end
+    end
 end

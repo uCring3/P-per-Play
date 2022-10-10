@@ -1,6 +1,6 @@
-Cursor = {}
+cursor = {}
 
-function Cursor:load()
+function cursor:load() --💾
 	self.arrow = love.mouse.getSystemCursor("arrow")
 
 	self.TelecinesiLibero = love.mouse.newCursor("assets/cursors/TelecinesiLibero.png", 0, 0)
@@ -22,9 +22,4 @@ function Cursor:load()
 	self.Immunizzare = love.mouse.newCursor("assets/cursors/Immunizzare.png", 0, 0)
 	self.Annulla = love.mouse.newCursor("assets/cursors/Annulla.png", 0, 0)
 	self.Uccidere = love.mouse.newCursor("assets/cursors/Uccidere.png", 0, 0)
-end
-
-
-function LOAD_CURSOR()
-	Cursor:load()
 end

@@ -1,6 +1,6 @@
 connect = {}
 
-function connect:load()
+function connect:load() --💾
 
     -- how often an update is sent out                      --[🌐
     ticksRate = 1/60
@@ -45,14 +45,14 @@ function connect:load()
         player.HP = HP
     end)
 
-    client:on("player_name_1-2", function(text, client)
-        Testo[1] = text
+    client:on("player_name_1-2", function(text)
+        testo[1] = text
     end)
 
-    giocatore = 2
-
-    client:on("cambia_turno_1-2", function(p)
-        cambia_turno = p
+    client:on("cambia_turno_1-2", function(bool)
+        if bool then
+            abilita:cambiaTurno()
+        end
     end)
 
     client:on("CHIUDI_1-2", function(bool)
@@ -70,38 +70,41 @@ function connect:load()
     end)
 
     connesso = true
-
+    giocatore = 2
     client:connect()
-    player:scambio_nomi()                                        --🌐]
+    --general:scambioNomiPlayers() --🌐]
 end
 
-function connect:update(dt)
-        client:update()                                     --[🌐
+function connect:update(dt) --🔁
+    if connesso then
+        client:update() --🔁
 
-    if client:getState() == "connected" then
-        ticks = ticks + dt
-    end
+        if client:getState() == "connected" then
+            ticks = ticks + dt
+        end
 
-    if ticks >= ticksRate then
-        ticks = 0
-                                                    
-        if giocatore == 1 then                                                   --[🃏
-            client:send("inCampoCard_2-1", bitser.dumps(inCampoCards))
-        end                                                                      --🃏]
-    end                                                     --🌐]
+        if ticks >= ticksRate then
+            ticks = 0
+                                                        
+            if giocatore == 1 then                                                   --[🃏
+                client:send("inCampoCard_2-1", bitser.dumps(inCampoCards))
+            end                                                                      --🃏]
+        end
 
-    if chiudi then
-        love.event.quit()
+        if chiudi then
+            love.event.quit()
+        end
     end
 end
 
-function connect:draw()
-
-    love.graphics.print(client:getState(), 5, 20)                --[🌐
-    if playerNumber then
-        love.graphics.print(menu.player2.text, 5, 45)
-    else
-        love.graphics.print(
+function connect:draw() --✏️
+    if connesso then
+        love.graphics.setFont(font.verdana)
+        love.graphics.print(client:getState(), 5, 20)
+        if playerNumber then
+            love.graphics.print(menu.player2.text, 5, 45)
+        else
+            love.graphics.print(
 [[QUALCOSA E' ANDATO STORTO
     >SPEGNI E RIACCENDI IL GIOCO SEGUENDO IL TUTORIAL
     >ASSICURATI CHE L'HOST (L'ALTRO GIOCATORE)
@@ -109,19 +112,6 @@ function connect:draw()
     >ASSICURATI CHE HAMACHI FUNZIONI CORRETTAMENTE
     >CONTATTA PING
 ]], 5, 45)
-    end                                                         --🌐]
-end
-
-function LOAD_CONNECT()
-    connect:load()
-end
-
-function UPDATE_CONNECT(dt)
-    connect:update(dt)
-end
-
-function DRAW_CONNECT()
-    love.graphics.setColor(1,1,1)                                               --🎨
-    love.graphics.setFont(Font.menu2)
-    connect:draw()
+        end
+    end
 end

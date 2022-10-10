@@ -1,510 +1,306 @@
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdoodxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdol::codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdolll:;;:cldxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdolllll:;;;;;codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdollllcllc;;;;;;:codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdoolllllcllc:;:;;:;;:coxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxdddddddddolcoooooooooddxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxO0XXNNNNXXXXXXNNNNNNNNNNNNNNNNNXXXXXXXXXXXXXXXXXXXXKK0000OOkkxxxxxxxxxxxxxdol::cldxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0XNWNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXKK000000000OOkkxxxxxxxdolllc;;;:odxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXK0KK000000000000OOkkdolccll:;;;;:cldxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxOXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNK00000000000000000000Oxdollc:;;;;:;;codxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0XNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXK000000000000000000000000Okxoc:::;::;:coxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0NNNXXKKKKKKKKKKKKKKKKKKKKKKK00000000000OOO0KXNNNNXK0000000000000000000000000000Okdoddoddoddxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxkKNNXKOOOO000000000000000000OOOOOOOOOkkkkkkkkkO0XNNK0000000000000000000000000000000Oxxxxxkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxkKNXK0O0XNWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWNNNNXXK000OO00000000000000000000000000Odldxkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxOXNXKOOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXXKOOOOO000OOOOOOOOOOOOOOO00000000Oo;:oxxxxxxxxdoooxxxxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxxOXNXKOOXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXX0OOOOOO0OOOOOOOOOOOOOOOOOOOOOOOOOo;;;cldxxxxdolc:cldxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxxxxxx0XNX0O0NMMWMMWMMMMMWMMMWMMWWWWWMWWWWWWWMWWMMMMMWXXK0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo:;;;:coddolll:;;;coxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxkxxxxkKNNX0OKNMWKO0NWMMW0OKNWMMMWNKkOXWWWN0kONWWMMMMWNXXKOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxddoddollllclc:;;;;;codxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxkkkkxxkKNXX0OKWWOl:cd0X0xc:lONMMMW0l:coOK0dc:ckNMMMMWWNXXKOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkxkxxdollllclc:;;;;;;;codxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxkkkxxOXNXKOOXWWNOoc:cll::oONWMWWMN0dc:clc:coOXWMMMMWNXXX0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOdoddolllllllll:;;:;;::;:codxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxkxxxOXNXKO0NWWWWKdc::::dXWWWMMMMWWXxc::ccoKWWWMMMMWNNXX0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOd::loddddddddoccooddddddddxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxkkxk0XNX0k0NMMN0xl:clc:cdKNWWWWWN0dcc:lc:loONWWMMMNNXXK0OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOkd:;;:odxxxxdolc:cldxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxkxxxxxxxkkkk0XNX0OKNWWOl::oOKOoc:lONWMWW0lccokK0dc:ckNWWMMNXXXKOkOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOd:;:;:coddollcc:;:codxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxkkkkxxxxxkkkOKNNXOOXWWWNOk0NWMMNOx0NMMMMWN0kONWWWN0kONWWMMWNXXXKOkOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOkxdddoooollccll::;;;:cldxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxkkxxxxxxkkxOXXXKOOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKXK0OOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOkxxxddolllllllc:;;;;;;codxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxxkxxOXXXKOOXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOxoddolllllllllc::::::;;:coxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxkkkkkxx0XXXKO0NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNXXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOd::loddddxdddoccoddddddddddxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxkkkkkxx0XXXX00NMMWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOd:;:codxxxddol:::ldxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxkxxxkxxkKXXXXXKXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXXXXXK0OkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOxc:::;codollll:;;:cldxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxxxxxxxxxxkxxOKXXXXXXXKKXXXXXXXXXXKKKKKKKKKXXXXXXXKXXXKKXXXXXXXK0Okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdddddoollllllc;;;;;:ldxxxxxxxxxxxxxx
---xxxxxxxxxxxxxk0KK0kxxxxxkkOKXXXXXXXXXXXXXXXXXXXXKKKKKKKXXXXXXXXKKXXXKKXXKKXXKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxdolllllll::;;;;;;codxxxxxxxxxxxx
---xxxxxxxxxxxxx0NWWN0xxxxxkk0KXXXKOkOKXKKKKKXX0kxxkkkkkkkkxxxxxxxxk0XXKKXKKXXKKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxdddolllllllllc:::;;::::codxxxxxxxxxx
---kkkkxxxxxxkkkk0NN0kxxxxkkk0KKXXK0kOKXKKXKKXX0kxxxxxxxxxkkkkkkkkxk0KXKKKKKXXK0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkd::loddddddddoccooddooddddxxxxxxxxxxx
---xkkxxxxxxxkkkxk00xxkxxxxxkKXXXKKKXKKKXKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKXK0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdc;;:ldxxxxdol:::ldxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxkk00dxkxxkkkOKXXXKKKKKKKXKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdc::::coddolllc:;;:ldxxxxxxxxxxxxxxxx
---xxxxxxxxxxxk0XNN0xxxkKNKO0KXKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK0Okkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxdddddoollccll:;;;;:cldxxxxxxxxxxxxxx
---xxxxxxxxxxxkKWWW0xxx0NMXO0KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK0Okxxkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkxxxdoolllllllc;;;:;;;:ldxxkxxxxxxxxx
---xxxxxxxxxxxkO0KX0xkO0000kOO00000000000000000000000000000000000000000000000OOkxxkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkxoodolllllllllc:::::;;::coxxxxkxxxxxx
---00Oxxkkxxxxxxxk00kkkkxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkdc:codxxdxdddoccodddddddddxxxxxxxxxxx
---WWXOxkkkxxxxxxkOOkkkkxxkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxddxxxxxxxxxxxxddxxddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxdc;;:ldxxxddol:;:ldxxxxxxxxxxxxxxxxxx
---NNX0kxxxxxxxxxx00kkxxxxxkxxxxxxxxddoooooooooooooooooooooooooooooooooooooooooooooloooddxxxxxxxxxxdxxdxxxxxxxddxxxxdl::::codoollc:;;;:ldxxxxxxxxxxxxxxxx
---kkOOOOkxxxxxxxk00xxxkkxxkxxxxxxxxxddoooooooooooooooooooooooooooooooooooollllllllllllodxxxxxxxxxxddxddddddddodxxxxxxddxddollllllc:;;;;:ldxxxxxxxxxxxxxx
---xxxkKXKOxxxxxxx00xxxkkxkxxxxxxxxxxxdoooooooooooooooooooooooooooooooooooooooollllllllldxxxxxxddddoodooooooooooxxdxxxxxdoolllllllc:;;;;;;:ldxxxxxxxxxxxx
---xxx0NWWNKOxxOO0K0xxxkkkkkxxxxkxxxxxdoooooooooooooooooooooooooooooooooooooolllllllllloodddxxddooooooooooooododdddxdoooolllllllllc::::;::::coxxxxxxxxxxx
---xxxkKNNKO00KNMWN0xxxkkkkkxO00Okxxxxdoooooooooooooooooooooooooooooooooooooolllllllllllodddddddoooooodddddddddddddxdc:cldxxddxddoccodddddddddxxxxxxxxxxx
---xxxxxkkxxxkKNWWN0xxxxxxxk0NWWN0xxOOkdooooooooooooooooooooooooooooooooooooolllllllllllodddddddddddddddddddddddddddxxxoooddxxdoolc;cldxxxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxOKKX0xxxxxxxkOKNNNNXNWWXkooooooooooooooooooooooooooooooooooooolllllllllllodddddddddddddddddddddddddddkXWWNXKKOdolll:;;;:ldxxxxxxxxxxxxxxxx
---xxxxxxxxxxxxxxkK0xxxxxxxddxdx0WWWWMWXOdooooooooooooooooooooooooooooooooooolllllllllllodddddddddddddddddddddddddxOXWMWMMWN0doool:;;;;;:ldxxxxxxxxxxxxxx
---xxxxxxxxxxxkO00K0xxxdddddddddxKNWMMWMWX0kdoooooooooooooooooooooooooollllooooolllllollodddddddddddodddddddddxxk0XWWMMMWWN0xddddoolc:;;;;:ldxxxxxxxxxxxx
---xxxxxxxxxxk0NWWW0xdxdddddddddddkKNWWMMWWWNK0kxddoooooooooooooooooooooolooolllllllllllodddddddddddddddddxkO0KNWMMMMMMWN0kdddddddddoolc::::coxxxxxxxxxxx
---xxxxxxxxxxxOXWWKkddddddddddddddddxOKXNWWMMMMWWNX00OkxddoooollllllllooooollllllllllllloddddddddddxkOO0KXNNWMMMMMWWNX0Oxddddddddddddddooddddddxxxxxxxxxx
---xxxxxxxxxxxxkkxxddddddddddddddddddddxkO0XNWWMMMMMMWWNNNXKK00OOOkkkkxxxxxxxxxxddddxxxxkO0000KKXXXNWWWWMMMWWWWNNX0Okxddddddddddddddddddddddxxxxxxxxxxxxx
---xxxxxxxxxxxddddodddddoddddddddddddddddddddxkO0KXNNWWWWMMMMMMMMMMWWWWWWNNNNNNNNNNWWWWWMMMMMMMMMMMMMWWWNXXK0Okxddddddddddddddddddddddddddddddxxxxxxxxxxx
---xxxxxxxxxxddddddO0kooxOK0kddk0OxddddddddddddddddxxkkO00KXXXNNNNWWWWWWWWWWWWWWWWWWWWWWWWNNNNXXXKK0OOkkxxdddddddddddddddddddddddddddddddddddddxxxxxxxxxx
---xxxxxxxxdddddddxXWNK0XWMWN00NWXxdddddddddddddddddddddddddddxxxxkkkkkkOOOOOOOOOOOOkkkkkkkxxxdddddddooddddddddddddddddddddddddddddddddddddddddddxxxxxxxx
---xxxxxxxddddddddkXMMWMMMMMMMWWWNkddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxOOxoodkOOxodxkkdddddddddddddddddddddddddddddddddxxxxxxx
---xxxxxxdddddddddkXWMMMMMMMMMMMWXkddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxKWXOk0NWWKOOXWKxodddddddddddddddddddddddddddddddddxxxxx
---xxxxxddddddddddx0NWMMWMMMWMMWN0xddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddkXMWWWWMMWWWWWWXkddddddddddddddddddddddddddddddddddxxxxx
---xxxddddddddddddox0XWWMMMMMMWX0xoddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxXWMMWMMMWMMMMWXxdddddddddddddddddddddddddddddddddddxxxx
---xxxdodddddddddddddxO0KXXXK0Oxddddddddddddddddddddddddddodddodddodddddddddddddddddddddddddddddox0WMMWWMMWMMMWWKxddddddddddddddddddddddddodddddddddddxxx
---xxdddoddddoddddddddddddddddddddddddddddddddddddddddooddddddodddddddddddddddddddddddddddddddddodx0NWMMMMMMMWN0xdddddddddddddddddddx0KOdox0X0kddOK0ddxxx
---xxdodddodddddoddddddddddddddddddddddddddddddddddodkOkdddxOOxddxkOxddddddddddddddddddddddddddddddxk0XNNNNNX0kdddddddddddddddddddddxXMWXKXWWWNKXWWXxdddx
---dxO0kddxkOkddddddddddddddddddddddddddddddddddddddd0NX0k0XWWXOOKNXkdoddddddddddddddddddddddddoddddddxxkkxxdddddddddddddddddddddddoxXMWWMMMWMMMWMMXkdddx
---OXWWNKOKNW0dddddddddddddddddddddddddddddddddddddddKWWWWWMMMMWWWWXkooddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddoxXWMWWWMWMMMWMMKxoddd
---NWMMMMWMMW0dddddddddddddddddddddddddddddddddddddddKWMMMMMMMMMMMMXkddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddodONWMWMMMMMMMWNOddddd
---WMMMMMMMMW0dddddddddddddddddddddddddddddddddddddddONWMMMMMMMMMMWKxdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddkKNWMMMMWWNKkdddddd
---MMMMMMMMWNOdddddddddddddddddddddddddddddddddddddddxKWMMMMMMMMMMNOdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddxOXNWMMNKOxdoddddd
-
 io.stdout:setvbuf("no")
 
-enet = require "enet"			--🌐
+enet = require "enet" --[🌐
 sock = require "libs/sock"
 bitser = require "libs/bitser"
-tick = require "libs/tick"
-Object = require "libs/classic"
-anim8 = require "libs/anim8"
-InputField = require"libs/InputField"			--💬
-Konami = require"libs/konami"
-Konami.setWaitTime(1.5)
-flux = require"libs/flux"
-require"libs/text_anim"
-require"libs/flux"
 require"host"
-require"connect"				--🌐
-require"general"
-require"achievement"
-require"gui"
-require"music"						--[🎵
-require"sfx"						--🎵]
-require"entity"
-require"entities/camps"
-require"draw_order"
+require"connect" --🌐]
+class = require"libs/hump.class"
+gamestate = require"libs/hump.gamestate"
+menU = {}
+inventariO = {}
+inGamE = {}
+Timer = require"libs/hump.timer" --⏱️
+flux = require"libs/flux"
+InputField = require"libs/InputField" --📄
+field = InputField("Initial text.")
+anim8 = require "libs/anim8"
+Konami = require"libs/konami"
+require"libs/text_anim" --💬
 require"menu"
-require"tutorial"
-require"hamachi"
+require"stanza" --🏙️
 require"inventario"
+require"cards"
+require"abilita"
+require"gui"
+require"font" --🔠
+require"cursor" --⬉
+require"achievement" --🏆
+require"music" --[🎵
+require"sfx" --🎵]
+require"draw_order"
+require"tutorial" --📔
+require"hamachi" --📔🌐
+require"general"
 require"player"
 require"player2"
-require"entities/cards"
-require"entities/cards2"
-require"abilita"
-require"room"
-require"font"
-require"cursor"
 
-local exit = {img,imgON,imgOFF,x,y,width,height,bool}
-function love.load()
-		--window 															--[🔲
-    window = {width,height,flags} 
-    window.width, window.height, window.flags = love.window.getMode( )		--🔲]
-	nessuno = {puoattaccare}
-    cambia_turno = false
-    giocatore = 1
-    numeroCarteInMano = 1
-
-    LOAD_ACHIEVEMENT()
-    LOAD_JUMPSCARE()
+function love.load() --💾
+	font:load() --🔠
+	text_anim:load("",0,0,0,0,0,0,0) --💬
+	cursor:load() --⬉
+	achievement:load() --🏆
+	achievement:loadJumpscare()
+	music:load() --[🎵
+	sfx:load() --🎵]
+	love.audio.setVolume(.5)
+	Konami.setWaitTime(1.5)
     	--premi 6 9 del tastierino numerico 69 volte
     Konami.newCode({"kp6", "kp9", "kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6", "kp9","kp6"}, function() love.system.openURL("https://www.reddit.com/user/Cring3_Crimson") end)
-	gameState = "menu"
-	LOAD_FONTS()
-	--Testo[1] = "ping" --importante da eliminare
-	host.IP = Testo[3]			--[🌐-💬
-	connect.IP = Testo[4]		--🌐-💬]
-	LOAD_CURSOR()
-	LOAD_GENERAL()
-	LOAD_TEXT_ANIM("", 0, 0, 0, 0, 0, 0, 0)
-	LOAD_ROOM()
-	campo:load()
-	LOAD_MENU()
-	LOAD_SFX()					--[🎵
-	LOAD_MUSIC()
-	love.audio.setVolume(.5)
-	music.menu:setLooping(true)
-	music.menu:play()			--🎵]
-	LOAD_EXIT()
+	host.IP = testo[3] --[🌐-💬
+	connect.IP = testo[4] --🌐-💬]
+	general.load()
+	gamestate.registerEvents()
+	gamestate.switch(menU)
 end
 
-function LOAD_INGAME()
-	gameState = "inGame"
-	LOAD_ROOM()
-	LOAD_PLAYER()
-	LOAD_PLAYER2()
-	LOAD_GUI()
-	LOAD_inventario()
-	LOAD_GENERAL()
-end
-
-function love.update(dt)
-
-	Konami.update(dt)
-	field:update(dt)			--💬
-	tick.update(dt)
-	if hoster then			--[🌐
-		UPDATE_HOST(dt)
-	end
-	if connesso then		
-		UPDATE_CONNECT(dt)
-	end						--🌐]
-    UPDATE_GENERAL(dt)
+function love.update(dt) --🔁
+	mouse.x,mouse.y = love.mouse.getPosition() --🖱️
+	Timer.update(dt)
 	flux.update(dt)
-	UPDATE_TEXT_ANIM(dt)
-	UPDATE_ACHIEVEMENT(dt)
-	UPDATE_JUMPSCARE(dt)
-	if gameState == "inGame" then
-		UPDATE_ROOM(dt)
-		UPDATE_PLAYER(dt)
-		UPDATE_PLAYER2(dt)
-		UPDATE_GUI(dt)
-		UPDATE_CARDS2(dt)
-		UPDATE_CARDS(dt)
-		general:morte()
-		UPDATE_ABILITA(dt)
-		UPDATE_TUTORIAL(dt)
-		UPDATE_MUSIC()			--🎵
-	elseif gameState == "inventario" then
-		UPDATE_inventario(dt)
-		inventario:update_leva(dt)
-	elseif gameState == "menu" then
-		UPDATE_FONTS(dt)
-		UPDATE_MENU(dt)
-		if hamachi.bool then
-			UPDATE_HAMACHI(dt)
+	field:update(dt) --📄
+	Konami.update(dt)
+	text_anim:update(dt) --💬
+	--[🚧
+	--achievement:update(dt) --🏆--DA RIPARARE🚧
+		--animazione achievement
+	if achievement_sbloccato and achievement_salendo then
+		ScorrimentoAchievement = ScorrimentoAchievement+80*dt
+		if ScorrimentoAchievement >= 160 then
+			ScorrimentoAchievement = 160
+			Timer.after(6, function() --⏱️
+				achievement_salendo = false
+			end)
 		end
-	end
-	for u,camp in ipairs(campi) do
-    	for i,campo in ipairs(camp) do
-        	campo:update()
-        end
-    end 
-    if cambia_turno then
-		Abilita:cambiaTurno()
-		cambia_turno = false
-	end
-	UPDATE_EXIT()
-end
-
-function love.draw()							--✏️
-	if gameState == "inGame" then
-		DRAW_ROOM()
-		DRAW_GUI()
-		DRAW_PLAYER2()
-		DRAW_PLAYER()
-		DRAW_TUTORIAL()
-	elseif gameState == "inventario" then
-		DRAW_inventario()
-	elseif gameState == "menu" then
-		DRAW_MENU()
-		if hamachi.bool then
-			DRAW_HAMACHI()
+	elseif achievement_sbloccato and not achievement_salendo then
+		ScorrimentoAchievement = ScorrimentoAchievement-140*dt
+		if ScorrimentoAchievement <= -1 then
+			ScorrimentoAchievement = 0
+			achievement_sbloccato = false
 		end
-	end
-	DRAW_ACHIEVEMENT()
-	DRAW_JUMPSCARE()
-	if hoster then			--[🌐
-		DRAW_HOST()
-	end
-	if connesso then
-		DRAW_CONNECT()
-	end						--🌐]
-	DRAW_FONTS()
-	if ToolBox then 							--[🧰
-		love.graphics.setColor(0, 0, 0, .9)
-		DRAW_TOOLBOX(1)
-		love.graphics.setColor(1,1,1,1)
-		DRAW_TOOLBOX(0)
-		love.graphics.setFont(Font.menu)
-	end 										--🧰]
-	DRAW_GENERAL()
-	DRAW_WINDOW_BAR()	
-end
-
-
-function love.keypressed(key, scancode, isRepeat)									--⌨️
-	Konami.keypressed(key)
-	field:keypressed(key, isRepeat)												--💬
-	if key == "return" then
-		if Scrivere1 then
-			Testi_Easteregg(1)
-			menu.player1.text = Testo[1]
-			Scrivere1 = false
-		elseif Scrivere2 then
-			Testi_Easteregg(2)
-			menu.player2.text = Testo[2]
-			Scrivere2 = false
-		elseif Scrivere3 then
-			Testi_Easteregg(3)
-			host.IP = Testo[3]
-			Scrivere3 = false
-		elseif Scrivere4 then
-			Testi_Easteregg(4)
-			connect.IP = Testo[4]
-			Scrivere4 = false
-		end
-	end
-	if key == "f1" and ((hoster and (Testo[1] == "ping" or Testo[1] == "Ping" or Testo[1] == "PING")) or (connesso and (Testo[2] == "ping" or Testo[2] == "Ping" or Testo[2] == "PING"))) then 			--[🧰
-		if ToolBox then
-			ToolBox = false
-		else
-			ToolBox = true
-		end
-	end 							--🧰]
-	if gameState == "inventario" then
-			--deck pronto
-		if key == "space" or key == "return" then
-			if inventario.deck.total == inventario.deck.max then
-				gameState = "inGame"
-				LOAD_CARDS2()
-				LOAD_CARDS()
-				LOAD_ABILITA()
-				player:scambio_nomi()
-				music.menu:stop()
-				if not (Bad_Millie:isPlaying() or music.kazotsky_kick:isPlaying() or music.Red_Sun:isPlaying()) then
-					music.inGame:play()
-				end
-				if connesso then
-					client:send("iniziamo", true)
-				end
-			end
-		elseif key == "s" then
-			inventario:saveDeck()
-		end
-	elseif gameState == "menu" then
-	elseif gameState == "inGame" then
-		--cambia turno
-		if ToolBox then 					--🧰
-			if key == "f2" then 		--f2 per cambiare turno
-				if hoster then
-					Abilita:cambiaTurno()
-					server:sendToAll("cambia_turno_1-2", true)
-				elseif connesso then
-					Abilita:cambiaTurno()
-					client:send("cambia_turno_2-1", true)
-				end
-			elseif key == "f3" then 		--f3 per eliminare i nemici
-				inCampoCards2 = {}
-				general:scambio_dati_carta()
-			elseif key == "f4" then 		--f4 per OP
-				for c,card in ipairs(inCampoCards) do
-					card.ATK = 69420
-					card.hp = 69420
-					card.HP = 69420
-	        	end
-	        	general:scambio_dati_carta_propria()
-	        elseif key == "f5" then 		--f5 per +10 Mana
-	        	player.Mana = player.Mana + 10
-			end
-		end
-		Abilita:keypressed(key)
-	end
-end
-
-
-function love.keyreleased(key)
-end
-
-
-function love.textinput(text)
-	field:textinput(text)											--💬
-end
-
-
-function love.wheelmoved(dx, dy)									--🖱️
-	field:wheelmoved(dx, dy)										--💬
-	if gameState == "inventario" then
-		inventario:navigate(dx, dy)
-	end
-end
-
-
-function love.mousepressed(x, y, button)						--🖱️
-	field:mousepressed(x-FIELD_INNER_X, y-FIELD_INNER_Y, button, pressCount)	--💬
-	if gameState == "inventario" then
-		inventario:select(x, y, button) 
-	elseif gameState == "menu" and not Scrivere then
-		menu:mouseClick(x, y, button)
-		if hamachi.bool then
-			hamachi:mouseClick(x, y, button)
-		end
-	elseif gameState == "inGame" then
-		player:mouseClick(x, y, button)
-		room:mouseClick(x, y, button)
-		TUTORIAL_MOUSECLICK(x, y, button)
-		gui:mouseClick(x, y, button)
-		Abilita:activeAbility(x, y, button)
-	end
-
-	--chiudere il gioco
-	if exit.bool then
-		if (button == 1) or (button == 2) then
-			love.event.quit()
-		elseif button == 3 then
-			ACHIEVEMENT(
-[[qual'è il tuo tasto 
-del mouse preferito?]],
-[[non puoi usare la rotellina 
-per chiudere il gioco]],1)
-		end
-	end
-end
-
-
-function love.mousereleased(x, y, button)							--🖱️
-	field:mousereleased(x-FIELD_INNER_X, y-FIELD_INNER_Y, button)					--💬
-	if button == 1 then --tasto sx
-		player:throw()
-	end
-	if gameState == "inGame" then
-		Abilita:mousereleased(x, y, button)
 	end	
+	if Bad_Millie:tell( ) >= 142 then
+		achievement:sblocca("*applausi*","adoro questo video",4)
+		Timer.after(3, function() --⏱️
+			Bad_Millie:rewind()
+		end)
+		Bad_Millie_Bool = false
+		if gamestate.current() == inGamU then
+			music.menu:play()
+		elseif gamestate.current() == inGamE then
+			music.inGame:play()
+		end
+	end
+	--achievement:updateJumpscare(dt)--DA RIPARARE🚧
+	ora_esatta = (os.date('*t')) --🕒
+	if ora_esatta.hour == 3 then
+		achievement:sblocca("VA A DORMIRE","THE LAST OF PEPO\n AT 3 AM????????????",2)
+		Timer.after(4, function() --⏱️
+			jumpscare.bool.a = true
+		end)
+		Timer.after(6, function() --⏱️
+			jumpscare.bool.a = false
+		end)
+		Timer.after(10, function() --⏱️
+			jumpscare.bool.b = true
+		end)
+	end --🚧]
+	general:update(dt)
+end
+
+function love.draw() --✏️
+end
+
+function love.keypressed(key, scancode, isRepeat) --⌨️
+	field:keypressed(key, isRepeat) --📄
+	general.keypressed(key, scancode, isRepeat)
+end
+
+function love.keyreleased(key) --⌨️
+end
+
+function love.mousepressed(x, y, button) --🖱️
+	field:mousepressed(x-FIELD_INNER_X, y-FIELD_INNER_Y, button, pressCount) --📄
+	general:mousepressed(x, y, button)
+end
+
+function love.mousereleased(x, y, button) --🖱️
+	field:mousereleased(x-FIELD_INNER_X, y-FIELD_INNER_Y, button) --📄
+end
+
+function love.mousemoved(x, y, dx, dy) --🖱️
+	field:mousemoved(x-FIELD_INNER_X, y-FIELD_INNER_Y) --📄
+end
+
+function love.wheelmoved(dx, dy) --🖱️
+	field:wheelmoved(dx, dy) --📄
+	if menu.credits.Y ~= nil then
+		if dy > 0 then
+			menu.credits.Y = menu.credits.Y+15
+		elseif dy < 0 then
+			menu.credits.Y = menu.credits.Y-15
+		end
+	end
+	if inventario.wheel then
+		for c,card in ipairs(inventarioCards) do
+			card.y = card.y + dy*10
+		end
+	end
+end
+
+function love.textinput(text) --⌨️
+	field:textinput(text) --📄
 end
 
 
-function love.mousemoved(x, y, dx, dy)								--🖱️
-	field:mousemoved(x-FIELD_INNER_X, y-FIELD_INNER_Y)							--💬
+	--gamestate == menU
+function menU:enter() --💾
+	menu.load()
+	music.menu:setLooping(true) --[🎵
+	music.menu:play()			--🎵]
+	--tutorial:load() --📔
+	--hamachi:load() --📔🌐
+	font:loadField(50,menu.player.x,menu.player.y,272,62,24,testo[1]) --📄
+end
 
-	if gameState == "inventario" then
-		inventario:move_leva(x, y, dx, dy)
+function menU:update(dt) --🔁
+	menu:update(dt)
+end
+
+function menU:draw() --✏️
+	menu:draw()
+	--[🚧
+	--achievement:draw() --🏆--DA RIPARARE🚧
+	if achievement_sbloccato then
+		love.graphics.setFont(font.arial)
+		love.graphics.setColor(1,1,1) --🎨
+		love.graphics.draw((achievement.img.img),(window.width-(achievement.img.width/4.5)-5),(window.height-ScorrimentoAchievement),0,1/4.5,1/4.5)
+		love.graphics.print((achievement.titolo),(window.width-(achievement.img.width/4.5)-5)+5,(window.height-ScorrimentoAchievement)+85,0,1/4.5,1/4.5)
+		love.graphics.print((achievement.sottotitolo),(window.width-(achievement.img.width/4.5)-5)+6,(window.height-ScorrimentoAchievement)+123,0,1/6,1/6)
+		love.graphics.setFont(font.Digi)
 	end
-	if gameState == "inGame" then
-		Abilita:mousemoved(x, y, dx, dy)
-		if gui.ruota.bool then
-			gui:move_volume(x, y, dx, dy)
-		end
-	end
+	--achievement:drawJumpscare()--DA RIPARARE🚧
+	if jumpscare.bool.a and not jumpscare.bool.b then
+		love.graphics.draw(jumpscare.img.img, 0, 0, 0, window.width/jumpscare.img.width, window.height/jumpscare.img.height)
+	end --🚧]
+	font:draw()
+	general:draw()
+	--print(achievement.update)--per prove sul menu🚧
+end
+
+function menU:mousepressed(x, y, button) --🖱️
+	menu:mousepressed(x, y, button)
+	hamachi:mousepressed(x, y, button) --📔🌐
+end
+
+function menU:keypressed(key, scancode, isRepeat) --⌨️
+	menu:keypressed(key, scancode, isRepeat)
 end
 
 
-function DRAW_TOOLBOX(offset)												--ToolBox	--[🧰 	--✏️
-	love.graphics.setFont(Font.extraFont)
-	local drawStartTime = love.timer.getTime()
-
-	love.graphics.print("giocatore: "..giocatore, 10+offset, 90+offset)
-	love.graphics.print(gameState, 90+offset, 90+offset)
-	love.graphics.print("mouse x,y: "..mouse.x..","..mouse.y, 10+offset, 110+offset)			--🖱️
-	love.graphics.print("danno: "..danno, 10+offset, 130+offset)
-
-	if gameState == "inGame" or gameState == "inventario" then
-		for c, card in ipairs(inCampoCards) do 													--[🃏
-			if card.puoattaccare then
-				love.graphics.print("puo attaccare", (card.x)+offset, card.y+offset)
-			else
-				love.graphics.print("NON puo attaccare", (card.x)+offset, card.y+offset)
-			end
-			if card.puoabilita then
-				love.graphics.print("puo abilita", (card.x)+offset, card.y+30+offset)
-			else
-				love.graphics.print("NON puo abilita", (card.x)+offset, card.y+30+offset)
-			end
-			if card.abilita then
-				love.graphics.print("abilita", (card.x)+offset, card.y+60+offset)
-			else
-				--love.graphics.setColor(love.math.colorFromBytes(200,10,10,255))
-				love.graphics.print("NON abilita", (card.x)+offset, card.y+60+offset)
-				--love.graphics.setColor(love.math.colorFromBytes(0,0,0,255))
-			end
-			if card.stato.STORDITO then
-				love.graphics.print("stordito", (card.x)+offset, card.y+90+offset)
-			else
-				love.graphics.print("NON stordito", (card.x)+offset, card.y+90+offset)
-			end
-		end
-	
-		for c,card in ipairs(inCampoCards) do
-			love.graphics.print("sul campo: ", (10)+offset, 340+offset)
-			love.graphics.print(card.id, 70+(30*c)+offset, 340+offset)
-		end
-		for c2,card2 in ipairs(inCampoCards2) do
-			love.graphics.print("altro campo: ", (8)+offset, 370+offset)
-			love.graphics.print(card2.id, 70+(30*c2)+offset, 370+offset)
-		end
-		for i,inv in ipairs(inventario.deck) do
-			love.graphics.print("inventario: ", (10)+offset, 400+offset)
-			love.graphics.print(inventario.deck[i], 70+(30*i)+offset, 400+offset)
-		end
-		for c,cardc in ipairs(CimiteroCards) do
-			love.graphics.print("cimitero: ", (10)+offset, 430+offset)
-			love.graphics.print(cardc.id, 70+(30*c)+offset, 430+offset)
-		end
-	end 																						--🃏]
-
-	if gameState == "InGame" then
-		for p,pe in ipairs(PEPONE.PE) do
-			if PEPONE.PE[p] == "PE" then
-				love.graphics.print("PE", (10)+offset, 145+offset)
-			else love.graphics.print("pe", (10)+offset, 145+offset)
-			end
-		end
-		for p,po in ipairs(PEPONE.PO) do
-			if PEPONE.PO[p] == "PO" then
-				love.graphics.print("PO", (30)+offset, 145+offset)
-			else love.graphics.print("po", (30)+offset, 145+offset)
-			end
-		end
-		for p,ne in ipairs(PEPONE.NE) do
-			if PEPONE.NE[p] == "NE" then
-				love.graphics.print("NE", (50)+offset, 145+offset)
-			else love.graphics.print("ne", (50)+offset, 145+offset)
-			end
-		end
-		if PEPONE.bool then 
-			love.graphics.print("PEPONE", (10)+offset, 155+offset)
-		else 
-			love.graphics.print("pepone", (10)+offset, 155+offset)
-		end
-	end
-	local dati_vari = string.format(
-        "Memory: %.2f MB\nDraw time: %.1f ms\nIs busy: %s",
-        collectgarbage"count" / 1024,
-        (love.timer.getTime()-drawStartTime) * 1000,
-        tostring(field:isBusy()))
-    love.graphics.print(dati_vari, 0, window.height-4*Font.extraFont:getHeight())
-end 																							--🧰]
-
-function LOAD_EXIT()
-	exit.img = love.graphics.newImage("assets/Window_Bar/EXIT.png")
-	exit.imgOFF = love.graphics.newQuad( 0, 0, 50, 50, exit.img)
-	exit.imgON = love.graphics.newQuad( 0, 50, 50, 50, exit.img)
-	exit.width = exit.img:getWidth()
-	exit.height = exit.img:getHeight()/2
-	exit.scale = 0.5
+	--gamestate == inventariO
+function inventariO:enter() --💾
+	cards:load()
+	inventario:load()
 end
 
-function UPDATE_EXIT()
-		--tasto exit
-	if general:aabb(window.width-(exit.width*exit.scale), 0, exit.width*exit.scale, exit.height*exit.scale, mouse.x, mouse.y, 1, 1) then
-		exit.bool = true
-	else
-		exit.bool = false
-	end	
+function inventariO:update(dt) --🔁
+	if hoster then --[🌐
+		host:update(dt)
+	elseif connesso then
+		connect:update(dt)
+	end --🌐]
+	inventario:update(dt)
+	cards:update(dt)
+	--general:update(dt)
 end
 
-function DRAW_WINDOW_BAR()																		--✏️
-	love.graphics.setColor(love.math.colorFromBytes(32,34,27))					--🎨
-	love.graphics.rectangle("fill",0,0,window.width,(exit.height*exit.scale))
-	love.graphics.setColor(1,1,1)												--🎨
-	if exit.bool then
-		love.graphics.draw(exit.img, exit.imgON, window.width-(exit.width*exit.scale) , 0, 0, exit.scale, exit.scale)
-	else
-		love.graphics.draw(exit.img, exit.imgOFF, window.width-(exit.width*exit.scale) , 0, 0, exit.scale, exit.scale)
-	end
+function inventariO:draw() --✏️
+	inventario:draw()
+	cards:draw()
+	host:draw()
+	connect:draw()
+	achievement:draw() --🏆
+	achievement:drawJumpscare()
+	font:draw()
+	general:draw()
+end
+
+function inventariO:keypressed(key, scancode, isRepeat) --⌨️
+	inventario:keypressed(key, scancode, isRepeat)
+end
+
+function inventariO:mousepressed(x, y, button) --🖱️
+	inventario:mousepressed(x, y, button)
+end
+
+function inventariO:mousemoved(x, y, dx, dy) --🖱️
+	inventario:mousemoved(x, y, dx, dy)
+end
+
+
+	--gamestate == inGamE
+function inGamE:enter() --💾
+	music.menu:stop()
+	music.inGame:play()
+	stanza:load()
+	abilita:load()
+	gui:load()
+	player:load()
+	player2:load()
+end
+
+function inGamE:update(dt) --🔁
+	if hoster then --[🌐
+		host:update(dt)
+	elseif connesso then
+		connect:update(dt)
+	end --🌐]
+	stanza:update(dt)
+	cards:update(dt)
+	music:update(dt)--🎵
+	tutorial:update(dt)
+	abilita:update(dt)
+	gui:update(dt)
+	player:update(dt)
+	player2:update(dt)
+	--general:update(dt)
+end
+
+function inGamE:draw() --✏️
+	stanza:draw()
+	host:draw()
+	connect:draw()
+	cards:draw()
+	tutorial:draw()
+	abilita:draw()
+	general:drawDanno()
+	gui:draw()
+	achievement:draw() --🏆
+	achievement:drawJumpscare()
+	font:draw()
+	player:draw()
+	player2:draw()
+	general:draw()
+end
+
+function inGamE:keypressed(key, scancode, isRepeat) --⌨️
+end
+
+function inGamE:mousepressed(x, y, button) --🖱️
+	stanza:mousepressed(x, y, button)
+	cards:mousepressed(x, y, button)
+	player:mousepressed(x, y, button)
+	tutorial:mousepressed(x, y, button) --📔
+	abilita:mousepressed(x, y, button)
+	gui:mousepressed(x, y, button)
+end
+
+function inGamE:mousereleased(x, y, button) --🖱️
+	player:mousereleased(x, y, button)
+	abilita:mousereleased(x, y, button)
+end
+
+function inGamE:mousemoved(x, y, dx, dy)
+	gui:mousemoved(x, y, dx, dy)
 end

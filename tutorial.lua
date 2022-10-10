@@ -1,34 +1,34 @@
 tutorial = {}
 
 function tutorial:load()
-	self.bool = true
-	self.no_cambia_turno = true
-	self.no_sacrifici = true
-	self.no_posizionamenti = false
-	self.next = {
+	tutorial.bool = true
+	tutorial.no_cambia_turno = true
+	tutorial.no_sacrifici = true
+	tutorial.no_posizionamenti = false
+	tutorial.next = {
 		img = love.graphics.newImage("assets/menu/tutorials/next.png"),
 		x = 50,
 		y = 50
 	}
-	self.next.width = self.next.img:getWidth()
-	self.next.height = self.next.img:getHeight()
-	self.bar = {
+	tutorial.next.width = tutorial.next.img:getWidth()
+	tutorial.next.height = tutorial.next.img:getHeight()
+	tutorial.bar = {
 		img = love.graphics.newImage("assets/menu/tutorials/bar.png"),
 		x = 300,
 		y = 50
 	}
-	self.bar.width = self.bar.img:getWidth()
-	self.bar.height = self.bar.img:getHeight()
-	self.arrow = {
+	tutorial.bar.width = tutorial.bar.img:getWidth()
+	tutorial.bar.height = tutorial.bar.img:getHeight()
+	tutorial.arrow = {
 		img = love.graphics.newImage("assets/menu/tutorials/arrow.png"),
 		bool = false,
 		bool2 = false,
 		bool3 = false
 	}
-	self.arrow.width = self.arrow.img:getWidth()
-	self.arrow.height = self.arrow.img:getHeight()
+	tutorial.arrow.width = tutorial.arrow.img:getWidth()
+	tutorial.arrow.height = tutorial.arrow.img:getHeight()
 
-	self.mouse = { --da fare
+	tutorial.mouse = { --da fare
 		img0 = love.graphics.newImage("assets/menu/tutorials/Grid213x269.png"),
 		img = {},
 		x = 0,
@@ -37,332 +37,321 @@ function tutorial:load()
 		bool2 = false,
 		bool3 = false
 	}
-	self.mouse.img[1] = love.graphics.newQuad( 213, 0, 213, 269, self.mouse.img0)
-	self.mouse.img[2] = love.graphics.newQuad( 426, 0, 213, 269, self.mouse.img0)
-	self.mouse.img[3] = love.graphics.newQuad( 639, 0, 213, 269, self.mouse.img0)
+	tutorial.mouse.img[1] = love.graphics.newQuad( 213, 0, 213, 269, tutorial.mouse.img0)
+	tutorial.mouse.img[2] = love.graphics.newQuad( 426, 0, 213, 269, tutorial.mouse.img0)
+	tutorial.mouse.img[3] = love.graphics.newQuad( 639, 0, 213, 269, tutorial.mouse.img0)
 	--steps per il tutorial
-	self.step = 1
-	tick.delay(function () self.arrow.bool = true end , 2.5)
+	tutorial.step = 1
+	Timer.after(2.5, function() --⏱️
+		tutorial.arrow.bool = true
+	end)
+	cards:load()
+	giocatore = 1
+	gamestate.switch(inGamE)
 end
-
-function tutorial:mouseClick(x, y, button)
-		--vari steps del tutorial
-	if button == 1 and general:aabb(self.next.x, self.next.y, self.next.width, self.next.height, mouse.x, mouse.y, 1, 1) and not(self.step == 15 or self.step == 18 or self.step == 19 or self.step == 20 or self.step == 26)  then
-		self.step = self.step+1
-	end
-	if self.step == 2 then
-		LOAD_TEXT_ANIM(
-			--(testo,					x,				y,			scalax,	scalay,		sec_per_lettera,sec_passati,lettera_corrente)
-[[BENVENUTO NEL TUTORIAL DI PING]],	self.bar.x*1.1, self.bar.y*1.7,		0.5, 0.5, 		0.1, 0, 0)
-		tick.delay(function () self.arrow.bool = false end , 2.5)
-		self.step = self.step+1
-	elseif self.step == 4 then
-		LOAD_TEXT_ANIM(
-[[PER PRIMA COSA ECCOTI UNA CARTA]], self.bar.x*1.1, self.bar.y*1.7,	0.5, 0.5,		0.07, 0, 0)
-		tick.delay(function () 
-				--carta di Trill
-			table.insert(activeCards, Card:new(screen.width / 2, screen.height - 90, 1,false, 5))
-			COLOR_CARDS(activeCards)
-		 end , 2)
-		self.step = self.step+1
-	elseif self.step == 6 then
-		LOAD_TEXT_ANIM(
-[[QUANDO INIZI UNA PARTITA PUOI
- SCEGLIERNE 30 DA METTERE NEL MAZZO]], self.bar.x*1.1, self.bar.y*1.3,	0.4, 0.4,		0.07, 0, 0)
-		self.step = self.step+1
-	elseif self.step == 8 then
-		LOAD_TEXT_ANIM(
-[[(MASSIMO 2 COPIE PER OGNI CARTA)]], self.bar.x*1.1, self.bar.y*1.7,		0.5, 0.5,		0.055, 0, 0)
-		self.step = self.step+1
-	elseif self.step == 10 then
-		LOAD_TEXT_ANIM(
-[[E UNA PARTITA INIZIA
- CON 5 CARTE]], self.bar.x*1.1, self.bar.y*1.3,	0.4, 0.4,		0.07, 0, 0)
-		self.step = self.step+1
-	elseif self.step == 12 then
-		LOAD_TEXT_ANIM(
-[[GLI UTENTI SI POSIZIONANO NELLA META' ALTA
- E LE REAZIONI NELLA META' BASSA]], self.bar.x*1.1, self.bar.y*1.4,	0.38, 0.4,		0.07, 0, 0)
-		self.step = self.step+1
-	elseif self.step == 14 then
-		LOAD_TEXT_ANIM(
-[[PER POSIZIONARE UNA CARTA POSIZIONA IL MOUSE SU
- DI ESSA E TIENI PREMUTO IL TASTO SX,  TRASCINA IL
- MOUSE SULLO SPAZIO APPOSITO E RILASCIA IL MOUSE]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		tick.delay(function () self.mouse.bool = true end , 9)
-			:after(function () self.arrow.bool2 = true end , 4)
-		self.step = self.step+1
-	elseif self.step == 17 then
-		LOAD_TEXT_ANIM(
-[[PER ATTACCARE UNA CARTA AVVERSARIA
- PREMI TASTO DX SULLA TUA CARTA E
- TASTO DX SU QUELLA AVVERSARIA
-
-
-
-
-
-
-C'E' UNA POSSIBILITA' DI DANNO CRITICO (X10)]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		for c,card in ipairs(inCampoCards) do
-			card.puoattaccare = true
-		end
-		activeCards[2] = Card:new(screen.width / 2, screen.height - 90, 1,false, 1)
-		COLOR_CARDS(activeCards)
-			table.insert(inCampoCards2, activeCards[2])
-			table.remove(activeCards, 2)
-			inCampoCards2[1].posizionato = true
-			inCampoCards2[1].x = 263
-			inCampoCards2[1].y = 161
-		tick.delay(function () self.mouse.bool2 = true end , 8)
-		self.step = self.step+1
-	elseif self.step == 19 then
-		LOAD_TEXT_ANIM(
-[[PER ATTIVARE L'ABILITA' SPECIALE DI
- UNA TUA CARTA USA IL TASTO ROTELLINA
- DEL MOUSE]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		tick.delay(function () self.mouse.bool3 = true end , 8)
-		self.step = self.step+1
-	elseif self.step == 20 and button == 3 then
-		for c,card in ipairs(inCampoCards) do 
-			if general:aabb(card.x, card.y, card.width/2, card.height/2, mouse.x, mouse.y, 1, 1) then
-				self.step = self.step+1
-			end
-		end
-	elseif self.step == 23 then
-		LOAD_TEXT_ANIM(
-[[RICORDA CHE L'ATTIVAZIONE DI 
- UNA ABILITA' RICHIEDE MANA
- (INDICATO IN BASSO A DX)]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		self.step = self.step+1
-	elseif self.step == 25 then
-		LOAD_TEXT_ANIM(
-[[PER OTTENERE MANA DEVI SACRIFICARE
- CARTE DALLA TUA MANO (+1 MANA)
-> POSIZIONA LA CARTA SULLA ZONA SACRIFICI <]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		self.no_posizionamenti = true
-		self.no_sacrifici = false
-		tick.delay(function () 
-				--carta di Trill
-			table.insert(activeCards, Card:new(screen.width / 2, screen.height - 90, 1,false, 23))
-			COLOR_CARDS(activeCards)
-		 end , 1.6)
-			:after(function() self.arrow.bool3 = true end, 9)
-		self.step = self.step+1
-	elseif self.step == 27 then
-		LOAD_TEXT_ANIM(
-[[PASSA IL TURNO 
- PREMENDO L'APPOSITO PULSANTE]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		self.no_cambia_turno = false
-		self.step = self.step+1
-	elseif self.step == 29 then
-		LOAD_TEXT_ANIM(
-[[OGNI CARTA HA LA SUA ABILITA'
- E CLASSE]], self.bar.x*1.1, self.bar.y*1.4,	0.5, 0.5,		0.069, 0, 0)
-		self.step = self.step+1
-	elseif self.step == 31 then
-		LOAD_TEXT_ANIM(
-[[LE CARTE POSSONO ESSERE
-   UTENTI  O  REAZIONI   
- E SI DISTINGUONO DALLA LORO CORNICE]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		tick.delay(function () 
-				--carta di Ping e #memes
-			table.insert(activeCards, Card:new(screen.width / 2, screen.height - 90, 1,false, 2))
-			table.insert(activeCards, Card:new(300+screen.width / 2, screen.height - 90, 1,false, 32))
-			COLOR_CARDS(activeCards)
-		 end , 1.6)
-		self.step = self.step+1
-	elseif self.step == 33 then
-		LOAD_TEXT_ANIM(
-[[SE PROVI AD ATTIVARE UNA CARTA
- REAZIONE SENZA AVERE IL MANA NECESSARIO
- ESSA VERRA' SACRIFICATA (+1 MANA)]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		tick.delay(function () 
-				--carta di Ping e #memes
-			table.insert(activeCards, Card:new(screen.width / 2, screen.height - 90, 1,false, 2))
-			table.insert(activeCards, Card:new(300+screen.width / 2, screen.height - 90, 1,false, 32))
-			COLOR_CARDS(activeCards)
-		 end , 1.6)
-		self.step = self.step+1
-	elseif self.step == 35 then
-		LOAD_TEXT_ANIM(
-[[IN BASE AL MOUSE SI POSSONO
- USARE DIVERSI POTERI]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		tick.delay(function() love.mouse.setCursor(Cursor.TelecinesiLibero) end, 3)
-			:after(function() love.mouse.setCursor(Cursor.TelecinesiPreso) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Bread) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Potenziare) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.DePotenziare) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Evocare) end, 0.6)	
-			:after(function() love.mouse.setCursor(Cursor.INGEGNERE_DEI_MEMES) end, 0.6)	
-			:after(function() love.mouse.setCursor(Cursor.Explosion) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Rubare) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Switch) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Annulla) end, 0.6)	
-			:after(function() love.mouse.setCursor(Cursor.Stella) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Aculeo) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Laser) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Urlo) end, 0.6)	
-			:after(function() love.mouse.setCursor(Cursor.Smith) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Cuore) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Immunnizzare) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.Uccidere) end, 0.6)
-			:after(function() love.mouse.setCursor(Cursor.arrow) end, 0.6)
-		self.step = self.step+1
-	elseif self.step == 37 then
-		LOAD_TEXT_ANIM(
-[[PER PROBLEMI DI CONNESSIONE CONSULTARE
- CONSULTARE IL TUTORIAL APPOSITO]], self.bar.x*1.1, self.bar.y*1.4,	0.2, 0.2,		0.05, 0, 0)
-		self.step = self.step+1
-
-	elseif self.step == 39 then
-		self.bool = false
-		self.no_cambia_turno = false
-		self.no_sacrifici = false
-		self.no_posizionamenti = false
-		tick.delay(function ()
-			love.load()
-			music.inGame:stop()
-			end , 2)
-	end
-end
-
 
 function tutorial:update(dt)
-	if self.step == 15 then
-		for c,card in ipairs(inCampoCards) do
-			self.step = self.step+1
-		end
-	elseif self.step == 18 then
-		for c2,card2 in ipairs(inCampoCards2) do
-			if card2.HP < card2.hp then
-				self.step = self.step+1
-			end
-		end
-	elseif self.step == 21 then
-		LOAD_TEXT_ANIM(
-[[(NON PUOI USARE LA TUA ABILITA'
- NEL TURNO IN CUI LA EVOCHI)]], self.bar.x*1.1, self.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0)
-		self.step = self.step+1
-	elseif self.step == 26 and player.Mana >= 4 then
-		self.step = self.step+1
-	elseif self.step == 28 and giocatore == 2 then
-		Abilita:cambiaTurno()
-		self.step = self.step+1
-	end
-end
-
-local function UPDATE_MOUSE(dt)
-	if tutorial.mouse.bool and tutorial.step == 15 then
-		tutorial.mouse.x = tutorial.mouse.x+10*dt
-		tutorial.mouse.y = tutorial.mouse.y-50*dt
-		if tutorial.mouse.y <= -350 then
-			tutorial.mouse.y = 0 
-			tutorial.mouse.x = 0
-		end
-	end
-end
-
-
-function tutorial:draw()							--✏️
-	love.graphics.setFont(Font.pixel)
-	love.graphics.setColor(love.math.colorFromBytes(255,255,255))
-		--barra di testo
-	if self.step >=2 then
-		love.graphics.draw(self.bar.img, self.bar.x, self.next.y, 0, 0.56, 1)
-		love.graphics.setColor(love.math.colorFromBytes(162,80,12))		--🎨
-		text_anim:draw()
-	end
-		--tasto NEXT
-	love.graphics.setColor(love.math.colorFromBytes(255,255,255,255))		--🎨
-	love.graphics.draw(self.next.img, self.next.x, self.next.y)
-	love.graphics.setColor(love.math.colorFromBytes(162,80,12,255))		--🎨
-	if self.step >= 38 then
-		love.graphics.print("END", self.next.x+25, self.next.y+35, 0, 0.53, 0.52)
-	else
-		love.graphics.print("NEXT", self.next.x+25, self.next.y+35, 0, 0.53, 0.52)
-	end
-		--clicca qui per andare avanti col tutorial
-	love.graphics.setFont(Font.cardName)
-	love.graphics.setColor(love.math.colorFromBytes(250,255,255,255))		--🎨
-	if self.step == 1 and self.arrow.bool then 									--freccia 1
-		love.graphics.draw(self.arrow.img, 250, 145, 1, 0.4, 0.4)
-		love.graphics.print(
-			[[premi qui per andare
-			 avanti col tutorial]],
-			  350, 500, 0, 0.5, 0.5)
-	elseif self.step == 15 and self.arrow.bool2 then 							--freccia 2
-		love.graphics.draw(self.arrow.img, window.width*0.25, window.height-175, 0, 0.4, 0.4)
-		love.graphics.print(
-			[[CARTA]],
-			  window.width*0.375, window.height-185, 0, 0.6, 0.6)
-		for u,camp in ipairs(campi) do
-			for i,campo in ipairs(camp) do
-				if u == 1 then
-					love.graphics.draw(self.arrow.img, campo.x+campo.width*0.8, campo.y, -math.pi/2, 0.1, 0.1, 0, self.arrow.height/2)
-     	   	end
-   		end
-		end
-	elseif self.step == 26 and self.arrow.bool3 then 							--freccia 3
-		love.graphics.setColor(love.math.colorFromBytes(200,20,20,255))		--🎨
-		love.graphics.setLineWidth(14)
-		for u,camp in ipairs(campi) do
-			for i,campo in ipairs(camp) do
-				if u == 6 then
-					love.graphics.circle("line",campo.x+campo.width/2,campo.y+campo.height/2,110)
-				end
-        	end
-   	end
-   	love.graphics.setColor(love.math.colorFromBytes(255,255,255,255))		--🎨
-   	love.graphics.setLineWidth(1)
-	end
-	if self.step == 15 and self.mouse.bool then
-		for c,card in ipairs(activeCards) do
-			love.graphics.draw(self.mouse.img0, self.mouse.img[1], card.x+card.width/2+self.mouse.x, card.y+card.height/2+self.mouse.y, 0, 0.4, 0.4)
-		end
-	elseif self.step == 18 and self.mouse.bool2 then
-		for c,card in ipairs(inCampoCards) do
-			if card.puoattaccare and not card.attacco then
-				love.graphics.draw(self.mouse.img0, self.mouse.img[2], card.x+card.width/4+self.mouse.x, card.y+card.height/2+self.mouse.y, 0, 0.4, 0.4)
-			else
-				for c2,card2 in ipairs(inCampoCards2) do
-					love.graphics.draw(self.mouse.img0, self.mouse.img[2], card2.x+card2.width/4+self.mouse.x, card2.y+card2.height/2+self.mouse.y, 0, 0.4, 0.4)
+	if tutorial.bool then
+		if tutorial.step == 15 then
+			if tutorial.mouse.bool then
+				tutorial.mouse.x = tutorial.mouse.x+20*dt
+				tutorial.mouse.y = tutorial.mouse.y-50*dt
+				if tutorial.mouse.y <= -350 then
+					tutorial.mouse.y = 0 
+					tutorial.mouse.x = 0
 				end
 			end
+			for c,card in ipairs(inCampoCards) do
+				tutorial.step = tutorial.step+1
+			end
+		elseif tutorial.step == 18 then
+			for c2,card2 in ipairs(inCampoCards2) do
+				if card2.HP < card2.hp then
+					tutorial.step = tutorial.step+1
+				end
+			end
+		elseif tutorial.step == 21 then
+			text_anim:load("NON PUOI USARE LA TUA ABILITA'\n NEL TURNO IN CUI LA EVOCHI",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 26 and player.Mana >= 4 then
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 28 and giocatore == 2 then
+			Abilita:cambiaTurno()
+			tutorial.step = tutorial.step+1
 		end
-	elseif self.step == 20 and self.mouse.bool3 then
-		for c,card in ipairs(inCampoCards) do
-			love.graphics.draw(self.mouse.img0, self.mouse.img[3], card.x+card.width/4+self.mouse.x, card.y+card.height/2+self.mouse.y, 0, 0.4, 0.4)
+	end
+end
+
+function tutorial:draw() --✏️
+	if tutorial.bool then
+		love.graphics.setFont(font.pixel)
+		love.graphics.setColor(love.math.colorFromBytes(255,255,255))
+			--barra di testo
+		if tutorial.step >=2 then
+			love.graphics.draw(tutorial.bar.img, tutorial.bar.x, tutorial.next.y, 0, 0.56, 1)
+			love.graphics.setColor(love.math.colorFromBytes(162,80,12))		--🎨
+			text_anim:draw()
+		end
+			--tasto NEXT
+		love.graphics.setColor(love.math.colorFromBytes(255,255,255,255))		--🎨
+		love.graphics.draw(tutorial.next.img, tutorial.next.x, tutorial.next.y)
+		love.graphics.setColor(love.math.colorFromBytes(162,80,12,255))		--🎨
+		if tutorial.step >= 38 then
+			love.graphics.print("END", tutorial.next.x+25, tutorial.next.y+35, 0, 0.53, 0.52)
+		else
+			love.graphics.print("NEXT", tutorial.next.x+25, tutorial.next.y+35, 0, 0.53, 0.52)
+		end
+			--clicca qui per andare avanti col tutorial
+		love.graphics.setFont(font.cardName)
+		love.graphics.setColor(love.math.colorFromBytes(250,255,255,255))		--🎨
+		if tutorial.step == 1 and tutorial.arrow.bool then 									--freccia 1
+			love.graphics.draw(tutorial.arrow.img, 250, 145, 1, 0.4, 0.4)
+			love.graphics.print(
+				[[premi qui per andare
+				 avanti col tutorial]],
+				  350, 500, 0, 0.5, 0.5)
+		elseif tutorial.step == 15 and tutorial.arrow.bool2 then 							--freccia 2
+			love.graphics.draw(tutorial.arrow.img, window.width*0.15, window.height*0.83, 0, 0.4, 0.4)
+			love.graphics.print(
+				[[CARTA]],
+				  window.width*0.25, window.height*0.805, 0, 0.6, 0.6)
+			for u,camp in ipairs(campi) do
+				for i,campo in ipairs(camp) do
+					if u == 1 then
+						love.graphics.draw(tutorial.arrow.img, campo.x+campo.width*0.5, campo.y, -math.pi/2, 0.1, 0.1, 0, tutorial.arrow.height/2)
+		     	   	end
+		   		end
+			end
+		elseif tutorial.step == 26 and tutorial.arrow.bool3 then 							--freccia 3
+			love.graphics.setColor(love.math.colorFromBytes(200,20,20,255))		--🎨
+			love.graphics.setLineWidth(14)
+			for u,camp in ipairs(campi) do
+				for i,campo in ipairs(camp) do
+					if u == 6 then
+						love.graphics.circle("line",campo.x+campo.width/2,campo.y+campo.height/2,110)
+					end
+	        	end
+	   	end
+	   	love.graphics.setColor(love.math.colorFromBytes(255,255,255,255))		--🎨
+	   	love.graphics.setLineWidth(1)
+		end
+		if tutorial.step == 15 and tutorial.mouse.bool then
+			for c,card in ipairs(inManoCards) do
+				love.graphics.draw(tutorial.mouse.img0, tutorial.mouse.img[1], card.x+card.width/2+tutorial.mouse.x, card.y+card.height/2+tutorial.mouse.y, 0, 0.4, 0.4)
+			end
+		elseif tutorial.step == 18 and tutorial.mouse.bool2 then
+			for c,card in ipairs(inCampoCards) do
+				if card.puoattaccare and not card.attacco then
+					love.graphics.draw(tutorial.mouse.img0, tutorial.mouse.img[2], card.x+card.width/4+tutorial.mouse.x, card.y+card.height/2+tutorial.mouse.y, 0, 0.4, 0.4)
+				else
+					for c2,card2 in ipairs(inCampoCards2) do
+						love.graphics.draw(tutorial.mouse.img0, tutorial.mouse.img[2], card2.x+card2.width/4+tutorial.mouse.x, card2.y+card2.height/2+tutorial.mouse.y, 0, 0.4, 0.4)
+					end
+				end
+			end
+		elseif tutorial.step == 20 and tutorial.mouse.bool3 then
+			for c,card in ipairs(inCampoCards) do
+				love.graphics.draw(tutorial.mouse.img0, tutorial.mouse.img[3], card.x+card.width/4+tutorial.mouse.x, card.y+card.height/2+tutorial.mouse.y, 0, 0.4, 0.4)
+			end
 		end
 	end
 end
 
-
-function LOAD_TUTORIAL()
-	tutorial:load()
-	LOAD_INGAME() 	--vedi main.lua
-	LOAD_CARDS2()
-	LOAD_CARDS()
-	LOAD_ABILITA()
-	player:scambio_nomi()
-end
-
-
-function UPDATE_TUTORIAL(dt)
+function tutorial:mousepressed(x, y, button)
+		--vari steps del tutorial
 	if tutorial.bool then
-		tutorial:update(dt)
-		UPDATE_MOUSE(dt)
-	end
-end 
+		if button == 1 and general:aabb(tutorial.next.x, tutorial.next.y, tutorial.next.width, tutorial.next.height, mouse.x, mouse.y, 1, 1) and not(tutorial.step == 15 or tutorial.step == 18 or tutorial.step == 19 or tutorial.step == 20 or tutorial.step == 26)  then
+			tutorial.step = tutorial.step+1
+		end
+		if tutorial.step == 2 then
+				--(testo,
+			text_anim:load("BENVENUTO NEL TUTORIAL DI PING",
+									--x,				y,			scalax,	scalay,		sec_per_lettera,sec_passati,lettera_corrente)
+				tutorial.bar.x*1.1, tutorial.bar.y*1.7,		0.5, 0.5, 		0.1, 0, 0) --💬
+			Timer.after(2.5, function() --⏱️
+				tutorial.arrow.bool = false
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 4 then
+			text_anim:load("PER PRIMA COSA ECCOTI UNA CARTA",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.7,	0.5, 0.5,		0.07, 0, 0) --💬
+			Timer.after(2, function() --⏱️
+					--carta di Trill
+				cards:spawn(100,window.height*0.78,5)
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 6 then
+			text_anim:load("QUANDO INIZI UNA PARTITA PUOI\nSCEGLIERNE 30 DA METTERE NEL MAZZO",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.4, 0.4,		0.07, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 8 then
+			text_anim:load("(MASSIMO 2 COPIE PER OGNI CARTA)",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.7,		0.5, 0.5,		0.055, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 10 then
+			text_anim:load("E UNA PARTITA INIZIA\n CON 5 CARTE",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.4, 0.4,		0.07, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 12 then
+			text_anim:load("GLI UTENTI SI POSIZIONANO NELLA META' ALTA\n E LE REAZIONI NELLA META' BASSA",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.4,	0.38, 0.4,		0.07, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 14 then
+			text_anim:load("PER POSIZIONARE UNA CARTA POSIZIONA IL MOUSE SU\n DI ESSA E TIENI PREMUTO IL TASTO SX,  TRASCINA IL\n MOUSE SULLO SPAZIO APPOSITO E RILASCIA IL MOUSE",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			Timer.after(9, function() --⏱️
+				tutorial.mouse.bool = true
+				Timer.after(4, function() --⏱️
+					tutorial.arrow.bool2 = true
+				end)
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 17 then
+			text_anim:load("PER ATTACCARE UNA CARTA AVVERSARIA\n PREMI TASTO DX SULLA TUA CARTA E\n TASTO DX SU QUELLA AVVERSARIA\n\n\n                                            \n\n\n\n C'E' UNA POSSIBILITA' DI DANNO CRITICO (X10)",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			for c,card in ipairs(inCampoCards) do
+				card.puoattaccare = true
+			end
+			cards:spawn(100,window.height*0.78,1)
+				table.insert(inCampoCards2, inManoCards[2])
+				table.remove(inManoCards, 2)
+				inCampoCards2[1].x = 263
+				inCampoCards2[1].y = 161
+			Timer.after(8, function() --⏱️
+				tutorial.mouse.bool2 = true
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 19 then
+			text_anim:load("PER ATTIVARE L'ABILITA' SPECIALE DI\n UNA TUA CARTA USA IL TASTO ROTELLINA\n DEL MOUSE",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			Timer.after(8, function() --⏱️
+				tutorial.mouse.bool3 = true
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 20 and button == 3 then
+			for c,card in ipairs(inCampoCards) do 
+				if general:aabb(card.x, card.y, card.width/2, card.height/2, mouse.x, mouse.y, 1, 1) then
+					tutorial.step = tutorial.step+1
+				end
+			end
+		elseif tutorial.step == 23 then
+			text_anim:load("RICORDA CHE L'ATTIVAZIONE DI\n UNA ABILITA' RICHIEDE MANA\n (INDICATO IN BASSO A DX)",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 25 then
+			text_anim:load("PER OTTENERE MANA DEVI SACRIFICARE\n CARTE DALLA TUA MANO (+1 MANA)\n > POSIZIONA LA CARTA SULLA ZONA SACRIFICI <",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			tutorial.no_posizionamenti = true
+			tutorial.no_sacrifici = false
+			Timer.after(1.6, function() --⏱️
+					--Cring3_Crimson
+				cards:spawn(100,window.height*0.78,23)
+				Timer.after(9, function() --⏱️
+					tutorial.arrow.bool3 = true
+				end)
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 27 then
+			text_anim:load("PASSA IL TURNO\n PREMENDO L'APPOSITO PULSANTE",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			tutorial.no_cambia_turno = false
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 29 then
+			text_anim:load("OGNI CARTA HA LA SUA ABILITA'\n E CLASSE",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.4,	0.5, 0.5,		0.069, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 31 then
+			text_anim:load("LE CARTE POSSONO ESSERE\n		UTENTI  O  REAZIONI\n	E SI DISTINGUONO DALLA LORO CORNICE",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			Timer.after(1.6, function() --⏱️
+					--Ping & #memes
+				cards:spawn(100,window.height*0.78,2)
+				cards:spawn(250,window.height*0.78,32)
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 33 then
+			text_anim:load("SE PROVI AD ATTIVARE UNA CARTA\n REAZIONE SENZA AVERE IL MANA NECESSARIO\n ESSA VERRA' SACRIFICATA (+1 MANA)",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 35 then
+			text_anim:load("IN BASE AL MOUSE SI POSSONO\n USARE DIVERSI POTERI",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.3,	0.33, 0.33,		0.069, 0, 0) --💬
+			Timer.after(3, function() --⏱️
+				love.mouse.setCursor(Cursor.TelecinesiLibero)
+			end)
+			Timer.after(3.6, function() --⏱️
+				love.mouse.setCursor(Cursor.TelecinesiPreso)
+			end)
+			Timer.after(4.2, function() --⏱️
+				love.mouse.setCursor(Cursor.Bread)
+			end)
+			Timer.after(4.8, function() --⏱️
+				love.mouse.setCursor(Cursor.Potenziare)
+			end)
+			Timer.after(5.4, function() --⏱️
+				love.mouse.setCursor(Cursor.DePotenziare)
+			end)
+			Timer.after(6, function() --⏱️
+				love.mouse.setCursor(Cursor.Evocare)
+			end)
+			Timer.after(6.6, function() --⏱️
+				love.mouse.setCursor(Cursor.INGEGNERE_DEI_MEMES)
+			end)
+			Timer.after(7.2, function() --⏱️
+				love.mouse.setCursor(Cursor.Explosion)
+			end)
+			Timer.after(7.8, function() --⏱️
+				love.mouse.setCursor(Cursor.Rubare)
+			end)
+			Timer.after(8.4, function() --⏱️
+				love.mouse.setCursor(Cursor.Switch)
+			end)
+			Timer.after(9, function() --⏱️
+				love.mouse.setCursor(Cursor.Annulla)
+			end)
+			Timer.after(9.6, function() --⏱️
+				love.mouse.setCursor(Cursor.Stella)
+			end)
+			Timer.after(10.2, function() --⏱️
+				love.mouse.setCursor(Cursor.Aculeo)
+			end)
+			Timer.after(10.8, function() --⏱️
+				love.mouse.setCursor(Cursor.Laser)
+			end)
+			Timer.after(11.4, function() --⏱️
+				love.mouse.setCursor(Cursor.Urlo)
+			end)
+			Timer.after(12, function() --⏱️
+				love.mouse.setCursor(Cursor.Smith)
+			end)
+			Timer.after(12.6, function() --⏱️
+				love.mouse.setCursor(Cursor.Cuore)
+			end)
+			Timer.after(13.2, function() --⏱️
+				love.mouse.setCursor(Cursor.Immunnizzare)
+			end)
+			Timer.after(13.8, function() --⏱️
+				love.mouse.setCursor(Cursor.Uccidere)
+			end)
+			Timer.after(14.4, function() --⏱️
+				love.mouse.setCursor(Cursor.arrow)
+			end)
+			tutorial.step = tutorial.step+1
+		elseif tutorial.step == 37 then
+			text_anim:load("PER PROBLEMI DI CONNESSIONE CONSULTARE\n CONSULTARE IL TUTORIAL APPOSITO",
+				tutorial.bar.x*1.1, tutorial.bar.y*1.4,	0.2, 0.2,		0.05, 0, 0) --💬
+			tutorial.step = tutorial.step+1
 
-function TUTORIAL_MOUSECLICK(x, y, button)
-	if tutorial.bool then
-		tutorial:mouseClick(x, y, button)
-	end
-end
-
-function DRAW_TUTORIAL()
-	if tutorial.bool then
-		tutorial:draw()	
+		elseif tutorial.step == 39 then
+			tutorial.bool = false
+			tutorial.no_cambia_turno = false
+			tutorial.no_sacrifici = false
+			tutorial.no_posizionamenti = false
+			Timer.after(2, function() --⏱️
+				love.load()
+				music.inGame:stop()
+			end)
+		end
 	end
 end

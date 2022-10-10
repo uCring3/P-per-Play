@@ -1,297 +1,110 @@
---                              ,╓╖╖╖╖╖╖╢╖╖╖╖╖╖╖,
---                        ,╓╖╢▒▒▒▒▒▒▓▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒║╖╖
---                    ,╖║▒▒▒▒▒▒▒▒▓▓▓▓▓▓▄▒▓▓╢╣╢╢▓▓▓▓▓▒▒▒▒▒╖╖
---                 ,╖▒▒▒▒▓▒▒▒▒▒▓▓▓▓▓▓▓▓▓╣╢╢╢╢╢╢╢▓▓▓▓▓▓▓▒▒▒▒▒╖╖
---               ╓╢▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓╢╣╣╣╢╢╢╣╢╢╢╢╢╢╢╢╢╢╣╢╢╢╬▒▒▒▒▒╖
---             ╓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓╢╢╣╢╣▓▓▓▓▓▓╣╢╢╢╢╢╢╢╢╢╢╢╢╢▓▓▓▓▒▒▒▒╖
---           ╓╢▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓╣╢▓▓▓▓▓▓▓╣╢╢╢╣╣╢╢╫╣╢╣╢╢╢╢╢╢▒▒▒▒▒▒╖
---          ╖▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▀╣╣▓╣╢╢▓╣▓▓╢▓▓▓╣╢╢╢╢╢╢▓▒▒▒▒▒▒╢
---         ╢▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▀▓▓▓▓░░╙╜╜╙▓▓▓▓▓╢╢╢╣╢╢╢╢╫▓▒▒▒▒▒▒▒▒▒▒
---        ╢▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▌░░]▓▓╣░   &▓▒░▀╢╢▓▓╣╢╢╢╢╢╢╢▓▒▒▒▒▒▒▒▒▒
---       ║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓║▓▌░░░░▓░░  ░▓▓░░░▒▓▓▓╫▓▓▓╢╢▓▓▒▒▒▒▒▒▒▒▒╙▒
---      ╓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▓▓▓▓╣░╢▌░▒▒░▌@N  ░░▒▒╓▓╢▓░▓▓▓╣╢╣╫╬▓▒▒▒▒▒▒▒╖.∩▒▒
---      ▒▒░░░▒▒▒▒▒▒▒▒▒▒▒░░▒▒░░╟@▓╢▒▒▒ ╙╜  ,g▒▒▒║▓▓ß╣ä▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
---      ▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░╓▒░▓@ ╙Ñ╖╓ n╜ ░░g▒░░╓▓╜░░  ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
---     ]▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒╓▒▒H╖╫▓░░▓▓Ñ╨▓    ,╓g▓▓▓▓▓▓▓░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
---     ]▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒╣░╢▒▒║░░╙  ╓▓▓▓▓▒▒╢░░▀▓▓▓▓▀▀░░▒▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
---     ]▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒@▒╨▒H╜░ ╓M▓▓▓░░▓Ñ╜╙@,  ▀▓▓@░░▒░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
---      ▒▒░░░▒▒▒▒▒▒▒▒▓▓▓▓▓▄░░░»H╩m╖░╓@▓▓▒░░,▓▓ÑW,░░░▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▒▒
---      ║▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▄╖╓╥╖╖▓╣▒▓▓▓╓╓▓▓░╖░░╙Ñ▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒
---       ▒▒▒░░▒▒▒▒▒▓▀░▀▓▓╣╣▒▀▓▓╣╢╢╣╢╢╢▒▒▓▓▓▒░░▒╣╣╣╣▒╢▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒╖▒▒▒▒
---       ╙▒▒░░░▒▒▓▓▓▒▒▒▒░╙j▄▓▒▒╢╢╢╣╣╣╢╢╣▒╢╨╢╢▒╙╫▓▓▓╨╢▓╜╜▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
---        ╙▒▒╖╖▓╣╢╣▒▒▒▒░  ╠▓▒▒╟▒▒▒▒▒▒▒▒░▒    ░░░╫▒▒    ░▓▒▒▒▒▒▒▒▒▒░░▒▒▒
---         ╙▒▒▓╢╢╢╢╣╢▒▒░ ░▓▒▒▒▓▓╣@╢▒▒▒╣▒▒╢▒▒▒▒░░╫▓╢▒╖╖░░░▓▒▒▒▒▒▒▒░░░▒╜
---          ╙▒▒▒╢╢╣╢╢╣╣╣▒▓▓╫╣▒▒▓╣▓▓╢╣╣╣╣╣╣▒▒▒▒▒╢▓╣╢╢▒╢╢╢╢▒▒▓▒▒▒▒░░▒▒╜
---            ╙▒▒▒░╜▓▓╢▒▓╣▓╢╢╣╣▓▓▓▓▓╢╢╢╢╣╢▒▒▒▒╢▒▓▒╢╢▒▒▒▒▒╢▒▒▓▒▒▒╓▒╜
---              ╨@░ ┌µ░g▓▒▒╢╣▓▓▒▒░░░░░░░░░░░░▒▒╫▒░░░▒▒░░░░╙░░▓▒▒▒`
---                ╙▒▓▓╢╣▒░░▒▓▒▒▓▓╖░░░╖╥╢▒░▒░ ,░▓▒▓▒▒@▒░▒░╓╓╓░▒▓`
---                  ╙▀▓▓▒▒▒▒▒▒▓╢╣▒▒▒▒▒╣╣╢▒▒▒╢╣▒▓╣╫▓╣╣╣╢▒╢╢╣▓╜
---                      ╙╜▒▒▓▒╢╫▒╣╣╢╢╢╢▒▒▒▒▒▒╫▓╢╢▓▓▓▓Ñ╣Ñ╜`
---                          ╙╙╜▒▒▒▒▒▒▒▒░▒▒▒▒▒╜░▓╬▒▒╜`
---                                  ``````'
-
 menu = {}
+menu.background = {img,speed}
+menu.background.speed = 0.15
 
-function menu:load()
-	self.background = love.graphics.newImage("assets/menu/Grid682x385.png")
-	self.grid = anim8.newGrid(682, 385, self.background:getWidth(), self.background:getHeight())
-	self.animation = anim8.newAnimation(self.grid('1-6',1), 0.15)
-	self.titolo = love.graphics.newImage("assets/menu/Titolo.png")
-	self.fields1 = love.graphics.newImage("assets/menu/fields1.png")
-	self.fields2 = love.graphics.newImage("assets/menu/fields2.png")
-	self.page = 1
-	self.selection = 1
+function menu:load() --💾
+	menu.background.img = love.graphics.newImage("assets/menu/Grid682x385.png")
+	menu.grid = anim8.newGrid(682, 385, menu.background.img:getWidth(), menu.background.img:getHeight())
+	menu.animation = anim8.newAnimation(menu.grid('1-6',1), menu.background.speed)
+	menu.titolo = love.graphics.newImage("assets/menu/Titolo.png")
+	menu.fields1 = love.graphics.newImage("assets/menu/fields1.png")
+	menu.fields2 = love.graphics.newImage("assets/menu/fields2.png")
+	menu.page = 1
+	menu.selection = 1
 
-	self.textSpacing = 20
+	menu.textSpacing = 20
 	
-	self.player1 = {}
-	self.player1.text = Testo[1]
-	self.player1.width = Font.menu:getWidth(self.player1.text)
-	self.player1.height = Font.menu:getHeight(self.player1.text)
-	self.player1.x, self.player1.y = 140, 260
+	menu.player = {}
+	menu.player.text = testo[1]
+	menu.player.width = font.RamonaBold:getWidth(menu.player.text)
+	menu.player.height = font.RamonaBold:getHeight(menu.player.text)
+	menu.player.x, menu.player.y = window.width*0.07, window.height*0.345
 
-	self.player2 = {}
-	self.player2.text = Testo[2]
-	self.player2.width = Font.menu:getWidth(self.player2.text)
-	self.player2.height = Font.menu:getHeight(self.player2.text)
-	self.player2.x, self.player2.y = 130, 360
+	menu.player2 = {}
+	menu.player2.text = testo[2]
+	menu.player2.width = font.RamonaBold:getWidth(menu.player2.text)
+	menu.player2.height = font.RamonaBold:getHeight(menu.player2.text)
+	menu.player2.x, menu.player2.y = window.width*0.07, window.height*0.48
 
-	self.credits = {}
-	self.credits.text = "credits"
-	self.credits.width = Font.menu:getWidth(self.credits.text)
-	self.credits.height = Font.menu:getHeight(self.credits.text)
-	self.credits.x, self.credits.y = 145, 465
-
-	creditsY = 0
-
-	self.quit = {}
-	self.quit.text = "quit"
-	self.quit.width = Font.menu:getWidth(self.quit.text)
-	self.quit.height = Font.menu:getHeight(self.quit.text)
-	self.quit.x, self.quit.y = 172, 540
-
-	self.hostIP = {}
-	self.hostIP.text = "host.IP"
-	self.hostIP.width = Font.menu:getWidth(self.hostIP.text)
-	self.hostIP.height = Font.menu:getHeight(self.hostIP.text)
-	self.hostIP.x, self.hostIP.y = 1000, 150
-
-	self.clientIP = {}
-	self.clientIP.text = "client.IP"
-	self.clientIP.width = Font.menu:getWidth(self.clientIP.text)
-	self.clientIP.height = Font.menu:getHeight(self.clientIP.text)
-	self.clientIP.x, self.clientIP.y = 990, 230
-
-	self.tutorial = {
-		img = love.graphics.newImage("assets/menu/tutorials/button.png"),
-		x = window.width*0.856,
-		y = window.height*0.498
+	menu.credits = {}
+	menu.credits.text = "credits"
+	menu.credits.width = font.RamonaBold:getWidth(menu.credits.text)
+	menu.credits.height = font.RamonaBold:getHeight(menu.credits.text)
+	menu.credits.x, menu.credits.y = window.width*0.09, window.height*0.59
+	menu.credits.texts = {
+		"Programmato da:","u/Cring3_Crimson   alias Ping",
+		"ringrazio tutti i corsi      ","      di LÖVE engine online:","Sheepolution","AtiByte","https://love2d.org/","(Colui che risponde al 70% delle      ","      domande sui forums di LÖVE) zorg",
+		"Artisti:","Summer","twitch : lupo_azteco","Discord : blackdarkness.exe",
+		"Tecnici sonori:","Summer",
+		"intro by Pepone & Plytlas","'iscrivetevi ai canali'",
+		"Giochi di Ispirazione","CardCade","Boss Bashing Button Brawlers","Kingdom: New Lands","Kingdom: Two Crowns",
+		"Persone di ispirazione","Discord: I know this meme      ","      Alias Sciagghi","Pepone e tutti i protagonisti del gioco",
+		"Le canzoni utilizzate per il potere    ","    di Gin sono Copyright free:",
+		"(inutilizzata) Begin Your Journey - Pix",
+		"Alien wolves - Pix",
+		"(inutilizzata) Digestive biscuit - Kubbi"
 	}
-		self.tutorial.width = self.tutorial.img:getWidth()
-		self.tutorial.height = self.tutorial.img:getHeight()
+	menu.credits.Y = 0
 
-	self.hamachi = {
+	menu.quit = {}
+	menu.quit.text = "quit"
+	menu.quit.width = font.RamonaBold:getWidth(menu.quit.text)
+	menu.quit.height = font.RamonaBold:getHeight(menu.quit.text)
+	menu.quit.x, menu.quit.y = window.width*0.09, window.height*0.685
+
+	menu.hostIP = {}
+	menu.hostIP.text = "host.IP"
+	menu.hostIP.width = font.RamonaBold:getWidth(menu.hostIP.text)
+	menu.hostIP.height = font.RamonaBold:getHeight(menu.hostIP.text)
+	menu.hostIP.x, menu.hostIP.y = window.width*0.84, window.height*0.544
+
+	menu.clientIP = {}
+	menu.clientIP.text = "client.IP"
+	menu.clientIP.width = font.RamonaBold:getWidth(menu.clientIP.text)
+	menu.clientIP.height = font.RamonaBold:getHeight(menu.clientIP.text)
+	menu.clientIP.x, menu.clientIP.y = window.width*0.83, window.height*0.65
+
+	menu.tutorial = { --📔
+		img = love.graphics.newImage("assets/menu/tutorials/ButtonGrid274^2.png"),
+		x = window.width*0.856,
+		y = window.height*0.25,
+		scale = {x,y},
+		speed = 0.025
+	}
+		menu.tutorial.width = menu.tutorial.img:getWidth()/7
+		menu.tutorial.height = menu.tutorial.img:getHeight()
+		menu.tutorial.scale.x = .25
+		menu.tutorial.scale.y = .25
+		menu.tutorial.grid = anim8.newGrid(math.floor(menu.tutorial.img:getWidth()/7), menu.tutorial.img:getHeight(), menu.tutorial.img:getWidth(), menu.tutorial.img:getHeight())
+		menu.tutorial.animation = anim8.newAnimation(menu.tutorial.grid('1-7',1), menu.tutorial.speed)
+
+	menu.hamachi = { --📔🌐
 		img = love.graphics.newImage("assets/menu/tutorials/hamachi.png"),
 		x = window.width*0.855,
-		y = window.height*0.59
+		y = window.height*0.35
 	}
-		self.hamachi.width = self.hamachi.img:getWidth()
-		self.hamachi.height = self.hamachi.img:getHeight()
+		menu.hamachi.width = menu.hamachi.img:getWidth()
+		menu.hamachi.height = menu.hamachi.img:getHeight()
+
+	scrivere = {false,false,false,false}
 end
 
-function menu:update(dt)
-	  self.animation:update(dt)
-
-	if self.page == 3 then
-		self:moveCredits(dt)
+local avviso = {}
+avviso[1] = 1 
+avviso[2] = 0.5 
+avviso[3] = 0
+local colora = {}
+colora[1] = false
+colora[2] = true
+colora[3] = false
+function menu:update(dt) --🔁
+	menu.animation:update(dt) --🔁
+	if general:calculateDistance(mouse.x, mouse.y, menu.tutorial.x+(menu.tutorial.width*menu.tutorial.scale.x)/2, menu.tutorial.y+(menu.tutorial.height*menu.tutorial.scale.y)/2) < 50 then
+		menu.tutorial.animation:update(dt)
+	elseif general:calculateDistance(mouse.x, mouse.y, menu.tutorial.x+(menu.tutorial.width*menu.tutorial.scale.x)/2, menu.tutorial.y+(menu.tutorial.height*menu.tutorial.scale.y)/2) < 300 then
+		menu.tutorial.animation:update(dt/(general:calculateDistance(mouse.x, mouse.y, menu.tutorial.x+(menu.tutorial.width*menu.tutorial.scale.x)/2, menu.tutorial.y+(menu.tutorial.height*menu.tutorial.scale.y)/2)/50)) --🔁
 	end
-end
-
-	
-function menu:draw()														--✏️
-	self.animation:draw(self.background, 0, 0, 0, 2, 2)
-	love.graphics.draw(self.fields1, 0, 0, 0, .71, .71)
-	love.graphics.draw(self.fields2, -window.width*0.1, -window.height*0.3, 0, .71, .71)
-	love.graphics.draw(self.titolo, 0, 0, 0, .71, .71)
-	love.graphics.setColor(1,1,1,1)		--🎨
-	if Bad_Millie_Bool then
-			love.graphics.draw(Bad_Millie, 0, 30, 0, 1.0153, 1.0153)
-		end
-	self:drawText()
-	love.graphics.draw(self.tutorial.img, self.tutorial.x, self.tutorial.y)
-	love.graphics.draw(self.hamachi.img, self.hamachi.x, self.hamachi.y)
-	if Senza_Titolo_bool then
-		love.graphics.draw(SummerEgg, 0, 25, 0, 1.15, 1.15)
-	end
-end
-
-
-function menu:drawText()
-	if self.page == 1 then
-
-		love.graphics.setColor(1,1,1,1)
-		love.graphics.setFont(Font.menu)
-
-		if self.selection == 1 then
-			love.graphics.setColor(love.math.colorFromBytes(52,134,157,255))
-		end
-		love.graphics.print(self.player1.text, self.player1.x, self.player1.y, 0,.8,.8)
-		love.graphics.setColor(1,1,1,1)
-
-		if self.selection == 2 then
-			love.graphics.setColor(love.math.colorFromBytes(52,134,157,255))
-		end
-		love.graphics.print(self.player2.text, self.player2.x, self.player2.y, 0,.8,.8)
-		love.graphics.setColor(1,1,1,1)
-
-		if self.selection == 3 then
-			love.graphics.setColor(love.math.colorFromBytes(52,134,157,255))
-		end
-		love.graphics.print(self.credits.text, self.credits.x, self.credits.y, 0, 0.5, 0.5)
-		love.graphics.setColor(1,1,1,1)
-
-		if self.selection == 4 then
-			love.graphics.setColor(love.math.colorFromBytes(52,134,157,255))
-		end
-		love.graphics.print(self.quit.text, self.quit.x, self.quit.y, 0,.5,.5)
-		love.graphics.setColor(1,1,1,1)
-
-		if self.selection == 5 then
-			love.graphics.setColor(love.math.colorFromBytes(52,134,157,255))
-		end
-		love.graphics.print(self.hostIP.text, self.hostIP.x, self.hostIP.y, 0, 0.7, 0.7)
-		love.graphics.setColor(1,1,1,1)
-
-		if self.selection == 6 then
-			love.graphics.setColor(love.math.colorFromBytes(52,134,157,255))
-		end
-		love.graphics.print(self.clientIP.text, self.clientIP.x, self.clientIP.y, 0, 0.7, 0.7)
-		love.graphics.setColor(1,1,1,1)
-
-	elseif self.page == 3 then
-		self:drawCredits(0,0,0,255,2)
-		self:drawCredits(255,255,255,255,0)
-	end
-
-	if self.page == 3 then
-		love.graphics.setColor(love.math.colorFromBytes(52,134,157,255))
-		love.graphics.setFont(Font.menu)
-		love.graphics.print("Torna al Menu", window.width/5 - Font.menu:getWidth("Torna al Menu") / 2, window.height*0.22)
-	end
-end
-
-
-function menu:moveCredits(dt)
-	if not Senza_Titolo_bool then
-		creditsY = creditsY+15*dt
-	end
-	if 1800 <= creditsY and creditsY <= 1825 then
-		ACHIEVEMENT(
-[[Non è la Marvel]],
-[[Nessun finale Post credits]],3)
-	elseif creditsY >= 3000 then
-		music.menu:pause()
-		Senza_Titolo_bool = true
-		SummerEgg:play()
-		creditsY = 3900
-		tick.delay(function() 	
-			SummerEgg:release( )
-			Senza_Titolo_bool = false
-			love.load()
-		end, 10)
-	end
-end
-
-function menu:drawCredits(r,g,b,a,offset)
-	love.graphics.setFont(Font.credits)
-	love.graphics.setColor(love.math.colorFromBytes(r,g,b,a))
-	love.graphics.print("Programmer u/Cring3_Crimson Alias Ping", (screen.width / 2 - Font.menu2:getWidth("Programmer u/Cring3_Crimson Alias Ping_________________") / 2)-offset, window.height 	+0-offset -creditsY)
-	love.graphics.print("ringrazio tutti i corsi di LÖVE engine online:", (screen.width / 2 - Font.menu2:getWidth("___ringrazio tutti i corsi di LÖVE engine online   ") / 2)-offset, window.height 	+50-offset -creditsY)
-	love.graphics.print("Sheepolution", (screen.width / 2 - Font.menu2:getWidth("Sheepolution") / 2)-offset, window.height 																			+100-offset -creditsY)
-	love.graphics.print("AtiByte", (screen.width / 2 - Font.menu2:getWidth("AtiByte") / 2)-offset, window.height 																					+150-offset -creditsY)
-	love.graphics.print("https://love2d.org/", (screen.width / 2 - Font.menu2:getWidth("https://love2d.org/") / 2)-offset, window.height 															+200-offset -creditsY)
-	love.graphics.print("Colui che risponde al 70%", (screen.width / 2 - Font.menu2:getWidth("Colui che risponde al 70%") / 2)-offset, window.height 												+250-offset -creditsY)
-	love.graphics.print(" delle domande sui forums di LÖVE:", (screen.width / 2 - Font.menu2:getWidth(" delle domande sui forums di LÖVE:") / 2)-offset, window.height 								+290-offset -creditsY)
-	love.graphics.print("zorg", (screen.width / 2 - Font.menu2:getWidth("zorg") / 2)-offset, window.height 																							+340-offset -creditsY)
-	love.graphics.print("Artisti:", (screen.width / 2 - Font.menu2:getWidth("Artisti:") / 2)-offset, window.height 																					+400-offset -creditsY)
-	love.graphics.print("Summer", (screen.width / 2 - Font.menu2:getWidth("Summer") / 2)-offset, window.height 																						+450-offset -creditsY)
-	love.graphics.print("twitch : lupo_azteco", (screen.width / 2 - Font.menu2:getWidth("twitch : lupo_azteco") / 2)-offset, window.height 															+500-offset -creditsY)
-	love.graphics.print("Discord : blackdarkness.exe", (screen.width / 2 - Font.menu2:getWidth("Discord : blackdarkness.exe") / 2)-offset, window.height 											+550-offset -creditsY)
-	love.graphics.print("Tecnici sonori:", (screen.width / 2 - Font.menu2:getWidth("Tecnici sonori:") / 2)-offset, window.height 																	+600-offset -creditsY)
-	love.graphics.print("Summer", (screen.width / 2 - Font.menu2:getWidth("Summer") / 2)-offset, window.height 																						+650-offset -creditsY)
-	love.graphics.print("intro by Pepone & Plytlas", (screen.width / 2 - Font.menu2:getWidth("intro by Pepone & Plytlas") / 2)-offset, window.height 												+700-offset -creditsY)
-	love.graphics.print("'iscrivetevi ai canali'", (screen.width / 2 - Font.menu2:getWidth("'iscrivetevi ai canali'") / 2)-offset, window.height 													+750-offset -creditsY)
-	love.graphics.print("Giochi di Ispirazione", (screen.width / 2 - Font.menu2:getWidth("Giochi di Ispirazione") / 2)-offset, window.height 														+800-offset -creditsY)
-	love.graphics.print("CardCade", (screen.width / 2 - Font.menu2:getWidth("CardCade") / 2)-offset, window.height 																					+850-offset -creditsY)
-	love.graphics.print("Boss Bashing Button Brawlers", (screen.width / 2 - Font.menu2:getWidth("Boss Bashing Button Brawlers") / 2)-offset, window.height 											+900-offset -creditsY)
-	love.graphics.print("Kingdom: New Lands", (screen.width / 2 - Font.menu2:getWidth("Kingdom: New Lands") / 2)-offset, window.height 																+950-offset -creditsY)
-	love.graphics.print("Kingdom: Two Crowns", (screen.width / 2 - Font.menu2:getWidth("Kingdom: Two Crowns") / 2)-offset, window.height 															+1000-offset -creditsY)
-	love.graphics.print("Persone di ispirazione", (screen.width / 2 - Font.menu2:getWidth("Persone di ispirazione") / 2)-offset, window.height 														+1050-offset -creditsY)
-	love.graphics.print("Discord: I know this meme  Alias Sciagghi", (screen.width / 2 - Font.menu2:getWidth("Discord: I know this meme  Alias Sciagghi") / 2)-offset, window.height 				+1100-offset -creditsY)
-	love.graphics.print("Le canzoni utilizzate per il potere di Gin sono Copyright free:", (screen.width / 2 - Font.menu2:getWidth("Le canzoni utilizzate per il potere di Gin sono Copyright free:") / 2)-offset, window.height 				+1150-offset -creditsY)
-	love.graphics.print("(inutilizzata) Begin Your Journey - Pix", (screen.width / 2 - Font.menu2:getWidth("Begin Your Journey - Pix") / 2)-offset, window.height 				+1200-offset -creditsY)
-	love.graphics.print("Alien wolves - Pix", (screen.width / 2 - Font.menu2:getWidth("Alien wolves - Pix") / 2)-offset, window.height 				+1250-offset -creditsY)
-	love.graphics.print("(inutilizzata) Digestive biscuit - Kubbi", (screen.width / 2 - Font.menu2:getWidth("Digestive biscuit - Kubbi") / 2)-offset, window.height 				+1300-offset -creditsY)
-end
-
-
-globalScreen = false
-
-
-function menu:mouseClick(x, y, button)
-	if self.page == 1 then
-		if self.selection == 1 then
-			if button == 1 and not (Scrivere1 or Scrivere2 or Scrivere3 or Scrivere4) and not hamachi.bool then
-				--crea_stanza								--[🌐
-				LOAD_HOST()	
-				LOAD_INGAME()
-				gameState = "inventario"
-			elseif button == 2 and not Scrivere1 then
-				Scrivere1 = true
-				Font:load_stats1()
-			end
-		elseif self.selection == 2 then --entra_stanza
-			if button == 1 and not (Scrivere1 or Scrivere2 or Scrivere3 or Scrivere4) and not hamachi.bool then
-				--entra stanza
-				LOAD_CONNECT()
-				LOAD_INGAME()
-				gameState = "inventario"						--🌐]
-			elseif button == 2 and not Scrivere2 then
-				Scrivere2 = true
-				Font:load_stats2()
-			end
-		elseif self.selection == 3 and not hamachi.bool and not (Scrivere1 or Scrivere2 or Scrivere3 or Scrivere4) then --credits
-			creditsY = 0
-			menu.page = 3
-		elseif self.selection == 4 then --quit
-			love.event.quit()
-		elseif self.selection == 5 then --inserisci IP
-			if (button == 1 or button == 2) and not Scrivere3 then
-				Scrivere3 = true
-				Font:load_stats3()
-			end
-		elseif self.selection == 6 then --inserisci IP
-			if (button == 1 or button == 2) and not Scrivere4 then
-				Scrivere4 = true
-				Font:load_stats4()
-			end
-		elseif general:aabb(self.tutorial.x, self.tutorial.y, self.tutorial.width, self.tutorial.height, mouse.x, mouse.y, 1, 1) and (button == 1 or button == 2) and not hamachi.bool and not (Scrivere1 or Scrivere2 or Scrivere3 or Scrivere4) then
-			LOAD_TUTORIAL()
-			if not Bad_Millie:isPlaying() then
-				music.inGame:play()
-			end
-			music.menu:stop()
-		elseif general:aabb(self.hamachi.x, self.hamachi.y, self.hamachi.width, self.hamachi.height, mouse.x, mouse.y, 1, 1) and (button == 1 or button == 2) and not hamachi.bool and not (Scrivere1 or Scrivere2 or Scrivere3 or Scrivere4) then
-			LOAD_HAMACHI()
-		end				
-	else
-		menu.page = 1
-	end
-end
-
----[[ migliorabile?
-function HOVER_MENU()
-	if general:aabb(menu.player1.x-60, menu.player1.y+15, 272, 70, mouse.x, mouse.y, 1, 1) then
+	if general:aabb(menu.player.x-60, menu.player.y+15, 272, 70, mouse.x, mouse.y, 1, 1) then
 		menu.selection = 1
 	elseif general:aabb(menu.player2.x-50, menu.player2.y+15, 272, 70, mouse.x, mouse.y, 1, 1) then
 		menu.selection = 2
@@ -306,18 +119,172 @@ function HOVER_MENU()
 	else
 		menu.selection = 0
 	end
-end --]]
-
-
-function LOAD_MENU()
-	menu:load()
+	if menu.selection > 6 then 
+		menu.selection = 1
+	elseif menu.selection < 0 then
+		menu.selection = 6
+	end
+	if menu.page == 3 then
+		menu.credits.Y = menu.credits.Y-20*dt
+		if menu.credits.Y < -5000 then
+			Senza_Titolo_bool = true
+			SummerEgg:play()
+			love.audio.stop(
+			sfx.megalovenia_short,
+			music.kazotsky_kick,
+			music.Red_Sun,
+			music.menu)
+		Bad_Millie:pause()
+		Bad_Millie_Bool = false
+		Timer.after(10, function() --⏱️
+			SummerEgg:release( )
+			Senza_Titolo_bool = false
+			love.load()
+		end)
+		elseif menu.credits.Y < -3600 then
+			achievement:sblocca("NOT A MARVEL MOVIE","nessun finale post credits",3)
+		end
+	end
+	for c=1,3 do
+		if avviso[c] > 1 then
+			colora[c] = false
+		elseif avviso[c] < 0 then
+			colora[c] = true
+		end
+		if colora[c] then
+			avviso[c] = avviso[c]+0.1*dt
+		else avviso[c] = avviso[c]-0.1*dt
+		end
+	end
+	if menu.background.speed < 0.01 then
+		achievement:sblocca("PEPONE IN HEAVEN","more, more, more",7)
+	end
 end
 
-function UPDATE_MENU(dt)
-	HOVER_MENU()
-	menu:update(dt)
+function menu:draw() --✏️
+	menu.animation:draw(self.background.img, 0, 0, 0, window.width/(menu.background.img:getWidth()/6), window.height/menu.background.img:getHeight())
+	love.graphics.draw(self.titolo, 0, 0, 0, .71, .71)
+	love.graphics.setColor(1,1,1,1)		--🎨
+	if Bad_Millie_Bool then
+		love.graphics.draw(Bad_Millie, 0, 25, 0, window.width/(Bad_Millie:getWidth()), window.height/Bad_Millie:getHeight())
+	end
+	love.graphics.setFont(font.RamonaBold)
+	if menu.selection == 1 then
+		love.graphics.setColor(.1,.1,1) --🎨
+	end
+	love.graphics.print(menu.player.text,menu.player.x,menu.player.y)
+	love.graphics.setColor(1,1,1) --🎨
+	if menu.selection == 2 then
+		love.graphics.setColor(.1,.1,1) --🎨
+	end
+	love.graphics.print(menu.player2.text,menu.player2.x,menu.player2.y)
+	love.graphics.setColor(1,1,1) --🎨
+	if menu.selection == 3 then
+		love.graphics.setColor(.1,.1,1) --🎨
+	end
+	love.graphics.print(menu.credits.text,menu.credits.x,menu.credits.y,0,0.8,0.8)
+	love.graphics.setColor(1,1,1) --🎨
+	if menu.selection == 4 then
+		love.graphics.setColor(.1,.1,1) --🎨
+	end
+	love.graphics.print(menu.quit.text,menu.quit.x,menu.quit.y)
+	love.graphics.setColor(1,1,1) --🎨
+	if menu.selection == 5 then
+		love.graphics.setColor(.1,.1,1) --🎨
+	end
+	love.graphics.print(menu.hostIP.text,menu.hostIP.x,menu.hostIP.y,0,0.75,0.75)
+	love.graphics.setColor(1,1,1) --🎨
+	if menu.selection == 6 then
+		love.graphics.setColor(.1,.1,1) --🎨
+	end
+	love.graphics.print(menu.clientIP.text,menu.clientIP.x,menu.clientIP.y,0,0.75,0.75)
+	love.graphics.setColor(1,1,1) --🎨
+	if menu.page == 3 then
+		love.graphics.setColor(0,0,0,0.5) --🎨
+		love.graphics.rectangle("fill",0,0,window.width,window.height)
+		love.graphics.setColor(1,1,1,1) --🎨
+		for t,text in ipairs(menu.credits.texts) do
+			love.graphics.print(text,window.width/2-font.RamonaBold:getWidth(text)/2,menu.credits.Y+100*(t-1))
+		end
+	end
+	menu.tutorial.animation:draw(menu.tutorial.img, menu.tutorial.x, menu.tutorial.y,0,menu.tutorial.scale.x,menu.tutorial.scale.y)
+	love.graphics.draw(menu.hamachi.img, menu.hamachi.x, menu.hamachi.y)
+	if Senza_Titolo_bool then
+		love.graphics.draw(SummerEgg,  (window.width/2)-(SummerEgg:getWidth()/1.2), 25, 0, (window.width/SummerEgg:getWidth())/1.25, window.height/SummerEgg:getHeight())
+	end
 end
 
-function DRAW_MENU()
-	menu:draw()
+function menu:mousepressed(x, y, button) --🖱️
+	if menu.page == 1 then
+		if menu.selection == 1 then --crea_stanza/cambia nome
+			if button == 1 and not (scrivere[1] or scrivere[2] or scrivere[3] or scrivere[4]) and not hamachi.bool then
+				host:load() --[🌐
+				--LOAD_INGAME()
+				gamestate.switch(inventariO)
+			elseif button == 2 and not scrivere[1] then
+				scrivere[1] = true
+				font:loadField(40,menu.player.x,menu.player.y,menu.player.width,menu.player.height,2.5,testo[1])
+			end
+		elseif menu.selection == 2 then --entra_stanza/cambia nome
+			if button == 1 and not (scrivere[1] or scrivere[2] or scrivere[3] or scrivere[4]) and not hamachi.bool then
+				connect:load() --🌐]
+				--LOAD_INGAME()
+				gamestate.switch(inventariO)
+			elseif button == 2 and not scrivere[2] then
+				scrivere[2] = true
+				font:loadField(40,menu.player2.x,menu.player2.y,menu.player2.width,menu.player2.height,2.5,testo[2])
+			end
+		elseif menu.selection == 3 and not hamachi.bool and not (scrivere[1] or scrivere[2] or scrivere[3] or scrivere[4]) then --credits
+			menu.credits.Y = window.height
+			menu.page = 3
+		elseif menu.selection == 4 then --quit
+			if button == 3 then
+				achievement:sblocca("Tasto sbagliato","non puoi chiudere il gioco\n con la rotellina del mouse",1)
+			else
+				love.event.quit()
+			end
+		elseif menu.selection == 5 then --inserisci IP
+			if (button == 1 or button == 2) and not scrivere[3] then
+				font:loadField(30,menu.hostIP.x,menu.hostIP.y,menu.hostIP.width,menu.hostIP.height,2.5,testo[3])
+				scrivere[3] = true
+			end
+		elseif menu.selection == 6 then --inserisci IP
+			if (button == 1 or button == 2) and not scrivere[4] then
+				font:loadField(30,menu.clientIP.x,menu.clientIP.y,menu.clientIP.width,menu.clientIP.height,2.5,testo[4])
+				scrivere[4] = true
+			end
+		elseif general:aabb(menu.tutorial.x, menu.tutorial.y, menu.tutorial.width*menu.tutorial.scale.x, menu.tutorial.height*menu.tutorial.scale.y, mouse.x, mouse.y, 1, 1) and (button == 1 or button == 2) and not hamachi.bool and not (Scrivere1 or Scrivere2 or Scrivere3 or Scrivere4) then
+			tutorial.load() --📔
+			if not Bad_Millie:isPlaying() then
+				music.inGame:play()
+			end
+			music.menu:stop()
+		elseif general:aabb(menu.hamachi.x, menu.hamachi.y, menu.hamachi.width, menu.hamachi.height, mouse.x, mouse.y, 1, 1) and (button == 1 or button == 2) and not hamachi.bool and not (Scrivere1 or Scrivere2 or Scrivere3 or Scrivere4) then
+			hamachi.load() --📔🌐
+		end				
+	else
+		menu.page = 1
+	end
+end
+
+function menu:keypressed(key, scancode, isRepeat) --⌨️
+	if key == "return" then
+		if scrivere[1] then
+			Testi_Easteregg(1)
+			menu.player.text = testo[1]
+			scrivere[1] = false
+		elseif scrivere[2] then
+			Testi_Easteregg(2)
+			menu.player2.text = testo[2]
+			scrivere[2] = false
+		elseif scrivere[3] then
+			Testi_Easteregg(3)
+			host.IP = testo[3]
+			scrivere[3] = false
+		elseif scrivere[4] then
+			Testi_Easteregg(4)
+			connect.IP = testo[4]
+			scrivere[4] = false
+		end
+	end
 end
