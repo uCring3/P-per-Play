@@ -1,13 +1,13 @@
 --
 -- flux
 --
--- Copyright (c) 2014, rxi
+-- Copyright (c) 2016 rxi
 --
 -- This library is free software; you can redistribute it and/or modify it
 -- under the terms of the MIT license. See LICENSE for details.
 --
 
-local flux = { _version = "0.1.1" }
+local flux = { _version = "0.1.5" }
 flux.__index = flux
 
 flux.tweens = {}
@@ -37,13 +37,13 @@ for k, v in pairs(easing) do
     return 1 - ($e)
   ]], v)
   flux.easing[k .. "inout"] = makefunc([[
-    p = p * 2 
+    p = p * 2
     if p < 1 then
       return .5 * ($e)
     else
       p = 2 - p
       return .5 * (1 - ($e)) + .5
-    end 
+    end
   ]], v)
 end
 
@@ -54,7 +54,8 @@ tween.__index = tween
 
 local function makefsetter(field)
   return function(self, x)
-    if type(x) ~= "function" and not getmetatable(x).__call then
+    local mt = getmetatable(x)
+    if type(x) ~= "function" and not (mt and mt.__call) then
       error("expected function or callable", 2)
     end
     local old = self[field]
@@ -127,6 +128,11 @@ function tween:after(...)
 end
 
 
+function tween:stop()
+  flux.remove(self.parent, self)
+end
+
+
 
 function flux.group()
   return setmetatable({}, flux)
@@ -152,7 +158,7 @@ function flux:update(deltatime)
         t._onstart()
         t._onstart = nil
       end
-      t.progress = t.progress + t.rate * deltatime 
+      t.progress = t.progress + t.rate * deltatime
       local p = t.progress
       local x = p >= 1 and 1 or flux.easing[t._ease](p)
       for k, v in pairs(t.vars) do
@@ -199,7 +205,7 @@ function flux:remove(x)
     self[x] = self[#self]
     return table.remove(self)
   end
-  for i, v in pairs(self) do
+  for i, v in ipairs(self) do
     if v == x then
       return flux.remove(self, i)
     end

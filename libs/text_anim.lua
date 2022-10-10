@@ -24,16 +24,3 @@ function text_anim:draw()
     testo_animato_da_disegnare = text_anim.text:sub(1, current_letter)
     love.graphics.print(testo_animato_da_disegnare, text_anim.x, text_anim.y, 0, text_anim.scalax, text_anim.scalay)      
 end
-
-
-function LOAD_TEXT_ANIM(testo,x,y,scalax,scalay,sec_per_lettera,sec_passati,lettera_corrente)
-    text_anim:load(testo,x,y,scalax,scalay,sec_per_lettera,sec_passati,lettera_corrente)
-end
-
-function UPDATE_TEXT_ANIM(dt)
-    text_anim:update(dt)
-end
-
-function DRAW_TEXT_ANIM()
-    text_anim:draw()
-end
